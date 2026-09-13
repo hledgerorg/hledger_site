@@ -240,7 +240,7 @@ I use hledger and I love it. It has a learning curve (especially if you're new t
 
 Having hledger have all my accounts, personal and business and being able to filter out appropriate reports has been great for seeing things like is the business a money pit or am I actually growing wealth over time. --abhiyerra
 
-There are few things better than doing my taxes every year and being able to confirm every number on every form with simple #hledger queries (which lets me double check both my records and the forms themselves). --Michael Rees
+There are few things better than doing my taxes every year and being able to confirm every number on every form with simple hledger queries (which lets me double check both my records and the forms themselves). --Michael Rees
 
 I've been using hledger ... has more features like balance sheet,
 income statement generation with a plain text file for the last 3 years
@@ -701,10 +701,10 @@ it's like every day brings new excitement. last night I got the balancing the ac
 my accounting equation actually balances!!! this makes me giddy (my mom's half of the family is all bookkeepers/accountants and I think it might be genetic)
 --gnidan
 
-I just donated to Simon Michael because #hledger literally keeps me financially sane.
+I just donated to Simon Michael because hledger literally keeps me financially sane.
 --Davide Aversa
 
-After two weeks of using #PlainTextAccounting (double-entry bookkeeping) w/ #hledger, I couldn't be happier. So many things I couldn't record and evaluate with my old single-entry (income-expense) system are now a piece of cake! Best of all, multiple open source apps (hledger, etc.) exist & reports can be exported in many formats.
+After two weeks of using #PlainTextAccounting (double-entry bookkeeping) w/ hledger, I couldn't be happier. So many things I couldn't record and evaluate with my old single-entry (income-expense) system are now a piece of cake! Best of all, multiple open source apps (hledger, etc.) exist & reports can be exported in many formats.
 
 Fwiw the flexibility of how technical the tool can be has been a big feature for me ...
 point being, I could learn along the way. The level of precision/sophistication is really flexible.
@@ -714,7 +714,7 @@ i started using hledger and it's really, really good wow --sekun
 
 I started a freelance business this year and hledger has really helped me get some peace of mind with regards to my financials. --Benedikt Ritter
 
-I've been using #hledger from @simonmic for a few years, and it's been better than any other personal finance tool I've tried --Luca Bello
+I've been using hledger from @simonmic for a few years, and it's been better than any other personal finance tool I've tried --Luca Bello
 
 I have just closed the books on 2025 and remain a wholehearted champion of hledger. I enjoy my accounting routines. I look forward to my accounting routines. And I am endlessly surprised that this is the case. --bitsonchips
 
@@ -755,7 +755,7 @@ thank you SO much for making hledger! It's an amazing piece of software and a pl
 
 Just want to thank you again for hledger and all the docs you have written over time. They are pretty much the only reason I properly started book keeping und was able to stick with it for the last couple years. The flexibility is fantastic and most importantly its fun --goldledger
 
-F*ck man, #codex with #hledger fixed my accounting with weird taxdoo / amazon fba bookings down to cent accuracy - every accounting firm wanted 20.000eur + for doing it.
+F*ck man, #codex with hledger fixed my accounting with weird taxdoo / amazon fba bookings down to cent accuracy - every accounting firm wanted 20.000eur + for doing it.
 --Gerald Ha
 
 I haven't noticed any bugs that affect me in years of using it. --JuniperMesos
