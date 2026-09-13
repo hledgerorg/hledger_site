@@ -918,6 +918,8 @@ One piece of software that is really great is hledger
 I've been using hledger for a little over six months now. It's really transformed my personal and business finances, putting me in a much better position to make informed decisions.
 --Arthur Cinader
 
-
+hledgerはとにかくレポートが見やすく機能も豊富で、「ledgerのhaskell実装」の枠はとっくに大きく越えている。
+(hledger is, in any case, easy to read in its reports and packed with features, having long since outgrown the mere framework of "Haskell implementation of ledger".)
+--どっぴい
 
 `; const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
