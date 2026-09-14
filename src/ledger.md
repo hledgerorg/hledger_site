@@ -532,13 +532,24 @@ See also the other [Differences](#) mentioned above.
 
 ### hledger to Ledger
 
-Currently there's no specific output format for Ledger; use `print`'s standard `txt` output format.
+`print`'s standard `txt` output format is usually close enough to Ledger's journal format:
 
 ```cli
 $ hledger print | ledger --permissive -f - CMD
 ```
 Ledger requires a space between `-f` and `-`.
 `--permissive` disables checking of balance assertions (if needed).
+
+Since hledger 2.0 preview 1 there is also a `ledger` output format
+(see [print > print output format](hledger.md#print-output-format)),
+which is the same as `txt` except that amounts' cost basis annotations
+are rendered with Ledger's lot syntax (`[DATE] (LABEL) {COST}`)
+rather than hledger's (`{DATE, "LABEL", COST}`).
+Use it if your journal has lot annotations:
+
+```cli
+$ hledger print -O ledger | ledger --permissive -f - CMD
+```
 
 Some common problems:
 
