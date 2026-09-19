@@ -280,7 +280,6 @@ hledger is not yet ..
 - easy to use on a phone
 - equipped with mature, polished GUIs, or easy charts
 - able to download directly from banks and financial institutions
-- capable of automatically tracking capital gains like Beancount and Ledger
 - masterable in a day (or a week..)
 
 Plain Text Accounting, and Double Entry Bookkeeping and Accounting generally, are deep and rich topics.

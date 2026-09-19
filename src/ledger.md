@@ -183,7 +183,7 @@ A typical gnarly old Ledger file will not work with hledger as-is.
 Here are some of the roadbumps to expect (see also: [#1752](https://github.com/hledgerorg/hledger/issues/1752)):
 
 - Some features are supported only by one or the other (Ledger's `(AMOUNTEXPR)`, `((VALUEEXPR))`.. , hledger's `==`, `=*`, `==*`..)
-- Some will be accepted but ignored, perhaps causing transactions not to balance (`{LOTCOST}`, `{=LOTFIXEDCOST}`, `[LOTDATE]`, `(LOTNOTE)`..)
+- Some are accepted but ignored by hledger 1, perhaps causing transactions not to balance (`{LOTCOST}`, `{=LOTFIXEDCOST}`, `[LOTDATE]`, `(LOTNOTE)`..); hledger 2 reads and uses these
 - Some may be interpreted differently (balance assertions, balance assignments..)
 - Some may have different restrictions (dates, comments..)
 
@@ -223,12 +223,12 @@ Y (supported), Ignored (accepted but ignored), or N (not accepted).
 | [5.13 Posting cost expressions](https://www.ledger-cli.org/3.0/doc/ledger3.html#Posting-cost-expressions)                                             | N       |
 | [5.14 Total posting costs](https://www.ledger-cli.org/3.0/doc/ledger3.html#Total-posting-costs)                                                       | Y       | "(Explicit) total cost"
 | [5.15 Virtual posting costs](https://www.ledger-cli.org/3.0/doc/ledger3.html#Virtual-posting-costs)                                                   | Ignored | The parentheses are ignored (it's treated like a regular cost).
-| [5.16 Commodity prices](https://www.ledger-cli.org/3.0/doc/ledger3.html#Commodity-prices)                                                             | Ignored | Lot cost basis annotations are preserved but otherwise ignored. Ledger entries with these probably won't balance. (In hledger 2.0pre1, cost basis is fully supported.)
-| [5.16.1 Total commodity prices](https://www.ledger-cli.org/3.0/doc/ledger3.html#Total-commodity-prices)                                               | Ignored | Preserved in 1.52, fully supported in 2.0pre1.
-| [5.17 Prices versus costs](https://www.ledger-cli.org/3.0/doc/ledger3.html#Prices-versus-costs)                                                       | N       | If attached to a posting amount we call it "transacted cost", if declared ambiently with a P directive we call it "price" or "market price". `{AMT}` is ignored.
-| [5.18 Fixated prices and costs](https://www.ledger-cli.org/3.0/doc/ledger3.html#Fixated-prices-and-costs)                                             | Ignored | `{=AMT}` is ignored.
-| [5.19 Lot dates](https://www.ledger-cli.org/3.0/doc/ledger3.html#Lot-dates)                                                                           | Ignored | Preserved in 1.52, fully supported in 2.0pre1.
-| [5.20 Lot notes](https://www.ledger-cli.org/3.0/doc/ledger3.html#Lot-notes)                                                                           | Ignored | Preserved in 1.52, fully supported in 2.0pre1.
+| [5.16 Commodity prices](https://www.ledger-cli.org/3.0/doc/ledger3.html#Commodity-prices)                                                             | Y (2.x) | hledger 1: lot cost basis annotations are preserved but otherwise ignored, so Ledger entries with these probably won't balance. hledger 2 (1.99.1+): read and used for lot tracking.
+| [5.16.1 Total commodity prices](https://www.ledger-cli.org/3.0/doc/ledger3.html#Total-commodity-prices)                                               | Y (2.x) | hledger 1: preserved but ignored. hledger 2 (1.99.1+): supported.
+| [5.17 Prices versus costs](https://www.ledger-cli.org/3.0/doc/ledger3.html#Prices-versus-costs)                                                       | N       | If attached to a posting amount we call it "transacted cost", if declared ambiently with a P directive we call it "price" or "market price". `{AMT}` is a cost basis annotation (ignored by hledger 1, used by hledger 2).
+| [5.18 Fixated prices and costs](https://www.ledger-cli.org/3.0/doc/ledger3.html#Fixated-prices-and-costs)                                             | Partial | hledger 1 ignores `{=AMT}`. hledger 2 reads it as `{AMT}` (the fixation is not enforced).
+| [5.19 Lot dates](https://www.ledger-cli.org/3.0/doc/ledger3.html#Lot-dates)                                                                           | Y (2.x) | hledger 1: preserved but ignored. hledger 2 (1.99.1+): supported.
+| [5.20 Lot notes](https://www.ledger-cli.org/3.0/doc/ledger3.html#Lot-notes)                                                                           | Y (2.x) | hledger 1: preserved but ignored. hledger 2 (1.99.1+): supported.
 | [5.21 Lot value expressions](https://www.ledger-cli.org/3.0/doc/ledger3.html#Lot-value-expressions)                                                   | N       |
 | [5.22 Automated Transactions](https://www.ledger-cli.org/3.0/doc/ledger3.html#Automated-Transactions)                                                 | Y       | "Auto postings"
 | [5.22.1 Amount multipliers](https://www.ledger-cli.org/3.0/doc/ledger3.html#Amount-multipliers)                                                       | Y       | We use a different syntax (`*NUM` or `*AMT`).
@@ -424,15 +424,16 @@ these must be converted to explicit amounts. Here are the known ways:
 
 ### Cost basis
 
-hledger 1.52 preserves cost basis annotations, so that they can be exported to Ledger or Beancount for gain calculations.
-But it otherwise ignores them. So Ledger entries using cost basis annotations might be reported as unbalanced, or might have wrong capital gain inferred.
+hledger 1 (1.52) preserves cost basis annotations, so that they can be exported to Ledger or Beancount for gain calculations,
+but otherwise ignores them. So Ledger entries using cost basis annotations might be reported as unbalanced, or might have wrong capital gain inferred.
 (If you need to calculate capital gains in hledger 1, record the cost basis with `@` in both acquires and disposals, and track lots manually with subaccounts.
-See eg [Track investments (2020)](https://hledger.org/investments.html).)
+See eg [Track investments (2020)](investments.md).)
 
-hledger 2.0pre1 uses cost basis annotations to calculate lots and capital gains automatically.
-It normally uses a syntax similar to Beancount's, but it can also read most of Ledger's cost basis annotations
-(`{=FIXEDLOTUNITCOST}` and `{{=FIXEDLOTTOTALCOST}}` annotations are ignored),
-and will print them when printing in the `ledger` output format.
+hledger 2 (the 1.99.x previews and later) uses cost basis annotations to track lots and calculate capital gains automatically.
+It normally uses a syntax similar to Beancount's, but it also reads all of Ledger's cost basis annotations:
+`{LOTUNITCOST}`, `{{LOTTOTALCOST}}`, `[LOTDATE]`, `(LOTNOTE)`, and the fixated forms `{=LOTUNITCOST}` and `{{=LOTTOTALCOST}}`
+(which are treated like the non-fixated forms).
+It can also print them in Ledger's syntax, with the `ledger` output format.
 See [hledger manual: Cost basis](../dev/hledger.md#cost-basis),
 [hledger manual: Lot reporting](../dev/hledger.md#lot-reporting).
 
@@ -525,7 +526,7 @@ Some common problems:
 
 - hledger 1 preserves but otherwise ignores Ledger's cost basis annotations.
   So transactions using those might be reported as unbalanced, or might have wrong capital gain inferred.
-  hledger 2.0pre1 handles such entries better.
+  hledger 2 reads them and tracks the lots.
   See [Cost basis](#cost-basis) above.
 
 See also the other [Differences](#) mentioned above.
@@ -540,7 +541,7 @@ $ hledger print | ledger --permissive -f - CMD
 Ledger requires a space between `-f` and `-`.
 `--permissive` disables checking of balance assertions (if needed).
 
-Since hledger 2.0 preview 1 there is also a `ledger` output format
+Since hledger 1.99.1 (2.0 preview 1) there is also a `ledger` output format
 (see [print > print output format](hledger.md#print-output-format)),
 which is the same as `txt` except that amounts' cost basis annotations
 are rendered with Ledger's lot syntax (`[DATE] (LABEL) {COST}`)

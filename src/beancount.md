@@ -15,12 +15,11 @@ See also:
 hledger focusses strongly on user experience, reliability, and real-world practicality.
 It aims to be useful to accounting beginners and non-techies, as well as being a power tool for experts.
 
-Compared to hledger, Beancount has
+Compared to hledger, Beancount
 
-- a better web app (Fava)
-- more plugins, and more ease of customising by plugin
-- a more active mail list
-- and is written in Python, which lowers the barrier to entry for contributors.
+- has a better web app (Fava)
+- is customisable by easier-to-write plugins
+- and is written in Python, which is easier for contributors than Haskell.
 
 Also, compared to hledger 1, Beancount has more support for tracking investments and capital gains.
 As of the hledger 2 prereleases, it's the other way around.
