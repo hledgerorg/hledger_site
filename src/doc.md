@@ -7,29 +7,34 @@ h3 { margin-top:0; }
 
 hledger has lots of docs, covering different needs.
 (If it seems like a lot, see [Tips for learning hledger](learn.md).)
-Here are three good places to start:
+
+**Start here:**
 
 - **[hledger by example](hbe.md)** -
-  a book introducing hledger gradually, through examples.
+  a book introducing hledger gently, one step at a time.
 
-Or one of these faster-paced intros:
+**In a hurry ?**
 
-- **[A quick example](index.md#a-quick-example)** (on the home page)
-- [2 minute quick start](2-minute-quick-start.md)
-- [5 minute quick start](5-minute-quick-start.md)
-- [10 minute quick start](10-minute-quick-start.md)
+- **[5 minute quick start](5-minute-quick-start.md)** -
+  journal format, declarations and reports, on one page.
+
+**The complete, authoritative reference:**
+
+- **[hledger manual](hledger.md)**
+- [hledger-ui manual](hledger-ui.md)
+- [hledger-web manual](hledger-web.md)
+
+**Other intros:**
+
+- [A quick example](index.md#a-quick-example) (on the home page)
+- [2 minute quick start](2-minute-quick-start.md) - a command line transcript
+- [10 minute quick start](10-minute-quick-start.md) - an older, longer overview
 - [hledger manual: Common tasks](hledger.md#common-tasks)
 - [hledger manual: Journal cheatsheet](hledger.md#journal-cheatsheet)
 - [Workflows](workflows.md)
 - [Tutorial: Import CSV data](import-csv.md)
 - [hledger and Ledger](ledger.md) (if you know Ledger)
 - [hledger and Beancount](beancount.md) (if you know Beancount)
-
-Or the complete, authoritative reference manuals:
-
-- **[hledger manual](hledger.md)**
-- [hledger-ui manual](hledger-ui.md)
-- [hledger-web manual](hledger-web.md)
 
 You also can read the manuals offline, using commands like
 `hledger help`, 
