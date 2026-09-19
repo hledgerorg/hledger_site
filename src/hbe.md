@@ -1,7 +1,7 @@
 # hledger by example
 
 A small but growing book introducing hledger, one step at a time.
-(For other hledger docs, see [Docs](doc.md).)
+(For other hledger docs, see [Docs](doc.md) or the sidebar.)
 
 Reading the book in order is helpful, but not essential.
 You can use the the left and right arrow keys, 
