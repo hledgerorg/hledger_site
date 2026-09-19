@@ -2,7 +2,7 @@
 
 <style>
 h2 { margin-top:2em; }
-h3 { margin-top:0; }
+h3 { margin-top:1.5em; }
 </style>
 
 hledger has lots of docs, covering different needs.
@@ -148,148 +148,131 @@ See also:
 
 ## Cookbook
 
-Additional docs, tips, and notes.
+Additional docs, tips, and notes, grouped by topic.
+(The same groups are in the sidebar.)
 
-### USING HLEDGER
+<!-- keep synced: sidebar groups in SUMMARY.md -->
 
-#### Checking for errors
-- [Checking for errors](checking-for-errors.md)
-- [Balancing the accounting equation](balancing-the-accounting-equation.md)
+### Getting started
+- [Why hledger ?](why.md)
+- [FAQ](faq.md)
+- [Tips for learning hledger](learn.md)
+- [2 minute quick start](2-minute-quick-start.md)
+- [5 minute quick start](5-minute-quick-start.md)
+- [10 minute quick start](10-minute-quick-start.md)
 
-#### Customising
-- [Change account name separator](change-account-name-separator.md)
-- [Editor configuration](editors.md)
-- [Save frequently used options](save-frequently-used-options.md)
-
-#### Data entry
+### Data entry
 - [Create a journal](create-a-journal.md)
-- [Getting prices](prices.md)
 - [How to record journal entries](how-to-record.md)
 - [How to figure out journal entries](how-to-figure-out.md)
-- [Importing CSV data](import-csv.md)
+- [Common journal entries](common-journal-entries.md)
 - [Cost notation](cost-notation.md)
-
-#### Examples
-
-- [examples/](https://github.com/hledgerorg/hledger/tree/main/examples) - examples and snippets, old and new 
+- [Getting prices](prices.md)
+- [Tutorial: Import CSV data](import-csv.md)
+- [examples/](https://github.com/hledgerorg/hledger/tree/main/examples) - examples and snippets, old and new
 - [examples/csv/](https://github.com/hledgerorg/hledger/tree/main/examples/csv) - hledger CSV rules library
 
-#### Making charts
-- [Charts and Graphs](charts.md)
-- [Visualising discussion 2023](visualising2023.md)
-
-#### Other software
-- [Exporting from hledger](export.md)
-- [hledger and Beancount](beancount.md)
-- [hledger and dsq / DataStation](dsq.md)
-- [hledger and just](just.md)
-- [hledger and GnuCash](gnucash.md)
-- [hledger and Ledger](ledger.md)
-- [hledger and Obsidian](obsidian.md)
-- [hledger and Paisa](paisa.md)
-- [hledger and Postgres](postgres.md)
-- [hledger and Quicken/Quickbooks](quicken.md)
-- [hledger and SimpleFIN](simplefin.md)
-- [hledger and SQLite](sqlite.md)
-- [hledger and Ultorg](ultorg.md)
-- [hledger and YNAB](ynab.md)
-
-#### Preserving your data
-- [Track changes with version control](track-changes-with-version-control.md)
-- [Backups](https://en.wikipedia.org/wiki/Backup), the 3-2-1 rule
-
-#### Reporting
-- [Making sense of your finances with hledger reports](https://teosiyan.com/2025/07/09/hledger-commands)
+### Reporting
 - [Report examples](report-examples.md)
-- [Reporting version control stats](reporting-version-control-stats.md)
 - [Rewrite account names](rewrite-account-names.md)
 - [Rewrite commodity symbols](rewrite-commodity-symbols.md)
 - [Tags tutorial](tags-tutorial.md)
+- [Charts and Graphs](charts.md)
+- [Visualising discussion 2023](visualising2023.md)
+- [Reporting version control stats](reporting-version-control-stats.md)
+- [Making sense of your finances with hledger reports](https://teosiyan.com/2025/07/09/hledger-commands)
 
-#### Scripts and add-ons
+### Checking for errors
+- [Checking for errors](checking-for-errors.md)
+- [Balancing the accounting equation](balancing-the-accounting-equation.md)
+
+### Customising
+- [Editors](editors.md)
+- [Change account name separator](change-account-name-separator.md)
+- [Save frequently used options](save-frequently-used-options.md)
+
+### Accounting
+- [Accounting basics for PTA users](accounting-basics.md)
+- [Accounting: further study](accounting.md)
+- [Borrowing and lending](loans.md)
+- [Foreign trip expenses](foreign-trip-expenses.md)
+- [Tracking and selling inventory](inventory.md)
+- [Invoicing](invoicing.md)
+- [Project accounting](project-accounting.md)
+- [A tax reporting setup](tax-reporting-setup.md)
+- [Cryptocurrency tax reporting](cctax.md)
+- [PTA: Choosing cash or accrual](https://plaintextaccounting.org/#choosing-cash-vs-accrual)
+- [PTA: Eco accounting](https://plaintextaccounting.org/Eco-accounting)
+- [PTA: Non profit accounting](https://plaintextaccounting.org/Non-profit-accounting)
+- [PTA: Shared finances](https://plaintextaccounting.org/Shared-finances)
+- [PTA wiki: Inventory](https://github.com/plaintextaccounting/plaintextaccounting/wiki/Inventory)
+- [Youngbin Han: Plain Text Accounting with hledger](https://docs.google.com/presentation/d/17kkPlLOFhpwfEIhHfT0hJ1PRmZ6-Tq7JIAdTAhjp24A/preview?pru=AAABmo3qmB4*fWFiJB8Z7cZwQbc72JsTjA&slide=id.g38f1acd61f5_0_19) (slides, for FOSS projects)
+<!-- ### Depreciation -->
+<!-- [Depreciation](http://rantsideasstuff.com/posts/2018/07/08-depreciation-in-personal-finance-with-hledger) -->
+
+### Budgeting and forecasting
+- [Budgeting](budgeting.md)
+- [Forecasting](forecasting.md)
+- [Budgeting and Forecasting (2018)](budgeting-and-forecasting.md)
+
+### Multiple currencies
+- [Currency conversion](currency-conversion.md)
+- [Multicurrency tutorial (2018)](multicurrency-tutorial.md)
+- [hledger manual: Cost reporting](hledger.md#cost-reporting)
+- [hledger manual: Value reporting](hledger.md#value-reporting)
+
+### Investing
+- [Track investments (2020)](investments.md)
+- [Track investments (2017)](track-investments.md)
+- [Calculate unrealized gain](gain.md)
+- [Calculate return on investment](roi.md)
+- [hledger manual: Cost reporting](hledger.md#cost-reporting)
+- [hledger manual: Value reporting](hledger.md#value-reporting)
+- [hledger manual: Lot reporting](hledger.md#lot-reporting)
+- [hledger manual: balance features](hledger.md#balance-features)
+- [hledger-lots](scripts.md#hledger-lots)
+- [PTA Cookbook: Investing and trading](https://plaintextaccounting.org/Investing-and-trading)
+- [Average cost capital gains with hledger](https://curiousbicycle.com/post/hledger-capital-gains) 2023
+- [Track foreign stock capital gains using hledger](https://curiousbicycle.com/post/hledger-foreign-stock) 2023
+- [Full-fledged hledger: Manual lot tracking](https://github.com/adept/full-fledged-hledger/wiki/Manual-lot-tracking) 2024
+
+### Time tracking
+- [Converting time to money](time-to-money.md)
+- [Time planning](time-planning.md)
+
+### Scripts and add-ons
 - **[Scripts and add-ons](scripts.md)**
 - [Scripting hledger](scripting.md)
 
-#### Setups and workflows
-- [Workflows](workflows.md)
-
-#### User interfaces
+### User interfaces
 - [User Interfaces](uis.md)
 - [hledger-web tips](hledger-web-tips.md)
 - [Mobile apps](mobile.md)
 - [PTA: Software: UI, console](https://plaintextaccounting.org/#ui-console)
 
+### Other software
+- [Exporting from hledger](export.md)
+- [hledger and Beancount](beancount.md)
+- [hledger and dsq / DataStation](dsq.md)
+- [hledger and GnuCash](gnucash.md)
+- [hledger and just](just.md)
+- [hledger and Ledger](ledger.md)
+- [hledger and Obsidian](obsidian.md)
+- [hledger and Paisa](paisa.md)
+- [hledger and Postgres](postgres.md)
+- [hledger and Quicken / Quickbooks](quicken.md)
+- [hledger and SimpleFIN](simplefin.md)
+- [hledger and SQLite](sqlite.md)
+- [hledger and Ultorg](ultorg.md)
+- [hledger and YNAB](ynab.md)
 
-### ACCOUNTING
-
-#### Accounting and bookkeeping
-
-- [Accounting basics for PTA users](accounting-basics.md)
-- [Accounting: further study](accounting.md)
-- [Common journal entries](common-journal-entries.md)
-- [PTA: Choosing cash or accrual](https://plaintextaccounting.org/#choosing-cash-vs-accrual)
-
-#### Borrowing and lending
-- [Borrowing and lending](loans.md)
-
-#### Budgeting
-- [Budgeting](budgeting.md)
-<!-- ### Depreciation -->
-<!-- [Depreciation](http://rantsideasstuff.com/posts/2018/07/08-depreciation-in-personal-finance-with-hledger) -->
-
-#### Eco accounting
-- [PTA cookbook: Eco accounting](https://plaintextaccounting.org/Eco-accounting)
-
-#### Forecasting
-- [Forecasting](forecasting.md)
-
-#### FOSS projects
-- [Youngbin Han: Plain Text Accounting with hledger](https://docs.google.com/presentation/d/17kkPlLOFhpwfEIhHfT0hJ1PRmZ6-Tq7JIAdTAhjp24A/preview?pru=AAABmo3qmB4*fWFiJB8Z7cZwQbc72JsTjA&slide=id.g38f1acd61f5_0_19) (slides)
-
-#### Inventory tracking
-- [Tracking and selling inventory](inventory.md)
-- [PTA wiki: Inventory](https://github.com/plaintextaccounting/plaintextaccounting/wiki/Inventory)
-
-#### Investing and trading
-- [PTA Cookbook: Investing and trading](https://plaintextaccounting.org/Investing-and-trading)
-- [hledger manual: Cost reporting](hledger.md#cost-reporting)
-- [hledger manual: Value reporting](hledger.md#value-reporting)
-- [hledger manual: balance features](hledger.md#balance-features)
-- [Track investments (2017)](track-investments.md)
-- [Track investments (2020)](investments.md)
-- [Calculate unrealized gain](gain.md)
-- [Calculate return on investment](roi.md)
-- [hledger-lots](scripts.md#hledger-lots)
-- [Average cost capital gains with hledger](https://curiousbicycle.com/post/hledger-capital-gains) 2023
-- [Track foreign stock capital gains using hledger](https://curiousbicycle.com/post/hledger-foreign-stock) 2023
-- [Full-fledged hledger: Manual lot tracking](https://github.com/adept/full-fledged-hledger/wiki/Manual-lot-tracking) 2024
-
-#### Invoicing
-- [Invoicing](invoicing.md)
-- [Project accounting](project-accounting.md)
-
-#### Multiple currencies
-- [Multicurrency tutorial](multicurrency-tutorial.md) (2018)
-- [Currency conversion](currency-conversion.md) (2021)
-- [hledger manual: Cost reporting](hledger.md#cost-reporting)
-- [hledger manual: Value reporting](hledger.md#value-reporting)
-
-#### Non-profit accounting
-- [PTA: Non profit accounting](https://plaintextaccounting.org/Non-profit-accounting)
-
-#### Taxes
-- [A tax reporting setup](tax-reporting-setup.md)
-- [Cryptocurrency tax reporting](cctax.md)
-
-#### Time tracking
-- [Converting time to money](time-to-money.md)
-- [Time planning](time-planning.md)
-
-#### Trip expenses
-- [Foreign trip expenses](foreign-trip-expenses.md)
-
-#### Shared expenses
-- [PTA: Shared finances](https://plaintextaccounting.org/Shared-finances)
+### Setups and workflows
+- [Workflows](workflows.md)
+- [SM's 2019 setup](sm-2019-setup.md)
+- [SM's 2023 setup](sm-2023-setup.md)
+- [SM's time & task dashboard](time-and-task-dashboard.md)
+- [Track changes with version control](track-changes-with-version-control.md)
+- [Backups](https://en.wikipedia.org/wiki/Backup), the 3-2-1 rule
 
 ## See also...
 
