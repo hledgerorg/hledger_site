@@ -1,1 +1,0 @@
-../../doc/JUST-MAKE-SHAKE.md

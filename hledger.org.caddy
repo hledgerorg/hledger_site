@@ -142,6 +142,7 @@ hledger.org {
 	# XXX this somehow also redirects /workflows.html ?
 	# redir /WORKFLOWS.html /DEVWORKFLOWS.html
 	redir /FUNDING.html /FINANCE.html
+	redir /JUST-MAKE-SHAKE.html /DEVWORKFLOWS.html
 	redir /README.html /dev-README.html
 	redir /addons.html /scripts.html
 	redir /discuss /support.html
