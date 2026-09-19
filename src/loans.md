@@ -1,4 +1,4 @@
-# Borrowing and Lending
+# Borrowing and lending
 
 Last updated: 2020
 

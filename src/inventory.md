@@ -1,4 +1,4 @@
-# Inventory accounting
+# Tracking and selling inventory
 
 Last updated: 2022
 

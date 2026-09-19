@@ -20,53 +20,38 @@ Last updated: 2023
 
 - [Time planning](time-planning.md#how-to-set-up-a-time-budget) -> How to set up a time budget
 
-## Notes
+## Approaches
 
-```
- <sm> two commands that are roughly equivalent: ledger budget --add-budget expenses, hledger balance --budget -E expenses
- <sm> they show both budgeted and unbudgeted accounts            
-```
+There are two main approaches, which can be combined:
 
-```
---budget has no effect on single-column reports, it requires a reporting interval
---budget INTERVAL enables all periodic transactions with that interval; these can be date-limited
---budget hides all non-budgeted subaccounts; can be depth-limited more
-```
+- **Envelope budgeting** is like keeping cash for different purposes in different envelopes:
+  you allocate money to each purpose up front, and spend from those allocations.
+  The envelopes can be modelled as real-world accounts (eg extra savings accounts at your bank),
+  as virtual subaccounts of a real account (eg of your checking account),
+  or as separate virtual accounts (eg `budget:*`).
+  The allocations can be recorded by hand, or generated with [auto posting rules](hledger.md#auto-postings).
+  This sets limits on the source side; a pile of money approaching zero is very intuitive.
+  It gives more control over cashflow, and needs more journal entries.
 
-```
-<sm> there's different ways to do budgeting                     [16:46]
-<sm> let me try to count them                                   [16:50]
-<sm> "envelope budgeting" is analogous to having a set of envelopes containing cash for different purposes. 
-You can model the "envelopes" with 
-a. real-world accounts (eg your bank lets you create arbitrary savings accounts), 
-b. virtual (imaginary) subaccounts of a real-world account (eg your checking account), 
-c. virtual accounts "off to the side" (budget:*)
-<sm> also you can do the transfers to and from these manually, or generate them with automated posting rules
-<sm> "goal budgeting" (best name I can come up with) involves setting some inflow/outflow goals per account per period, 
-and then measuring how the actual flows compare with the goals. balance --budget provides this report
-<sm> I think that's 7 ways
-```
+- **Goal budgeting** (or report-based budgeting) sets goals or limits per account per period,
+  and then measures actual inflows/outflows against them.
+  hledger's [budget report](hledger.md#budget-report) (`balance --budget`) does this,
+  using [periodic transaction rules](hledger.md#periodic-transactions) to define the goals.
+  This sets goals on the destination side, with less enforcement and less work.
+  Some notes on it:
 
-From <https://www.reddit.com/r/plaintextaccounting/comments/doq9p5/new_to_ledger_budgeting_question>:
+  - `--budget` requires a report interval; it has no effect on single-column reports.
+  - `--budget INTERVAL` enables all periodic transaction rules with that interval; these can be date-limited.
+  - `--budget` hides accounts which have no budget goals, unless you add `-E`.
+  - `hledger balance --budget -E expenses` is roughly equivalent to `ledger budget --add-budget expenses`;
+    both show budgeted and unbudgeted accounts.
 
-> Also search for budgeting links at http://plaintextaccounting.org . You'll see two main approaches discussed:
-> 
-> 1. "envelope budgeting" - sounds more like what you've been doing. Based around explicitly allocating money for each purpose. Good for managing > cashflow. Requires more journal entries. Can be done entirely manually (1a) but many docs advise using automatic posting rules to assist (1b). Many > different ways to handle the details. Requires more thinking.
-> 
-> 2. the other kind ("report-based budgeting" ?). Based around a special budget report provided by Ledger/hledger, which uses periodic transaction > rules to set budget goals. Automatic posting rules might be useful here too, I'm not sure. Provides less enforcement, requires less work. Fewer ways > to do it, perhaps provides simpler/clearer reports.
-> 
-> I often find "budgeting" covers/touches on quite a lot of topics: 
-> - setting earning/spending goals, 
-> - reviewing performance against those goals, 
-> - controlling earning/spending based on the goals, 
-> - allocating funds for short term expenses, 
-> - allocating funds towards savings goals, 
-> - updating allocated funds as transactions occur, 
-> - reallocating funds/balancing the budget, 
-> - end of period actions (roll over ? reset ?), 
-> - forecasting cash balances and managing cashflow, 
-> - forecasting income/expenses... 
+In either approach, the numbers you pick can be goals (go at least this far) or limits (don't go beyond this).
 
+"Budgeting" can cover a lot of things: setting earning and spending goals; reviewing performance against them;
+controlling spending; allocating funds for short-term expenses or savings goals; updating and rebalancing allocations;
+end of period actions (roll over or reset); forecasting cash balances and managing cashflow.
+Be clear about which of these you need.
 
 ### --budget and subaccounts
 
@@ -147,13 +132,14 @@ Budget performance in 2019/01:
                                         ||        0 [                 0] 
 ```
 
+## Forecasting
 
-Envelope budgeting sets the limits on the source side, and a pile of money approaching zero is very intuitive.
+Some ways to forecast with hledger:
 
-Goal budgeting sets the goals (or limits) on the destination side. 
-And we don't usually enforce not going over.
-
-In either system, the numbers we pick can be goals (go at least this far) or limits (don't go beyond this).
-
-You can also mix them: envelope/source limits for some categories, goal/destination thresholds for others.
--->
+- Enter future-dated transactions in your journal, commented out (with `;` or `comment`).
+- Enter future transactions uncommented, and use a query to exclude them from reports when needed
+  (`-e tomorrow` or `date:-tomorrow`; hledger-ui hides them by default).
+- Enter future transactions in a separate `forecast.journal`, which you include when needed (eg with `-f forecast.journal`).
+- Enter [periodic transaction rules](hledger.md#periodic-transactions) describing future recurring or one-off transactions,
+  and generate them with [`--forecast`](hledger.md#forecasting).
+  The same rules can define budget goals, as described in [Budgeting and forecasting (2018)](budgeting-and-forecasting.md).

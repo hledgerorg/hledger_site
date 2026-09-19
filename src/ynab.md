@@ -1,4 +1,4 @@
-# hledger and You Need A Budget
+# hledger and YNAB
 
 Last updated: 2023
 

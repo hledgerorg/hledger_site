@@ -184,6 +184,7 @@ Additional docs, tips, and notes, grouped by topic.
 
 ### Checking for errors
 - [Checking for errors](checking-for-errors.md)
+- [Reconciling](reconciling.md)
 - [Balancing the accounting equation](balancing-the-accounting-equation.md)
 
 ### Customising
@@ -199,6 +200,7 @@ Additional docs, tips, and notes, grouped by topic.
 - [Tracking and selling inventory](inventory.md)
 - [Invoicing](invoicing.md)
 - [Project accounting](project-accounting.md)
+- [Closing the year](closing-the-year.md)
 - [A tax reporting setup](tax-reporting-setup.md)
 - [Cryptocurrency tax reporting](cctax.md)
 - [PTA: Choosing cash or accrual](https://plaintextaccounting.org/#choosing-cash-vs-accrual)
@@ -212,8 +214,7 @@ Additional docs, tips, and notes, grouped by topic.
 
 ### Budgeting and forecasting
 - [Budgeting](budgeting.md)
-- [Forecasting](forecasting.md)
-- [Budgeting and Forecasting (2018)](budgeting-and-forecasting.md)
+- [Budgeting and forecasting (2018)](budgeting-and-forecasting.md)
 
 ### Multiple currencies
 - [Currency conversion](currency-conversion.md)

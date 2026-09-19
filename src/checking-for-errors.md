@@ -10,6 +10,34 @@ In hledger 1.21+,
 see [strict mode](https://hledger.org/hledger.html#strict-mode)
 and the [check](https://hledger.org/hledger.html#check) command.
 
+## Balance assertions
+
+A [balance assertion](hledger.md#balance-assertions) records what an account's balance should be at a point in time,
+by writing `= EXPECTEDBALANCE` after a posting's amount:
+
+```journal
+2026-01-31 * paycheck
+    income:salary
+    assets:checking    $1000 = $1234.56
+```
+
+hledger checks all assertions whenever it reads the journal, and stops with an error, showing the location,
+if one fails. This protects reconciled balances from being disturbed by later edits or imports,
+and turns each reconciliation into a permanent check.
+
+Some tips:
+
+- To assert a balance without recording a transaction, use a zero amount:
+  `assets:checking  $0 = $1234.56`.
+- `=` checks just that commodity's balance in that account.
+  `==` also checks there are no other commodities, and `=*` / `==*` include subaccounts.
+  See [Assertions and subaccounts](hledger.md#assertions-and-subaccounts) and neighbouring sections.
+- When importing CSV, assign the bank's running balance to the [`balance` field](hledger.md#hledger-field-names)
+  to generate an assertion on every imported transaction.
+- `hledger check recentassertions` reports accounts whose latest assertion is more than 7 days before their latest posting,
+  a reminder to keep [reconciling](reconciling.md).
+- `-I`/`--ignore-assertions` disables the checks temporarily, eg while reorganising old entries.
+
 ## Old way to check accounts
 
 Here's another way to check for undeclared accounts, that works with older hledger versions,

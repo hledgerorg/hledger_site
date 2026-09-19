@@ -1,4 +1,4 @@
-# Getting Prices
+# Getting prices
 
 Here are some ways to download current or historical market prices for your commodities.
 

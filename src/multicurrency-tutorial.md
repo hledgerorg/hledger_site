@@ -1,6 +1,8 @@
-# Multicurrency tutorial
+# Multicurrency tutorial (2018)
 
 Last updated: 2018
+
+*For newer docs, see [Currency conversion](currency-conversion.md).*
 
 *Currency handling in PTA tools is a big topic. 
 I wrote this tutorial in 2018.

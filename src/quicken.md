@@ -1,4 +1,4 @@
-# hledger and Quicken/Quickbooks
+# hledger and Quicken / Quickbooks
 
 Last updated: 2021
 

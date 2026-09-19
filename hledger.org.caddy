@@ -143,6 +143,7 @@ hledger.org {
 	# redir /WORKFLOWS.html /DEVWORKFLOWS.html
 	redir /FUNDING.html /FINANCE.html
 	redir /JUST-MAKE-SHAKE.html /DEVWORKFLOWS.html
+	redir /forecasting.html /budgeting.html#forecasting
 	redir /README.html /dev-README.html
 	redir /addons.html /scripts.html
 	redir /discuss /support.html
