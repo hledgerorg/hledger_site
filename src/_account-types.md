@@ -57,7 +57,7 @@ account expenses                   ; type:X
 ```
 
 This is recommended even if you use the english account names, as it brings other benefits,
-such as customising the [account display order](account-display-order.md).
+such as customising the [account display order](_account-display-order.md).
 
 You can list accounts and their types with `hledger accounts --types`.
 For the full rules, see [hledger manual > Account types](hledger.md#account-types).

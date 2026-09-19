@@ -40,7 +40,7 @@ Any undeclared accounts are displayed last, in alphabetic order.
 Ordering is applied among sibling accounts at each level of the account tree,
 so a declaration like `account expenses:rent` positions `rent` among the other `expenses` subaccounts.
 
-These same directives can also declare [account types](account-types.md),
+These same directives can also declare [account types](_account-types.md),
 so it's common to do both at once.
 For more, see [hledger manual > Account display order](hledger.md#account-display-order).
 
