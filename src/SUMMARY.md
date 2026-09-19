@@ -43,7 +43,7 @@
 - [Read timeclock files](read-timeclock-files.md)
 - [Read timedot files](read-timedot-files.md)
 
-# MORE DOCS
+# COOKBOOK
 
 <!-- Pages must be listed here for mdbook to render them. -->
 <!-- Since mdbook 4.50 or so, duplicates must be avoided. -->
