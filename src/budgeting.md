@@ -6,7 +6,7 @@ Last updated: 2023
 
 - [hledger > balance > Budget report](hledger.md#budget-report), hledger's built-in periodic budget report
 
-- [Budgeting and forecasting (2018)](budgeting-and-forecasting.md), a older introduction
+- [Budgeting and forecasting tutorial](budgeting-and-forecasting.md), a walkthrough of the budget report and forecasting
 
 - <https://github.com/hledgerorg/hledger/tree/main/examples/budgeting>, annotated examples of journals implementing budgets
 
@@ -142,4 +142,4 @@ Some ways to forecast with hledger:
 - Enter future transactions in a separate `forecast.journal`, which you include when needed (eg with `-f forecast.journal`).
 - Enter [periodic transaction rules](hledger.md#periodic-transactions) describing future recurring or one-off transactions,
   and generate them with [`--forecast`](hledger.md#forecasting).
-  The same rules can define budget goals, as described in [Budgeting and forecasting (2018)](budgeting-and-forecasting.md).
+  The same rules can define budget goals, as described in the [Budgeting and forecasting tutorial](budgeting-and-forecasting.md).

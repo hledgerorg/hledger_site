@@ -89,7 +89,7 @@
   - [Cryptocurrency tax reporting](cctax.md)
 - [Budgeting and forecasting]()
   - [Budgeting](budgeting.md)
-    - [Budgeting and forecasting (2018)](budgeting-and-forecasting.md)
+    - [Budgeting and forecasting tutorial](budgeting-and-forecasting.md)
 - [Multiple currencies]()
   - [Currency conversion](currency-conversion.md)
   - [Multicurrency tutorial (2018)](multicurrency-tutorial.md)

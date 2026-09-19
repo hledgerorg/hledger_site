@@ -208,7 +208,7 @@ Additional docs, tips, and notes, grouped by topic.
 
 ### Budgeting and forecasting
 - [Budgeting](budgeting.md)
-- [Budgeting and forecasting (2018)](budgeting-and-forecasting.md)
+- [Budgeting and forecasting tutorial](budgeting-and-forecasting.md)
 
 ### Multiple currencies
 - [Currency conversion](currency-conversion.md)
