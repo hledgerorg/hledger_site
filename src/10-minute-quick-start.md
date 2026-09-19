@@ -227,7 +227,7 @@ cron job and no manual data entry at all. This is convenient but costs some
 financial awareness.
 
 Download one or more CSV files containing transaction info, then create a 
-[csv rules file](convert-csv-files.md) for each. Eg if SomeBank.csv looks
+[csv rules file](hledger.md#csv) for each. Eg if SomeBank.csv looks
 like:
 
 ```csv

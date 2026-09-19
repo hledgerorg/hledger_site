@@ -1,7 +1,7 @@
 # Calculate unrealized gain
 
 This is a guide on calculating the unrealized capital gain/loss of investments,
-using the `balance --gain` report (currently unreleased and available only in the git repo).
+using the `balance --gain` report.
 
 This guide assumes you've read [the investments guide](investments.md) and that you're
 using the "simple" version of recording investment transactions laid

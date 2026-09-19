@@ -9,7 +9,7 @@ Open a
 [terminal](https://itconnect.uw.edu/learn/workshops/online-tutorials/web-publishing/what-is-a-terminal/)
 or command prompt
 and check your hledger-ui version.
-It should be reasonably [up to date](release-notes.md). 
+It should be reasonably [up to date](relnotes.md). 
 This doc was last tested with:
 ```cli
 $ hledger-ui --version

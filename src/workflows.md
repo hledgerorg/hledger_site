@@ -148,7 +148,7 @@ Some downloading helpers can be found at
 - Michael Walker's [personal finance setup](https://memo.barrucadu.co.uk/personal-finance.html), with Grafana dashboard
 
 
-[convert]:           convert-csv-files.md
+[convert]:           hledger.md#csv
 [import]:            hledger.md#import
 [balance sheet]:     https://en.wikipedia.org/wiki/Balance_sheet#Personal
 [income statement]:  https://en.wikipedia.org/wiki/Income_statement

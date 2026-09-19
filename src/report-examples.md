@@ -1,6 +1,6 @@
 # Report examples
 
-There are some [example reports on the home page](index.md/#examples).
+There are some [example reports on the home page](index.md#a-quick-example).
 
 Here are some more example reports using the [bcexample journal][bcexample] from beancount:
 

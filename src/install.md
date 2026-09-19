@@ -7,7 +7,7 @@ Both versions are suitable for daily use. hledger 1 is receiving only essential 
 the hledger 2 previews are strictly better, highly compatible,
 and by using the latest you help make the final 2.0 release (coming later this year) better.
 We also have some notes on AI usage.
-See the full **[release notes](release-notes.md)** for all releases.
+See the full **[release notes](relnotes.md)** for all releases.
 
 You can install hledger by any of these methods:
 

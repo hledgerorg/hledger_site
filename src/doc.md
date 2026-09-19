@@ -93,7 +93,7 @@ Short videos:
   - [hledger: fast fancy formatting](https://www.youtube.com/watch?v=Hb-hK8Lc67s)
   - [hledger: who did you pay?](https://www.youtube.com/watch?v=DrMoawQBKHE)
   - [hledger: bring order to your expenses](https://www.youtube.com/watch?v=O7_--Jz0jeQ&t=2s)
-  - [hledger: commands to help with reconciling](https://www.youtube.com/watch?v=gt4hm8pfMHk)7
+  - [hledger: commands to help with reconciling](https://www.youtube.com/watch?v=gt4hm8pfMHk)
   - [hledger: shortcuts part 1](https://www.youtube.com/watch?v=ItnYCw8cgKc)
   - [hledger: shortcuts part 2](https://www.youtube.com/watch?v=0d-28UIFhlo)
   - [hledger: shortcuts part 3](https://www.youtube.com/watch?v=_3pHNICDgHc)

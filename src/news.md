@@ -3,7 +3,7 @@
 Share your hledger/PTA user notes, dev news, achievements or experiences in the [hledger matrix chat](support.md),
 every Friday morning or any time, tagged with `TWIH:`.
 
-See also: [Release notes](release-notes.md), [Recent discussion](https://hledger.org/support.html).
+See also: [Release notes](relnotes.md), [Recent discussion](https://hledger.org/support.html).
 
 ---
 
@@ -900,7 +900,7 @@ If the trial is a success Open Source Collective will lower our fee on contribut
 ## This Week In Hledger 2024-01-05
 
 **sm:** 
-I released [hledger 1.32.2](release-notes.md#2023-12-31-hledger-1322), which fixes bugs and adds hledger-ui on Windows.
+I released [hledger 1.32.2](relnotes.md#hledger-1322), which fixes bugs and adds hledger-ui on Windows.
 
 In master I worked on
 - fix check tags to ignore modified, _modified tags automatically [#2148]
