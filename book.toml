@@ -30,8 +30,6 @@ additional-css = [
 ]
 additional-js = [
   "highslide/highslide.js",
-  # TODO these are also included earlier, before page content, in index.hbs to avoid render flash.
-  # Still needed here so they get installed. XXX
   "js/jquery-1.11.0.min.js",
   "js/site.js",
   "js/quotes.js",

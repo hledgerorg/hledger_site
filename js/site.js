@@ -1,6 +1,4 @@
-// This file gets included twice - early by the theme to reduce flash,
-// and again at the end for silly mdbook reasons (see book.toml).
-// The first time, highslide won't have loaded yet.
+// This file is installed and included (at the end of each page) via book.toml's additional-js.
 if (typeof hs !== 'undefined') {
   // http://www.highslide.com/ref
   hs.graphicsDir = '/highslide/graphics/';
