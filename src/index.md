@@ -266,7 +266,7 @@ Everything is documented, and the docs are easy to find.<!-- , and the help comm
 
 ```
 $ hledger help impor   # hledger main
-"impor" matches several manual sections; please be more specific:
+"impor" matches several manual sections, try a more specific topic:
   Deduplicating, importing
   import
   Default import sources
