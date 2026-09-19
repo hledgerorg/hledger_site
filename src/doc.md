@@ -73,8 +73,8 @@ Here are some notable blog posts/articles:
 Some other useful docs:
 
 - **[Plain Text Accounting FAQ](https://plaintextaccounting.org/FAQ)**
-- [Why hledger ?](why.md)
 - **[hledger FAQ](faq.md)**
+- [Why hledger ?](why.md)
 - [Release notes](relnotes.md)
 - [Developer docs](dev.md)
 
