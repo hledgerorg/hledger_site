@@ -1,5 +1,7 @@
 # Inventory accounting
 
+Last updated: 2022
+
 ## Fundraiser
 
 This example demonstrates accounting for a fundraiser where members sold

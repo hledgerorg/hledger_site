@@ -1,5 +1,7 @@
 # Converting time to money
 
+Last updated: 2023
+
 Perhaps you track billable hours with hledger,
 and you'd like to see those hours as money.
 The method depends on where you store time records:

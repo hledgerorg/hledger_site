@@ -1,5 +1,7 @@
 # Budgeting
 
+Last updated: 2023
+
 ## All budgeting-related docs
 
 - [hledger > balance > Budget report](hledger.md#budget-report), hledger's built-in periodic budget report

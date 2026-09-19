@@ -1,5 +1,7 @@
 # Reporting version control stats
 
+Last updated: 2023
+
 You can export version control history as a journal, for analysis with hledger.
 Here's an example: comparing the big 3 PTA apps' git commit counts.
 

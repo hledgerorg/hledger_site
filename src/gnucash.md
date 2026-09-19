@@ -1,5 +1,7 @@
 # hledger and GnuCash
 
+Last updated: 2025
+
 Tips for co-using/converting/switching GnuCash and hledger.
 
 Conversion tools.

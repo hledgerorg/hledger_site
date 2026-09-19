@@ -1,5 +1,7 @@
 # Budgeting and forecasting (2018)
 
+Last updated: 2018
+
 This is an old but still useful intro to budgeting with hledger.
 For more about budgeting, see also:
 

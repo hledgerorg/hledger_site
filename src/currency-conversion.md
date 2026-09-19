@@ -1,5 +1,7 @@
 # Currency conversion
 
+Last updated: 2025
+
 *I wrote two currency conversion explainers in 2021, now both combined on this page, showing different ways of recording conversions.
 See [Cookbook > Multiple currencies](doc.md#multiple-currencies) for more.*
 

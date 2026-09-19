@@ -1,5 +1,7 @@
 # Project accounting
 
+Last updated: 2021
+
 Some ways to track small business/freelancer activity - orders, budgets, invoices, payments..
 
 ## Accrual method

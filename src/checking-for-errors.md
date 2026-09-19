@@ -1,5 +1,7 @@
 # Checking for errors
 
+Last updated: 2024
+
 hledger can check your data in various ways.
 
 ## Built in checks

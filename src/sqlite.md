@@ -1,5 +1,7 @@
 # hledger and SQLite
 
+Last updated: 2023
+
 With SQLite you can do full relational queries on your hledger data.
 
 Here we export all transactions to a database and run some queries:

@@ -1,5 +1,7 @@
 # How to record journal entries
 
+Last updated: 2023
+
 There are many ways to create hledger journal entries.
 Here are some options:
 

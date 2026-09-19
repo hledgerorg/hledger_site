@@ -1,5 +1,7 @@
 # SM's 2023 setup
 
+Last updated: 2025
+
 A relatively simple, automated workflow using current hledger features. The Files layout will give you the gist of it. It is a journal first setup (journal files are primary, CSV files are disposable).
 
 ## Tools

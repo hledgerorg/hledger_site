@@ -1,5 +1,7 @@
 # How to figure out journal entries
 
+Last updated: 2023
+
 When you're facing an unfamiliar bookkeeping situation where the journal entries aren't clear, try this:
 
 1. Write down the real world events to be modelled, in detail

@@ -1,5 +1,7 @@
 # Rewrite commodity symbols
 
+Last updated: 2022
+
 Three ways to temporarily change a commodity symbol, eg to show "$" as "USD" in a report:
 
 ## Postprocess

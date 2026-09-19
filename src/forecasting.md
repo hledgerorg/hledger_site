@@ -1,5 +1,7 @@
 # Forecasting
 
+Last updated: 2021
+
 Some ways:
 
 - Enter future-dated transactions in your journal, commented out

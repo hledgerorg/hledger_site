@@ -1,5 +1,7 @@
 # 2 minute quick start
 
+Last updated: 2023
+
 Here is a sequence of examples, focussed on command-line usage:
 
 ```cli

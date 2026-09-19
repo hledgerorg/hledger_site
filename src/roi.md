@@ -1,5 +1,7 @@
 # Calculate return on investment
 
+Last updated: 2023
+
 A tutorial for the [roi](hledger.md#roi) (Return On Investment) command.
 
 ## Cash-only investments

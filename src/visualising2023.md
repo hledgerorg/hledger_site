@@ -1,5 +1,7 @@
 # Visualising discussion 2023
 
+Last updated: 2023
+
 Some notes excerpted from <https://www.reddit.com/r/plaintextaccounting/comments/121ka8m/how_do_you_visualize_drill_down_your_financial>.
 
 ### Allaman

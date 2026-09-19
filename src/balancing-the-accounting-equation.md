@@ -1,5 +1,7 @@
 # Balancing the accounting equation
 
+Last updated: 2025
+
 The [Accounting Equation](https://en.wikipedia.org/wiki/Accounting_equation) 
 states that Assets and Liabilities always match Equity. Eg: `A - L = E`. 
 

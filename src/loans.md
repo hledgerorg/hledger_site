@@ -1,5 +1,7 @@
 # Borrowing and Lending
 
+Last updated: 2020
+
 ## Lending, calculating interest manually
 
 0.41% interest per month (roughly equivalent to 5% APR), calculated manually:

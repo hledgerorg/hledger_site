@@ -1,5 +1,7 @@
 # Calculate unrealized gain
 
+Last updated: 2021
+
 This is a guide on calculating the unrealized capital gain/loss of investments,
 using the `balance --gain` report.
 

@@ -1,5 +1,7 @@
 # Exporting from hledger
 
+Last updated: 2025
+
 A number of hledger reports support multiple output formats, such as plain text, HTML, JSON, beancount, or SQL.
 There are also tabular formats such as CSV, TSV, and FODS.
 See [hledger:&nbsp;Output&nbsp;format][output format] for full details.

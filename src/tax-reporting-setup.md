@@ -1,5 +1,7 @@
 # A tax reporting setup
 
+Last updated: 2024
+
 Tax prep is done in a subdirectory of the year.:
 
     finance/

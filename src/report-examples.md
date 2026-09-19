@@ -1,5 +1,7 @@
 # Report examples
 
+Last updated: 2024
+
 There are some [example reports on the home page](index.md#a-quick-example).
 
 Here are some more example reports using the [bcexample journal][bcexample] from beancount:

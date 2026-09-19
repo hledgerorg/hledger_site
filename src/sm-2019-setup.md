@@ -1,5 +1,7 @@
 # SM's 2019 setup
 
+Last updated: 2025
+
 Some notes on my setup circa 2019 and later.
 
 - Author:       Simon Michael

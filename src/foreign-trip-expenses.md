@@ -1,5 +1,7 @@
 # Foreign trip expenses
 
+Last updated: 2019
+
 From https://www.reddit.com/r/plaintextaccounting/comments/9r9cfj/beancount_price_and_cost :
 
 > 1. Before going to vacation to Europe, I borrowed 350 EUR, cash.

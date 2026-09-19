@@ -1,5 +1,7 @@
 # hledger and just
 
+Last updated: 2024
+
 <https://github.com/casey/just> is a cross platform task runner -
 like [make](https://en.wikipedia.org/wiki/Make_(software)),
 but easier and more suitable for running commands (and more cross platform).

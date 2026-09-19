@@ -1,5 +1,7 @@
 # Invoicing
 
+Last updated: 2025
+
 Freelancers and businesses send invoices to clients to request payment.
 
 See [common journal entries](common-journal-entries.md) and

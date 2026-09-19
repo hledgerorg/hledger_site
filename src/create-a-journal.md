@@ -1,5 +1,7 @@
 # Create a journal
 
+Last updated: 2023
+
 See also:
 [Input](hledger.md#input) and
 [Setting LEDGER_FILE](hledger.md#setting-ledger_file) and

@@ -1,5 +1,7 @@
 # Tutorial: Import CSV data
 
+Last updated: 2025
+
 hledger has a powerful CSV converter built in. After saving a few
 declarations in a "CSV rules file", it can read transactions from
 almost any CSV file. This is described in detail in the [hledger manual][csv format],

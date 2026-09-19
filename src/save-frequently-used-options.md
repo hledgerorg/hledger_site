@@ -1,5 +1,7 @@
 # Save frequently used options
 
+Last updated: 2022
+
 You can save frequently used options and arguments in an 
 [argument file](hledger.md#argument-files), one per
 line, then reuse them via a @FILE argument on the command line.

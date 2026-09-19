@@ -1,5 +1,7 @@
 # 10 minute quick start
 
+Last updated: 2025
+
 [full website]:   https://hledger.org
 [hledger]:        hledger.md
 [hledger manual]: hledger.md

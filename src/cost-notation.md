@@ -1,5 +1,7 @@
 # Cost notation
 
+Last updated: 2023
+
 Here is a little more background on cost notations, 
 moved here from [hledger manual > Cost reporting](https://hledger.org/dev/hledger.html#cost-reporting).
 

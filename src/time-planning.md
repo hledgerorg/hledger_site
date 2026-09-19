@@ -1,5 +1,7 @@
 # Time planning
 
+Last updated: 2023
+
 Some notes relating to time tracking and budgeting.
 
 ## See also

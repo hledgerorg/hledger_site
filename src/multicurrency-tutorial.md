@@ -1,5 +1,7 @@
 # Multicurrency tutorial
 
+Last updated: 2018
+
 *Currency handling in PTA tools is a big topic. 
 I wrote this tutorial in 2018.
 It is focussed on simple journal entries with implicit currency conversion.
