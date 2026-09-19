@@ -3,8 +3,8 @@
 Last updated: 2020
 
 Here's a tutorial on tracking "investments" - stocks, cryptocurrencies, and similar - in hledger.
-This is a more in-depth version of [Tracking investments](track-investments.md),
-using hledger 1.17; older hledger versions may not match this doc.
+Since then, hledger 2.x (preview) has gained built-in [lot tracking](hledger.md#lot-reporting),
+which automates much of what is done by hand below; the manual methods here still work.
 I hope to teach you a little basic investment accounting, 
 or a little about doing it with hledger (and other PTA tools), 
 or a little of both.
@@ -626,9 +626,9 @@ instead of just `hledger is`.
 
 
 [cost]:                  hledger.html#costs
-[market price]:          hledger.html#market-prices
+[market price]:          hledger.html#p-directive
 [valuation]:             hledger.html#valuation
-[end dates]:             hledger.html#report-start-end-date
+[end dates]:             hledger.html#report-start--end-date
 [balance assertion]:     hledger.html#balance-assertions
 [unbalanced posting]:    hledger.html#virtual-postings
 

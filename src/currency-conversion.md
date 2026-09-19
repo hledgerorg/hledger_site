@@ -1,7 +1,5 @@
 # Currency conversion
 
-Last updated: 2025
-
 *I wrote two currency conversion explainers in 2021, now both combined on this page, showing different ways of recording conversions.
 See [Cookbook > Multiple currencies](doc.md#multiple-currencies) for more.*
 
@@ -302,3 +300,49 @@ The @ method:
 
 However, hledger nowadays can convert between these styles on the fly, using `--infer-equity` or (with some restrictions) `--infer-costs`. 
 See the [hledger manual > Cost reporting](hledger.md#cost-reporting) for the latest on this.
+
+## Four ways to record a conversion, compared
+
+(From the former "Cost notation" page.)
+To summarise, there are four ways to record a conversion of 100 EUR to 120 USD:
+
+**With implicit cost:**
+```journal
+2021-01-01
+    assets:cash    -100 EUR
+    assets:cash     120 USD
+```
+hledger assumes the transaction is balanced and infers the rate, 1 EUR = 1.20 USD (`hledger print -x` shows it).
+Concise, but with little error checking: typos in amounts or commodity symbols may go unnoticed,
+the rate is not visible, and the accounting equation is disturbed unless you add `--infer-equity`.
+`hledger check commodities` catches mistyped symbols; `hledger check balancednoautoconversion` (or `-s`) forbids implicit conversions entirely.
+
+**With explicit cost:**
+```journal
+2021-01-01
+    assets:cash        -100 EUR @ 1.20 USD
+    assets:cash         120 USD
+```
+Still concise, the rate is visible, and hledger checks that 100 * 1.20 = 120.
+The accounting equation is still disturbed unless you add `--infer-equity`.
+
+**With equity postings:**
+```journal
+2021-01-01
+    assets:cash        -100 EUR
+    equity:conversion   100 EUR
+    equity:conversion  -120 USD
+    assets:cash         120 USD
+```
+Standard double entry bookkeeping: the equation balances, and conversions and related gains/losses are tracked in one place.
+More verbose, the rate is not obvious, and cost reporting needs `--infer-costs`.
+
+**With equity postings and explicit cost:**
+```journal
+2021-01-01
+    assets:cash        -100 EUR @ 1.20 USD
+    equity:conversion   100 EUR
+    equity:conversion  -120 USD
+    assets:cash         120 USD
+```
+The most complete: balanced, rate visible, most error checking. Also the most verbose, and not compatible with Ledger.

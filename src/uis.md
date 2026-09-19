@@ -50,7 +50,7 @@ Last updated: 2026-04
 
 **Web**
 
-- **[hledger-web]** - a simple web app. See also: [hledger-web tips](hledger-web-tips.md)
+- **[hledger-web]** - a simple web app.
 - [hledger-webuix] one-page local web app for hledger viewing, adding, editing (html+js, 2026)
 - [ledgeraccounting] web UI for hledger: data entry, basic reports and budgets (python+js, 2018)
 - [muhasib-e-hledger] web UI for hledger reports (rust, 2024)

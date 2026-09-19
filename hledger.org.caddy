@@ -144,6 +144,13 @@ hledger.org {
 	redir /FUNDING.html /FINANCE.html
 	redir /JUST-MAKE-SHAKE.html /DEVWORKFLOWS.html
 	redir /forecasting.html /budgeting.html#forecasting
+	redir /2-minute-quick-start.html /5-minute-quick-start.html#as-a-terminal-session
+	redir /10-minute-quick-start.html /hbe.html
+	redir /cost-notation.html /currency-conversion.html#four-ways-to-record-a-conversion-compared
+	redir /track-investments.html /investments.html
+	redir /track-changes-with-version-control.html /workflows.html#version-control
+	redir /hledger-web-tips.html /hledger-web.html#editing-uploading-downloading
+	redir /how-to-figure-out.html /how-to-record.html#how-to-figure-out-unfamiliar-entries
 	redir /README.html /dev-README.html
 	redir /addons.html /scripts.html
 	redir /discuss /support.html

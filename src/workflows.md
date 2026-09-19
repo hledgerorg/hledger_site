@@ -119,6 +119,24 @@ Some downloading helpers can be found at
 <https://plaintextaccounting.org/#data-importconversion> (search for "download").
 
 
+## Version control
+
+It's optional, but keeping your journal files in a version control system
+is a very useful way to track changes, undo mistakes, and keep backups. Eg with git:
+
+```cli
+$ git init                                     # start tracking changes in this directory
+$ git add main.journal                         # start tracking this file
+$ git commit -m 'first commit' main.journal    # save a snapshot
+$ git status; git diff                         # see uncommitted changes
+$ git commit -m 'updates' main.journal         # save another snapshot
+$ git log                                      # see past commits
+```
+
+Other tools such as darcs or jj work just as well.
+Committing after each reconciliation or import is a good habit;
+and you can commit report output too, to detect changes (see [Checking for errors](checking-for-errors.md#compare-report-output)).
+
 ## Custom workflows
 
 ### SM

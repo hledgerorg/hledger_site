@@ -27,8 +27,6 @@ hledger has lots of docs, covering different needs.
 **Other intros:**
 
 - [A quick example](index.md#a-quick-example) (on the home page)
-- [2 minute quick start](2-minute-quick-start.md) - a command line transcript
-- [10 minute quick start](10-minute-quick-start.md) - an older, longer overview
 - [hledger manual: Common tasks](hledger.md#common-tasks)
 - [hledger manual: Journal cheatsheet](hledger.md#journal-cheatsheet)
 - [Workflows](workflows.md)
@@ -157,16 +155,12 @@ Additional docs, tips, and notes, grouped by topic.
 - [Why hledger ?](why.md)
 - [FAQ](faq.md)
 - [Tips for learning hledger](learn.md)
-- [2 minute quick start](2-minute-quick-start.md)
 - [5 minute quick start](5-minute-quick-start.md)
-- [10 minute quick start](10-minute-quick-start.md)
 
 ### Data entry
 - [Create a journal](create-a-journal.md)
 - [How to record journal entries](how-to-record.md)
-- [How to figure out journal entries](how-to-figure-out.md)
 - [Common journal entries](common-journal-entries.md)
-- [Cost notation](cost-notation.md)
 - [Getting prices](prices.md)
 - [Tutorial: Import CSV data](import-csv.md)
 - [examples/](https://github.com/hledgerorg/hledger/tree/main/examples) - examples and snippets, old and new
@@ -224,7 +218,6 @@ Additional docs, tips, and notes, grouped by topic.
 
 ### Investing
 - [Track investments (2020)](investments.md)
-- [Track investments (2017)](track-investments.md)
 - [Calculate unrealized gain](gain.md)
 - [Calculate return on investment](roi.md)
 - [hledger manual: Cost reporting](hledger.md#cost-reporting)
@@ -247,7 +240,6 @@ Additional docs, tips, and notes, grouped by topic.
 
 ### User interfaces
 - [User Interfaces](uis.md)
-- [hledger-web tips](hledger-web-tips.md)
 - [Mobile apps](mobile.md)
 - [PTA: Software: UI, console](https://plaintextaccounting.org/#ui-console)
 
@@ -272,7 +264,6 @@ Additional docs, tips, and notes, grouped by topic.
 - [SM's 2019 setup](sm-2019-setup.md)
 - [SM's 2023 setup](sm-2023-setup.md)
 - [SM's time & task dashboard](time-and-task-dashboard.md)
-- [Track changes with version control](track-changes-with-version-control.md)
 - [Backups](https://en.wikipedia.org/wiki/Backup), the 3-2-1 rule
 
 ## See also...
