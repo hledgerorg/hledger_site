@@ -106,3 +106,14 @@ summary {
   margin-left:0;
   padding-left:0;
 }
+
+/* Sidebar group headings (draft chapters, which fold/unfold their pages):
+   use the regular link colour instead of the dim "non-existent page" colour,
+   and look clickable (site.js makes clicking them toggle the fold). */
+#mdbook-sidebar .chapter-link-wrapper > span {
+  color: var(--sidebar-fg);
+  cursor: pointer;
+}
+#mdbook-sidebar .chapter-link-wrapper > span:hover {
+  color: var(--sidebar-active);
+}

@@ -73,3 +73,14 @@ function highlightCurrentDocVersion() {
     });
   });
 }
+
+// Make the sidebar's group headings (draft chapters) fold/unfold when their text is clicked,
+// not just when their arrow is clicked. (mdbook's own handler is on the arrow only.)
+// Guarded, since this file is included twice and a doubled handler would toggle twice.
+if (!window.hledgerSidebarGroupsClickable) {
+  window.hledgerSidebarGroupsClickable = true;
+  document.addEventListener('click', function (e) {
+    var heading = e.target.closest('#mdbook-sidebar .chapter-link-wrapper > span');
+    if (heading) heading.parentElement.parentElement.classList.toggle('expanded');
+  });
+}
