@@ -126,7 +126,6 @@
   - [SM's 2019 setup](sm-2019-setup.md)
   - [SM's 2023 setup](sm-2023-setup.md)
   - [SM's time & task dashboard](time-and-task-dashboard.md)
-- [News](news.md)
 
 # DEVELOPER DOCS
 
@@ -172,3 +171,4 @@
   - [CLIMATE](CLIMATE.md)
   - [FINANCE](FINANCE.md)
   - [CREDITS](CREDITS.md)
+  - [This Week In Hledger 2023-2024](news.md)

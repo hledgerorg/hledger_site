@@ -1,9 +1,8 @@
-# News
+# This Week In Hledger 2023-2024
 
-Share your hledger/PTA user notes, dev news, achievements or experiences in the [hledger matrix chat](support.md),
-every Friday morning or any time, tagged with `TWIH:`.
-
-See also: [Release notes](relnotes.md), [Recent discussion](https://hledger.org/support.html).
+A weekly digest of hledger project news, user notes and community happenings,
+compiled from October 2023 to August 2024.
+For current news, see the [Release notes](relnotes.md) and [Support](support.md) channels.
 
 ---
 
