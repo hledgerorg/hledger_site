@@ -153,6 +153,7 @@ hledger.org {
 	redir /how-to-figure-out.html /how-to-record.html#how-to-figure-out-unfamiliar-entries
 	redir /REPOS.html /FILES.html#repos
 	redir /EXAMPLES.html /FILES.html#sample-journals
+	redir /MOCKUPS.html /dev.html
 	redir /README.html /dev-README.html
 	redir /addons.html /scripts.html
 	redir /discuss /support.html

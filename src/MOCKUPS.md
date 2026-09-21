@@ -1,1 +1,0 @@
-../../doc/MOCKUPS.md
