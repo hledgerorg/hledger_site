@@ -6,8 +6,8 @@ The current preview release is **1.99.4** (2.0 preview 4).
 Both versions are suitable for daily use. hledger 1 is receiving only essential fixes;
 the hledger 2 previews are strictly better, highly compatible,
 and by using the latest you help make the final 2.0 release (coming later this year) better.
-We also have some notes on AI usage.
-See the full **[release notes](relnotes.md)** for all releases.
+See the full **[release notes](relnotes.md)** for all releases,
+and our notes on [AI usage](AI.md) in hledger development.
 
 You can install hledger by any of these methods:
 
@@ -29,11 +29,11 @@ or use a download tool like [eget](https://github.com/zyedidia/eget?tab=readme-o
 
 [![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.52.4-brightgreen.svg)][release binaries]
 `eget hledgerorg/hledger --all`\
-[![hledger preview binaries](https://img.shields.io/badge/hledger_release_binaries-1.99.4-brightgreen.svg)][release binaries]
+[![hledger preview binaries](https://img.shields.io/badge/hledger_preview_binaries-1.99.4-brightgreen.svg)][preview binaries]
 `eget hledgerorg/hledger --all --pre-release`
 
-[release binaries]:    https://github.com/hledgerorg/hledger/releases/tag/1.52.4
-[prerelease binaries]: https://github.com/hledgerorg/hledger/releases/tag/nightly
+[release binaries]: https://github.com/hledgerorg/hledger/releases/tag/1.52.4
+[preview binaries]: https://github.com/hledgerorg/hledger/releases/tag/1.99.4
 
 ## Packaged binaries
 
@@ -236,12 +236,6 @@ Eg don't build it in a WSL or MINGW window if you plan to use it in CMD or Power
 Possible issues:
 - [windows: cross-environment non-ascii display issues](https://github.com/hledgerorg/hledger/issues/961#issuecomment-471229644)
 
-### On Nix
-
-Possible issues:
-- [nix: nix install on linux can fail with "cloning builder process: Operation not permitted"](https://github.com/hledgerorg/hledger/issues/1030)
-- [nix: on Linux, nix-installed hledger won't handle non-ascii data](https://github.com/hledgerorg/hledger/issues/1033)
-
 ### On Android
 
 Here's 
@@ -390,11 +384,11 @@ If you use the bash or zsh shells, you can set up context-sensitive auto-complet
 
     If not, eg because your system's hledger package does not yet include the bash completions, or if they are not up to date, 
     or if you have installed hledger by other means, then install the 
-    [latest hledger bash completions](https://raw.githubusercontent.com/hledgerorg/hledger/1.50-branch/hledger/shell-completion/hledger-completion.bash)
+    [latest hledger bash completions](https://raw.githubusercontent.com/hledgerorg/hledger/main/hledger/shell-completion/hledger-completion.bash)
     yourself, under your XDG_DATA_HOME directory. Eg:
 
     ```
-    curl https://raw.githubusercontent.com/hledgerorg/hledger/1.50-branch/hledger/shell-completion/hledger-completion.bash \
+    curl https://raw.githubusercontent.com/hledgerorg/hledger/main/hledger/shell-completion/hledger-completion.bash \
       -o ~/.local/share/bash-completion/completions/hledger --create-dirs
     ```
 
@@ -428,13 +422,6 @@ Nicely done! Now see [Docs](doc.md), or come to the [#hledger chat](support.md)
 where we'll gladly share tips or receive your feedback.
 
 
-[ghc]:             https://www.haskell.org/ghc
-[bash]:            https://en.wikipedia.org/wiki/Bash_%28Unix_shell%29
-[make]:            https://www.gnu.org/software/make/
 [ghcup]:           https://haskell.org/ghcup
 [stack]:           https://docs.haskellstack.org/en/stable/
-[cabal]:           https://cabal.readthedocs.io/en/stable/
-[hledger-install]: https://github.com/hledgerorg/hledger/blob/main/hledger-install/hledger-install.sh
-[WSL]:             https://en.wikipedia.org/wiki/Windows_Subsystem_for_Linux
-[nix]:             https://nixos.org
 [git]:             https://en.wikipedia.org/wiki/Git
