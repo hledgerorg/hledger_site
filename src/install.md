@@ -126,132 +126,6 @@ Sandstorm (web) \
 
 
 
-## Build from source
-
-Building hledger requires the GHC compiler and either the stack or cabal build tool
-which you can install with your package manager (brew, apt, winget..), with [ghcup], or with [stack] (simplest).
-Or, you can use docker. All this may need perhaps 4G of RAM and 4G or more of disk space.
-
-### Building outside the source tree
-
-You can use stack or cabal to build hledger from the packages on Hackage,
-without first getting a copy of the source with git.
-With stack, use the current Stackage nightly snapshot, which includes all of the current hledger packages
-(the LTS snapshot may lag behind):
-
-    stack install hledger hledger-ui hledger-web --resolver nightly
-
-With cabal (tested with ghc 9.14.1), extra flags are currently needed to work around dependency problems:
-
-    cabal install hledger hledger-ui hledger-web --constraint 'ram<0' --allow-newer containers --overwrite-policy=always
-
-If these fail, get a copy of the hledger source and build from there, as described below.
-
-### On Mac
-
-You will need the XCode Command Line Tools. Homebrew or macports will probably also be helpful.
-
-Possible issues:
-- [mac m1: ffitarget_arm64.h file not found](https://gitlab.haskell.org/ghc/ghc/-/issues/20592)
-
-
-### On Unix/Linux
-
-You will need 
-
-1. Certain C libraries, to avoid build errors like "cannot find -ltinfo".
-   The exact package names will be specific to your system, but here are some likely install commands:
-   - Debian-based systems: `apt install libgmp-dev libncurses-dev zlib1g-dev`
-   - Older Debian systems: `apt install libgmp3-dev libncurses5-dev zlib1g-dev`
-   - Redhat-based systems: `dnf install gmp-devel ncurses-devel zlib-devel`
-   - Arch: `pacman -S gmp ncurses zlib`
-   - Alpine: `apk add gmp-dev ncurses-dev zlib-dev`
-   - openSUSE: `zypper install gmp-devel ncurses-devel zlib-devel`
-   - FreeBSD: `pkg install gmp ncurses`
-
-2. A configured system locale that specifies a text encoding;
-  otherwise you'll see text decoding errors when processing non-ascii characters.
-  For example, on most unix systems `echo $LANG` should show something like `en_US.UTF-8` or `zh_CN.GB2312` or `C.UTF-8` - 
-  it should not be just `C`, or unset.
-  This is discussed more in [Text encoding](#text-encoding), below.
-
-Get the [hledger source code](https://github.com/hledgerorg/hledger/commits/main) with [git](https://git-scm.com):
-
-    git clone https://github.com/hledgerorg/hledger
-    cd hledger
-    git checkout 1.52.4   # switch to the latest release tag (optional)
-
-Then build and install with stack:
-
-    stack update; stack install
-
-or with cabal:
-
-    cabal update; cabal install all:exes
-
-or with docker:
-
-    cd docker; ./build.sh   # or build-dev.sh to keep build artifacts
-
-Possible issues:
-- [arch: haskell build advice from Arch wiki](https://wiki.archlinux.org/index.php/Haskell)
-- [openbsd 6: exec: permission denied](https://deftly.net/posts/2017-10-12-using-cabal-on-openbsd.html)
-- [openbsd: stack install tips](https://github.com/commercialhaskell/stack/issues/3313#issuecomment-570353913)
-
-### On Windows
-
-These notes are for Windows 11.
-On Windows, stack is the easiest way to get the haskell tools.
-(Though if you are on a Windows ARM machine, stack will install slow x86_64 versions of the tools, and build slow x86_64 hledger binaries.)
-
-First, apply all windows updates (to get the latest TLS certificates for network requests).
-
-Install [stack] - in a command or powershell window, run:
-
-    winget install -e --id commercialhaskell.stack
-
-Install [git]:
-
-    winget install -e --id Git.Git
-
-Get the hledger source:
-
-    git clone https://github.com/hledgerorg/hledger
-    cd hledger
-    git checkout 1.52.4   # switch to the latest release tag (optional)
-
-Build and install hledger:
-
-    stack update
-    stack install
-
-On Windows, this may die repeatedly with a "... permission denied (Access is denied.)" error; 
-we [don't know why](https://github.com/commercialhaskell/stack/issues/2426).
-Just run it again to continue (press up arrow, enter).
-
-On Windows, things work best if you build in the environment where you will use hledger.
-Eg don't build it in a WSL or MINGW window if you plan to use it in CMD or Powershell.
-
-Possible issues:
-- [windows: cross-environment non-ascii display issues](https://github.com/hledgerorg/hledger/issues/961#issuecomment-471229644)
-
-### On Android
-
-Here's 
-[how to build hledger on Android with Termux](https://libera.ems.host/_matrix/media/r0/download/libera.chat/51835530d2b9eed094096d8a2c79e03dda2c35fb),
-if your phone has plenty of memory.
-
-### Build tips
-
-- Building the hledger tools and possibly all their dependencies could take anywhere from a minute to an hour.
-- On machines with less than 4G of RAM, the build may use swap space and 
-  take much longer (overnight), or die part-way through. 
-  In such low memory situations, try adding `-j1` to the stack/cabal install command, 
-  and retry a few times, or [ask](support.md) for more tips.
-- You could build just the hledger CLI to use less time and space: instead of `stack install`, run `stack install hledger`
-- It's ok to kill a build and rerun the command later; you won't lose progress.
-- You can add `--dry-run` to the install command to see how much building remains.
-
 ## Check your setup
 
 With modern hledger versions, you should now run:
@@ -427,6 +301,132 @@ Then `hledger <TAB>` should list hledger's commands.
 hledger completions are [shipped with fish](https://github.com/fish-shell/fish-shell/blob/master/share/completions/hledger.fish);
 there is nothing to install.
 
+
+## Build from source
+
+Building hledger requires the GHC compiler and either the stack or cabal build tool
+which you can install with your package manager (brew, apt, winget..), with [ghcup], or with [stack] (simplest).
+Or, you can use docker. All this may need perhaps 4G of RAM and 4G or more of disk space.
+
+### Building outside the source tree
+
+You can use stack or cabal to build hledger from the packages on Hackage,
+without first getting a copy of the source with git.
+With stack, use the current Stackage nightly snapshot, which includes all of the current hledger packages
+(the LTS snapshot may lag behind):
+
+    stack install hledger hledger-ui hledger-web --resolver nightly
+
+With cabal (tested with ghc 9.14.1), extra flags are currently needed to work around dependency problems:
+
+    cabal install hledger hledger-ui hledger-web --constraint 'ram<0' --allow-newer containers --overwrite-policy=always
+
+If these fail, get a copy of the hledger source and build from there, as described below.
+
+### On Mac
+
+You will need the XCode Command Line Tools. Homebrew or macports will probably also be helpful.
+
+Possible issues:
+- [mac m1: ffitarget_arm64.h file not found](https://gitlab.haskell.org/ghc/ghc/-/issues/20592)
+
+
+### On Unix/Linux
+
+You will need 
+
+1. Certain C libraries, to avoid build errors like "cannot find -ltinfo".
+   The exact package names will be specific to your system, but here are some likely install commands:
+   - Debian-based systems: `apt install libgmp-dev libncurses-dev zlib1g-dev`
+   - Older Debian systems: `apt install libgmp3-dev libncurses5-dev zlib1g-dev`
+   - Redhat-based systems: `dnf install gmp-devel ncurses-devel zlib-devel`
+   - Arch: `pacman -S gmp ncurses zlib`
+   - Alpine: `apk add gmp-dev ncurses-dev zlib-dev`
+   - openSUSE: `zypper install gmp-devel ncurses-devel zlib-devel`
+   - FreeBSD: `pkg install gmp ncurses`
+
+2. A configured system locale that specifies a text encoding;
+  otherwise you'll see text decoding errors when processing non-ascii characters.
+  For example, on most unix systems `echo $LANG` should show something like `en_US.UTF-8` or `zh_CN.GB2312` or `C.UTF-8` - 
+  it should not be just `C`, or unset.
+  This is discussed more in [Text encoding](#text-encoding), above.
+
+Get the [hledger source code](https://github.com/hledgerorg/hledger/commits/main) with [git](https://git-scm.com):
+
+    git clone https://github.com/hledgerorg/hledger
+    cd hledger
+    git checkout 1.52.4   # switch to the latest release tag (optional)
+
+Then build and install with stack:
+
+    stack update; stack install
+
+or with cabal:
+
+    cabal update; cabal install all:exes
+
+or with docker:
+
+    cd docker; ./build.sh   # or build-dev.sh to keep build artifacts
+
+Possible issues:
+- [arch: haskell build advice from Arch wiki](https://wiki.archlinux.org/index.php/Haskell)
+- [openbsd 6: exec: permission denied](https://deftly.net/posts/2017-10-12-using-cabal-on-openbsd.html)
+- [openbsd: stack install tips](https://github.com/commercialhaskell/stack/issues/3313#issuecomment-570353913)
+
+### On Windows
+
+These notes are for Windows 11.
+On Windows, stack is the easiest way to get the haskell tools.
+(Though if you are on a Windows ARM machine, stack will install slow x86_64 versions of the tools, and build slow x86_64 hledger binaries.)
+
+First, apply all windows updates (to get the latest TLS certificates for network requests).
+
+Install [stack] - in a command or powershell window, run:
+
+    winget install -e --id commercialhaskell.stack
+
+Install [git]:
+
+    winget install -e --id Git.Git
+
+Get the hledger source:
+
+    git clone https://github.com/hledgerorg/hledger
+    cd hledger
+    git checkout 1.52.4   # switch to the latest release tag (optional)
+
+Build and install hledger:
+
+    stack update
+    stack install
+
+On Windows, this may die repeatedly with a "... permission denied (Access is denied.)" error; 
+we [don't know why](https://github.com/commercialhaskell/stack/issues/2426).
+Just run it again to continue (press up arrow, enter).
+
+On Windows, things work best if you build in the environment where you will use hledger.
+Eg don't build it in a WSL or MINGW window if you plan to use it in CMD or Powershell.
+
+Possible issues:
+- [windows: cross-environment non-ascii display issues](https://github.com/hledgerorg/hledger/issues/961#issuecomment-471229644)
+
+### On Android
+
+Here's 
+[how to build hledger on Android with Termux](https://libera.ems.host/_matrix/media/r0/download/libera.chat/51835530d2b9eed094096d8a2c79e03dda2c35fb),
+if your phone has plenty of memory.
+
+### Build tips
+
+- Building the hledger tools and possibly all their dependencies could take anywhere from a minute to an hour.
+- On machines with less than 4G of RAM, the build may use swap space and 
+  take much longer (overnight), or die part-way through. 
+  In such low memory situations, try adding `-j1` to the stack/cabal install command, 
+  and retry a few times, or [ask](support.md) for more tips.
+- You could build just the hledger CLI to use less time and space: instead of `stack install`, run `stack install hledger`
+- It's ok to kill a build and rerun the command later; you won't lose progress.
+- You can add `--dry-run` to the install command to see how much building remains.
 
 ## Next steps
 
