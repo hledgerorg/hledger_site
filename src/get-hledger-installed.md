@@ -11,31 +11,37 @@ by copy/pasting the appropriate command below into a [terminal] window.
 
 On a Linux machine with an intel processor:
 ```
-curl -sL https://github.com/hledgerorg/hledger/releases/download/1.50/hledger-linux-x64.tar.gz | tar -xzv -f- -C/usr/local/bin hledger hledger-ui hledger-web
+curl -sL https://github.com/hledgerorg/hledger/releases/latest/download/hledger-linux-x64.tar.gz | tar -xzv -f- -C/usr/local/bin hledger hledger-ui hledger-web
+```
+
+On a Linux machine with an ARM processor:
+```
+curl -sL https://github.com/hledgerorg/hledger/releases/latest/download/hledger-linux-arm64.tar.gz | tar -xzv -f- -C/usr/local/bin hledger hledger-ui hledger-web
 ```
 
 On a modern mac with an ARM ("M") processor:
 ```
-curl -sL https://github.com/hledgerorg/hledger/releases/download/1.50/hledger-mac-arm64.tar.gz | tar -xzv -f- -C/usr/local/bin hledger hledger-ui hledger-web
+curl -sL https://github.com/hledgerorg/hledger/releases/latest/download/hledger-mac-arm64.tar.gz | tar -xzv -f- -C/usr/local/bin hledger hledger-ui hledger-web
 ```
 
 On an older mac with an intel processor:
 ```
-curl -sL https://github.com/hledgerorg/hledger/releases/download/1.50/hledger-mac-x64.tar.gz | tar -xzv -f- -C/usr/local/bin hledger hledger-ui hledger-web
+curl -sL https://github.com/hledgerorg/hledger/releases/latest/download/hledger-mac-x64.tar.gz | tar -xzv -f- -C/usr/local/bin hledger hledger-ui hledger-web
 ```
 
 On a Windows machine with an intel or ARM processor:\
 (To get a terminal window, type: Windows-R, powershell, Return)
 ```
 cd ~
-curl https://github.com/hledgerorg/hledger/releases/download/1.50/hledger-windows-x64.zip -OutFile hledger-windows-x64.zip
+curl https://github.com/hledgerorg/hledger/releases/latest/download/hledger-windows-x64.zip -OutFile hledger-windows-x64.zip
 Expand-Archive hledger-windows-x64.zip -Force -DestinationPath AppData\Roaming\local\bin
 ```
 
-The end result should be that you can run `hledger --version` and see a recent version:
+The end result should be that you can run `hledger --version` and see the current release version
+(the one shown at the top of the [Install](install.md) page):
 ```
 $ hledger --version
-hledger 1.50 ...
+hledger 1.52.4 ...
 ```
 
 The examples in this book assume you are using this latest hledger version.
