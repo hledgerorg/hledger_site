@@ -151,6 +151,8 @@ hledger.org {
 	redir /track-changes-with-version-control.html /workflows.html#version-control
 	redir /hledger-web-tips.html /hledger-web.html#editing-uploading-downloading
 	redir /how-to-figure-out.html /how-to-record.html#how-to-figure-out-unfamiliar-entries
+	redir /REPOS.html /FILES.html#repos
+	redir /EXAMPLES.html /FILES.html#sample-journals
 	redir /README.html /dev-README.html
 	redir /addons.html /scripts.html
 	redir /discuss /support.html
