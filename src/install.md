@@ -360,7 +360,7 @@ $OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Obj
 
 ### Shell completions
 
-If you use the bash or zsh shells, you can set up context-sensitive auto-completions for hledger command lines.
+If you use the bash, zsh or fish shells, you can set up context-sensitive auto-completions for hledger command lines.
 (Here's how to [contribute other shells](https://github.com/hledgerorg/hledger/tree/main/hledger/shell-completion#completions-for-other-shells).)
 
 #### bash
@@ -411,8 +411,21 @@ When a completion includes special characters, backslashes will be inserted auto
 
 #### zsh
 
-1. Ensure that [zsh-completions](https://github.com/zsh-users/zsh-completions/tree/0adf2f053ece56262ad8a173678add97c8ca4042) is installed and enabled.
-2. ? [discussion](https://www.reddit.com/r/plaintextaccounting/comments/1iqqpgg/hledger_shell_completions_for_zsh/)
+hledger completions for zsh are provided by the [zsh-completions](https://github.com/zsh-users/zsh-completions) project
+(they may lag behind the latest hledger release).
+
+1. Install zsh-completions with your package manager (eg `brew install zsh-completions` or `pacman -S zsh-completions`),
+   and follow its instructions to add its directory to your `fpath` before `compinit` runs.
+   Or, download just [_hledger](https://raw.githubusercontent.com/zsh-users/zsh-completions/master/src/_hledger)
+   into a directory that is already in your `fpath`.
+2. Open a new shell, or run `rm -f ~/.zcompdump; compinit`, so that zsh notices the new completion.
+
+Then `hledger <TAB>` should list hledger's commands.
+
+#### fish
+
+hledger completions are [shipped with fish](https://github.com/fish-shell/fish-shell/blob/master/share/completions/hledger.fish);
+there is nothing to install.
 
 
 ## Next steps
