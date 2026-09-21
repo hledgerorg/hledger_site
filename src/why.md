@@ -303,8 +303,8 @@ and learn through hands-on practice.
 [cashflow]:                   hledger.md#cashflow
 [depth limiting]:             hledger.md#depth-limiting
 [output format]:              hledger.md#output-format
-[download]:                   install.md#binary-packages
-[build]:                      install.md#building-from-source
+[download]:                   install.md#official-binaries
+[build]:                      install.md#build-from-source
 [actively maintained]:        https://github.com/hledgerorg/hledger/graphs/contributors
 [releases]:                   https://hledger.org/release-notes
 [plain text accounting]:      http://plaintextaccounting.org

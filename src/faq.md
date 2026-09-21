@@ -594,7 +594,7 @@ Here's a [suggestion](https://groups.google.com/g/beancount/c/iJirO6GOMgU/m/8VDg
 ### Where can I find hledger CSV rules for my financial institutions ?
 
 Look for a suitable rules file in the [examples/csv/](https://github.com/hledgerorg/hledger/tree/main/examples/csv) directory on github.
-Or you can [get the hledger source](https://hledger.org/install.html#build-in-a-source-checkout) and look in examples/csv/.
+Or you can [get the hledger source](install.md#build-from-source) and look in examples/csv/.
 
 If your financial institution is not there yet, please use these for inspiration,
 ask in the chat for help, and perhaps send a pull request contributing your new rules.

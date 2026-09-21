@@ -365,7 +365,7 @@ $OutputEncoding = [console]::InputEncoding = [console]::OutputEncoding = New-Obj
 ```
 
 
-### Completions
+### Shell completions
 
 If you use the bash or zsh shells, you can set up context-sensitive auto-completions for hledger command lines.
 (Here's how to [contribute other shells](https://github.com/hledgerorg/hledger/tree/main/hledger/shell-completion#completions-for-other-shells).)
