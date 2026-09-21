@@ -428,10 +428,9 @@ nightly.hledger.org {
 	redir https://github.com/hledgerorg/hledger/releases/nightly
 }
 issues.hledger.org {
-	# all issues (bugs, PRs, etc)
-	#redir / https://github.com/hledgerorg/hledger/issues?q=is%3Aissue
-	# the ISSUES page
-	redir / https://hledger.org/ISSUES.html
+	# all open issues
+	redir / https://github.com/hledgerorg/hledger/issues
+	# the ISSUES page: https://hledger.org/ISSUES.html
 	# new generic issue form
 	redir /new https://github.com/hledgerorg/hledger/issues/new
 }

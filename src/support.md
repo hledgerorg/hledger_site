@@ -11,7 +11,7 @@
 | **[hledger mail list](https://list.hledger.org/)**      | usually fairly quiet
 | **[Mastodon #hledger](https://fosstodon.org/tags/hledger)**      | quick and with a wider reach
 | **[hledger bug tracker](https://bugs.hledger.org/)**    | for the hledger software
-| **[website bug tracker](https://github.com/hledgerorg/hledger_site/issues?utf8=%E2%9C%93&q=)** | for the hledger.org website
+| **[website bug tracker](https://github.com/hledgerorg/hledger_site/issues)** | for the hledger.org website
 | **[PTA forum](https://forum.plaintextaccounting.org/)** | good for longer hledger/PTA content and searchability
 | **[PTA reddit](https://reddit.com/r/plaintextaccounting/)** | consider using the forum instead
 
@@ -20,10 +20,9 @@
 The [#hledger matrix chat](https://matrix.hledger.org/) is the best place for quick help and feedback. (Element is a good client.) \
 The [#hledger IRC chat](https://irc.hledger.org/) is older but also available. \
 The [#plaintextaccounting matrix chat](https://matrix.to/#/#plaintextaccounting:matrix.org) and [#plaintextaccounting IRC chat](https://web.libera.chat/#plaintextaccounting) discuss all PTA apps.
-<!-- (To speak here, you might need to [register](https://libera.chat/guides/registration).) -->
 
 **Mail list**\
-The hledger mail list is on google groups, low traffic with about 200 subscribers. \
+The hledger mail list is on google groups, low traffic. \
 Read: [list.hledger.org](https://list.hledger.org/) \
 Join: [hledger+subscribe@googlegroups.com](mailto:hledger+subscribe@googlegroups.com) \
 Send: [hledger@googlegroups.com](mailto:hledger@googlegroups.com)
@@ -32,12 +31,12 @@ Send: [hledger@googlegroups.com](mailto:hledger@googlegroups.com)
 hledger issues are tracked in the hledger repos on github. There are some shortcut urls:\
 [bugs.hledger.org](https://bugs.hledger.org/) (bugs only) \
 [wishes.hledger.org](https://wishes.hledger.org/) (wishes only) \
-[issues.hledger.org](https://issues.hledger.org/) (all issues) \
+[issues.hledger.org](https://issues.hledger.org/) (all open issues) \
 [issues.hledger.org/new](https://issues.hledger.org/new) (report a new issue) \
 [prs.hledger.org](https://prs.hledger.org/) (all pull requests) \
-[open issues by category](ISSUES.html#open-issues) \
-[website issues](https://github.com/hledgerorg/hledger_site/issues?utf8=%E2%9C%93&q=) \
-[finance issues](https://github.com/hledgerorg/hledger_finance/issues?utf8=%E2%9C%93&q=)
+[open issues by category](ISSUES.md#open-issues) \
+[website issues](https://github.com/hledgerorg/hledger_site/issues) \
+[finance issues](https://github.com/hledgerorg/hledger_finance/issues)
 
 **Maintainer**\
 [simon@joyful.com](mailto:simon@joyful.com)
