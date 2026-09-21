@@ -21,7 +21,7 @@ and then, [check your setup](#check-your-setup).
 
 ## Official binaries
 
-Official release binaries for Linux, Mac, and Windows are provided in the hledger github repo.
+Official release binaries for Linux (x64, arm64), Mac (x64, arm64) and Windows (x64) are provided in the hledger github repo.
 You can click the badge below to install them manually,
 or copy-paste the install command from [Get hledger installed](get-hledger-installed.md),
 or use a download tool like [eget](https://github.com/zyedidia/eget?tab=readme-ov-file#how-to-get-eget):
@@ -42,7 +42,7 @@ Homebrew (Mac, Linux) <!-- chenrui ? --> \
 
 Windows \
 [![Scoop](https://repology.org/badge/version-for-repo/scoop/hledger.svg)](https://scoop.sh/#/apps?q=hledger) `scoop install hledger` \
-[![Winget](https://img.shields.io/badge/Winget_package-1.52.3-e05d44.svg)](https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/hledgerorg/hledger) `winget install -e --id simonmichael.hledger` \
+[![Winget](https://img.shields.io/badge/Winget_package-1.52.4-brightgreen.svg)](https://github.com/microsoft/winget-pkgs/tree/master/manifests/s/hledgerorg/hledger) `winget install -e --id simonmichael.hledger` \
 [![Chocolatey](https://repology.org/badge/version-for-repo/chocolatey/hledger.svg)](https://community.chocolatey.org/packages/hledger) `choco install hledger -y`
 <!--
 https://learn.microsoft.com/en-us/windows/package-manager/winget/#use-winget
@@ -101,12 +101,11 @@ Fedora ([more](https://src.fedoraproject.org/rpms/hledger)) \
 Gentoo <!-- ezzie --> \
 [![Gentoo](https://img.shields.io/badge/Gentoo_package-1.52.1-e05d44.svg)](https://gentoo.zugaina.org/Search?search=hledger) `eselect repository enable haskell && emerge hledger hledger-ui hledger-web`
 
-Raspberry Pi (unaudited) <!-- nobodyinperson --> \
-![Raspberry Pi release binaries](https://img.shields.io/badge/Raspberry_Pi_release_binaries-1.22.1-e05d44.svg)
-[hledger-linux-arm32v7.zip](https://github.com/hledgerorg/hledger/releases/tag/1.22.1) \
-![Raspberry Pi contributed binaries](https://img.shields.io/badge/Raspberry_Pi_contributed_binaries-1.18.1-e05d44.svg)
-[hledger-aarch64-manjaro.gz](https://github.com/hledgerorg/hledger/releases/tag/1.18.1) ,
-[hledger-armhf32-debian.gz](https://github.com/hledgerorg/hledger/releases/tag/1.18)
+Raspberry Pi \
+On a 64-bit OS, use the [official binaries](#official-binaries) for linux-arm64.
+On a 32-bit OS, there is an old release binary (unaudited): <!-- nobodyinperson --> \
+![Raspberry Pi 32-bit release binaries](https://img.shields.io/badge/Raspberry_Pi_32bit_release_binaries-1.22.1-e05d44.svg)
+[hledger-linux-arm32v7.zip](https://github.com/hledgerorg/hledger/releases/tag/1.22.1)
 
 Ubuntu ([more](https://packages.ubuntu.com/search?suite=all&searchon=names&keywords=hledger)) \
 [![ubuntu_26_04](https://repology.org/badge/version-for-repo/ubuntu_26_04/hledger.svg)](https://packages.ubuntu.com/resolute/hledger) `apt install hledger hledger-ui hledger-web`\
