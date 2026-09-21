@@ -49,6 +49,31 @@ and hledger can export all data to Beancount format.
 See also: the [PTA apps](https://plaintextaccounting.org/#pta-apps) overview
 and [Feature matrix](https://plaintextaccounting.org/#pta-apps-feature-matrix).
 
+## Cost and lot notation
+
+Both apps write costs with `@ UNITCOST` or `@@ TOTALCOST`, and cost basis with `{...}`,
+but the meanings differ.
+Beancount has simpler [notation](https://beancount.github.io/docs/beancount_language_syntax.html#costs-and-prices)
+and different [behaviour](https://beancount.github.io/docs/how_inventories_work.html):
+
+- `@ UNITCOST` and `@@ TOTALCOST`
+  - expresses a cost without creating a lot, as in hledger
+  - when buying (acquiring) or selling (disposing of) a lot, and combined with `{...}`:
+    is not used except to document the cost/selling price
+
+- `{UNITCOST}` and `{{TOTALCOST}}`
+  - when buying, expresses the cost for transaction balancing, and also creates a lot with this cost basis attached
+  - when selling,
+    - selects a lot by its cost basis
+    - raises an error if that lot is not present or can not be selected unambiguously (depending on booking method configured)
+    - expresses the selling price for transaction balancing
+
+- `{}`, `{YYYY-MM-DD}`, `{"LABEL"}`, `{UNITCOST, "LABEL"}`, `{UNITCOST, YYYY-MM-DD, "LABEL"}`
+  - when selling, other combinations of date/cost/label, like the above, are accepted for selecting the lot.
+
+For hledger's notation and behaviour, see [Cost basis](hledger.md#cost-basis)
+and [Lot reporting](hledger.md#lot-reporting) in the hledger manual.
+
 
 ## hledger to Beancount
 
