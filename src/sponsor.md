@@ -59,7 +59,6 @@ Not recommended for small donations because of the high fee.
 ### Other
 
 You can donate directly to [specific contributors](CREDITS.md), eg by paypal to their email address.
-Or offer bounties in the issue tracker.
 Or propose a paid project or consulting work.
 
 ## Sponsors
@@ -73,7 +72,7 @@ Thank you to our generous sponsors for their support. Some of these are:
 <a href="https://writersperhour.com" title="Writers Per Hour"><img src="https://images.opencollective.com/writersperhour/033b80a/logo/400.png" alt="Writers Per Hour" height="135"></a>
 <a href="https://www.apmhelp.com" title="APM Help"><img src="https://images.opencollective.com/apmhelp/6d865c8/logo/400.png" alt="APM Help" height="117"></a>
 <a href="https://finmasters.com" title="FinMasters"><img src="https://images.opencollective.com/finmasters/22f821d/logo/400.png" alt="FinMasters" height="102"></a>
-<a href="https://opencollective.com/diasparsoft" title="Diaspar Software Services"><img src="https://images.opencollective.com/diasparsoft/logo/400.png" alt="Diaspar Software Services" height="89"></a>
+<a href="https://opencollective.com/diasparsoft" title="Diaspar Software Services"><img src="https://images.opencollective.com/diasparsoft/logo/400.png" alt="Diaspar Software Services" height="88"></a>
 <a href="https://joyful.com" title="Joyful Systems"><img src="https://images.opencollective.com/joyfulsystems/d7ce8c3/logo/400.png" alt="Joyful Systems" height="79"></a>
 <br>
 <a href="https://www.olsensrevision.dk" title="Olsens Revision ApS"><img src="https://images.opencollective.com/olsensrevision/c629690/avatar/400.png" alt="Olsens Revision ApS" height="120"></a>
@@ -84,6 +83,6 @@ Thank you to our generous sponsors for their support. Some of these are:
 <a href="https://opencollective.com/jack-todaro" title="Jack Todaro"><img src="https://images.opencollective.com/jack-todaro/avatar/400.png" alt="Jack Todaro" height="66"></a>
 <a href="https://opencollective.com/richard-kelly" title="Richard Kelly"><img src="https://images.opencollective.com/richard-kelly/1b2c64c/avatar/400.png" alt="Richard Kelly" height="64"></a>
 <a href="https://opencollective.com/james-blachly" title="James Blachly"><img src="https://images.opencollective.com/james-blachly/ffc8288/avatar/400.png" alt="James Blachly" height="63"></a>
-<a href="https://opencollective.com/ken-ewing" title="Ken Ewing"><img src="https://images.opencollective.com/ken-ewing/b5ace9b/avatar/400.png" alt="Ken Ewing" height="61"></a>
+<a href="https://opencollective.com/ken-ewing" title="Ken Ewing"><img src="https://images.opencollective.com/ken-ewing/b5ace9b/avatar/400.png" alt="Ken Ewing" height="62"></a>
 <a href="https://opencollective.com/marc11" title="Marc"><img src="https://images.opencollective.com/marc11/avatar/400.png" alt="Marc" height="60"></a>
 <!-- SPONSOR AVATARS END -->
