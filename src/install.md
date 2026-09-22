@@ -21,7 +21,7 @@ and then, [check your setup](#check-your-setup).
 
 ## Official binaries
 
-Official release binaries for Linux (x64, arm64), Mac (x64, arm64) and Windows (x64) are provided in the hledger github repo.
+Official release binaries for Linux (x64), Mac (x64, arm64) and Windows (x64) are provided in the hledger github repo.
 You can click the badge below to install them manually,
 or copy-paste the install command from [Get hledger installed](get-hledger-installed.md),
 or use a download tool like [eget](https://github.com/zyedidia/eget?tab=readme-ov-file#how-to-get-eget):
@@ -106,10 +106,14 @@ Gentoo <!-- ezzie --> \
 [![Gentoo](https://img.shields.io/badge/Gentoo_package-1.52.1-e05d44.svg)](https://gentoo.zugaina.org/Search?search=hledger) `eselect repository enable haskell && emerge hledger hledger-ui hledger-web`
 
 Raspberry Pi \
-On a 64-bit OS, use the [official binaries](#official-binaries) for linux-arm64.
-On a 32-bit OS, there is an old release binary (unaudited): <!-- nobodyinperson --> \
+There are no official Linux ARM binaries, so use a package above if one is available for your OS,
+or [build from source](#build-from-source).
+There are also some old unaudited binaries: <!-- nobodyinperson --> \
 ![Raspberry Pi 32-bit release binaries](https://img.shields.io/badge/Raspberry_Pi_32bit_release_binaries-1.22.1-e05d44.svg)
-[hledger-linux-arm32v7.zip](https://github.com/hledgerorg/hledger/releases/tag/1.22.1)
+[hledger-linux-static-arm32v7.zip](https://github.com/hledgerorg/hledger/releases/tag/1.22.1) \
+![Raspberry Pi contributed binaries](https://img.shields.io/badge/Raspberry_Pi_contributed_binaries-1.18.1-e05d44.svg)
+[hledger-aarch64-manjaro.gz](https://github.com/hledgerorg/hledger/releases/tag/1.18.1) ,
+[hledger-armhf32-debian.gz](https://github.com/hledgerorg/hledger/releases/tag/1.18)
 
 Ubuntu ([more](https://packages.ubuntu.com/search?suite=all&searchon=names&keywords=hledger)) \
 [![ubuntu_26_04](https://img.shields.io/badge/ubuntu_26_04_package-1.50.3-e05d44.svg)](https://packages.ubuntu.com/resolute/hledger) `apt install hledger hledger-ui hledger-web` <!-- repology: https://repology.org/badge/version-for-repo/ubuntu_26_04/hledger.svg -->\
