@@ -153,9 +153,9 @@ or *lot*. This information is needed:
      by comparing the selling price with the original cost (AKA *cost
      basis*) of those lots.
   
-Ledger and Beancount provide a special syntax and some builtin reports for tracking lots and calculating capital gains.
-Currently, hledger does not (aside from [a little support for lot syntax](hledger.md#lot-prices-lot-dates)).
-So for now, how can we track lots in hledger ?
+Ledger and Beancount provide a special syntax and some builtin reports for tracking lots and calculating capital gains,
+and so does hledger 2: see [Lot reporting](hledger.md#lot-reporting) in the manual.
+The rest of this page shows a manual approach, which also works in hledger 1.
 
 We can use the obvious categorisation feature: accounts.
 We'll give every lot its own uniquely-named subaccount.
@@ -614,6 +614,99 @@ instead of just `hledger is`.
 
 
 
+
+## Other lot events (hledger 2)
+
+hledger 2's automated [lot tracking](hledger.md#lot-reporting) understands three lot movements:
+acquire, transfer and dispose.
+Other real-world events can be recorded as combinations of these; here are some examples.
+The right treatment varies by jurisdiction, so check your local tax rules.
+Unlike the rest of this page, these entries need hledger 2:
+hledger 1 ignores cost basis annotations (so no basis or gain is tracked),
+and rejects the date-only annotations used in the stock split example.
+
+### Gift received
+
+An acquisition's cost basis can differ from the commodity's current market
+price. Eg with GOLD currently priced at $5000, you receive a gift carrying
+its original ("carryover") cost basis of $3000/oz:
+```
+P 2026-05-01 GOLD $5000
+
+2026-05-01 gift received, with carryover basis of $3000
+    income:gifts         $-6000
+    assets:stock              2 GOLD {$3000}
+```
+The transacted cost is $3000 (same as the basis), not $5000.
+And the recorded gift income is $6000 (the gift's current market value is $10000, but remember when you dispose you'll have to declare $2000/oz more capital gain, $4000 more in total).
+
+### Bonus shares
+
+Extra shares granted for free (a bonus issue or stock dividend) can be recorded as a zero-cost acquisition. 
+Such an entry balances by itself:
+
+```journal
+2026-06-01 bonus shares
+    assets:stock    5 AAPL @@ $0
+```
+
+Or you can add an equity posting for more explicit double entry
+(note that account will then keep an offsetting negative AAPL balance):
+
+```journal
+2026-06-01 bonus shares
+    assets:stock          5 AAPL @@ $0
+    equity:bonus-shares  -5 AAPL @@ $0
+```
+
+A zero cost basis means the full sale proceeds will be counted as capital
+gain at disposal. This matches the tax treatment of bonus shares in some
+jurisdictions - eg India, where their acquisition cost is nil, or the UK,
+where they enter the pool at nil cost, diluting the average cost.
+Other treatments exist, so check your local rules. 
+Eg for US nontaxable stock dividends, 
+the original shares' cost basis is instead spread proportionally 
+across the old and new shares, which can be recorded like a stock split. 
+Or, free shares which are taxable income when received (eg a brokerage promotion)
+would typically be acquired at their market value, balanced by an income posting.
+
+### Stock splits
+
+A stock split (eg 2:1, doubling the share count and halving the share
+price) can be recorded as a disposal and re-acquisition, preserving the
+original acquisition date and total cost basis. Eg, for 10 AAPL bought
+on 2026-01-01 with cost basis $100/share:
+
+```journal
+2026-06-01 AAPL splits 2:1
+    assets:broker   -10 AAPL {2026-01-01} @@ $1000
+    assets:broker    20 AAPL {2026-01-01} @@ $1000
+```
+
+The old lot is disposed at its cost basis, so there is no gain; the new
+lot keeps the old acquisition date, with the per-unit basis inferred
+from the unchanged total ($1000 / 20 = $50). (Since two acquisitions now
+share the same basis date, hledger will add sequence-number labels to keep their
+[lot ids](hledger.md#lot-ids) distinct.)
+
+### Capitalising an in-kind transfer fee
+
+hledger does not automatically capitalise fees into cost basis.
+For a purchase fee, fold it into the acquisition cost (`10 AAPL @@ $510`), as described under
+[Capitalising fees](hledger.md#capitalising-fees) in the manual.
+Capitalising an in-kind transfer fee - keeping the remaining units' total basis unchanged -
+requires disposing of the position at its basis price (producing no gain)
+and re-acquiring the remainder with the combined basis, eg:
+
+```journal
+; earlier: bought 5 ABC for $20 ($4 each); now 0.1 ABC is deducted in transit:
+2020-04-05 transfer with 0.1 ABC fee, capitalised
+    assets:broker1     -5 ABC {} @ $4
+    assets:broker2      4.9 ABC {$4.08163265} @@ $20
+```
+
+Note this re-acquisition starts a new lot, with a new date unless you write
+the original date in its basis annotation; usually fees are simply expensed instead.
 
 ## Related
 
