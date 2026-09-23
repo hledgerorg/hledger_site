@@ -367,48 +367,29 @@ A helper to browse TODO tags in the journal:
 
 ## Vim
 
-### vim-ledger
-
-<https://github.com/ledger/vim-ledger>
-
-### hledger-vim
-
-<https://github.com/anekos/hledger-vim>
-
-### timedot-vim
-
-<https://github.com/linuxcaffe/timedot-vim>
-
-## Neovim
-
-Run `:TSInstall ledger` to enable [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter#language-parsers) for hledger.
+- <https://github.com/ptimoney/hledger-nvim>
+- <https://github.com/ledger/vim-ledger>
+- <https://github.com/anekos/hledger-vim>
+- <https://github.com/linuxcaffe/timedot-vim>
+- <https://github.com/nvim-treesitter/nvim-treesitter>
 
 ## VS Code
 
 Extensions for working with hledger journal files -
-as of 2025Q3 I think they rank in features and activity roughly like so:
+as of 2026Q3 I think they rank in features and activity roughly like so:
 
-1. [hledger Language Support](https://marketplace.visualstudio.com/items?itemName=evsyukov.hledger) by evsyukov
-  ([source](https://github.com/juev/hledger-vscode))
-  2025
-2. [HLedger Formatter](https://marketplace.visualstudio.com/items?itemName=iiatlas.hledger-formatter) by iiatlas
-  ([source](https://github.com/iiAtlas/hledger-formatter))
-  2025
-3. [hledger (Tools)](https://marketplace.visualstudio.com/items?itemName=patrickt.hledger-tools) by patrickt
-  ([source](https://github.com/ptimoney/hledger-tools))
-  2024
-4. [hledger-vscode](https://marketplace.visualstudio.com/items?itemName=mark-hansen.hledger-vscode) by mark-hansen
-  ([source](https://github.com/mhansen/hledger-vscode))
-  2017
+- <https://github.com/juev/hledger-vscode>
+- <https://github.com/ptimoney/hledger-lsp>
+- <https://github.com/iiAtlas/hledger-formatter>
+- <https://github.com/mhansen/hledger-vscode>
 
 Extensions for working with hledger CSV rules files:
 
-- [hledger rules](https://marketplace.visualstudio.com/items?itemName=EthanOlpin.hledger-rules)
-  ([source](https://github.com/EthanOlpin/hledger-rules-vscode)) by EthanOlpin 2025
+- <https://github.com/EthanOlpin/hledger-rules-vscode>
 
 All VS Code extensions mentioning "hledger":
 
-- [search for \*hledger\*](https://marketplace.visualstudio.com/search?term=hledger&target=VSCode&category=All%20categories&sortBy=Relevance)
+- [VS Code marketplace: \*hledger\*](https://marketplace.visualstudio.com/search?term=hledger&target=VSCode&category=All%20categories&sortBy=Relevance)
 
 
 
