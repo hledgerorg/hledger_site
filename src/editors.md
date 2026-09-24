@@ -225,15 +225,16 @@ An alternative to ledger-mode, written specifically for hledger. Has some differ
 
 ### flycheck-hledger
 
-<https://github.com/DamienCassou/flycheck-hledger> (2021)
+<https://github.com/DamienCassou/flycheck-hledger>
 provides realtime indication of problems in your journal.
 It can be used with ledger-mode or hledger-mode.
+Use flycheck-hledger 1.1.0 or newer (from MELPA or MELPA Stable),
+which supports hledger 1.40 and newer, including hledger 2 (and partially supports hledger 1.26+).
 
-``C-x ` `` steps to the next problem in the current file.\
-``C-u C-x ` `` restarts the scan from the top.\
-A description should appear in the  message area, 
-but Emacs may hide it behind "...locus..." messages;
-you can fix that by customising the `next-error-verbose` variable to off.
+``C-c ! n`` and ``C-c ! p`` step to the next and previous problem in the current file,
+and `M-x flycheck-first-error` goes back to the first one.
+(Emacs's general ``C-x ` `` (`next-error`) also steps through problems, and ``C-u C-x ` `` restarts from the first one.
+But when several files are open, these jump back to the file where you first used them.)
 
 Sample config:
 ```elisp
