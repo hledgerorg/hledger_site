@@ -73,57 +73,35 @@ Ledger was traditionally faster than hledger with large files, eg above 5k trans
 (Many people record about 1-2k transactions per year.)
 Ledger's speed came partly from providing fewer guarantees, eg Ledger's balance assertions/assignments are not date-aware.
 
-Since about 2021 the performance gap seems to me to have closed or reversed,
-at least on my mac, where hledger often runs faster and in less memory than Ledger,
+Since about 2021 the performance gap seemed to me to have closed or reversed,
+at least on my mac, where hledger often ran faster and in less memory than Ledger,
 especially with very large files.
 
-In 2022, hledger ~1.25 compiled natively on a macbook air m1 processed 25k transactions per second:
-```cli
-$ hledger --version
-hledger 1.24.99.2-gba5b0e93f-20220205, mac-aarch64
-$ make throughput
-date: Tue Feb 8 11:03:50 HST 2022
-system: Darwin slate.local 21.3.0 Darwin Kernel Version 21.3.0: Wed Jan 5 21:37:58 PST 2022; root:xnu-8019.80.24~20/RELEASE_ARM64_T8101 arm64
-executable: hledger
-version: hledger 1.24.99.2-gba5b0e93f-20220205, mac-aarch64
-  1000 txns: Run time (throughput)    : 0.07s (15308 txns/s)
-  2000 txns: Run time (throughput)    : 0.09s (21121 txns/s)
-  3000 txns: Run time (throughput)    : 0.13s (23648 txns/s)
-  4000 txns: Run time (throughput)    : 0.17s (23226 txns/s)
-  5000 txns: Run time (throughput)    : 0.21s (23647 txns/s)
-  6000 txns: Run time (throughput)    : 0.24s (24784 txns/s)
-  7000 txns: Run time (throughput)    : 0.29s (24166 txns/s)
-  8000 txns: Run time (throughput)    : 0.33s (24450 txns/s)
-  9000 txns: Run time (throughput)    : 0.35s (25516 txns/s)
- 10000 txns: Run time (throughput)    : 0.41s (24226 txns/s)
-100000 txns: Run time (throughput)    : 4.32s (23158 txns/s)
-Tue Feb  8 11:03:57 HST 2022
-```
+hledger's speed has varied over the years.
+hledger 1.25 (2022) was fast; later versions were slower
+(hledger 1.29-1.32.2 also had a performance bug with large files, #2153, fixed in hledger 1.40).
+The hledger 2 previews 1.99.1-1.99.4 are slower than hledger 1.x.
+In September 2026 hledger's main branch was optimised, and is now the fastest hledger yet.
+This is not released yet; it will be in the next hledger 2 preview.
 
-Newer hledger versions are slower than this.
-hledger 1.29-1.32.2 have a performance bug which can be seen with large files,
-[#2153](https://github.com/hledgerorg/hledger/issues/2153)
-(see eg [2153#issuecomment-1912942305](https://github.com/hledgerorg/hledger/issues/2153#issuecomment-1912942305) benchmarks).
+Here are some version performance numbers, for a 100,000-transaction journal (`examples/100ktxns-1kaccts.journal`) 
+on a MacBook Pro M5 Pro. Times are in seconds; txns/s is the throughput reported by `hledger stats`
+(adjusted for 1.52 and 1.99.4, which don't show it accurately):
 
-2024's hledger 1.40 on macbook air m1 runs at roughly 16k txns/s for me:
+| command    |  1.25 |  1.40 |  1.52 | 1.99.4 |  main |
+|------------|------:|------:|------:|-------:|------:|
+| stats      |  2.70 |  3.95 |  4.29 |   5.96 |  2.00 |
+| balance    |  2.68 |  3.92 |  4.06 |   5.80 |  2.15 |
+| print      |  3.24 |  4.27 |  4.42 |   6.32 |  2.84 |
+| register   | 71.99 | 30.22 | 20.73 |  19.02 | 14.17 |
+| **txns/s** |   37k |   25k | 23k * |  17k * |   52k |
 
-```cli
-$ hledger -f examples/100ktxns-1kaccts.journal stats
-Main file           : .../100ktxns-1kaccts.journal
-Included files      : 0
-Txns span           : 2000-01-01 to 2273-10-16 (100000 days)
-Last txn            : 2273-10-15 (90965 days from now)
-Txns                : 100000 (1.0 per day)
-Txns last 30 days   : 31 (1.0 per day)
-Txns last 7 days    : 8 (1.1 per day)
-Payees/descriptions : 100000
-Accounts            : 1000 (depth 10)
-Commodities         : 26
-Market prices       : 100000
-Runtime stats       : 6.23 s elapsed, 16051 txns/s, 258 MB live, 773 MB alloc
-```
+1.52 is the current hledger 1 release, and 1.99.4 the latest hledger 2 preview.
+So hledger main is about 3x faster than 1.99.4, 2x faster than 1.52, and 1.2x faster than 1.25, the previous speed king.
 
-More independent benchmarking is needed, help welcome.
+Earlier measurements, on a MacBook Air M1:
+hledger 1.25 processed about 25k transactions per second in 2022, and hledger 1.40 about 16k in 2024.
+More benchmarking is welcome. For tips, see [BENCHMARKS](BENCHMARKS.md).
 
 ### Command line differences
 
