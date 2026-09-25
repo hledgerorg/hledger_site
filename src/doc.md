@@ -247,6 +247,7 @@ Additional docs, tips, and notes, grouped by topic.
 - [Exporting from hledger](export.md)
 - [hledger and Beancount](beancount.md)
 - [hledger and dsq/DataStation](dsq.md)
+- [hledger and Emacs](emacs.md)
 - [hledger and GnuCash](gnucash.md)
 - [hledger and just](just.md)
 - [hledger and Ledger](ledger.md)
