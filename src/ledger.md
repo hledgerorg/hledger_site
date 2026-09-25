@@ -77,31 +77,11 @@ Since about 2021 the performance gap seemed to me to have closed or reversed,
 at least on my mac, where hledger often ran faster and in less memory than Ledger,
 especially with very large files.
 
-hledger's speed has varied over the years.
-hledger 1.25 (2022) was fast; later versions were slower
-(hledger 1.29-1.32.2 also had a performance bug with large files, #2153, fixed in hledger 1.40).
-The hledger 2 previews 1.99.1-1.99.4 are slower than hledger 1.x.
-In September 2026 hledger's main branch was optimised, and is now the fastest hledger yet.
-This is not released yet; it will be in the next hledger 2 preview.
-
-Here are some version performance numbers, for a 100,000-transaction journal (`examples/100ktxns-1kaccts.journal`) 
-on a MacBook Pro M5 Pro. Times are in seconds; txns/s is the throughput reported by `hledger stats`
-(adjusted for 1.52 and 1.99.4, which don't show it accurately):
-
-| command    |  1.25 |  1.40 |  1.52 | 1.99.4 |  main |
-|------------|------:|------:|------:|-------:|------:|
-| stats      |  2.70 |  3.95 |  4.29 |   5.96 |  2.00 |
-| balance    |  2.68 |  3.92 |  4.06 |   5.80 |  2.15 |
-| print      |  3.24 |  4.27 |  4.42 |   6.32 |  2.84 |
-| register   | 71.99 | 30.22 | 20.73 |  19.02 | 14.17 |
-| **txns/s** |   37k |   25k | 23k * |  17k * |   52k |
-
-1.52 is the current hledger 1 release, and 1.99.4 the latest hledger 2 preview.
-So hledger main is about 3x faster than 1.99.4, 2x faster than 1.52, and 1.2x faster than 1.25, the previous speed king.
-
-Earlier measurements, on a MacBook Air M1:
-hledger 1.25 processed about 25k transactions per second in 2022, and hledger 1.40 about 16k in 2024.
-More benchmarking is welcome. For tips, see [BENCHMARKS](BENCHMARKS.md).
+hledger's own speed has varied between releases.
+In September 2026 hledger's main branch (not yet released) became the fastest hledger yet:
+on a 100,000-transaction journal, about 2x faster than hledger 1.52 and 3x faster than the 1.99.4 preview.
+For measurements across releases, and how to benchmark hledger yourself, see [PERFORMANCE](PERFORMANCE.md).
+More benchmarking is welcome.
 
 ### Command line differences
 

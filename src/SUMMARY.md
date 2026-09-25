@@ -145,7 +145,7 @@
   - [CODE](CODE.md)
   - [TESTS](TESTS.md)
   - [ERRORS](ERRORS.md)
-  - [BENCHMARKS](BENCHMARKS.md)
+  - [PERFORMANCE](PERFORMANCE.md)
 - [Specs]()
   - [SPEC-journal](SPEC-journal.md)
   - [SPEC-finalising](SPEC-finalising.md)
