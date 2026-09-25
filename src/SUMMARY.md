@@ -75,6 +75,7 @@
   - [Balancing the accounting equation](balancing-the-accounting-equation.md)
 - [Customising]()
   - [Editors](editors.md)
+    - [hledger and Emacs](emacs.md)
   - [Change account name separator](change-account-name-separator.md)
   - [Save frequently used options](save-frequently-used-options.md)
 - [Accounting]()

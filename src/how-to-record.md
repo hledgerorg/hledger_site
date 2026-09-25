@@ -31,7 +31,7 @@ Here are some options:
 
 ### From past entries
 - Find, copy and modify a past entry in the journal
-- Or in Emacs [ledger-mode](editors.md#ledger-mode), enter a date and partial description and complete with C-c TAB
+- Or in Emacs [ledger-mode](emacs.md#ledger-mode), enter a date and partial description and complete with C-c TAB
 
 ### From future entries
 - Move the entry from a separate file where you prepared it ahead of time (eg future.journal) 

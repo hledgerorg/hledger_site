@@ -371,7 +371,7 @@ See [Editors](editors.md).
 No and no. hledger-mode is not very actively maintained.
 ledger-mode is more popular, more mature, and works very well with hledger and hledger journals,
 except for a few non-essential features, and is what hledger's maintainer uses.
-See [Editors](editors.md) for configuration tips.
+See [hledger and Emacs](emacs.md) for configuration tips.
 
 ### How can I tidy a journal file ?
 
