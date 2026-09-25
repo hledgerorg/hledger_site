@@ -51,15 +51,46 @@ This makes ledger-mode run hledger, skips its check of Ledger's version,
 turns off two report features which need Ledger-only options,
 and shows hledger's colours in reports.
 
+### Reports
+
+ledger-mode can run hledger reports and show them in a report buffer.
+`C-c C-o C-r` runs a named report (with `C-u`, you can edit its command first).
+In a report command, `%(binary)` stands for hledger (`ledger-binary-path`),
+`%(ledger-file)` for the current file, and `%(account)` and `%(payee)` ask for an account or payee (defaulting to the one at point).
+In the report buffer, `e` edits the report's command, `s` saves it, `r` reruns it, and `q` quits;
+the report also reruns when you save the journal.
+
 ledger-mode's default reports include a payee report which uses Ledger syntax.
-To make it work with hledger, you can customise `ledger-reports` like this (and add your own reports):
+To make it work with hledger, and to add some of hledger's reports,
+you can customise `ledger-reports` like this (or with `M-x customize-variable RET ledger-reports`):
 
 ``` elisp
 (setq ledger-reports
       '(("bal"     "%(binary) -f %(ledger-file) bal")
         ("reg"     "%(binary) -f %(ledger-file) reg")
         ("payee"   "%(binary) -f %(ledger-file) reg payee:%(payee)")
-        ("account" "%(binary) -f %(ledger-file) reg %(account)")))
+        ("account" "%(binary) -f %(ledger-file) reg %(account)")
+        ("bs"      "%(binary) -f %(ledger-file) bs")
+        ("is"      "%(binary) -f %(ledger-file) is")
+        ("cf"      "%(binary) -f %(ledger-file) cf")))
+```
+
+### Tips
+
+``` elisp
+;; Align amounts further right, leaving room for longer account names (default 52):
+(setq ledger-post-amount-alignment-column 64)
+
+;; Show new entries added by hledger add or hledger-web (appended to the file):
+(add-hook 'ledger-mode-hook #'auto-revert-tail-mode)
+
+;; M-1 folds every entry to its first line, for quick scanning; M-0 unfolds.
+(with-eval-after-load 'ledger-mode
+  (define-key ledger-mode-map (kbd "M-1") (lambda () (interactive) (set-selective-display 1)))
+  (define-key ledger-mode-map (kbd "M-0") (lambda () (interactive) (set-selective-display nil))))
+
+;; Some highlighting for CSV rules files:
+(add-to-list 'auto-mode-alist '("\\.rules\\'" . conf-mode))
 ```
 
 ### What doesn't work
@@ -69,6 +100,8 @@ As of ledger-mode 2026-07:
 - **Quick balance display** (`C-c C-p`), **statistics** (`C-c C-l`) and **add transaction** (`C-c C-a`)
   fail, because ledger-mode passes a `--date-format` option, which hledger doesn't have.
   The [compatibility script](#compatibility-script) below fixes these.
+  (A pending ledger-mode change, [#441](https://github.com/ledger/ledger-mode/pull/441),
+  would stop it passing `--date-format` to hledger.)
 - **Reconciling** (`C-c C-r`) fails, because it uses Ledger's `emacs` command.
 - **Links from register report entries to transactions**, and **automatic report width**,
   need Ledger's `--prepend-format` and `--columns` options;
