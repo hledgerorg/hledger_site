@@ -4,18 +4,26 @@
 Here are the main Emacs packages for hledger, and some tips.
 (For other editors, see [Editors](editors.md).)
 
+## Quick start
+
+1. Install [ledger-mode](#ledger-mode), and configure it to run hledger as shown below.
+   (Or try [hledger-mode](#hledger-mode), an alternative written for hledger.)
+2. Install [flycheck-hledger or flymake-hledger](#error-checking),
+   to see problems in your journal as you edit it.
+3. Optionally, use [org babel](#org-babel) to keep hledger reports in org files,
+   and [calc](#calc) (eg `C-x * q`) for arithmetic during data entry.
+
 ## Ledger-mode
 
 <https://github.com/ledger/ledger-mode>
-([manual](http://www.ledger-cli.org/3.0/doc/ledger-mode.html)), for
-[Emacs](https://www.gnu.org/software/emacs/), is the most used and
-maintained helper mode for hledger and Ledger files.
+is the most used and maintained Emacs mode for Ledger and hledger files.
+Its manual is included (`C-h i m Ledger Mode RET`).
 
-It has some hard-coded dependence on Ledger's command-line interface, so
-does not work perfectly with hledger, whose CLI is similar but not
-identical.
+It is designed for Ledger, and some of its features run Ledger-specific commands or options,
+so they don't work with hledger (see [below](#what-doesnt-work)).
+Its editing features, and most of its reports, work well.
 
-**1. Basic configuration:**
+### Configuration
 
 ``` elisp
 (setq ledger-binary-path "hledger"
@@ -23,7 +31,7 @@ identical.
       ledger-report-auto-width nil
       ledger-report-links-in-register nil
       ledger-report-native-highlighting-arguments '("--color=always"))
-(add-to-list 'auto-mode-alist '("\\.hledger\\'" . ledger-mode))
+(add-to-list 'auto-mode-alist '("\\.\\(journal\\|hledger\\)\\'" . ledger-mode))
 ```
 
 Or, using use-package:
@@ -36,179 +44,107 @@ Or, using use-package:
    (ledger-report-auto-width nil)
    (ledger-report-links-in-register nil)
    (ledger-report-native-highlighting-arguments '("--color=always")))
-  :mode ("\\.hledger\\'" "\\.ledger\\'"))
+  :mode ("\\.journal\\'" "\\.hledger\\'" "\\.ledger\\'"))
 ```
 
-This configuration makes ledger-mode commands run hledger, configures
-colored output correctly and turns off some incompatible functionality.
-Most editing functions in the journal buffer work correctly and so do
-most of the reports. Annoyingly, reconcilliation, quick balance display
-and the add-transaction prompt fail due to hardcoded ledger-specific
-options that hledger doesn't have. Hence the following:
+This makes ledger-mode run hledger, skips its check of Ledger's version,
+turns off two report features which need Ledger-only options,
+and shows hledger's colours in reports.
 
-**2. Compatibility script**
-
-Further functionality can be gained by putting the following script in
-your PATH and pointing \`ledger-binary-path\` to it.
+ledger-mode's default reports include a payee report which uses Ledger syntax.
+To make it work with hledger, you can customise `ledger-reports` like this (and add your own reports):
 
 ``` elisp
-(setq ledger-binary-path "hledger.sh")
-(setq ledger-default-date-string "%Y-%m-%d")
+(setq ledger-reports
+      '(("bal"     "%(binary) -f %(ledger-file) bal")
+        ("reg"     "%(binary) -f %(ledger-file) reg")
+        ("payee"   "%(binary) -f %(ledger-file) reg payee:%(payee)")
+        ("account" "%(binary) -f %(ledger-file) reg %(account)")))
 ```
 
-The script works by converting command line options and arguments to
-hledger's equivalent incantations, or filtering them out. By using it
-all the commands in the journal buffer become functional. It enables the
-Quick Balance Display (\<C-c\> \<C-p\>), display-ledger-stats (\<C-c\>
-\<C-l\>) and Add Transaction (\<C-c\> \<C-p\>) and gets us a step closer
-to reconcilliation (still not there tho).
+### What doesn't work
+
+As of ledger-mode 2026-07:
+
+- **Quick balance display** (`C-c C-p`), **statistics** (`C-c C-l`) and **add transaction** (`C-c C-a`)
+  fail, because ledger-mode passes a `--date-format` option, which hledger doesn't have.
+  The [compatibility script](#compatibility-script) below fixes these.
+- **Reconciling** (`C-c C-r`) fails, because it uses Ledger's `emacs` command.
+- **Links from register report entries to transactions**, and **automatic report width**,
+  need Ledger's `--prepend-format` and `--columns` options;
+  the configuration above turns them off.
+- **ledger-mode's own error checking** (`ledger-flymake`, `M-x ledger-check-buffer`) expects Ledger's error messages;
+  use flycheck-hledger or flymake-hledger instead.
+- **Scheduled transactions** (`ledger-schedule`) are a Ledger-style workflow;
+  with hledger you can use [periodic transactions](hledger.md#periodic-transactions) and `--forecast` instead.
+
+### Compatibility script
+
+This script makes quick balance display, statistics and add transaction work,
+by converting ledger-mode's Ledger-specific arguments to hledger's.
+Save it as an executable file named `ledger-mode-hledger`, somewhere in your PATH,
+and configure ledger-mode to run it:
+
+``` elisp
+(setq ledger-binary-path "ledger-mode-hledger")
+```
+
+(Its name ends with "hledger", which flycheck-hledger and flymake-hledger need, to recognise a ledger-mode buffer as an hledger one.)
+
+<details>
+<summary>ledger-mode-hledger</summary>
 
 ``` shell
-#!/bin/sh
-# hledger.sh
+#!/usr/bin/env bash
+# ledger-mode-hledger - run hledger for Emacs ledger-mode,
+# converting some Ledger-specific arguments.
 # Kudos to acarrico for the original script.
-
-# The script is contingent on ledger-default-date-string
-# being set to "%Y-%m-%d", aka ISO date format.
 
 iargs=("$@")
 oargs=()
-j=0;
-date=;
-for((i=0; i<${#iargs[@]}; ++i)); do
+date=
+for ((i=0; i<${#iargs[@]}; i++)); do
     case ${iargs[i]} in
         --date-format)
-            # drop --date-format and the next arg
-            i=$((i+1));
+            # drop --date-format and its argument
+            i=$((i+1))
             ;;
-        cleared) # for ledger-di
-            splay-balance-at-point
+        cleared)
+            # for ledger-display-balance-at-point:
             # convert "cleared" to "balance -N -C"
-            oargs[j]=balance; oargs[j+1]=-N; oargs[j+2]=-C; j=$((j+3));
+            oargs+=(balance -N -C)
             ;;
         xact)
-            # convert "xact" to "print --match"
-            oargs[j]=print; oargs[j+1]=--match; j=$((j+2));
-            # drop xact argument and stash the date argument
-            i=$((i+1));
-            date=${iargs[i]};
+            # for ledger-add-transaction:
+            # convert "xact DATE DESC..." to "print --match DESC...", remembering DATE
+            oargs+=(print --match)
+            i=$((i+1))
+            date=${iargs[i]}
             ;;
-        # NOTE: Reconciliation still doesn't work for other reasons
-        #       so the following filters/conversions are unnecessary for now.
-        # --sort) # for reconcilliation
-        #     # drop --sort and the next arg
-        #     i=$((i+1));
-        #     ;;
-        # --uncleared) # for reconcilliation
-        #     # convert "--uncleared" to "--unmarked --pending"
-        #     oargs[j]=--unmarked; oargs[j+1]=--pending; j=$((j+2))
-        #     ;;
         *)
-            # keep any other args:
-            oargs[j]=${iargs[i]};
-            j=$((j+1));
+            oargs+=("${iargs[i]}")
             ;;
     esac
 done
 
-if test "$date"
-then
-    # substitute the given date for the old date:
-    hledger "${oargs[@]}" | sed "1s/....-..-../$date/"
+if [ -n "$date" ]; then
+    # show the most similar transaction, with the given date
+    hledger "${oargs[@]}" | sed "1s|....-..-..|$date|"
 else
-    # echo "${oargs[@]}"
     hledger "${oargs[@]}"
 fi
-
 ```
 
-**TODO** – Generalize script to work with different date formats
+</details>
 
-**Feature Compatibility Checklist:**
-
-- [x] **Ledger Buffer**
-  - [x] Navigation
-  - [x] Completion
-  - [x] Set effective date (\<C-c\> \<C-t\>)
-  - [x] Quick balance display (\<C-c\> \<C-p\>) – **FAILS due to
-    -–date-format, fixed by script**
-  - [x] Copy Transaction (\<C-c\> \<C-k\>)
-  - [x] Clear Posting/Transaction
-  - [x] Delete transaction
-  - [x] Sorting transactions
-  - [x] Narrowing (i.e. regex filtering)
-  - [x] Transaction completion by payee (\<C-c\> \<TAB\>)
-  - [x] Add transaction (\<C-c\> \<C-a\>) – **FAILS due to -–date-format,
-    fixed by script**
-  - [x] display-ledger-stats (\<C-c\> \<C-l\>) – **FAILS due to
-    -–date-format, fixed by script**
-- [ ] **Report Buffer** (\<C-c\> \<C-o\> \<C-r\>)
-  - [x] balance
-  - [x] register
-  - [ ] payee – **FAILS, hledger uses @item syntax for argument files,
-    ledger uses @payee to filter transactions**
-  - [x] account
-  - [x] custom  
-    NOTE: custom report simply opens the minibuffer with the
-    word ledger prefilled. It works if you input a valid hledger
-    command, but it doesn't use the current buffer filename or anything.
-    It does update on buffer changes however. Naming and saving custom
-    reports works as well.
-    - [ ] Expansion formats
-      - [x] %(ledger-file)
-      - [x] %(payee)
-      - [x] %(account)
-      - [ ] %(tag-name) – **TODO: Figure out what/why.**
-      - [ ] %(tag-value) – **TODO: Figure out what/why.**
-      - [x] %(month)
-    - [ ] Jump to transaction from register report – **FAILS, line data
-      is passed to emacs using ledger's -–prepend-format**
-    - [x] Reversing report order
-- [ ] **Reconcile Buffer** – **FAILS due to an assortment of errors**  
-  NOTE: Opening the reconcile buffer uses Narrowing (\<C-c\> \<C-f\>) to
-  filter transactions to only ones relevant to the selected account.
-  After the reconcile buffer errors out filtering needs to be turned off
-  with \<C-c\> \<C-f\>.
-- [ ] **Scheduling Transactions** – **FAILS -- ledger/hledger UI
-  incompatibility**  
-  NOTE: ledger has a scheduler for periodic
-  transactions which are written in a separate ledger file. Ledger-mode
-  provides a way to view and copy those transactions into the main
-  journal, making the process of updating the journal with periodic
-  transactions somewhat easier. The closest corresponding functionality
-  are hledger's periodic transactions and the –forecast option (how easy
-  it would be to adapt ledger-mode to it remains to be seen).
-
-**TODO** – Add common hledger reports as custom reports
-
-[#367 ledger-mode setup for hledger needs documenting](https://github.com/hledgerorg/hledger/issues/367) has
-more tips to be collected here.  
-[hledger-related issues](https://github.com/ledger/ledger-mode/issues?q=label:hledger)
-
-**Errors:**
-
-1.  The –date-format error:  
-    ledger-mode hardcodes this option into it's
-    ledger incantations. It can be avoided in some, but not all cases.
-    Generally the first and most common error you bump into.
-2.  –columns: see [\#279](https://github.com/ledger/ledger-mode/issues/279)  
-    This error is why (setq ledger-report-auto-width nil) is necessary.
-3.  –prepend-format:  
-    This is why (setq ledger-report-links-in-register
-    nil) is necessary.  
-    ledger-mode links register report entries to
-    transactions by prepending line data to ledger's output, then
-    stripping that data from the buffer and turning the output to links.
-    Hledger doesn't have a –prepend-format CLI option.
-4.  command emacs is not recognised.  
-    This is the next hurdle to
-    reconcilliation. ledger-cli has an option to output data, formatted
-    for elisp consumption, which the reconcile buffer uses.
+More tips: [#367 ledger-mode setup for hledger needs documenting](https://github.com/hledgerorg/hledger/issues/367),
+[ledger-mode's hledger-related issues](https://github.com/ledger/ledger-mode/issues?q=label:hledger).
 
 ## hledger-mode
 
 <https://github.com/narendraj9/hledger-mode>\
-An alternative to ledger-mode, written specifically for hledger. Has some different features. Less actively maintained.
+An alternative to ledger-mode, written specifically for hledger, with some different features.
+It is less actively maintained (its last change was in 2025-10).
 
 ## Error checking
 
@@ -244,7 +180,7 @@ Sample config:
   :ensure t
   :demand t
   :custom
-  (flycheck-hledger-strict t) 
+  (flycheck-hledger-strict t)
   (flycheck-hledger-checks '("ordereddates" "recentassertions"))   ; extra checks from https://hledger.org/hledger.html#check: ordereddates, uniqueleafnames, payees, recentassertions, tags..
   ;(flycheck-hledger-executable "hledger")
   )
@@ -318,7 +254,7 @@ To enable org-contrib in emacs:
   - as markdown (if configured):    `C-c C-e m o`
   - etc.
 - To export only the reports in the current subtree:
-  - configure it at top of org file: `# -*- org-export-initial-scope:subtree; -*-`)
+  - configure it at top of org file: `# -*- org-export-initial-scope:subtree; -*-`
   - put point in the desired subtree before exporting as above
 
 See also
@@ -329,7 +265,7 @@ See also
 Calc can help perform arithmetic on amounts in the buffer during data entry.
 Position the cursor anywhere in the number, then use `C-x * w` to enter embedded Calc mode, and `q` to exit.
 
-Eg to halve an amount: put cursor at the number, then `C-x w * 2 / q`
+Eg to halve an amount: put the cursor at the number, then `C-x * w 2 / q`
 
 Note Calc rewrites decimal numbers to a standard format, hiding trailing zeros by default, which you may not want.
 To preserve trailing zeros, you must force a fixed number of decimal digits. 
@@ -343,8 +279,8 @@ And to ensure that such config changes are saved in (and reloaded from) ~/.emacs
 (setq calc-mode-save-mode 'save)
 ```
 
+
 ## Misc
 
-A helper to browse TODO tags in the journal:
-
-    (defun journal-todos nil (interactive) (lgrep "TODO:" "current.journal" "~/finance" nil))
+To list the TODO notes in the current journal, use `M-x occur RET TODO: RET`.
+To search several files, use `M-x lgrep` or `M-x rgrep`.
