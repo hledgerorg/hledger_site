@@ -223,11 +223,25 @@ more tips to be collected here.
 <https://github.com/narendraj9/hledger-mode>\
 An alternative to ledger-mode, written specifically for hledger. Has some different features. Less actively maintained.
 
-### flycheck-hledger
+### Error checking
+
+Two packages show problems in your journal as you edit it, by running `hledger check`:
+flycheck-hledger and flymake-hledger.
+They work in a similar way, with hledger-mode, or ledger-mode configured to run hledger (as above);
+the difference is the Emacs checking framework they use.
+If you already use [Flycheck](https://www.flycheck.org) (a separate package), choose flycheck-hledger;
+otherwise flymake-hledger uses [Flymake](https://www.gnu.org/software/emacs/manual/html_node/emacs/Flymake.html), which is built into Emacs.
+
+To enable extra checks for one journal file, you can add a line like this near the top
+(using `flycheck-hledger-checks` or `flymake-hledger-checks`):
+```elisp
+; -*- eval: (setq-local flymake-hledger-checks (append flymake-hledger-checks '("tags"))) -*-
+```
+
+#### flycheck-hledger
 
 <https://github.com/DamienCassou/flycheck-hledger>
-provides realtime indication of problems in your journal.
-It can be used with ledger-mode or hledger-mode.
+reports problems using Flycheck.
 Use flycheck-hledger 1.1.0 or newer (from MELPA or MELPA Stable),
 which supports hledger 1.40 and newer, including hledger 2 (and partially supports hledger 1.26+).
 
@@ -252,54 +266,38 @@ Sample config:
 Currently flycheck-hledger always runs hledger with the `--auto` flag,
 so be aware that any auto posting rules will be active.
 
-### flymake-hledger
+#### flymake-hledger
 
-<https://github.com/DamienCassou/flymake-hledger/> (2023)
-is a more recent alternative to flycheck-hledger, using the built-in Flymake
-rather than the third-party Flycheck feature.
+<https://github.com/DamienCassou/flymake-hledger>
+reports problems using Flymake.
+Use the latest version (from MELPA).
+Updated support for hledger 1.40 and newer, including hledger 2, is in progress
+([#8](https://github.com/DamienCassou/flymake-hledger/pull/8));
+until it is released, some error messages are shown incompletely.
 
-Here are some early configuration notes, using use-package:
+Flymake doesn't bind keys for navigating problems by default; the sample config below binds the same keys as flycheck.
+``C-c ! n`` and ``C-c ! p`` step to the next and previous problem, and ``C-c ! l`` lists them.
 
+Sample config:
 ```elisp
-;; Enable verbose use-package debug info when starting with --debug-init
-;; (when init-file-debug
-;;   (setq use-package-verbose t
-;;         use-package-expand-minimally nil
-;;         use-package-compute-statistics t
-;;         debug-on-error t))
-
-;; Configure flycheck-like keybindings for flymake:
 (use-package flymake
-  :bind (
-         :map flymake-mode-map
+  :bind (:map flymake-mode-map
          ("C-c ! n" . flymake-goto-next-error)
          ("C-c ! p" . flymake-goto-prev-error)
-         ("C-c ! l" . flymake-show-buffer-diagnostics)  ; a new list for each buffer, unlike flycheck
-         ("C-c ! v" . flymake-switch-to-log-buffer)))
+         ("C-c ! l" . flymake-show-buffer-diagnostics)))
 
 (use-package flymake-hledger
-  :load-path "~/src/flymake-hledger"
-  :after (ledger-mode flymake)
-
-  :hook (
-  (ledger-mode . flymake-hledger-enable)
-  ;; Make C-x ` work ?
-  ;; XXX Both of these work only in the first file opened; debugging needed.
-  ;; (ledger-mode . (lambda () (setq next-error-function 'flymake-goto-next-error)))
-  ;; (ledger-mode . (lambda () (setq next-error-function (lambda (num reset) (when reset (goto-char (point-min))) (flymake-goto-next-error num)))))
-  )
-
+  :ensure t
+  :hook (ledger-mode . flymake-hledger-enable)  ; or hledger-mode
   :custom
-  (flymake-show-diagnostics-at-end-of-line t)  ; might require Emacs 30
-  (flymake-suppress-zero-counters t)
-  (flymake-hledger-checks '("accounts" "commodities" "balancednoautoconversion" "ordereddates")) ; "recentassertions" "payees" "tags" "uniqueleafnames" https://hledger.org/hledger.html#check
+  (flymake-hledger-checks '("accounts" "commodities" "balanced" "ordereddates" "recentassertions"))   ; checks from https://hledger.org/hledger.html#check
+  ;(flymake-hledger-command '("hledger"))
+  ;(flymake-show-diagnostics-at-end-of-line t)  ; Emacs 30+
   )
 ```
 
-To extra checks for a specific journal file, add a line like this near the top:
-```elisp
-; -*- eval:(add-to-list 'flymake-hledger-checks "recentassertions" t); -*-
-```
+flymake-hledger doesn't add the `--auto` flag, so auto posting rules are active only if
+your [hledger config file](hledger.md#config-files) or `flymake-hledger-command` includes it.
 
 ### org babel
 
