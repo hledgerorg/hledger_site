@@ -144,7 +144,6 @@ More tips: [#367 ledger-mode setup for hledger needs documenting](https://github
 
 <https://github.com/narendraj9/hledger-mode>\
 An alternative to ledger-mode, written specifically for hledger, with some different features.
-It is less actively maintained (its last change was in 2025-10).
 
 ## Error checking
 
@@ -155,7 +154,7 @@ the difference is the Emacs checking framework they use.
 If you already use [Flycheck](https://www.flycheck.org) (a separate package), choose flycheck-hledger;
 otherwise flymake-hledger uses [Flymake](https://www.gnu.org/software/emacs/manual/html_node/emacs/Flymake.html), which is built into Emacs.
 
-To enable extra checks for one journal file, you can add a line like this near the top
+To enable extra checks in a particular journal file, you can add a line like this near the top
 (using `flycheck-hledger-checks` or `flymake-hledger-checks`):
 ```elisp
 ; -*- eval: (setq-local flymake-hledger-checks (append flymake-hledger-checks '("tags"))) -*-
@@ -163,8 +162,7 @@ To enable extra checks for one journal file, you can add a line like this near t
 
 ### flycheck-hledger
 
-<https://github.com/DamienCassou/flycheck-hledger>
-reports problems using Flycheck.
+<https://github.com/DamienCassou/flycheck-hledger> shows journal problems using Flycheck.
 Use flycheck-hledger 1.1.0 or newer (from MELPA or MELPA Stable),
 which supports hledger 1.40 and newer, including hledger 2 (and partially supports hledger 1.26+).
 
@@ -191,8 +189,7 @@ so be aware that any auto posting rules will be active.
 
 ### flymake-hledger
 
-<https://github.com/DamienCassou/flymake-hledger>
-reports problems using Flymake.
+<https://github.com/DamienCassou/flymake-hledger> shows journal problems using Flymake.
 Use the latest version (from MELPA).
 Updated support for hledger 1.40 and newer, including hledger 2, is in progress
 ([#8](https://github.com/DamienCassou/flymake-hledger/pull/8));
