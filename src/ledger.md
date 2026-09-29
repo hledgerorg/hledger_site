@@ -395,8 +395,9 @@ It normally uses a syntax similar to Beancount's, but it also reads all of Ledge
 (which are treated like the non-fixated forms).
 It can also print them in Ledger's syntax, with the `ledger` output format.
 
-Note Ledger balances acquisitions with `@` and calculates gains with `{}`, allowing these to differ (and be unaccounted for).
-hledger 2 requires them to agree (unless you use `-I` or `--ignore-lots`).
+Note one difference: when both `{}` and `@` are written on a purchase, Ledger balances with `{}` and treats `@` as an informational price,
+whereas in hledger 2 `@` is always what you paid, so it must agree with `{}` (or use `-I`/`--ignore-lots`);
+record a different market price with a `P` directive instead.
 See [Acquire](../dev/hledger.md#acquire) in the manual for more about this.
 
 See [hledger manual: Cost basis](../dev/hledger.md#cost-basis),
