@@ -206,7 +206,7 @@ Y (supported), Ignored (accepted but ignored), or N (not accepted).
 | `;` `#` `%` `*` &#124; comment lines                                                                                                                  | Y       | "Comment line". `%` and &#124; are not supported.
 | `!` or `@` as a directive prefix                                                                                                                      | Y       | Legacy syntax, best avoided.
 | `account` pre-declare account names                                                                                                                   | Y       |
-| `account` subdirectives                                                                                                                               | Ignored | <!-- Y? -->
+| `account` subdirectives                                                                                                                               | Y       | `alias` is supported, other subdirectives are ignored.
 | `apply account` set a default parent account                                                                                                          | Y       |
 | `apply fixed` set fixated prices                                                                                                                      | Ignored |
 | `apply tag` assign a tag to transactions                                                                                                              | Ignored |
