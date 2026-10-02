@@ -1,7 +1,7 @@
 # Install
 
 The current stable hledger release is **1.52.4**. <!-- for setup command: "current hledger release" --> \
-The current preview release is **1.99.4** (2.0 preview 4).
+The current preview release is **1.99.5** (2.0 preview 5).
 
 Both versions are suitable for daily use. hledger 1 is receiving only essential fixes;
 the hledger 2 previews are strictly better, highly compatible,
@@ -29,11 +29,11 @@ or use a download tool like [eget](https://github.com/zyedidia/eget?tab=readme-o
 
 [![hledger release binaries](https://img.shields.io/badge/hledger_release_binaries-1.52.4-brightgreen.svg)][release binaries]
 `eget hledgerorg/hledger --all`\
-[![hledger preview binaries](https://img.shields.io/badge/hledger_preview_binaries-1.99.4-brightgreen.svg)][preview binaries]
+[![hledger preview binaries](https://img.shields.io/badge/hledger_preview_binaries-1.99.5-brightgreen.svg)][preview binaries]
 `eget hledgerorg/hledger --all --pre-release`
 
 [release binaries]: https://github.com/hledgerorg/hledger/releases/tag/1.52.4
-[preview binaries]: https://github.com/hledgerorg/hledger/releases/tag/1.99.4
+[preview binaries]: https://github.com/hledgerorg/hledger/releases/tag/1.99.5
 
 ## Packaged binaries
 
