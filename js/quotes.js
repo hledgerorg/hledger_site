@@ -922,4 +922,19 @@ hledgerはとにかくレポートが見やすく機能も豊富で、「ledger�
 (hledger is, in any case, easy to read in its reports and packed with features, having long since outgrown the mere framework of "Haskell implementation of ledger".)
 --どっぴい
 
+I got around to producing investment return numbers from my books to match up against the the various portals where my investments live.
+It works! Very gratifying. Still have a ways to go, but the initial trials are going great.
+--Arthur Cinader
+
+Decades of statements, multiple brokers, custody changes, real estate, mortgages, and partnerships.
+Fees, taxes, it all foots, runs on my laptop, and is backed by immutable evidence on S3.
+It's liberating both because I am not dependent on any service, but I am also now intimate with the details, and no longer fear the complexity of it all.
+Puts me in a position to make better financial decisions. So thanks, Simon. Hledger is a fun tool to work with.
+--Arthur Cinader
+
+Hledger used with an LLM is pure bliss
+--Luca Molteni
+
+
+
 `; const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
