@@ -75,6 +75,7 @@ all: \
 	build3-1.43 \
 	build3-1.50 \
 	build3-1.51 \
+	build3-1.99.5 \
 	build3-dev \
 	build3-1.52
 	@make -s sitemap

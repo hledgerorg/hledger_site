@@ -93,6 +93,7 @@ hledger.org {
 		path /1.50/*
 		path /1.51/*
 		path /1.52/*
+		path /1.99.5/*
 		path /dev/*
 	}
 	root @oldmanpath /srv/hledger/site/out2/
