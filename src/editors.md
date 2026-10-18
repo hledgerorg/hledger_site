@@ -24,6 +24,10 @@ See [hledger and Emacs](emacs.md) for details and configuration tips. In brief:
 - <a id="flycheck-hledger"></a><a id="flymake-hledger"></a>[flycheck-hledger](emacs.md#flycheck-hledger) and [flymake-hledger](emacs.md#flymake-hledger) show problems in your journal as you edit it.
 - <a id="org-babel"></a><a id="calc"></a>[org babel](emacs.md#org-babel) can embed hledger reports in org files, and [calc](emacs.md#calc) can help with arithmetic during data entry.
 
+## NEdit
+
+- <https://hub.darcs.net/thielema/nedit>
+
 ## Vim
 
 - <https://github.com/ptimoney/hledger-nvim>
