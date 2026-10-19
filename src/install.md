@@ -41,7 +41,7 @@ or use a download tool like [eget](https://github.com/zyedidia/eget?tab=readme-o
 because repology.org, which normally provides live badges, is offline
 ([details](https://github.com/repology/repology-rs/issues/560)).
 
-Homebrew (Mac, Linux) <!-- chenrui ? --> \
+Homebrew (Mac, Linux including 64-bit ARM) <!-- chenrui ? --> \
 [![Homebrew](https://img.shields.io/badge/Homebrew_package-1.52.4-brightgreen.svg)](https://formulae.brew.sh/formula/hledger) `brew install hledger` <!-- repology: https://repology.org/badge/version-for-repo/homebrew/hledger.svg -->
 
 Windows \
@@ -106,7 +106,8 @@ Gentoo <!-- ezzie --> \
 [![Gentoo](https://img.shields.io/badge/Gentoo_package-1.52.1-e05d44.svg)](https://gentoo.zugaina.org/Search?search=hledger) `eselect repository enable haskell && emerge hledger hledger-ui hledger-web`
 
 Raspberry Pi \
-There are no official Linux ARM binaries, so use a package above if one is available for your OS,
+There are no official Linux ARM binaries, but on a 64-bit Pi you can install hledger with Homebrew (above).
+Otherwise use a package above if one is available for your OS,
 or [build from source](#build-from-source).
 There are also some old unaudited binaries: <!-- nobodyinperson --> \
 ![Raspberry Pi 32-bit release binaries](https://img.shields.io/badge/Raspberry_Pi_32bit_release_binaries-1.22.1-e05d44.svg)

@@ -13,8 +13,9 @@ On a Linux machine with an intel processor:
 ```
 curl -sL https://github.com/hledgerorg/hledger/releases/latest/download/hledger-linux-x64.tar.gz | tar -xzv -f- -C/usr/local/bin hledger hledger-ui hledger-web
 ```
-(On a Linux machine with an ARM processor, such as a Raspberry Pi, there is no official binary;
-see [Install](install.md) for other ways.)
+(On a Linux machine with a 64-bit ARM processor, such as a recent Raspberry Pi, there is no official binary,
+but you can install hledger with [Homebrew](https://brew.sh): `brew install hledger`.
+Or see [Install](install.md) for other ways.)
 
 On a modern mac with an ARM ("M") processor:
 ```
