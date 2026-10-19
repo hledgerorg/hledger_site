@@ -41,8 +41,10 @@ $ hledger --version
 hledger 1.52.4 ...
 ```
 
-The examples in this book assume you are using this latest hledger version.
-(And if you're on Windows, that you are using powershell, not CMD.EXE.)
+This book is beginning to be updated for hledger 2, which is currently in preview (see [Install](install.md)).
+The examples in this book were tested with hledger 1, but most will be the same with hledger 2.
+
+(And if you're on Windows, the examples assume you are using powershell, not CMD.EXE.)
 
 Press the right arrow key again (or click the right arrow button) to step to the next page.
 

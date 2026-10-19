@@ -3,8 +3,11 @@
 A small but growing book introducing hledger, one step at a time.
 (For other hledger docs, see [Docs](doc.md) or the sidebar.)
 
+It describes hledger 1, but is beginning to be updated for hledger 2 (the 1.99.x previews, see [Install](install.md)).
+Most of it applies to both.
+
 Reading the book in order is helpful, but not essential.
-You can use the the left and right arrow keys, 
+You can use the left and right arrow keys, 
 or the arrow buttons below, to step through the pages.
 Eg press the right arrow key now to see the next.
 
