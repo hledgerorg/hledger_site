@@ -1,7 +1,7 @@
 # Journal entries
 
 Here's the journal entry for a common type of transaction - a purchase - with the parts labelled in red.
-You can read more about each part in the [manual](hledger.md#transactions) if needed.:
+You can read more about each part in the [manual](hledger.md#transactions-1) if needed.:
 
 [![a hledger transaction entry, with parts named](https://raw.githubusercontent.com/RobertNielsen1/hledger/master/hledger%20basic%20transaction%20--%20terms.png)](https://github.com/RobertNielsen1/hledger/blob/master/hledger%20basic%20transaction%20--%20terms.png)
 This entry means: "on april 10th 2018, there was a $9.19 car-related expense, paid with the Acme credit card".
