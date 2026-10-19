@@ -112,16 +112,6 @@ Setup tips:
 - in Emacs, install the `flycheck-hledger` package and customise the `flycheck-checkers` variable, adding `hledger` to the list
 - customise the `flycheck-hledger-strict` and `flycheck-hledger-checks` variables
 
-## Todo / maybe
-
-Here are some checks we don't support, but could:
-
-- **accountsactive** - for each account used, if there is posting with an `open:` [tag](hledger.md#tags),
-  it must have a corresponding posting with a `close:` tag, and all other postings
-  must be chronologically between (and if on the same date, textually between)
-  open and close postings. ("Accounts are posted to only within their declared active period.")
-- **explicitamounts** - all transaction amounts have been recorded explicitly
-
 ## Preventing postings to closed accounts
 
 Some options (from <https://www.reddit.com/r/plaintextaccounting/comments/180a11b/how_to_represent_closure_of_an_account_using>):
