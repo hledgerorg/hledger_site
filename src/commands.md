@@ -48,6 +48,7 @@ GENERATING DATA
  rewrite                  generate postings by rule, like print --auto
 OTHER ADDONS
 ```
+(This is hledger 2's list; hledger 1's is grouped a little differently.)
 
 Most commands are reports. Here's a good order to learn them in:
 
