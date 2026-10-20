@@ -15,6 +15,13 @@ and both versions can be installed side by side.
 1. Install hledger 2 (see [Install](install.md)),
    keeping hledger 1 available under another name, eg by renaming its executable to `hledger1`.
 
+   Both versions read the same config file. If you later use hledger 2 config file features,
+   such as multi-line [command aliases](/dev/hledger.html#command-aliases),
+   hledger 1 will refuse to run, even for `--version`
+   (see [Config files](/dev/hledger.html#config-files) for the details).
+   Run it as `hledger1 -n` then, or give it its own config file with `--conf`.
+   And if hledger reports an unexpected config file error, check that an old hledger isn't running instead (eg one found earlier in your PATH).
+
 2. Make sure your data files are backed up, or committed to version control.
 
 3. Check your data with hledger 2:
