@@ -4,8 +4,8 @@ Tips and techniques for producing charts from hledger data.
 
 ## Built-in charts
 
-hledger can show many reports as a chart, by itself.
-(This is in the main branch for now, so you'll need to [build it](install.md#build-from-source) to try it.)
+hledger main can show many reports as a chart.
+This is not yet released, so you'll need to [build it](install.md#build-from-source) to try it.
 Add `--chart` to a `balance`, `balancesheet`, `balancesheetequity`, `cashflow`, `incomestatement`, `register` or `aregister` report;
 the `activity` command always shows one.
 A suitable kind of chart is chosen for the report: eg stacked bars per period for balance changes,
@@ -41,26 +41,6 @@ And to collect several reports and charts into one page, use the `run` command w
 
 For more, see [Charts](https://hledger.org/dev/hledger.html#charts) in the (dev) manual.
 
-## Using other tools
-
-**The most general, lowest-common-denominator way** is to produce simple [CSV output](hledger.md#output-format)
-from a report and then make charts from that using the tool of your choice.
-Eg, drag the CSV file into a spreadsheet and use its charting tools.
-The `balance` command with --layout=bare and -N/--no-total is most often used. Eg:
-```
-hledger bal --layout bare -N expenses -o expenses.csv
-```
-
-**For a polished web UI with many ready-made charts**, you can export to Beancount format
-and then use [Fava](https://fava.pythonanywhere.com).
-(If this doesn't work, you may need to alias some account names, eg; see [Beancount output](https://hledger.org/hledger.html#beancount-output)):
-```
-hledger print -o export.beancount
-fava export.beancount
-```
-
-Here are some other ways:
-
 ## Charting tools built for hledger
 
 Simplest first:
@@ -77,8 +57,7 @@ hledger web
 
 [hledger-bar](scripts.md#hledger-bar) (2023)
 is a bash script for making quick bar charts in the terminal.
-It's useful with hledger 1.x, or hledger 2.x previews up to 1.99.5;
-with newer hledger, use the [built-in charts](#built-in-charts) instead.
+It's useful with hledger 1.x, or hledger 2.x previews up to 1.99.5.
 
 ```
 $ hledger bar -v 1 -f $TIMELOG biz
@@ -91,14 +70,14 @@ $ hledger bar -v 1 -f $TIMELOG biz
 ### hledger-plot
 
 [hledger-plot](https://pypi.org/project/hledger-utils) (2023)
-is a powerful chart-making tool written in python.
+is a powerful chart-making addon you can install in PATH.
 
 ![hledger-plot screenshot](images/charts-hledger-plot.png)
 
 ### hledger-lit
 
 [hledger-lit](https://github.com/adept/hledger-lit) (2025)
-is a nice python web UI that makes several kinds of chart.
+is a nice web UI that makes several kinds of chart.
 
 ### hledger-sankeymatic
 
@@ -158,23 +137,34 @@ using [ROOT](https://root.cern).
 
 ## Other charting tools
 
+## Fava
+
+You can export to Beancount format and then use [Fava](https://fava.pythonanywhere.com), a web UI with many charts.
+See [Beancount output](https://hledger.org/hledger.html#beancount-output)
+or (improved) [Beancount output in 2.x](https://hledger.org/dev/hledger.html#beancount-output).
+
 ### Ledger chart tools
 
 Tools built for Ledger can sometimes be adapted to work with hledger also; or, hledger data can be exported to Ledger-readable files. Eg:
 
 - [Report Scripts for Ledger CLI with Gnuplot](https://www.sundialdreams.com/report-scripts-for-ledger-cli-with-gnuplot/) (2016)
 - [ledger-plots](https://github.com/esovetkin/ledger-plots) (2018), an R package that makes PDF charts from Ledger
-- More can be found at the PTA site:
-  [GUI](https://plaintextaccounting.org/#ui-gui),
-  [web](https://plaintextaccounting.org/#ui-web),
-  [mobile](https://plaintextaccounting.org/#ui-mobile),
-  [other](https://plaintextaccounting.org/#reporting)
+
+## Spreadsheets
+
+The most general, lowest-common-denominator way is to produce [CSV output](hledger.md#output-format) from a report,
+then drag the CSV file into a spreadsheet and use its charting tools.
+The `balance` command with --layout=bare and -N/--no-total is most often used. Eg:
+```
+hledger bal --layout bare -N expenses -o expenses.csv
+```
 
 ### ploterific
 
+Here's another small example of plotting CSV data.
 [ploterific](https://github.com/GregorySchwartz/ploterific) (`stack install hvega-theme ploterific`) produces simple charts,
 in a HTML file that uses the [Vega-Lite](https://vega.github.io/vega-lite/) javascript library.
-Charts can also be saved as SVG or PNG. Here's a detailed example:
+Charts can also be saved as SVG or PNG.
 
 ```
 hledger -f examples/bcexample.journal bal -O csv -N expenses -3 cur:USD \
@@ -200,13 +190,3 @@ Let's break down that command line:
 - `-c account` - use `account` values to select colours
 - `-o a.html` - save into a temporary HTML file
 - `&& open a.html` - and view it in your web browser, on Mac; on other systems it might be `xdg-open` or `start`
-
-Here is the same chart but with the colour set by the balance:
-
-```
-hledger -f examples/bcexample.journal bal -O csv -N expenses -3 cur:USD \
-    | sed 's/ USD//' \
-    | ploterific -m Bar -f account:N -f balance:Q -c balance:Q -o a.html
-```
-![ploterific example 2](images/ploterific2.svg)
-
