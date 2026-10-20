@@ -4,8 +4,8 @@ Tips and techniques for producing charts from hledger data.
 
 ## Built-in charts
 
+(Not yet released, you'll need to [build main](install.md#build-from-source) to try it.)
 hledger main can show many reports as a chart.
-This is not yet released, so you'll need to [build it](install.md#build-from-source) to try it.
 Add `--chart` to a `balance`, `balancesheet`, `balancesheetequity`, `cashflow`, `incomestatement`, `register` or `aregister` report;
 the `activity` command always shows one.
 A suitable kind of chart is chosen for the report: eg stacked bars per period for balance changes,
