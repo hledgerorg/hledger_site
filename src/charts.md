@@ -137,7 +137,7 @@ using [ROOT](https://root.cern).
 
 ## Other charting tools
 
-## Fava
+### Fava
 
 You can export to Beancount format and then use [Fava](https://fava.pythonanywhere.com), a web UI with many charts.
 See [Beancount output](https://hledger.org/hledger.html#beancount-output)
@@ -150,7 +150,7 @@ Tools built for Ledger can sometimes be adapted to work with hledger also; or, h
 - [Report Scripts for Ledger CLI with Gnuplot](https://www.sundialdreams.com/report-scripts-for-ledger-cli-with-gnuplot/) (2016)
 - [ledger-plots](https://github.com/esovetkin/ledger-plots) (2018), an R package that makes PDF charts from Ledger
 
-## Spreadsheets
+### Spreadsheets
 
 The most general, lowest-common-denominator way is to produce [CSV output](hledger.md#output-format) from a report,
 then drag the CSV file into a spreadsheet and use its charting tools.
