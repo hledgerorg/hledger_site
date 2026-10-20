@@ -1,0 +1,852 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="hledger-chart" width="880" height="442" viewBox="0 0 880 442" role="img" aria-label="Monthly Income Statement 2013">
+<title>Monthly Income Statement 2013</title>
+<style>.hledger-chart{max-width:100%;height:auto;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:14px}
+.hledger-chart .title{font-size:17px;font-weight:600}
+.hledger-chart .heading{font-size:15px;font-weight:600}
+.hledger-chart .value,.hledger-chart .tick{font-variant-numeric:tabular-nums}
+.hledger-chart .grid,.hledger-chart .axis{stroke-width:1}
+.hledger-chart .line{fill:none;stroke-width:3;stroke-linejoin:round;stroke-linecap:round}
+.hledger-chart .mark{stroke-width:2.5}
+.hledger-chart .average{stroke-width:2;stroke-dasharray:5 4}
+.hledger-chart .hit{fill:transparent}
+.hledger-chart .hatch{stroke-width:2.5}
+.hledger-chart .bg{fill:#fcfcfb}
+.hledger-chart .title{fill:#0b0b0b}
+.hledger-chart .heading{fill:#0b0b0b}
+.hledger-chart .label{fill:#52514e}
+.hledger-chart .value{fill:#52514e}
+.hledger-chart .tick{fill:#898781}
+.hledger-chart .grid{stroke:#e1e0d9}
+.hledger-chart .axis{stroke:#c3c2b7}
+.hledger-chart .line.total{stroke:#0b0b0b}
+.hledger-chart .mark.total{stroke:#0b0b0b}
+.hledger-chart .average{stroke:#0b0b0b}
+.hledger-chart .clip{fill:#0b0b0b}
+.hledger-chart .hatch{stroke:#fcfcfb}
+.hledger-chart .fill.ta0{fill:#2a78d6}
+.hledger-chart .line.ta0{stroke:#2a78d6}
+.hledger-chart .fill.ta1{fill:#1d5496}
+.hledger-chart .line.ta1{stroke:#1d5496}
+.hledger-chart .fill.ta2{fill:#7faee6}
+.hledger-chart .line.ta2{stroke:#7faee6}
+.hledger-chart .fill.ta3{fill:#b4d0f1}
+.hledger-chart .line.ta3{stroke:#b4d0f1}
+.hledger-chart .fill.tl0{fill:#eda100}
+.hledger-chart .line.tl0{stroke:#eda100}
+.hledger-chart .fill.tl1{fill:#a67100}
+.hledger-chart .line.tl1{stroke:#a67100}
+.hledger-chart .fill.tl2{fill:#f4c766}
+.hledger-chart .line.tl2{stroke:#f4c766}
+.hledger-chart .fill.tl3{fill:#f9dea6}
+.hledger-chart .line.tl3{stroke:#f9dea6}
+.hledger-chart .fill.te0{fill:#4a3aa7}
+.hledger-chart .line.te0{stroke:#4a3aa7}
+.hledger-chart .fill.te1{fill:#342975}
+.hledger-chart .line.te1{stroke:#342975}
+.hledger-chart .fill.te2{fill:#9289ca}
+.hledger-chart .line.te2{stroke:#9289ca}
+.hledger-chart .fill.te3{fill:#c0bae0}
+.hledger-chart .line.te3{stroke:#c0bae0}
+.hledger-chart .fill.tr0{fill:#008300}
+.hledger-chart .line.tr0{stroke:#008300}
+.hledger-chart .fill.tr1{fill:#005c00}
+.hledger-chart .line.tr1{stroke:#005c00}
+.hledger-chart .fill.tr2{fill:#66b566}
+.hledger-chart .line.tr2{stroke:#66b566}
+.hledger-chart .fill.tr3{fill:#a6d4a6}
+.hledger-chart .line.tr3{stroke:#a6d4a6}
+.hledger-chart .fill.tx0{fill:#e34948}
+.hledger-chart .line.tx0{stroke:#e34948}
+.hledger-chart .fill.tx1{fill:#9f3332}
+.hledger-chart .line.tx1{stroke:#9f3332}
+.hledger-chart .fill.tx2{fill:#ee9291}
+.hledger-chart .line.tx2{stroke:#ee9291}
+.hledger-chart .fill.tx3{fill:#f5bfbf}
+.hledger-chart .line.tx3{stroke:#f5bfbf}
+.hledger-chart .fill.s0{fill:#2a78d6}
+.hledger-chart .line.s0{stroke:#2a78d6}
+.hledger-chart .fill.s1{fill:#eb6834}
+.hledger-chart .line.s1{stroke:#eb6834}
+.hledger-chart .fill.s2{fill:#1baf7a}
+.hledger-chart .line.s2{stroke:#1baf7a}
+.hledger-chart .fill.s3{fill:#eda100}
+.hledger-chart .line.s3{stroke:#eda100}
+.hledger-chart .fill.s4{fill:#e87ba4}
+.hledger-chart .line.s4{stroke:#e87ba4}
+.hledger-chart .fill.s5{fill:#008300}
+.hledger-chart .line.s5{stroke:#008300}
+.hledger-chart .fill.s6{fill:#4a3aa7}
+.hledger-chart .line.s6{stroke:#4a3aa7}
+.hledger-chart .fill.s7{fill:#e34948}
+.hledger-chart .line.s7{stroke:#e34948}
+.hledger-chart .fill.other{fill:#898781}
+.hledger-chart .line.other{stroke:#898781}
+.hledger-chart .fill.oa{fill:#6381a3}
+.hledger-chart .line.oa{stroke:#6381a3}
+.hledger-chart .fill.ol{fill:#b1914d}
+.hledger-chart .line.ol{stroke:#b1914d}
+.hledger-chart .fill.oe{fill:#706890}
+.hledger-chart .line.oe{stroke:#706890}
+.hledger-chart .fill.or{fill:#52854d}
+.hledger-chart .line.or{stroke:#52854d}
+.hledger-chart .fill.ox{fill:#ad6e6a}
+.hledger-chart .line.ox{stroke:#ad6e6a}
+.hledger-chart .fill.lone{fill:#1597b0}
+.hledger-chart .line.lone{stroke:#1597b0}
+.hledger-chart .fill.neutral{fill:#52514e}
+.hledger-chart .line.neutral{stroke:#52514e}
+@media (prefers-color-scheme:dark){
+.hledger-chart .bg{fill:#1a1a19}
+.hledger-chart .title{fill:#ffffff}
+.hledger-chart .heading{fill:#ffffff}
+.hledger-chart .label{fill:#c3c2b7}
+.hledger-chart .value{fill:#c3c2b7}
+.hledger-chart .tick{fill:#898781}
+.hledger-chart .grid{stroke:#2c2c2a}
+.hledger-chart .axis{stroke:#383835}
+.hledger-chart .line.total{stroke:#ffffff}
+.hledger-chart .mark.total{stroke:#ffffff}
+.hledger-chart .average{stroke:#ffffff}
+.hledger-chart .clip{fill:#ffffff}
+.hledger-chart .hatch{stroke:#1a1a19}
+.hledger-chart .fill.ta0{fill:#3987e5}
+.hledger-chart .line.ta0{stroke:#3987e5}
+.hledger-chart .fill.ta1{fill:#88b7ef}
+.hledger-chart .line.ta1{stroke:#88b7ef}
+.hledger-chart .fill.ta2{fill:#285ea0}
+.hledger-chart .line.ta2{stroke:#285ea0}
+.hledger-chart .fill.ta3{fill:#bad5f6}
+.hledger-chart .line.ta3{stroke:#bad5f6}
+.hledger-chart .fill.tl0{fill:#c98500}
+.hledger-chart .line.tl0{stroke:#c98500}
+.hledger-chart .fill.tl1{fill:#dfb666}
+.hledger-chart .line.tl1{stroke:#dfb666}
+.hledger-chart .fill.tl2{fill:#8d5d00}
+.hledger-chart .line.tl2{stroke:#8d5d00}
+.hledger-chart .fill.tl3{fill:#ecd4a6}
+.hledger-chart .line.tl3{stroke:#ecd4a6}
+.hledger-chart .fill.te0{fill:#9085e9}
+.hledger-chart .line.te0{stroke:#9085e9}
+.hledger-chart .fill.te1{fill:#bcb6f2}
+.hledger-chart .line.te1{stroke:#bcb6f2}
+.hledger-chart .fill.te2{fill:#655da3}
+.hledger-chart .line.te2{stroke:#655da3}
+.hledger-chart .fill.te3{fill:#d8d4f7}
+.hledger-chart .line.te3{stroke:#d8d4f7}
+.hledger-chart .fill.tr0{fill:#008300}
+.hledger-chart .line.tr0{stroke:#008300}
+.hledger-chart .fill.tr1{fill:#66b566}
+.hledger-chart .line.tr1{stroke:#66b566}
+.hledger-chart .fill.tr2{fill:#005c00}
+.hledger-chart .line.tr2{stroke:#005c00}
+.hledger-chart .fill.tr3{fill:#a6d4a6}
+.hledger-chart .line.tr3{stroke:#a6d4a6}
+.hledger-chart .fill.tx0{fill:#e66767}
+.hledger-chart .line.tx0{stroke:#e66767}
+.hledger-chart .fill.tx1{fill:#f0a4a4}
+.hledger-chart .line.tx1{stroke:#f0a4a4}
+.hledger-chart .fill.tx2{fill:#a14848}
+.hledger-chart .line.tx2{stroke:#a14848}
+.hledger-chart .fill.tx3{fill:#f6caca}
+.hledger-chart .line.tx3{stroke:#f6caca}
+.hledger-chart .fill.s0{fill:#3987e5}
+.hledger-chart .line.s0{stroke:#3987e5}
+.hledger-chart .fill.s1{fill:#d95926}
+.hledger-chart .line.s1{stroke:#d95926}
+.hledger-chart .fill.s2{fill:#199e70}
+.hledger-chart .line.s2{stroke:#199e70}
+.hledger-chart .fill.s3{fill:#c98500}
+.hledger-chart .line.s3{stroke:#c98500}
+.hledger-chart .fill.s4{fill:#d55181}
+.hledger-chart .line.s4{stroke:#d55181}
+.hledger-chart .fill.s5{fill:#008300}
+.hledger-chart .line.s5{stroke:#008300}
+.hledger-chart .fill.s6{fill:#9085e9}
+.hledger-chart .line.s6{stroke:#9085e9}
+.hledger-chart .fill.s7{fill:#e66767}
+.hledger-chart .line.s7{stroke:#e66767}
+.hledger-chart .fill.other{fill:#898781}
+.hledger-chart .line.other{stroke:#898781}
+.hledger-chart .fill.oa{fill:#6987a9}
+.hledger-chart .line.oa{stroke:#6987a9}
+.hledger-chart .fill.ol{fill:#a3864d}
+.hledger-chart .line.ol{stroke:#a3864d}
+.hledger-chart .fill.oe{fill:#8c86ab}
+.hledger-chart .line.oe{stroke:#8c86ab}
+.hledger-chart .fill.or{fill:#52854d}
+.hledger-chart .line.or{stroke:#52854d}
+.hledger-chart .fill.ox{fill:#ae7a77}
+.hledger-chart .line.ox{stroke:#ae7a77}
+.hledger-chart .fill.lone{fill:#22a6be}
+.hledger-chart .line.lone{stroke:#22a6be}
+.hledger-chart .fill.neutral{fill:#c3c2b7}
+.hledger-chart .line.neutral{stroke:#c3c2b7}
+}
+</style>
+<rect class="bg" width="100%" height="100%" />
+<text class="title" x="16" y="33">Monthly Income Statement 2013</text>
+<rect x="16" y="58" width="12" height="12" rx="3" class="fill tr3" />
+<text class="label" x="36" y="69">Income:US:ETrade:Gains</text>
+<rect x="221.8" y="58" width="12" height="12" rx="3" class="fill tr2" />
+<text class="label" x="241.8" y="69">Income:US:Hoogle:GroupTermLife</text>
+<rect x="485.4" y="58" width="12" height="12" rx="3" class="fill tr1" />
+<text class="label" x="505.4" y="69">Income:US:Hoogle:Match401k</text>
+<rect x="16" y="82" width="12" height="12" rx="3" class="fill tr0" />
+<text class="label" x="36" y="93">Income:US:Hoogle:Salary</text>
+<rect x="224.4" y="82" width="12" height="12" rx="3" class="fill tx0" />
+<text class="label" x="244.4" y="93">Expenses:Home:Rent</text>
+<rect x="401.6" y="82" width="12" height="12" rx="3" class="fill tx2" />
+<text class="label" x="421.6" y="93">Expenses:Taxes:Y2013:US:Federal</text>
+<rect x="16" y="106" width="12" height="12" rx="3" class="fill tx3" />
+<text class="label" x="36" y="117">Expenses:Taxes:Y2013:US:SocSec</text>
+<rect x="289" y="106" width="12" height="12" rx="3" class="fill tx1" />
+<text class="label" x="309" y="117">Expenses:Taxes:Y2013:US:State</text>
+<rect x="545.1" y="106" width="12" height="12" rx="3" class="fill ox" />
+<text class="label" x="565.1" y="117">other (18 accounts)</text>
+<line class="mark total" x1="707.3" x2="719.3" y1="112" y2="112" />
+<text class="label" x="727.3" y="117">Net</text>
+<rect x="766.9" y="106" width="12" height="12" rx="3" class="fill neutral" />
+<rect x="766.9" y="106" width="12" height="12" rx="3" fill="url(#hledger-chart-hatch)" />
+<text class="label" x="786.9" y="117">contra</text>
+<line class="grid" x1="103.8" x2="864" y1="400" y2="400" />
+<text class="tick" x="95.8" y="405" text-anchor="end">-2000</text>
+<line class="axis" x1="103.8" x2="864" y1="371.1" y2="371.1" />
+<text class="tick" x="95.8" y="376.1" text-anchor="end">0</text>
+<line class="grid" x1="103.8" x2="864" y1="342.2" y2="342.2" />
+<text class="tick" x="95.8" y="347.2" text-anchor="end">2000</text>
+<line class="grid" x1="103.8" x2="864" y1="313.3" y2="313.3" />
+<text class="tick" x="95.8" y="318.3" text-anchor="end">4000</text>
+<line class="grid" x1="103.8" x2="864" y1="284.4" y2="284.4" />
+<text class="tick" x="95.8" y="289.4" text-anchor="end">6000</text>
+<line class="grid" x1="103.8" x2="864" y1="255.6" y2="255.6" />
+<text class="tick" x="95.8" y="260.6" text-anchor="end">8000</text>
+<line class="grid" x1="103.8" x2="864" y1="226.7" y2="226.7" />
+<text class="tick" x="95.8" y="231.7" text-anchor="end">10000</text>
+<line class="grid" x1="103.8" x2="864" y1="197.8" y2="197.8" />
+<text class="tick" x="95.8" y="202.8" text-anchor="end">12000</text>
+<line class="grid" x1="103.8" x2="864" y1="168.9" y2="168.9" />
+<text class="tick" x="95.8" y="173.9" text-anchor="end">14000</text>
+<line class="grid" x1="103.8" x2="864" y1="140" y2="140" />
+<text class="tick" x="95.8" y="145" text-anchor="end">16000 USD</text>
+<text class="tick" x="135.5" y="421" text-anchor="middle">Jan</text>
+<text class="tick" x="198.8" y="421" text-anchor="middle">Feb</text>
+<text class="tick" x="262.2" y="421" text-anchor="middle">Mar</text>
+<text class="tick" x="325.5" y="421" text-anchor="middle">Apr</text>
+<text class="tick" x="388.9" y="421" text-anchor="middle">May</text>
+<text class="tick" x="452.2" y="421" text-anchor="middle">Jun</text>
+<text class="tick" x="515.6" y="421" text-anchor="middle">Jul</text>
+<text class="tick" x="578.9" y="421" text-anchor="middle">Aug</text>
+<text class="tick" x="642.3" y="421" text-anchor="middle">Sep</text>
+<text class="tick" x="705.6" y="421" text-anchor="middle">Oct</text>
+<text class="tick" x="769" y="421" text-anchor="middle">Nov</text>
+<text class="tick" x="832.3" y="421" text-anchor="middle">Dec</text>
+<defs>
+<clipPath id="hledger-chart-clip-barv_111.7_371.1_-218.4">
+<path d="M 111.7 371.1 V 155.7 Q 111.7 152.7 114.7 152.7 H 131.5 Q 134.5 152.7 134.5 155.7 V 371.1 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_111.7_371.1_-218.4)">
+<g>
+<title>Jan · Income:US:Hoogle:GroupTermLife · 72.96 USD</title>
+<path class="fill tr2" d="M 111.7 371.1 V 370.1 Q 111.7 370.1 111.7 370.1 H 134.5 Q 134.5 370.1 134.5 370.1 V 371.1 Z" />
+</g>
+<g>
+<title>Jan · Income:US:Hoogle:Match401k · 1200.00 USD</title>
+<path class="fill tr1" d="M 111.7 368.1 V 352.7 Q 111.7 352.7 111.7 352.7 H 134.5 Q 134.5 352.7 134.5 352.7 V 368.1 Z" />
+</g>
+<g>
+<title>Jan · Income:US:Hoogle:Salary · 13846.14 USD</title>
+<path class="fill tr0" d="M 111.7 350.7 V 152.7 Q 111.7 152.7 111.7 152.7 H 134.5 Q 134.5 152.7 134.5 152.7 V 350.7 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_136.5_371.1_-134.8">
+<path d="M 136.5 371.1 V 239.3 Q 136.5 236.3 139.5 236.3 H 156.2 Q 159.2 236.3 159.2 239.3 V 371.1 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_136.5_371.1_-134.8)">
+<g>
+<title>Jan · Expenses:Home:Rent · 2400.00 USD</title>
+<path class="fill tx0" d="M 136.5 371.1 V 336.4 Q 136.5 336.4 136.5 336.4 H 159.2 Q 159.2 336.4 159.2 336.4 V 371.1 Z" />
+</g>
+<g>
+<title>Jan · Expenses:Taxes:Y2013:US:Federal · 3188.76 USD</title>
+<path class="fill tx2" d="M 136.5 334.4 V 290.4 Q 136.5 290.4 136.5 290.4 H 159.2 Q 159.2 290.4 159.2 290.4 V 334.4 Z" />
+</g>
+<g>
+<title>Jan · Expenses:Taxes:Y2013:US:SocSec · 844.62 USD</title>
+<path class="fill tx3" d="M 136.5 288.4 V 278.2 Q 136.5 278.2 136.5 278.2 H 159.2 Q 159.2 278.2 159.2 278.2 V 288.4 Z" />
+</g>
+<g>
+<title>Jan · Expenses:Taxes:Y2013:US:State · 1095.24 USD</title>
+<path class="fill tx1" d="M 136.5 276.2 V 262.4 Q 136.5 262.4 136.5 262.4 H 159.2 Q 159.2 262.4 159.2 262.4 V 276.2 Z" />
+</g>
+<g>
+<title>Jan · other (18 accounts) · 1804.12 USD</title>
+<path class="fill ox" d="M 136.5 260.4 V 236.3 Q 136.5 236.3 136.5 236.3 H 159.2 Q 159.2 236.3 159.2 236.3 V 260.4 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_175.1_371.1_-151.4">
+<path d="M 175.1 371.1 V 222.7 Q 175.1 219.7 178.1 219.7 H 194.8 Q 197.8 219.7 197.8 222.7 V 371.1 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_175.1_371.1_-151.4)">
+<g>
+<title>Feb · Income:US:Hoogle:GroupTermLife · 48.64 USD</title>
+<path class="fill tr2" d="M 175.1 371.1 V 370.4 Q 175.1 370.4 175.1 370.4 H 197.8 Q 197.8 370.4 197.8 370.4 V 371.1 Z" />
+</g>
+<g>
+<title>Feb · Income:US:Hoogle:Match401k · 1200.00 USD</title>
+<path class="fill tr1" d="M 175.1 368.4 V 353.1 Q 175.1 353.1 175.1 353.1 H 197.8 Q 197.8 353.1 197.8 353.1 V 368.4 Z" />
+</g>
+<g>
+<title>Feb · Income:US:Hoogle:Salary · 9230.76 USD</title>
+<path class="fill tr0" d="M 175.1 351.1 V 219.7 Q 175.1 219.7 175.1 219.7 H 197.8 Q 197.8 219.7 197.8 219.7 V 351.1 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_175.1_371.1_2.1">
+<path d="M 175.1 371.1 V 371.1 Q 175.1 373.3 177.2 373.3 H 195.7 Q 197.8 373.3 197.8 371.1 V 371.1 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_175.1_371.1_2.1)">
+<g>
+<title>Feb · Income:US:ETrade:Gains · -148.19 USD</title>
+<path class="fill tr3" d="M 175.1 371.1 V 373.3 Q 175.1 373.3 175.1 373.3 H 197.8 Q 197.8 373.3 197.8 373.3 V 371.1 Z" />
+<path fill="url(#hledger-chart-hatch)" d="M 175.1 371.1 V 373.3 Q 175.1 373.3 175.1 373.3 H 197.8 Q 197.8 373.3 197.8 373.3 V 371.1 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_199.8_371.1_-106">
+<path d="M 199.8 371.1 V 268.1 Q 199.8 265.1 202.8 265.1 H 219.6 Q 222.6 265.1 222.6 268.1 V 371.1 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_199.8_371.1_-106)">
+<g>
+<title>Feb · Expenses:Home:Rent · 2400.00 USD</title>
+<path class="fill tx0" d="M 199.8 371.1 V 336.4 Q 199.8 336.4 199.8 336.4 H 222.6 Q 222.6 336.4 222.6 336.4 V 371.1 Z" />
+</g>
+<g>
+<title>Feb · Expenses:Taxes:Y2013:US:Federal · 2125.84 USD</title>
+<path class="fill tx2" d="M 199.8 334.4 V 305.7 Q 199.8 305.7 199.8 305.7 H 222.6 Q 222.6 305.7 222.6 305.7 V 334.4 Z" />
+</g>
+<g>
+<title>Feb · Expenses:Taxes:Y2013:US:SocSec · 563.08 USD</title>
+<path class="fill tx3" d="M 199.8 303.7 V 297.6 Q 199.8 297.6 199.8 297.6 H 222.6 Q 222.6 297.6 222.6 297.6 V 303.7 Z" />
+</g>
+<g>
+<title>Feb · Expenses:Taxes:Y2013:US:State · 730.16 USD</title>
+<path class="fill tx1" d="M 199.8 295.6 V 287.1 Q 199.8 287.1 199.8 287.1 H 222.6 Q 222.6 287.1 222.6 287.1 V 295.6 Z" />
+</g>
+<g>
+<title>Feb · other (18 accounts) · 1518.57 USD</title>
+<path class="fill ox" d="M 199.8 285.1 V 265.1 Q 199.8 265.1 199.8 265.1 H 222.6 Q 222.6 265.1 222.6 265.1 V 285.1 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_238.4_371.1_-160">
+<path d="M 238.4 371.1 V 214.1 Q 238.4 211.1 241.4 211.1 H 258.2 Q 261.2 211.1 261.2 214.1 V 371.1 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_238.4_371.1_-160)">
+<g>
+<title>Mar · Income:US:Hoogle:GroupTermLife · 48.64 USD</title>
+<path class="fill tr2" d="M 238.4 371.1 V 370.4 Q 238.4 370.4 238.4 370.4 H 261.2 Q 261.2 370.4 261.2 370.4 V 371.1 Z" />
+</g>
+<g>
+<title>Mar · Income:US:Hoogle:Match401k · 1800.00 USD</title>
+<path class="fill tr1" d="M 238.4 368.4 V 344.4 Q 238.4 344.4 238.4 344.4 H 261.2 Q 261.2 344.4 261.2 344.4 V 368.4 Z" />
+</g>
+<g>
+<title>Mar · Income:US:Hoogle:Salary · 9230.76 USD</title>
+<path class="fill tr0" d="M 238.4 342.4 V 211.1 Q 238.4 211.1 238.4 211.1 H 261.2 Q 261.2 211.1 261.2 211.1 V 342.4 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_263.2_371.1_-121.4">
+<path d="M 263.2 371.1 V 252.7 Q 263.2 249.7 266.2 249.7 H 282.9 Q 285.9 249.7 285.9 252.7 V 371.1 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_263.2_371.1_-121.4)">
+<g>
+<title>Mar · Expenses:Home:Rent · 2400.00 USD</title>
+<path class="fill tx0" d="M 263.2 371.1 V 336.4 Q 263.2 336.4 263.2 336.4 H 285.9 Q 285.9 336.4 285.9 336.4 V 371.1 Z" />
+</g>
+<g>
+<title>Mar · Expenses:Taxes:Y2013:US:Federal · 2125.84 USD</title>
+<path class="fill tx2" d="M 263.2 334.4 V 305.7 Q 263.2 305.7 263.2 305.7 H 285.9 Q 285.9 305.7 285.9 305.7 V 334.4 Z" />
+</g>
+<g>
+<title>Mar · Expenses:Taxes:Y2013:US:SocSec · 563.08 USD</title>
+<path class="fill tx3" d="M 263.2 303.7 V 297.6 Q 263.2 297.6 263.2 297.6 H 285.9 Q 285.9 297.6 285.9 297.6 V 303.7 Z" />
+</g>
+<g>
+<title>Mar · Expenses:Taxes:Y2013:US:State · 730.16 USD</title>
+<path class="fill tx1" d="M 263.2 295.6 V 287.1 Q 263.2 287.1 263.2 287.1 H 285.9 Q 285.9 287.1 285.9 287.1 V 295.6 Z" />
+</g>
+<g>
+<title>Mar · other (18 accounts) · 2584.64 USD</title>
+<path class="fill ox" d="M 263.2 285.1 V 249.7 Q 263.2 249.7 263.2 249.7 H 285.9 Q 285.9 249.7 285.9 249.7 V 285.1 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_301.8_371.1_-152.1">
+<path d="M 301.8 371.1 V 222.1 Q 301.8 219.1 304.8 219.1 H 321.5 Q 324.5 219.1 324.5 222.1 V 371.1 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_301.8_371.1_-152.1)">
+<g>
+<title>Apr · Income:US:ETrade:Gains · 47.19 USD</title>
+<path class="fill tr3" d="M 301.8 371.1 V 370.4 Q 301.8 370.4 301.8 370.4 H 324.5 Q 324.5 370.4 324.5 370.4 V 371.1 Z" />
+</g>
+<g>
+<title>Apr · Income:US:Hoogle:GroupTermLife · 48.64 USD</title>
+<path class="fill tr2" d="M 301.8 370.4 V 369.7 Q 301.8 369.7 301.8 369.7 H 324.5 Q 324.5 369.7 324.5 369.7 V 370.4 Z" />
+</g>
+<g>
+<title>Apr · Income:US:Hoogle:Match401k · 1200.00 USD</title>
+<path class="fill tr1" d="M 301.8 367.7 V 352.4 Q 301.8 352.4 301.8 352.4 H 324.5 Q 324.5 352.4 324.5 352.4 V 367.7 Z" />
+</g>
+<g>
+<title>Apr · Income:US:Hoogle:Salary · 9230.76 USD</title>
+<path class="fill tr0" d="M 301.8 350.4 V 219.1 Q 301.8 219.1 301.8 219.1 H 324.5 Q 324.5 219.1 324.5 219.1 V 350.4 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_326.5_371.1_-107.7">
+<path d="M 326.5 371.1 V 266.4 Q 326.5 263.4 329.5 263.4 H 346.3 Q 349.3 263.4 349.3 266.4 V 371.1 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_326.5_371.1_-107.7)">
+<g>
+<title>Apr · Expenses:Home:Rent · 2400.00 USD</title>
+<path class="fill tx0" d="M 326.5 371.1 V 336.4 Q 326.5 336.4 326.5 336.4 H 349.3 Q 349.3 336.4 349.3 336.4 V 371.1 Z" />
+</g>
+<g>
+<title>Apr · Expenses:Taxes:Y2013:US:Federal · 2125.84 USD</title>
+<path class="fill tx2" d="M 326.5 334.4 V 305.7 Q 326.5 305.7 326.5 305.7 H 349.3 Q 349.3 305.7 349.3 305.7 V 334.4 Z" />
+</g>
+<g>
+<title>Apr · Expenses:Taxes:Y2013:US:SocSec · 563.08 USD</title>
+<path class="fill tx3" d="M 326.5 303.7 V 297.6 Q 326.5 297.6 326.5 297.6 H 349.3 Q 349.3 297.6 349.3 297.6 V 303.7 Z" />
+</g>
+<g>
+<title>Apr · Expenses:Taxes:Y2013:US:State · 730.16 USD</title>
+<path class="fill tx1" d="M 326.5 295.6 V 287.1 Q 326.5 287.1 326.5 287.1 H 349.3 Q 349.3 287.1 349.3 287.1 V 295.6 Z" />
+</g>
+<g>
+<title>Apr · other (18 accounts) · 1636.33 USD</title>
+<path class="fill ox" d="M 326.5 285.1 V 263.4 Q 326.5 263.4 326.5 263.4 H 349.3 Q 349.3 263.4 349.3 263.4 V 285.1 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_365.1_371.1_-151.8">
+<path d="M 365.1 371.1 V 222.3 Q 365.1 219.3 368.1 219.3 H 384.9 Q 387.9 219.3 387.9 222.3 V 371.1 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_365.1_371.1_-151.8)">
+<g>
+<title>May · Income:US:Hoogle:GroupTermLife · 48.64 USD</title>
+<path class="fill tr2" d="M 365.1 370.7 V 370 Q 365.1 370 365.1 370 H 387.9 Q 387.9 370 387.9 370 V 370.7 Z" />
+</g>
+<g>
+<title>May · Income:US:Hoogle:Match401k · 1200.00 USD</title>
+<path class="fill tr1" d="M 365.1 368 V 352.7 Q 365.1 352.7 365.1 352.7 H 387.9 Q 387.9 352.7 387.9 352.7 V 368 Z" />
+</g>
+<g>
+<title>May · Income:US:Hoogle:Salary · 9230.76 USD</title>
+<path class="fill tr0" d="M 365.1 350.7 V 219.3 Q 365.1 219.3 365.1 219.3 H 387.9 Q 387.9 219.3 387.9 219.3 V 350.7 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_389.9_371.1_-104.7">
+<path d="M 389.9 371.1 V 269.4 Q 389.9 266.4 392.9 266.4 H 409.6 Q 412.6 266.4 412.6 269.4 V 371.1 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_389.9_371.1_-104.7)">
+<g>
+<title>May · Expenses:Home:Rent · 2400.00 USD</title>
+<path class="fill tx0" d="M 389.9 371.1 V 336.4 Q 389.9 336.4 389.9 336.4 H 412.6 Q 412.6 336.4 412.6 336.4 V 371.1 Z" />
+</g>
+<g>
+<title>May · Expenses:Taxes:Y2013:US:Federal · 2125.84 USD</title>
+<path class="fill tx2" d="M 389.9 334.4 V 305.7 Q 389.9 305.7 389.9 305.7 H 412.6 Q 412.6 305.7 412.6 305.7 V 334.4 Z" />
+</g>
+<g>
+<title>May · Expenses:Taxes:Y2013:US:SocSec · 563.08 USD</title>
+<path class="fill tx3" d="M 389.9 303.7 V 297.6 Q 389.9 297.6 389.9 297.6 H 412.6 Q 412.6 297.6 412.6 297.6 V 303.7 Z" />
+</g>
+<g>
+<title>May · Expenses:Taxes:Y2013:US:State · 730.16 USD</title>
+<path class="fill tx1" d="M 389.9 295.6 V 287.1 Q 389.9 287.1 389.9 287.1 H 412.6 Q 412.6 287.1 412.6 287.1 V 295.6 Z" />
+</g>
+<g>
+<title>May · other (18 accounts) · 1428.26 USD</title>
+<path class="fill ox" d="M 389.9 285.1 V 266.4 Q 389.9 266.4 389.9 266.4 H 412.6 Q 412.6 266.4 412.6 266.4 V 285.1 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_428.5_371.1_-151.4">
+<path d="M 428.5 371.1 V 222.7 Q 428.5 219.7 431.5 219.7 H 448.2 Q 451.2 219.7 451.2 222.7 V 371.1 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_428.5_371.1_-151.4)">
+<g>
+<title>Jun · Income:US:Hoogle:GroupTermLife · 48.64 USD</title>
+<path class="fill tr2" d="M 428.5 371.1 V 370.4 Q 428.5 370.4 428.5 370.4 H 451.2 Q 451.2 370.4 451.2 370.4 V 371.1 Z" />
+</g>
+<g>
+<title>Jun · Income:US:Hoogle:Match401k · 1200.00 USD</title>
+<path class="fill tr1" d="M 428.5 368.4 V 353.1 Q 428.5 353.1 428.5 353.1 H 451.2 Q 451.2 353.1 451.2 353.1 V 368.4 Z" />
+</g>
+<g>
+<title>Jun · Income:US:Hoogle:Salary · 9230.76 USD</title>
+<path class="fill tr0" d="M 428.5 351.1 V 219.7 Q 428.5 219.7 428.5 219.7 H 451.2 Q 451.2 219.7 451.2 219.7 V 351.1 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_453.2_371.1_-106.3">
+<path d="M 453.2 371.1 V 267.8 Q 453.2 264.8 456.2 264.8 H 473 Q 476 264.8 476 267.8 V 371.1 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_453.2_371.1_-106.3)">
+<g>
+<title>Jun · Expenses:Home:Rent · 2400.00 USD</title>
+<path class="fill tx0" d="M 453.2 371.1 V 336.4 Q 453.2 336.4 453.2 336.4 H 476 Q 476 336.4 476 336.4 V 371.1 Z" />
+</g>
+<g>
+<title>Jun · Expenses:Taxes:Y2013:US:Federal · 2125.84 USD</title>
+<path class="fill tx2" d="M 453.2 334.4 V 305.7 Q 453.2 305.7 453.2 305.7 H 476 Q 476 305.7 476 305.7 V 334.4 Z" />
+</g>
+<g>
+<title>Jun · Expenses:Taxes:Y2013:US:SocSec · 563.08 USD</title>
+<path class="fill tx3" d="M 453.2 303.7 V 297.6 Q 453.2 297.6 453.2 297.6 H 476 Q 476 297.6 476 297.6 V 303.7 Z" />
+</g>
+<g>
+<title>Jun · Expenses:Taxes:Y2013:US:State · 730.16 USD</title>
+<path class="fill tx1" d="M 453.2 295.6 V 287.1 Q 453.2 287.1 453.2 287.1 H 476 Q 476 287.1 476 287.1 V 295.6 Z" />
+</g>
+<g>
+<title>Jun · other (18 accounts) · 1539.19 USD</title>
+<path class="fill ox" d="M 453.2 285.1 V 264.8 Q 453.2 264.8 453.2 264.8 H 476 Q 476 264.8 476 264.8 V 285.1 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_491.8_371.1_-147.8">
+<path d="M 491.8 371.1 V 226.4 Q 491.8 223.4 494.8 223.4 H 511.6 Q 514.6 223.4 514.6 226.4 V 371.1 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_491.8_371.1_-147.8)">
+<g>
+<title>Jul · Income:US:Hoogle:GroupTermLife · 48.64 USD</title>
+<path class="fill tr2" d="M 491.8 371.1 V 370.4 Q 491.8 370.4 491.8 370.4 H 514.6 Q 514.6 370.4 514.6 370.4 V 371.1 Z" />
+</g>
+<g>
+<title>Jul · Income:US:Hoogle:Match401k · 950.00 USD</title>
+<path class="fill tr1" d="M 491.8 368.4 V 356.7 Q 491.8 356.7 491.8 356.7 H 514.6 Q 514.6 356.7 514.6 356.7 V 368.4 Z" />
+</g>
+<g>
+<title>Jul · Income:US:Hoogle:Salary · 9230.76 USD</title>
+<path class="fill tr0" d="M 491.8 354.7 V 223.4 Q 491.8 223.4 491.8 223.4 H 514.6 Q 514.6 223.4 514.6 223.4 V 354.7 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_516.6_371.1_-113.3">
+<path d="M 516.6 371.1 V 260.8 Q 516.6 257.8 519.6 257.8 H 536.3 Q 539.3 257.8 539.3 260.8 V 371.1 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_516.6_371.1_-113.3)">
+<g>
+<title>Jul · Expenses:Home:Rent · 2400.00 USD</title>
+<path class="fill tx0" d="M 516.6 371.1 V 336.4 Q 516.6 336.4 516.6 336.4 H 539.3 Q 539.3 336.4 539.3 336.4 V 371.1 Z" />
+</g>
+<g>
+<title>Jul · Expenses:Taxes:Y2013:US:Federal · 2125.84 USD</title>
+<path class="fill tx2" d="M 516.6 334.4 V 305.7 Q 516.6 305.7 516.6 305.7 H 539.3 Q 539.3 305.7 539.3 305.7 V 334.4 Z" />
+</g>
+<g>
+<title>Jul · Expenses:Taxes:Y2013:US:SocSec · 563.08 USD</title>
+<path class="fill tx3" d="M 516.6 303.7 V 297.6 Q 516.6 297.6 516.6 297.6 H 539.3 Q 539.3 297.6 539.3 297.6 V 303.7 Z" />
+</g>
+<g>
+<title>Jul · Expenses:Taxes:Y2013:US:State · 730.16 USD</title>
+<path class="fill tx1" d="M 516.6 295.6 V 287.1 Q 516.6 287.1 516.6 287.1 H 539.3 Q 539.3 287.1 539.3 287.1 V 295.6 Z" />
+</g>
+<g>
+<title>Jul · other (18 accounts) · 2025.11 USD</title>
+<path class="fill ox" d="M 516.6 285.1 V 257.8 Q 516.6 257.8 516.6 257.8 H 539.3 Q 539.3 257.8 539.3 257.8 V 285.1 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_555.2_371.1_-201.1">
+<path d="M 555.2 371.1 V 173.1 Q 555.2 170.1 558.2 170.1 H 574.9 Q 577.9 170.1 577.9 173.1 V 371.1 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_555.2_371.1_-201.1)">
+<g>
+<title>Aug · Income:US:Hoogle:GroupTermLife · 72.96 USD</title>
+<path class="fill tr2" d="M 555.2 371.1 V 370.1 Q 555.2 370.1 555.2 370.1 H 577.9 Q 577.9 370.1 577.9 370.1 V 371.1 Z" />
+</g>
+<g>
+<title>Aug · Income:US:Hoogle:Salary · 13846.14 USD</title>
+<path class="fill tr0" d="M 555.2 368.1 V 170.1 Q 555.2 170.1 555.2 170.1 H 577.9 Q 577.9 170.1 577.9 170.1 V 368.1 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_579.9_371.1_-137.1">
+<path d="M 579.9 371.1 V 237 Q 579.9 234 582.9 234 H 599.7 Q 602.7 234 602.7 237 V 371.1 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_579.9_371.1_-137.1)">
+<g>
+<title>Aug · Expenses:Home:Rent · 2400.00 USD</title>
+<path class="fill tx0" d="M 579.9 371.1 V 336.4 Q 579.9 336.4 579.9 336.4 H 602.7 Q 602.7 336.4 602.7 336.4 V 371.1 Z" />
+</g>
+<g>
+<title>Aug · Expenses:Taxes:Y2013:US:Federal · 3188.76 USD</title>
+<path class="fill tx2" d="M 579.9 334.4 V 290.4 Q 579.9 290.4 579.9 290.4 H 602.7 Q 602.7 290.4 602.7 290.4 V 334.4 Z" />
+</g>
+<g>
+<title>Aug · Expenses:Taxes:Y2013:US:SocSec · 844.62 USD</title>
+<path class="fill tx3" d="M 579.9 288.4 V 278.2 Q 579.9 278.2 579.9 278.2 H 602.7 Q 602.7 278.2 602.7 278.2 V 288.4 Z" />
+</g>
+<g>
+<title>Aug · Expenses:Taxes:Y2013:US:State · 1095.24 USD</title>
+<path class="fill tx1" d="M 579.9 276.2 V 262.4 Q 579.9 262.4 579.9 262.4 H 602.7 Q 602.7 262.4 602.7 262.4 V 276.2 Z" />
+</g>
+<g>
+<title>Aug · other (18 accounts) · 1965.52 USD</title>
+<path class="fill ox" d="M 579.9 260.4 V 234 Q 579.9 234 579.9 234 H 602.7 Q 602.7 234 602.7 234 V 260.4 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_618.5_371.1_-135.4">
+<path d="M 618.5 371.1 V 238.7 Q 618.5 235.7 621.5 235.7 H 638.3 Q 641.3 235.7 641.3 238.7 V 371.1 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_618.5_371.1_-135.4)">
+<g>
+<title>Sep · Income:US:ETrade:Gains · 95.20 USD</title>
+<path class="fill tr3" d="M 618.5 371.1 V 369.7 Q 618.5 369.7 618.5 369.7 H 641.3 Q 641.3 369.7 641.3 369.7 V 371.1 Z" />
+</g>
+<g>
+<title>Sep · Income:US:Hoogle:GroupTermLife · 48.64 USD</title>
+<path class="fill tr2" d="M 618.5 369.7 V 369 Q 618.5 369 618.5 369 H 641.3 Q 641.3 369 641.3 369 V 369.7 Z" />
+</g>
+<g>
+<title>Sep · Income:US:Hoogle:Salary · 9230.76 USD</title>
+<path class="fill tr0" d="M 618.5 367 V 235.7 Q 618.5 235.7 618.5 235.7 H 641.3 Q 641.3 235.7 641.3 235.7 V 367 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_643.3_371.1_-105.3">
+<path d="M 643.3 371.1 V 268.8 Q 643.3 265.8 646.3 265.8 H 663 Q 666 265.8 666 268.8 V 371.1 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_643.3_371.1_-105.3)">
+<g>
+<title>Sep · Expenses:Home:Rent · 2400.00 USD</title>
+<path class="fill tx0" d="M 643.3 371.1 V 336.4 Q 643.3 336.4 643.3 336.4 H 666 Q 666 336.4 666 336.4 V 371.1 Z" />
+</g>
+<g>
+<title>Sep · Expenses:Taxes:Y2013:US:Federal · 2125.84 USD</title>
+<path class="fill tx2" d="M 643.3 334.4 V 305.7 Q 643.3 305.7 643.3 305.7 H 666 Q 666 305.7 666 305.7 V 334.4 Z" />
+</g>
+<g>
+<title>Sep · Expenses:Taxes:Y2013:US:SocSec · 563.08 USD</title>
+<path class="fill tx3" d="M 643.3 303.7 V 297.6 Q 643.3 297.6 643.3 297.6 H 666 Q 666 297.6 666 297.6 V 303.7 Z" />
+</g>
+<g>
+<title>Sep · Expenses:Taxes:Y2013:US:State · 730.16 USD</title>
+<path class="fill tx1" d="M 643.3 295.6 V 287.1 Q 643.3 287.1 643.3 287.1 H 666 Q 666 287.1 666 287.1 V 295.6 Z" />
+</g>
+<g>
+<title>Sep · other (18 accounts) · 1468.83 USD</title>
+<path class="fill ox" d="M 643.3 285.1 V 265.8 Q 643.3 265.8 643.3 265.8 H 666 Q 666 265.8 666 265.8 V 285.1 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_681.9_371.1_-135.4">
+<path d="M 681.9 371.1 V 238.7 Q 681.9 235.7 684.9 235.7 H 701.6 Q 704.6 235.7 704.6 238.7 V 371.1 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_681.9_371.1_-135.4)">
+<g>
+<title>Oct · Income:US:ETrade:Gains · 92.50 USD</title>
+<path class="fill tr3" d="M 681.9 371.1 V 369.8 Q 681.9 369.8 681.9 369.8 H 704.6 Q 704.6 369.8 704.6 369.8 V 371.1 Z" />
+</g>
+<g>
+<title>Oct · Income:US:Hoogle:GroupTermLife · 48.64 USD</title>
+<path class="fill tr2" d="M 681.9 369.8 V 369.1 Q 681.9 369.1 681.9 369.1 H 704.6 Q 704.6 369.1 704.6 369.1 V 369.8 Z" />
+</g>
+<g>
+<title>Oct · Income:US:Hoogle:Salary · 9230.76 USD</title>
+<path class="fill tr0" d="M 681.9 367.1 V 235.7 Q 681.9 235.7 681.9 235.7 H 704.6 Q 704.6 235.7 704.6 235.7 V 367.1 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_706.6_371.1_-107.3">
+<path d="M 706.6 371.1 V 266.8 Q 706.6 263.8 709.6 263.8 H 726.4 Q 729.4 263.8 729.4 266.8 V 371.1 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_706.6_371.1_-107.3)">
+<g>
+<title>Oct · Expenses:Home:Rent · 2400.00 USD</title>
+<path class="fill tx0" d="M 706.6 371.1 V 336.4 Q 706.6 336.4 706.6 336.4 H 729.4 Q 729.4 336.4 729.4 336.4 V 371.1 Z" />
+</g>
+<g>
+<title>Oct · Expenses:Taxes:Y2013:US:Federal · 2125.84 USD</title>
+<path class="fill tx2" d="M 706.6 334.4 V 305.7 Q 706.6 305.7 706.6 305.7 H 729.4 Q 729.4 305.7 729.4 305.7 V 334.4 Z" />
+</g>
+<g>
+<title>Oct · Expenses:Taxes:Y2013:US:SocSec · 563.08 USD</title>
+<path class="fill tx3" d="M 706.6 303.7 V 297.6 Q 706.6 297.6 706.6 297.6 H 729.4 Q 729.4 297.6 729.4 297.6 V 303.7 Z" />
+</g>
+<g>
+<title>Oct · Expenses:Taxes:Y2013:US:State · 730.16 USD</title>
+<path class="fill tx1" d="M 706.6 295.6 V 287.1 Q 706.6 287.1 706.6 287.1 H 729.4 Q 729.4 287.1 729.4 287.1 V 295.6 Z" />
+</g>
+<g>
+<title>Oct · other (18 accounts) · 1606.95 USD</title>
+<path class="fill ox" d="M 706.6 285.1 V 263.8 Q 706.6 263.8 706.6 263.8 H 729.4 Q 729.4 263.8 729.4 263.8 V 285.1 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_745.2_371.1_-134">
+<path d="M 745.2 371.1 V 240.1 Q 745.2 237.1 748.2 237.1 H 765 Q 768 237.1 768 240.1 V 371.1 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_745.2_371.1_-134)">
+<g>
+<title>Nov · Income:US:Hoogle:GroupTermLife · 48.64 USD</title>
+<path class="fill tr2" d="M 745.2 371.1 V 370.4 Q 745.2 370.4 745.2 370.4 H 768 Q 768 370.4 768 370.4 V 371.1 Z" />
+</g>
+<g>
+<title>Nov · Income:US:Hoogle:Salary · 9230.76 USD</title>
+<path class="fill tr0" d="M 745.2 368.4 V 237.1 Q 745.2 237.1 745.2 237.1 H 768 Q 768 237.1 768 237.1 V 368.4 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_770_371.1_-105.2">
+<path d="M 770 371.1 V 268.9 Q 770 265.9 773 265.9 H 789.7 Q 792.7 265.9 792.7 268.9 V 371.1 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_770_371.1_-105.2)">
+<g>
+<title>Nov · Expenses:Home:Rent · 2400.00 USD</title>
+<path class="fill tx0" d="M 770 371.1 V 336.4 Q 770 336.4 770 336.4 H 792.7 Q 792.7 336.4 792.7 336.4 V 371.1 Z" />
+</g>
+<g>
+<title>Nov · Expenses:Taxes:Y2013:US:Federal · 2125.84 USD</title>
+<path class="fill tx2" d="M 770 334.4 V 305.7 Q 770 305.7 770 305.7 H 792.7 Q 792.7 305.7 792.7 305.7 V 334.4 Z" />
+</g>
+<g>
+<title>Nov · Expenses:Taxes:Y2013:US:SocSec · 563.08 USD</title>
+<path class="fill tx3" d="M 770 303.7 V 297.6 Q 770 297.6 770 297.6 H 792.7 Q 792.7 297.6 792.7 297.6 V 303.7 Z" />
+</g>
+<g>
+<title>Nov · Expenses:Taxes:Y2013:US:State · 730.16 USD</title>
+<path class="fill tx1" d="M 770 295.6 V 287.1 Q 770 287.1 770 287.1 H 792.7 Q 792.7 287.1 792.7 287.1 V 295.6 Z" />
+</g>
+<g>
+<title>Nov · other (18 accounts) · 1464.12 USD</title>
+<path class="fill ox" d="M 770 285.1 V 265.9 Q 770 265.9 770 265.9 H 792.7 Q 792.7 265.9 792.7 265.9 V 285.1 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_808.6_371.1_-134">
+<path d="M 808.6 371.1 V 240.1 Q 808.6 237.1 811.6 237.1 H 828.3 Q 831.3 237.1 831.3 240.1 V 371.1 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_808.6_371.1_-134)">
+<g>
+<title>Dec · Income:US:Hoogle:GroupTermLife · 48.64 USD</title>
+<path class="fill tr2" d="M 808.6 371.1 V 370.4 Q 808.6 370.4 808.6 370.4 H 831.3 Q 831.3 370.4 831.3 370.4 V 371.1 Z" />
+</g>
+<g>
+<title>Dec · Income:US:Hoogle:Salary · 9230.76 USD</title>
+<path class="fill tr0" d="M 808.6 368.4 V 237.1 Q 808.6 237.1 808.6 237.1 H 831.3 Q 831.3 237.1 831.3 237.1 V 368.4 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_833.3_371.1_-102.8">
+<path d="M 833.3 371.1 V 271.3 Q 833.3 268.3 836.3 268.3 H 853.1 Q 856.1 268.3 856.1 271.3 V 371.1 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_833.3_371.1_-102.8)">
+<g>
+<title>Dec · Expenses:Home:Rent · 2400.00 USD</title>
+<path class="fill tx0" d="M 833.3 371.1 V 336.4 Q 833.3 336.4 833.3 336.4 H 856.1 Q 856.1 336.4 856.1 336.4 V 371.1 Z" />
+</g>
+<g>
+<title>Dec · Expenses:Taxes:Y2013:US:Federal · 2125.84 USD</title>
+<path class="fill tx2" d="M 833.3 334.4 V 305.7 Q 833.3 305.7 833.3 305.7 H 856.1 Q 856.1 305.7 856.1 305.7 V 334.4 Z" />
+</g>
+<g>
+<title>Dec · Expenses:Taxes:Y2013:US:SocSec · 243.08 USD</title>
+<path class="fill tx3" d="M 833.3 305.7 V 302.2 Q 833.3 302.2 833.3 302.2 H 856.1 Q 856.1 302.2 856.1 302.2 V 305.7 Z" />
+</g>
+<g>
+<title>Dec · Expenses:Taxes:Y2013:US:State · 730.16 USD</title>
+<path class="fill tx1" d="M 833.3 300.2 V 291.7 Q 833.3 291.7 833.3 291.7 H 856.1 Q 856.1 291.7 856.1 291.7 V 300.2 Z" />
+</g>
+<g>
+<title>Dec · other (18 accounts) · 1618.31 USD</title>
+<path class="fill ox" d="M 833.3 289.7 V 268.3 Q 833.3 268.3 833.3 268.3 H 856.1 Q 856.1 268.3 856.1 268.3 V 289.7 Z" />
+</g>
+</g>
+<defs>
+<pattern id="hledger-chart-hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+<line class="hatch" x1="0" y1="0" x2="0" y2="5" />
+</pattern>
+</defs>
+<g>
+<title>Jan · Net · 5786.36 USD</title>
+<line class="mark total" x1="107.7" x2="163.2" y1="287.5" y2="287.5" />
+</g>
+<g>
+<title>Feb · Net · 2993.56 USD</title>
+<line class="mark total" x1="171.1" x2="226.6" y1="327.9" y2="327.9" />
+</g>
+<g>
+<title>Mar · Net · 2675.68 USD</title>
+<line class="mark total" x1="234.4" x2="289.9" y1="332.5" y2="332.5" />
+</g>
+<g>
+<title>Apr · Net · 3071.18 USD</title>
+<line class="mark total" x1="297.8" x2="353.3" y1="326.7" y2="326.7" />
+</g>
+<g>
+<title>May · Net · 3259.78 USD</title>
+<line class="mark total" x1="361.1" x2="416.6" y1="324" y2="324" />
+</g>
+<g>
+<title>Jun · Net · 3121.13 USD</title>
+<line class="mark total" x1="424.5" x2="480" y1="326" y2="326" />
+</g>
+<g>
+<title>Jul · Net · 2385.21 USD</title>
+<line class="mark total" x1="487.8" x2="543.3" y1="336.7" y2="336.7" />
+</g>
+<g>
+<title>Aug · Net · 4424.96 USD</title>
+<line class="mark total" x1="551.2" x2="606.7" y1="307.2" y2="307.2" />
+</g>
+<g>
+<title>Sep · Net · 2086.69 USD</title>
+<line class="mark total" x1="614.5" x2="670" y1="341" y2="341" />
+</g>
+<g>
+<title>Oct · Net · 1945.87 USD</title>
+<line class="mark total" x1="677.9" x2="733.4" y1="343" y2="343" />
+</g>
+<g>
+<title>Nov · Net · 1996.20 USD</title>
+<line class="mark total" x1="741.2" x2="796.7" y1="342.3" y2="342.3" />
+</g>
+<g>
+<title>Dec · Net · 2162.01 USD</title>
+<line class="mark total" x1="804.6" x2="860.1" y1="339.9" y2="339.9" />
+</g>
+</svg>

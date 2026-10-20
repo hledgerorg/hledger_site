@@ -1,6 +1,47 @@
 # Charts and Graphs
 
-Tips and techniques for producing graphical charts from hledger data.
+Tips and techniques for producing charts from hledger data.
+
+## Built-in charts
+
+hledger can show many reports as a chart, by itself.
+(This is in the main branch for now, so you'll need to [build it](install.md#build-from-source) to try it.)
+Add `--chart` to a `balance`, `balancesheet`, `balancesheetequity`, `cashflow`, `incomestatement`, `register` or `aregister` report;
+the `activity` command always shows one.
+A suitable kind of chart is chosen for the report: eg stacked bars per period for balance changes,
+lines for balances over time, or a bar per account for a single period.
+
+In the terminal, the chart is drawn with text characters:
+
+```cli
+$ hledger -f examples/sample.journal bal -Q expenses income --chart -w 50
+Balance changes in 2008:
+
+█ expenses:food  ▓ expenses:supplies
+▒ income:gifts  ░ income:salary
+
+2008Q1  $-1  ░░░░░░░░░░░░│
+2008Q2   $1  ▒▒▒▒▒▒▒▒▒▒▒▒│████████████▓▓▓▓▓▓▓▓▓▓▓▓
+2008Q3    0              │
+2008Q4    0              │
+```
+
+With SVG output (eg `-o chart.svg`) it is a graphical chart; with HTML output, the report's table is shown below it;
+and with CSV, TSV or JSON output you get the chart's data.
+To see a graphical chart quickly, in your web browser, add `--view`:
+
+```cli
+$ hledger -f examples/bcexample.journal is -M -p 2013 cur:USD --chart --view
+```
+
+![built-in chart of a monthly income statement](images/charts-hledger.svg)
+
+And to collect several reports and charts into one page, use the `run` command with `--view`, eg
+`hledger run --view -- bs -M --chart -- is -M --chart`.
+
+For more, see [Charts](https://hledger.org/dev/hledger.html#charts) in the (dev) manual.
+
+## Using other tools
 
 **The most general, lowest-common-denominator way** is to produce simple [CSV output](hledger.md#output-format)
 from a report and then make charts from that using the tool of your choice.
@@ -10,8 +51,8 @@ The `balance` command with --layout=bare and -N/--no-total is most often used. E
 hledger bal --layout bare -N expenses -o expenses.csv
 ```
 
-**The quickest way to get polished, ready-to-use charts** as of 2025 is probably to  export to Beancount format
-and then use [Fava](https://fava.pythonanywhere.com), a mature web UI with ready-made charts.
+**For a polished web UI with many ready-made charts**, you can export to Beancount format
+and then use [Fava](https://fava.pythonanywhere.com).
 (If this doesn't work, you may need to alias some account names, eg; see [Beancount output](https://hledger.org/hledger.html#beancount-output)):
 ```
 hledger print -o export.beancount
@@ -36,14 +77,8 @@ hledger web
 
 [hledger-bar](scripts.md#hledger-bar) (2023)
 is a bash script for making quick bar charts in the terminal.
-
-```
-$ hledger bar someacct
-2023-01	+++++
-2023-02	++++
-2023-03	++++
-2023-04	+
-```
+It's useful with hledger 1.x, or hledger 2.x previews up to 1.99.5;
+with newer hledger, use the [built-in charts](#built-in-charts) instead.
 
 ```
 $ hledger bar -v 1 -f $TIMELOG biz
@@ -51,14 +86,6 @@ $ hledger bar -v 1 -f $TIMELOG biz
 2023-02	        10 ++++++++++
 2023-03	        20 ++++++++++++++++++++
 2023-04	        12 ++++++++++++
-```
-
-```
-$ hledger bar -v 1 -f $TIMELOG biz -p weeklyfrom3weeksago
-2023-03-27W13	         8 ++++++++
-2023-04-03W14	         2 ++
-2023-04-10W15	         4 ++++
-2023-04-17W16	         5 +++++
 ```
 
 ### hledger-plot
