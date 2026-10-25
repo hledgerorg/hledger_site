@@ -6,10 +6,11 @@ Tips and techniques for producing charts from hledger data.
 
 (Not yet released, you'll need to [build main](install.md#build-from-source) to try it.)
 hledger main can show many reports as a chart.
-Add `--chart` to a `balance`, `balancesheet`, `balancesheetequity`, `cashflow`, `incomestatement`, `register` or `aregister` report;
+Add `--chart` to a `balance`, `balancesheet`, `balancesheetequity`, `cashflow`, `incomestatement`, `register`, `aregister` or `holdings` report;
 the `activity` command always shows one.
 A suitable kind of chart is chosen for the report: eg stacked bars per period for balance changes,
-lines for balances over time, or a bar per account for a single period.
+lines for balances over time, a bar per account for a single period,
+or a bar per investment holding showing its cost basis and unrealised gain or loss.
 
 In the terminal, the chart is drawn with text characters:
 
