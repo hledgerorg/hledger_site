@@ -568,20 +568,7 @@ Related discussion:
 
 ### Can I use arithmetic expressions in journal entries ?
 
-Eg, [Ledger-style amount expressions](https://ledger-cli.org/doc/ledger3.html#Expression-amounts) ?
-Generally no, hledger doesn't allow this.
-(If you want it, you could revive PR [#934](https://github.com/hledgerorg/hledger/pull/934).)
-
-In some cases, you can emulate it with [auto postings](https://hledger.org/hledger.html#auto-postings),
-which can multiple amounts by a constant. Eg to (effectively) divide all food expenses by 2,
-you could add this rule, and enable it with `--auto`:
-
-```journal
-; Add a posting subtracting half from every food expense (good enough for expense reports)
-= revenues
-    (expenses:food)  *-.5
-```
-Related: [50% of the balance?](https://forum.plaintextaccounting.org/t/50-of-the-balance/461)
+Yes, in hledger 1.99.6+: [Amount expressions](/dev/hledger.md#amount-expressions)
 
 ### How could I record call/put stock options ?
 

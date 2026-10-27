@@ -172,7 +172,7 @@ Y (supported), Ignored (accepted but ignored), or N (not accepted).
 | [5.7.2 Metadata values](https://www.ledger-cli.org/3.0/doc/ledger3.html#Metadata-values)                                                              | Y       | "Tag values". They are terminated by a comma or newline.
 | [5.7.3 Typed metadata](https://www.ledger-cli.org/3.0/doc/ledger3.html#Typed-metadata)                                                                | N       | All tag values are strings, except `date:`/`date2:` in posting comments, which set posting dates (see [Other differences](#other-differences)).
 | [5.8 Virtual postings](https://www.ledger-cli.org/3.0/doc/ledger3.html#Virtual-postings)                                                              | Y       | "Virtual postings" AKA "unbalanced postings", and "balanced virtual postings"
-| [5.9 Expression amounts](https://www.ledger-cli.org/3.0/doc/ledger3.html#Expression-amounts)                                                          | N       | 
+| [5.9 Expression amounts](https://www.ledger-cli.org/3.0/doc/ledger3.html#Expression-amounts)                                                          | Partial | hledger 1: not supported. hledger 2 (1.99.6+): simple arithmetic only, see [Amount expressions](#amount-expressions) below.
 | [4.5.4 Value expressions](https://www.ledger-cli.org/3.0/doc/ledger3.html#Complete-control-over-commodity-pricing)                                    | N       | 
 | [5.10 Balance verification](https://www.ledger-cli.org/3.0/doc/ledger3.html#Balance-verification)                                                     | Y       |
 | [5.10.1 Balance assertions](https://www.ledger-cli.org/3.0/doc/ledger3.html#Balance-assertions)                                                       | Y       |
@@ -364,8 +364,23 @@ Ledger seems to always generate them on the period boundaries.
 ### Amount expressions
 
 hledger does not support value expressions, Ledger's embedded programming language.
-In particular, parenthesised amount expressions like `($10 / 3)` are not supported;
-these must be converted to explicit amounts. Here are the known ways:
+
+hledger 1 does not support Ledger's parenthesised [expression amounts](https://www.ledger-cli.org/3.0/doc/ledger3.html#Expression-amounts), like `($10 / 3)`, either.
+
+hledger 2 (1.99.6+) supports simple [amount expressions](/dev/hledger.md#amount-expressions):
+`+`, `-`, `*`, `/` and parentheses, with or without Ledger's outer parentheses.
+Two differences from Ledger:
+
+- Expressions using more of the value expression language, eg functions or variables, are not supported.
+- hledger rounds the results of `*` and `/` to the entry's decimal places, where Ledger keeps full precision.
+  So an entry that splits $100.00 three ways with `($100.00 / 3)` balances in Ledger,
+  but in hledger it is unbalanced by $0.01 (or by $1, if written as `($100 / 3)`).
+  (Rounding describes real world transactions better, and requires the user to account accurately for any imbalance,
+  eg by leaving one of the amounts blank to absorb it.)
+
+Also, hledger keeps only the results, so `print`, including its `ledger` output format, shows those, not the expressions.
+
+Expressions that hledger can't read must be converted to explicit amounts. Here are the known ways:
 
 - Convert each expression manually, eg replace `($10 / 3)` with `$3.333`.
 
@@ -495,7 +510,8 @@ $ hledger-ui -f <(ledger print --raw)          # view journal in hledger-ui TUI 
 
 Some common problems:
 
-- hledger does not support Ledger's amount expressions, like `($10 / 3)`.
+- hledger 1 does not support Ledger's amount expressions, like `($10 / 3)`, and hledger 2 supports only simple ones,
+  rounding their results.
   If you have those, see [Amount expressions](#amount-expressions) above.
 
 - hledger 1 preserves but otherwise ignores Ledger's cost basis annotations.
