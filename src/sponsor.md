@@ -20,7 +20,7 @@ All support is greatly appreciated. Consider:
 
 - <https://github.com/hledgerorg/hledger> -> Sponsor button
 - Requirements: a github account
-- Payment methods: credit card, invoice
+- Payment methods: credit card, or (for businesses paying $5000+) invoice
 - Fees: none for personal accounts, 3% for organizations using invoice, 6% for organizations using credit card
 - Goes to: Simon
 
@@ -46,9 +46,9 @@ The most efficient method; no fees for personal accounts.
 
 - <https://opencollective.com/hledger>
 - Requirements: none
-- Payment methods: credit card, US bank direct debit, paypal, apple pay
+- Payment methods: credit card, US bank direct debit, paypal, apple pay, or (if you ask them) invoice
 - Fees: payment processor fee + 10% fiscal host fee
-- Goes to: [Open Source Collective](https://oscollective.org), which makes approved disbursements to hledger contributors.
+- Goes to: [Open Source Collective](https://oscollective.org), our fiscal host, which makes approved disbursements to hledger contributors.
 
 The most costly method,
 and the most transparent (all transactions appear in the collective's public ledger).
