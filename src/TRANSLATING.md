@@ -1,0 +1,1 @@
+../../doc/TRANSLATING.md
