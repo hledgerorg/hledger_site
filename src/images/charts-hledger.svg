@@ -8,7 +8,7 @@
 .hledger-chart .line{fill:none;stroke-width:3;stroke-linejoin:round;stroke-linecap:round}
 .hledger-chart .mark{stroke-width:2.5}
 .hledger-chart .average{stroke-width:2;stroke-dasharray:5 4}
-.hledger-chart .hit{fill:transparent}
+.hledger-chart .hit,.hledger-chart .plot{fill:transparent}
 .hledger-chart .hatch{stroke-width:2.5}
 .hledger-chart .bg{fill:#fcfcfb}
 .hledger-chart .title{fill:#0b0b0b}
@@ -185,6 +185,11 @@
 </style>
 <rect class="bg" width="100%" height="100%" />
 <text class="title" x="16" y="33">Monthly Income Statement 2013</text>
+<defs>
+<pattern id="hledger-chart-hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+<line class="hatch" x1="0" y1="0" x2="0" y2="5" />
+</pattern>
+</defs>
 <rect x="16" y="58" width="12" height="12" rx="3" class="fill tr3" />
 <text class="label" x="36" y="69">Income:US:ETrade:Gains</text>
 <rect x="221.8" y="58" width="12" height="12" rx="3" class="fill tr2" />
@@ -796,11 +801,6 @@
 <path class="fill ox" d="M 833.3 289.7 V 268.3 Q 833.3 268.3 833.3 268.3 H 856.1 Q 856.1 268.3 856.1 268.3 V 289.7 Z" />
 </g>
 </g>
-<defs>
-<pattern id="hledger-chart-hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-<line class="hatch" x1="0" y1="0" x2="0" y2="5" />
-</pattern>
-</defs>
 <g>
 <title>Jan · Net · 5786.36 USD</title>
 <line class="mark total" x1="107.7" x2="163.2" y1="287.5" y2="287.5" />

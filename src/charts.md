@@ -4,27 +4,26 @@ Tips and techniques for producing charts from hledger data.
 
 ## Built-in charts
 
-(Not yet released, you'll need to [build main](install.md#build-from-source) to try it.)
-hledger main can show many reports as a chart.
+New in hledger 1.99.6 (2.0 preview 6): hledger can show many reports as a chart.
 Add `--chart` to a `balance`, `balancesheet`, `balancesheetequity`, `cashflow`, `incomestatement`, `register`, `aregister` or `holdings` report;
 the `activity` command always shows one.
 A suitable kind of chart is chosen for the report: eg stacked bars per period for balance changes,
 lines for balances over time, a bar per account for a single period,
 or a bar per investment holding showing its cost basis and unrealised gain or loss.
 
-In the terminal, the chart is drawn with text characters:
+In the terminal, the chart is drawn with text characters (in colour when supported):
 
 ```cli
 $ hledger -f examples/sample.journal bal -Q expenses income --chart -w 50
 Balance changes in 2008:
 
 █ expenses:food  ▓ expenses:supplies
-▒ income:gifts  ░ income:salary
+▒ income:gifts  ░ income:salary  ┃ Total
 
-2008Q1  $-1  ░░░░░░░░░░░░│
-2008Q2   $1  ▒▒▒▒▒▒▒▒▒▒▒▒│████████████▓▓▓▓▓▓▓▓▓▓▓▓
-2008Q3    0              │
-2008Q4    0              │
+2008Q1  $-1  ┃░░░░░░░░░░░│
+2008Q2   $1  ▒▒▒▒▒▒▒▒▒▒▒▒│███████████┃▓▓▓▓▓▓▓▓▓▓▓▓
+2008Q3    0              ┃
+2008Q4    0              ┃
 ```
 
 With SVG output (eg `-o chart.svg`) it is a graphical chart; with HTML output, the report's table is shown below it;
@@ -40,19 +39,22 @@ $ hledger -f examples/bcexample.journal is -M -p 2013 cur:USD --chart --view
 And to collect several reports and charts into one page, use the `run` command with `--view`, eg
 `hledger run --view -- bs -M --chart -- is -M --chart`.
 
+hledger-web shows the same charts, above the report on its All accounts, Balance sheet, Income statement,
+Cashflow statement and Holdings pages, and a balance over time chart on its register page.
+The `c` and `d` keys hide or show a page's chart and its table,
+and with several commodities, a legend chooses the one charted.
+
+```cli
+$ hledger-web -f examples/bcexample.journal
+```
+
+![hledger-web's monthly income statement page, with its chart](images/charts-hledger-web.png)
+
 For more, see [Charts](https://hledger.org/dev/hledger.html#charts) in the (dev) manual.
 
 ## Charting tools built for hledger
 
 Simplest first:
-
-### hledger-web
-
-hledger-web has a simple balance over time chart, in the register view. ([demo](https://demo.hledger.org/register?q=inacct:Assets:US:ETrade))
-```
-hledger web
-```
-![hledger-web screenshot](images/charts-hledger-web.png)
 
 ### hledger-bar
 
@@ -131,8 +133,8 @@ from your hledger reports, using the powerful [vega-lite](https://vega.github.io
 
 ### docker-finance metadata visualising
 
-docker-finance, a hledger-based system, can [visualise large quantities of metadata](https://gitea.com/EvergreenCrypto/docker-finance#meta-w-root-c-analysis)
-using [ROOT](https://root.cern).
+[docker-finance](https://gitea.evergreencrypto.co/EvergreenCrypto/docker-finance), a hledger-based system,
+can visualise large quantities of metadata using [ROOT](https://root.cern).
 
 ![docker-finance screenshot](images/charts-docker-finance.png)
 
