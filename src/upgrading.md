@@ -124,6 +124,12 @@ Comparing reports from both versions, as in the upgrade steps above, will show t
   This can make balance assertions or account checks fail.
   Update the aliases if you need to. (`--alias` options are unaffected; they still apply last.)
 
+- **Repeated commodity declarations.**
+  When a commodity is declared more than once, the later declaration now adds to the earlier one,
+  and replaces its display style only if it gives one.
+  With several `-f` files, the last file's display style is now used (hledger 1 used the first's),
+  and hledger warns if they differ.
+
 - **Repeated CSV settings.**
   When a CSV setting like `date-format` or `separator` is written more than once,
   the last one now wins.
@@ -143,6 +149,7 @@ If your scripts, aliases or config files depend on these, update them:
 - `--tldr` is now `--examples`.
 - `stats -1` is now `stats --oneline`.
 - `--verbose-tags` is now an option of `print` and `rewrite` only.
+- `hledger test` (which runs the built-in unit tests) is now `hledger --test`.
 - The `demo` and `commands` commands have been removed.
   (`hledger help commands` lists the commands.)
 
@@ -152,6 +159,10 @@ If your scripts, aliases or config files depend on these, update them:
 - **Decimal places.**
   Amounts which hledger infers no longer affect a commodity's display precision,
   so some reports show fewer decimal places.
+
+- **activity.**
+  This now shows a weekly chart counting transactions.
+  `activity --postings -D -0` shows daily posting counts, as hledger 1's did.
 
 - **any: and all: queries.**
   These now also work in posting reports like `register` and `balance`, not just in `print`.
@@ -168,7 +179,7 @@ If your scripts, aliases or config files depend on these, update them:
 - hledger-web, when listening on a non-local address (set with `--host`), is now read-only by default.
   Add `--allow=edit` to allow editing.
 - hledger-web now shows its pages in your browser's preferred language, if a translation is available
-  (currently Chinese, German and Spanish). `--lang en` keeps it in English.
+  (see [Languages](/dev/hledger.html#languages) for the current list). `--lang en` keeps it in English.
 
 ## What's new
 
@@ -176,7 +187,7 @@ Some of the most useful new features in hledger 2:
 
 - **Speed**: hledger 2 is [2-3x faster](PERFORMANCE.md) than hledger 1.52, and uses up to a third less memory.
 - **Localisation**: report headings and hledger-ui/hledger-web's UI can be shown in other [languages](/dev/hledger.html#languages), with `--lang`
-  (currently en, es, de, zh).
+  (more languages are welcome, see [Translating hledger](TRANSLATING.md)).
 - **Lot tracking and capital gains**: a commodity can track each purchase's cost basis and calculate gains when you sell,
   with several [cost basis methods](/dev/hledger.html#cost-basis-methods) (FIFO, LIFO, HIFO, AVERAGE, ..),
   and the new [holdings](/dev/hledger.html#holdings) report shows your investments and their performance.
@@ -190,8 +201,10 @@ Some of the most useful new features in hledger 2:
 - **Commodity aliases**: [commodity aliases](/dev/hledger.html#commodity-aliases) help unify a commodity's symbols/units
 - **Find anywhere**: [`::TEXT`](/dev/hledger.html#find-query) matches text in any field, as you'd see it in `print` output.
 - **Compact transactions list**: the new [transactions](/dev/hledger.html#transactions) (tx) command lists transactions one per line.
+- **Charts**: reports can show [charts](charts.md), in the terminal or as SVG/HTML, with `--chart`.
+- **Amount expressions**: a posting amount can be simple [arithmetic](/dev/hledger.html#amount-expressions), like `$50.20 + $16.54`.
 - **hledger-ui** updates automatically when your files change, by default.
-- **hledger-web** gains balance reports, paging and a dark mode.
+- **hledger-web** gains balance reports, a holdings page, charts, report controls and keyboard shortcuts, paging and a dark mode.
 
 For all changes, see the [release notes](relnotes.md).
 
@@ -240,6 +253,7 @@ If you want to convert them to hledger 2's lot tracking:
 ## Switching back, or using both
 
 hledger 1 can read most journals written for hledger 2.
+So can add-ons built with hledger-lib 1.x, like hledger-interest, which read journals as hledger 1 does.
 To switch back, or to keep the same files working in both versions, watch out for these:
 
 - **Cost basis annotations.** hledger 1 ignores them: `10 AAA {$50}` means just `10 AAA`.
@@ -247,7 +261,14 @@ To switch back, or to keep the same files working in both versions, watch out fo
 - **Gain postings.** hledger 1 doesn't infer them, and balances a sale differently, as shown above.
   So leave out the gain posting, or its amount; hledger 2 will infer it, and hledger 1 will record no gain.
 - **New syntax.** hledger 1 can't read dated annotations like `{2024-03-15, $50}`,
+  amount expressions like `$50.20 + $16.54`,
   `type: U` account declarations, or new CSV rules like `merge`. Avoid these.
+- **print output.** With lot tracking, hledger 2's `print` shows lot postings with cost basis annotations,
+  including ones it inferred, often dated (`{2026-01-01, $50}`), which hledger 1 can't read;
+  and it shows inferred gain postings, which make sales unbalanced in hledger 1.
+  To print entries that hledger 1 and its add-ons can read, use `hledger print --ignore-lots -O ledger`.
+  `--ignore-lots` leaves out the inferred annotations and gain postings,
+  and the `ledger` format writes any remaining annotations in Ledger's syntax, which hledger 1 reads (and ignores).
 - **Lot subaccounts.** hledger 2's `print --lots` output includes names like `assets:stocks:{2026-01-01, $50}`,
   which hledger 1 reads as ordinary subaccounts. Generally, avoid account names ending in `{...}`.
 - **The `lots` tag** is an ordinary tag in hledger 1, and has no effect.
