@@ -17,7 +17,7 @@ It aims to be useful to accounting beginners and non-techies, as well as being a
 
 Compared to hledger, Beancount
 
-- has a better web app (Fava)
+- has a more featureful web app (Fava)
 - is customisable by easier-to-write plugins
 - and is written in Python, which is easier for contributors than Haskell.
 
@@ -71,9 +71,9 @@ and different [behaviour](https://beancount.github.io/docs/how_inventories_work.
 - `{}`, `{YYYY-MM-DD}`, `{"LABEL"}`, `{UNITCOST, "LABEL"}`, `{UNITCOST, YYYY-MM-DD, "LABEL"}`
   - when selling, other combinations of date/cost/label, like the above, are accepted for selecting the lot.
 
-For hledger's notation and behaviour, see [Cost basis](hledger.md#cost-basis)
-and [Lots and capital gains](hledger.md#lots-and-capital-gains) in the hledger manual;
-[Acquire](hledger.md#acquire) there compares how Beancount, Ledger and hledger balance and calculate gains with `{}` and `@`.
+For hledger's notation and behaviour, see [Cost basis](../dev/hledger.md#cost-basis)
+and [Lots and capital gains](../dev/hledger.md#lots-and-capital-gains) in the hledger 2 manual;
+[Acquire](../dev/hledger.md#acquire) there compares how Beancount, Ledger and hledger balance and calculate gains with `{}` and `@`.
 
 
 ## hledger to Beancount
