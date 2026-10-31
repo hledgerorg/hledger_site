@@ -250,27 +250,47 @@ If you want to convert them to hledger 2's lot tracking:
   Eg `assets:cc:ada:20200201  -1000 ADA @ $0.03` becomes `assets:cc:ada  -1000 ADA {2020-02-01} @ $0.04`.
 - If you have balance assertions on lot subaccounts, move them to the parent account, or drop them.
 
-## Switching back, or using both
+## Staying compatible with hledger 1
 
-hledger 1 can read most journals written for hledger 2.
-So can add-ons built with hledger-lib 1.x, like hledger-interest, which read journals as hledger 1 does.
-To switch back, or to keep the same files working in both versions, watch out for these:
-
-- **Cost basis annotations.** hledger 1 ignores them: `10 AAA {$50}` means just `10 AAA`.
-  So write the transacted cost too, with the same amount: `10 AAA {$50} @ $50`.
-- **Gain postings.** hledger 1 doesn't infer them, and balances a sale differently, as shown above.
-  So leave out the gain posting, or its amount; hledger 2 will infer it, and hledger 1 will record no gain.
-- **New syntax.** hledger 1 can't read dated annotations like `{2024-03-15, $50}`,
-  amount expressions like `$50.20 + $16.54`,
-  `type: U` account declarations, or new CSV rules like `merge`. Avoid these.
-- **print output.** With lot tracking, hledger 2's `print` shows lot postings with cost basis annotations,
-  including ones it inferred, often dated (`{2026-01-01, $50}`), which hledger 1 can't read;
-  and it shows inferred gain postings, which make sales unbalanced in hledger 1.
-  To print entries that hledger 1 and its add-ons can read, use `hledger print --ignore-lots -O ledger`.
-  `--ignore-lots` leaves out the inferred annotations and gain postings,
-  and the `ledger` format writes any remaining annotations in Ledger's syntax, which hledger 1 reads (and ignores).
-- **Lot subaccounts.** hledger 2's `print --lots` output includes names like `assets:stocks:{2026-01-01, $50}`,
-  which hledger 1 reads as ordinary subaccounts. Generally, avoid account names ending in `{...}`.
-- **The `lots` tag** is an ordinary tag in hledger 1, and has no effect.
-
+hledger 1, and add-ons built with hledger-lib 1.x such as hledger-interest or hledger-iadd,
+can read most journals written for hledger 2.
+To keep your files working with those, avoid hledger 2's new syntax:
+amount expressions like `$50.20 + $16.54`, new CSV rules like `merge`,
+and dated or labelled cost basis annotations like `{2024-03-15, $50}` or `{"note", $50}`.
 After changes, check your files with both versions, eg `hledger check` and `hledger1 check`.
+
+If you are using hledger 2's lot tracking, there's more to know:
+
+- **Lot subaccounts.**
+  hledger 2 requires account names ending in `{...}` to be valid lot subaccount names; generally, avoid these account names in hledger 1.
+  hledger 2's `print --lots` output, and start-of-year opening balances entries, include names like `assets:stocks:{2026-01-01, $50}`;
+  hledger 1 will read these as ordinary subaccounts.
+
+- **Simple cost basis annotations.**
+  hledger 1 reads `{$50}` and ignores it, so `10 AAA {$50}` is just `10 AAA` to it.
+  For a balanced transaction you may need to write the transacted cost too, with the same amount: `10 AAA {$50} @ $50`.
+
+- **Dated/labelled cost basis annotations.**
+  hledger 1 can't currently read hledger 2's dated annotations like `{2024-03-15, $50}` or labelled annotations like `{"note", $50}`.
+  But both versions read Ledger-style annotations like `[2024-03-15] {$50}` or `(note) {$50}`; hledger 2 respects them, and hledger 1 ignores them.
+  So you could use that form in files shared with hledger 1.
+
+- **Inferred cost basis annotations.**
+  hledger 2's `print` shows amounts with their inferred cost basis annotations, including dates and/or labels (see above).
+  This can be avoided by using `--ignore-lots`.
+
+- **Selling price.**
+  In lot disposals, write the selling price, as hledger 2 requires: `-5 AAA {$50} @ $70`.
+  hledger 1 will reduce the holding's cost by the sale proceeds rather than the cost basis,
+  so its cost reports (`-B`) will differ from hledger 2's.
+
+- **Gain postings.**
+  In lot disposals, an explicit gain posting with an amount makes the transaction unbalanced for hledger 1.
+  So omit either the gain posting or its amount (hledger 2 will infer these; hledger 1 will infer a zero amount).
+  Also, hledger 2's `print` normally shows inferred gain postings; `--ignore-lots` avoids this.
+
+In summary: to keep lot entries readable by hledger 1, leave gains implicit and either use Ledger-style cost basis annotations,
+or convert to them with `print --ignore-lots -O ledger`. Eg:
+```cli
+$ hledger print --ignore-lots -O ledger | hledger1 -n -f- check
+```
