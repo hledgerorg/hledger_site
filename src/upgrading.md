@@ -199,7 +199,7 @@ Some of the most useful new features in hledger 2:
   [functions](/dev/hledger.html#functions) transform field values,
   and CSV or rules files can be included in a journal.
 - **Commodity aliases**: [commodity aliases](/dev/hledger.html#commodity-aliases) help unify a commodity's symbols/units
-- **Find anywhere**: [`::TEXT`](/dev/hledger.html#find-query) matches text in any field, as you'd see it in `print` output.
+- **Find anywhere**: [`::TEXT`](/dev/hledger.html#find-query) is an easy way to search for text in any field, or by date
 - **Compact transactions list**: the new [transactions](/dev/hledger.html#transactions) (tx) command lists transactions one per line.
 - **Charts**: reports can show [charts](charts.md), in the terminal or as SVG/HTML, with `--chart`.
 - **Amount expressions**: a posting amount can be simple [arithmetic](/dev/hledger.html#amount-expressions), like `$50.20 + $16.54`.
@@ -254,7 +254,7 @@ If you want to convert them to hledger 2's lot tracking:
 
 hledger 1, and add-ons built with hledger-lib 1.x such as hledger-interest or hledger-iadd,
 can read most journals written for hledger 2.
-To keep your files working with those, avoid hledger 2's new syntax:
+If you need to keep your files working with those, avoid hledger 2's new syntax:
 amount expressions like `$50.20 + $16.54`, new CSV rules like `merge`,
 and dated or labelled cost basis annotations like `{2024-03-15, $50}` or `{"note", $50}`.
 After changes, check your files with both versions, eg `hledger check` and `hledger1 check`.
