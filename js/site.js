@@ -29,6 +29,7 @@ function addDocVersions() {
     // include just packaged versions to save screen space (keep synced with site/Makefile)
     docversions.innerHTML = '\
       <a href="/dev/' +newdest3+'">dev</a>  · \
+      <a href="/1.99.6/'+newdest3+'">1.99.6</a> · \
       <a href="/1.99.5/'+newdest3+'">1.99.5</a> · \
       <a href="/1.52/'+newdest3+'">1.52</a> · \
       <a href="/1.51/'+newdest3+'">1.51</a> · \
