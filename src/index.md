@@ -178,9 +178,9 @@ Daily Income Statement 2025-12-01..2025-12-04
 ```
 in multiple formats:
 ```
-$ hledger help | grep formats   # hledger main
-Input formats   journal csv tsv ssv rules timeclock timedot
-Output formats  txt html journal csv tsv fods ledger beancount sql json
+$ hledger help | grep -A1 Formats   # hledger 2
+Formats, input:   csv journal rules ssv timeclock timedot tsv
+         output:  beancount csv fods journal json html ledger sql svg tsv txt
 ```
 ```
 $ hledger is -tDTAS -o foo.html
@@ -265,9 +265,8 @@ imported 8 new transactions from boi-ichecking.rules, chase.rules, paypal.rules,
 Everything is documented, and the docs are easy to find.<!-- , and the help command is a quick way to view docs. -->
 
 ```
-$ hledger help impor   # hledger main
+$ hledger help impor   # hledger 2
 "impor" matches several manual sections, try a more specific topic:
-  Deduplicating, importing
   import
   Default import sources
   Import dry run
@@ -277,9 +276,10 @@ $ hledger help impor   # hledger main
   Import archiving
   Import special cases
   Import configurations to avoid
+  Deduplicating, importing
 ```
 ```
-$ hledger help examples import   # hledger main
+$ hledger help examples import   # hledger 2
 
   Import new transactions from one or more data files to the main journal.
   More information: <https://hledger.org/hledger.html#import>.

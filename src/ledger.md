@@ -81,7 +81,7 @@ at 100k its balance report takes 15s against hledger 1.99.5's 1.4s,
 its print and register reports need over 10 GB of memory, and at 1M it did not finish.
 
 hledger's own speed has varied between releases.
-The 1.99.5 preview (September 2026) is the fastest hledger yet:
+The latest 2.x preview is the fastest hledger yet:
 on a 100,000-transaction journal, about 3x faster than hledger 1.52.
 For measurements across releases, how to benchmark hledger yourself, and measurements of
 Ledger, Beancount, rustledger and Tackler on the same journals, see [PERFORMANCE](PERFORMANCE.md)

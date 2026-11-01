@@ -739,7 +739,7 @@ hledger print liabilities:mastercard | hledger -f- -I incomestatement
 Complex multi-account transactions could muddle these reports a little;
 if that's a problem you might need to exclude those transactions or split them up.
 
-Or, with hledger main you can use `any:`.
+Or, since hledger 1.43, you can use `any:`.
 This shows all tax transactions paid from a "checking" account:
 
 ```cli
