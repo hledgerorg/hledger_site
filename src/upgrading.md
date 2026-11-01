@@ -10,7 +10,38 @@ the [release notes](relnotes.md) list all changes.
 hledger 1 (1.52.x) continues to receive occasional fixes,
 and both versions can be installed side by side.
 
+## What's new
+
+Some of the most useful new features in hledger 2:
+
+- **Speed**: hledger 2 is [2-3x faster](PERFORMANCE.md) than hledger 1.52, and uses up to a third less memory.
+- **Localisation**: report headings and hledger-ui/hledger-web's UI can be shown in other [languages](/dev/hledger.html#languages), with `--lang`
+  (more languages are welcome, see [Translating hledger](TRANSLATING.md)).
+- **Lot tracking and capital gains**: a commodity can track each purchase's cost basis and calculate gains when you sell,
+  with several [cost basis methods](/dev/hledger.html#cost-basis-methods) (FIFO, LIFO, HIFO, AVERAGE, ..),
+  and the new [holdings](/dev/hledger.html#holdings) report shows your investments and their performance.
+- **Custom commands**: define custom [command aliases](/dev/hledger.html#command-aliases) and scripts in your config file
+- **Simpler importing**: the new [get](/dev/hledger.html#get) command fetches new transactions and market prices,
+  and with a conventional `data/`, `rules/`, `prices/` layout, `hledger import` needs no arguments
+  (see [Finding the data](/dev/hledger.html#finding-the-data)).
+- **CSV rules**: [merge](/dev/hledger.html#merge) combines several CSV records into one transaction,
+  [functions](/dev/hledger.html#functions) transform field values,
+  and CSV or rules files can be included in a journal.
+- **Commodity aliases**: [commodity aliases](/dev/hledger.html#commodity-aliases) help unify a commodity's symbols/units
+- **Find anywhere**: [`::TEXT`](/dev/hledger.html#find-query) is an easy way to search for text in any field, or by date
+- **Compact transactions list**: the new [transactions](/dev/hledger.html#transactions) (tx) command lists transactions one per line.
+- **Charts**: reports can show [charts](charts.md), in the terminal or as SVG/HTML, with `--chart`.
+- **Amount expressions**: a posting amount can be simple [arithmetic](/dev/hledger.html#amount-expressions), like `$50.20 + $16.54`.
+- **hledger-ui** updates automatically when your files change, by default.
+- **hledger-web** gains balance reports, a holdings page, charts, report controls and keyboard shortcuts, paging and a dark mode.
+
+For all changes, see the [release notes](relnotes.md).
+
 ## Upgrade steps
+
+Upgrading is essentially just: install a hledger 2 binary (or build it) and keep working.
+
+But if you prefer, here's a more careful process, providing more assurance:
 
 1. Install hledger 2 (see [Install](install.md)),
    keeping hledger 1 available under another name, eg by renaming its executable to `hledger1`.
@@ -181,34 +212,7 @@ If your scripts, aliases or config files depend on these, update them:
 - hledger-web now shows its pages in your browser's preferred language, if a translation is available
   (see [Languages](/dev/hledger.html#languages) for the current list). `--lang en` keeps it in English.
 
-## What's new
-
-Some of the most useful new features in hledger 2:
-
-- **Speed**: hledger 2 is [2-3x faster](PERFORMANCE.md) than hledger 1.52, and uses up to a third less memory.
-- **Localisation**: report headings and hledger-ui/hledger-web's UI can be shown in other [languages](/dev/hledger.html#languages), with `--lang`
-  (more languages are welcome, see [Translating hledger](TRANSLATING.md)).
-- **Lot tracking and capital gains**: a commodity can track each purchase's cost basis and calculate gains when you sell,
-  with several [cost basis methods](/dev/hledger.html#cost-basis-methods) (FIFO, LIFO, HIFO, AVERAGE, ..),
-  and the new [holdings](/dev/hledger.html#holdings) report shows your investments and their performance.
-- **Custom commands**: define custom [command aliases](/dev/hledger.html#command-aliases) and scripts in your config file
-- **Simpler importing**: the new [get](/dev/hledger.html#get) command fetches new transactions and market prices,
-  and with a conventional `data/`, `rules/`, `prices/` layout, `hledger import` needs no arguments
-  (see [Finding the data](/dev/hledger.html#finding-the-data)).
-- **CSV rules**: [merge](/dev/hledger.html#merge) combines several CSV records into one transaction,
-  [functions](/dev/hledger.html#functions) transform field values,
-  and CSV or rules files can be included in a journal.
-- **Commodity aliases**: [commodity aliases](/dev/hledger.html#commodity-aliases) help unify a commodity's symbols/units
-- **Find anywhere**: [`::TEXT`](/dev/hledger.html#find-query) is an easy way to search for text in any field, or by date
-- **Compact transactions list**: the new [transactions](/dev/hledger.html#transactions) (tx) command lists transactions one per line.
-- **Charts**: reports can show [charts](charts.md), in the terminal or as SVG/HTML, with `--chart`.
-- **Amount expressions**: a posting amount can be simple [arithmetic](/dev/hledger.html#amount-expressions), like `$50.20 + $16.54`.
-- **hledger-ui** updates automatically when your files change, by default.
-- **hledger-web** gains balance reports, a holdings page, charts, report controls and keyboard shortcuts, paging and a dark mode.
-
-For all changes, see the [release notes](relnotes.md).
-
-## Turning on lot tracking
+## Lot tracking
 
 Once your data works with hledger 2, you can (if you want) let it track and check your investment lots.
 [Start tracking lots](start-tracking-lots.md) explains why and how, with advice for long investment histories.
@@ -252,14 +256,25 @@ If you want to convert them to hledger 2's lot tracking:
 
 ## Staying compatible with hledger 1
 
-hledger 1, and add-ons built with hledger-lib 1.x such as hledger-interest or hledger-iadd,
-can read most journals written for hledger 2.
-If you need to keep your files working with those, avoid hledger 2's new syntax:
-amount expressions like `$50.20 + $16.54`, new CSV rules like `merge`,
-and dated or labelled cost basis annotations like `{2024-03-15, $50}` or `{"note", $50}`.
-After changes, check your files with both versions, eg `hledger check` and `hledger1 check`.
+If you need to keep your files working with hledger 1,
+or add-ons not yet updated for hledger 2 (such as hledger-interest or hledger-iadd),
+avoid hledger 2's new syntax:
+- amount expressions like `$50.20 + $16.54`
+- new CSV rules like `merge`
+- and dated or labelled cost basis annotations like `{2024-03-15, $50}` or `{"note", $50}`.
 
-If you are using hledger 2's lot tracking, there's more to know:
+If you are using hledger 2's lot tracking, you should also:
+
+- leave gains implicit
+- and use Ledger-style cost basis annotations, or convert to those.
+  Eg:
+  ```cli
+  $ hledger print --ignore-lots -O ledger | hledger1 -n -f- check
+  ```
+
+After edits, check your files with both versions, eg `hledger check` and `hledger1 check`.
+
+Here's more detail about how hledger 2's lot tracking affects hledger 1, if you're curious.
 
 - **Lot subaccounts.**
   hledger 2 requires account names ending in `{...}` to be valid lot subaccount names; generally, avoid these account names in hledger 1.
@@ -289,8 +304,3 @@ If you are using hledger 2's lot tracking, there's more to know:
   So omit either the gain posting or its amount (hledger 2 will infer these; hledger 1 will infer a zero amount).
   Also, hledger 2's `print` normally shows inferred gain postings; `--ignore-lots` avoids this.
 
-In summary: to keep lot entries readable by hledger 1, leave gains implicit and either use Ledger-style cost basis annotations,
-or convert to them with `print --ignore-lots -O ledger`. Eg:
-```cli
-$ hledger print --ignore-lots -O ledger | hledger1 -n -f- check
-```
