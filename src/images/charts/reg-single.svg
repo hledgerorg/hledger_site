@@ -1,0 +1,380 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="hledger-chart" width="880" height="404" viewBox="0 0 880 404" role="img">
+<style>.hledger-chart{max-width:100%;height:auto;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:14px}
+.hledger-chart .title{font-size:17px;font-weight:600}
+.hledger-chart .heading{font-size:15px;font-weight:600}
+.hledger-chart .value,.hledger-chart .tick{font-variant-numeric:tabular-nums}
+.hledger-chart .grid,.hledger-chart .axis{stroke-width:1}
+.hledger-chart .line{fill:none;stroke-width:3;stroke-linejoin:round;stroke-linecap:round}
+.hledger-chart .mark{stroke-width:2.5}
+.hledger-chart .average{stroke-width:2;stroke-dasharray:5 4}
+.hledger-chart .hit,.hledger-chart .plot{fill:transparent}
+.hledger-chart .hatch{stroke-width:2.5}
+.hledger-chart .bg{fill:#fcfcfb}
+.hledger-chart .title{fill:#0b0b0b}
+.hledger-chart .heading{fill:#0b0b0b}
+.hledger-chart .label{fill:#52514e}
+.hledger-chart .value{fill:#52514e}
+.hledger-chart .tick{fill:#898781}
+.hledger-chart .grid{stroke:#e1e0d9}
+.hledger-chart .axis{stroke:#c3c2b7}
+.hledger-chart .line.total{stroke:#0b0b0b}
+.hledger-chart .mark.total{stroke:#0b0b0b}
+.hledger-chart .average{stroke:#0b0b0b}
+.hledger-chart .clip{fill:#0b0b0b}
+.hledger-chart .hatch{stroke:#fcfcfb}
+.hledger-chart .fill.ta0{fill:#2a78d6}
+.hledger-chart .line.ta0{stroke:#2a78d6}
+.hledger-chart .fill.ta1{fill:#1d5496}
+.hledger-chart .line.ta1{stroke:#1d5496}
+.hledger-chart .fill.ta2{fill:#7faee6}
+.hledger-chart .line.ta2{stroke:#7faee6}
+.hledger-chart .fill.ta3{fill:#b4d0f1}
+.hledger-chart .line.ta3{stroke:#b4d0f1}
+.hledger-chart .fill.tl0{fill:#eda100}
+.hledger-chart .line.tl0{stroke:#eda100}
+.hledger-chart .fill.tl1{fill:#a67100}
+.hledger-chart .line.tl1{stroke:#a67100}
+.hledger-chart .fill.tl2{fill:#f4c766}
+.hledger-chart .line.tl2{stroke:#f4c766}
+.hledger-chart .fill.tl3{fill:#f9dea6}
+.hledger-chart .line.tl3{stroke:#f9dea6}
+.hledger-chart .fill.te0{fill:#4a3aa7}
+.hledger-chart .line.te0{stroke:#4a3aa7}
+.hledger-chart .fill.te1{fill:#342975}
+.hledger-chart .line.te1{stroke:#342975}
+.hledger-chart .fill.te2{fill:#9289ca}
+.hledger-chart .line.te2{stroke:#9289ca}
+.hledger-chart .fill.te3{fill:#c0bae0}
+.hledger-chart .line.te3{stroke:#c0bae0}
+.hledger-chart .fill.tr0{fill:#008300}
+.hledger-chart .line.tr0{stroke:#008300}
+.hledger-chart .fill.tr1{fill:#005c00}
+.hledger-chart .line.tr1{stroke:#005c00}
+.hledger-chart .fill.tr2{fill:#66b566}
+.hledger-chart .line.tr2{stroke:#66b566}
+.hledger-chart .fill.tr3{fill:#a6d4a6}
+.hledger-chart .line.tr3{stroke:#a6d4a6}
+.hledger-chart .fill.tx0{fill:#e34948}
+.hledger-chart .line.tx0{stroke:#e34948}
+.hledger-chart .fill.tx1{fill:#9f3332}
+.hledger-chart .line.tx1{stroke:#9f3332}
+.hledger-chart .fill.tx2{fill:#ee9291}
+.hledger-chart .line.tx2{stroke:#ee9291}
+.hledger-chart .fill.tx3{fill:#f5bfbf}
+.hledger-chart .line.tx3{stroke:#f5bfbf}
+.hledger-chart .fill.s0{fill:#2a78d6}
+.hledger-chart .line.s0{stroke:#2a78d6}
+.hledger-chart .fill.s1{fill:#eb6834}
+.hledger-chart .line.s1{stroke:#eb6834}
+.hledger-chart .fill.s2{fill:#1baf7a}
+.hledger-chart .line.s2{stroke:#1baf7a}
+.hledger-chart .fill.s3{fill:#eda100}
+.hledger-chart .line.s3{stroke:#eda100}
+.hledger-chart .fill.s4{fill:#e87ba4}
+.hledger-chart .line.s4{stroke:#e87ba4}
+.hledger-chart .fill.s5{fill:#008300}
+.hledger-chart .line.s5{stroke:#008300}
+.hledger-chart .fill.s6{fill:#4a3aa7}
+.hledger-chart .line.s6{stroke:#4a3aa7}
+.hledger-chart .fill.s7{fill:#e34948}
+.hledger-chart .line.s7{stroke:#e34948}
+.hledger-chart .fill.other{fill:#898781}
+.hledger-chart .line.other{stroke:#898781}
+.hledger-chart .fill.oa{fill:#6381a3}
+.hledger-chart .line.oa{stroke:#6381a3}
+.hledger-chart .fill.ol{fill:#b1914d}
+.hledger-chart .line.ol{stroke:#b1914d}
+.hledger-chart .fill.oe{fill:#706890}
+.hledger-chart .line.oe{stroke:#706890}
+.hledger-chart .fill.or{fill:#52854d}
+.hledger-chart .line.or{stroke:#52854d}
+.hledger-chart .fill.ox{fill:#ad6e6a}
+.hledger-chart .line.ox{stroke:#ad6e6a}
+.hledger-chart .fill.lone{fill:#1597b0}
+.hledger-chart .line.lone{stroke:#1597b0}
+.hledger-chart .fill.neutral{fill:#52514e}
+.hledger-chart .line.neutral{stroke:#52514e}
+@media (prefers-color-scheme:dark){
+.hledger-chart .bg{fill:#1a1a19}
+.hledger-chart .title{fill:#ffffff}
+.hledger-chart .heading{fill:#ffffff}
+.hledger-chart .label{fill:#c3c2b7}
+.hledger-chart .value{fill:#c3c2b7}
+.hledger-chart .tick{fill:#898781}
+.hledger-chart .grid{stroke:#2c2c2a}
+.hledger-chart .axis{stroke:#383835}
+.hledger-chart .line.total{stroke:#ffffff}
+.hledger-chart .mark.total{stroke:#ffffff}
+.hledger-chart .average{stroke:#ffffff}
+.hledger-chart .clip{fill:#ffffff}
+.hledger-chart .hatch{stroke:#1a1a19}
+.hledger-chart .fill.ta0{fill:#3987e5}
+.hledger-chart .line.ta0{stroke:#3987e5}
+.hledger-chart .fill.ta1{fill:#88b7ef}
+.hledger-chart .line.ta1{stroke:#88b7ef}
+.hledger-chart .fill.ta2{fill:#285ea0}
+.hledger-chart .line.ta2{stroke:#285ea0}
+.hledger-chart .fill.ta3{fill:#bad5f6}
+.hledger-chart .line.ta3{stroke:#bad5f6}
+.hledger-chart .fill.tl0{fill:#c98500}
+.hledger-chart .line.tl0{stroke:#c98500}
+.hledger-chart .fill.tl1{fill:#dfb666}
+.hledger-chart .line.tl1{stroke:#dfb666}
+.hledger-chart .fill.tl2{fill:#8d5d00}
+.hledger-chart .line.tl2{stroke:#8d5d00}
+.hledger-chart .fill.tl3{fill:#ecd4a6}
+.hledger-chart .line.tl3{stroke:#ecd4a6}
+.hledger-chart .fill.te0{fill:#9085e9}
+.hledger-chart .line.te0{stroke:#9085e9}
+.hledger-chart .fill.te1{fill:#bcb6f2}
+.hledger-chart .line.te1{stroke:#bcb6f2}
+.hledger-chart .fill.te2{fill:#655da3}
+.hledger-chart .line.te2{stroke:#655da3}
+.hledger-chart .fill.te3{fill:#d8d4f7}
+.hledger-chart .line.te3{stroke:#d8d4f7}
+.hledger-chart .fill.tr0{fill:#008300}
+.hledger-chart .line.tr0{stroke:#008300}
+.hledger-chart .fill.tr1{fill:#66b566}
+.hledger-chart .line.tr1{stroke:#66b566}
+.hledger-chart .fill.tr2{fill:#005c00}
+.hledger-chart .line.tr2{stroke:#005c00}
+.hledger-chart .fill.tr3{fill:#a6d4a6}
+.hledger-chart .line.tr3{stroke:#a6d4a6}
+.hledger-chart .fill.tx0{fill:#e66767}
+.hledger-chart .line.tx0{stroke:#e66767}
+.hledger-chart .fill.tx1{fill:#f0a4a4}
+.hledger-chart .line.tx1{stroke:#f0a4a4}
+.hledger-chart .fill.tx2{fill:#a14848}
+.hledger-chart .line.tx2{stroke:#a14848}
+.hledger-chart .fill.tx3{fill:#f6caca}
+.hledger-chart .line.tx3{stroke:#f6caca}
+.hledger-chart .fill.s0{fill:#3987e5}
+.hledger-chart .line.s0{stroke:#3987e5}
+.hledger-chart .fill.s1{fill:#d95926}
+.hledger-chart .line.s1{stroke:#d95926}
+.hledger-chart .fill.s2{fill:#199e70}
+.hledger-chart .line.s2{stroke:#199e70}
+.hledger-chart .fill.s3{fill:#c98500}
+.hledger-chart .line.s3{stroke:#c98500}
+.hledger-chart .fill.s4{fill:#d55181}
+.hledger-chart .line.s4{stroke:#d55181}
+.hledger-chart .fill.s5{fill:#008300}
+.hledger-chart .line.s5{stroke:#008300}
+.hledger-chart .fill.s6{fill:#9085e9}
+.hledger-chart .line.s6{stroke:#9085e9}
+.hledger-chart .fill.s7{fill:#e66767}
+.hledger-chart .line.s7{stroke:#e66767}
+.hledger-chart .fill.other{fill:#898781}
+.hledger-chart .line.other{stroke:#898781}
+.hledger-chart .fill.oa{fill:#6987a9}
+.hledger-chart .line.oa{stroke:#6987a9}
+.hledger-chart .fill.ol{fill:#a3864d}
+.hledger-chart .line.ol{stroke:#a3864d}
+.hledger-chart .fill.oe{fill:#8c86ab}
+.hledger-chart .line.oe{stroke:#8c86ab}
+.hledger-chart .fill.or{fill:#52854d}
+.hledger-chart .line.or{stroke:#52854d}
+.hledger-chart .fill.ox{fill:#ae7a77}
+.hledger-chart .line.ox{stroke:#ae7a77}
+.hledger-chart .fill.lone{fill:#22a6be}
+.hledger-chart .line.lone{stroke:#22a6be}
+.hledger-chart .fill.neutral{fill:#c3c2b7}
+.hledger-chart .line.neutral{stroke:#c3c2b7}
+}
+</style>
+<rect class="bg" width="100%" height="100%" />
+<line class="line s3" x1="16" x2="28" y1="26" y2="26" />
+<text class="label" x="36" y="31">Expenses:Food:Restaurant</text>
+<line class="line s2" x1="229.1" x2="241.1" y1="26" y2="26" />
+<text class="label" x="249.1" y="31">Expenses:Taxes:Y2014:US:CityNYC</text>
+<line class="line s7" x1="505.8" x2="517.8" y1="26" y2="26" />
+<text class="label" x="525.8" y="31">Expenses:Taxes:Y2014:US:Federal</text>
+<line class="line s5" x1="16" x2="28" y1="50" y2="50" />
+<text class="label" x="36" y="55">Expenses:Taxes:Y2014:US:Medicare</text>
+<line class="line s1" x1="298.3" x2="310.3" y1="50" y2="50" />
+<text class="label" x="318.3" y="55">Expenses:Taxes:Y2014:US:SocSec</text>
+<line class="line s6" x1="571.3" x2="583.3" y1="50" y2="50" />
+<text class="label" x="591.3" y="55">Expenses:Taxes:Y2014:US:State</text>
+<line class="line s4" x1="16" x2="28" y1="74" y2="74" />
+<text class="label" x="36" y="79">Expenses:Transport:Tram</text>
+<line class="line other" x1="221.6" x2="233.6" y1="74" y2="74" />
+<text class="label" x="241.6" y="79">other (6 accounts)</text>
+<line class="line total" x1="375.1" x2="387.1" y1="74" y2="74" />
+<text class="label" x="395.1" y="79">Total</text>
+<line class="axis" x1="95.1" x2="864" y1="362" y2="362" />
+<text class="tick" x="87.1" y="367" text-anchor="end">0</text>
+<line class="grid" x1="95.1" x2="864" y1="310" y2="310" />
+<text class="tick" x="87.1" y="315" text-anchor="end">500</text>
+<line class="grid" x1="95.1" x2="864" y1="258" y2="258" />
+<text class="tick" x="87.1" y="263" text-anchor="end">1000</text>
+<line class="grid" x1="95.1" x2="864" y1="206" y2="206" />
+<text class="tick" x="87.1" y="211" text-anchor="end">1500</text>
+<line class="grid" x1="95.1" x2="864" y1="154" y2="154" />
+<text class="tick" x="87.1" y="159" text-anchor="end">2000</text>
+<line class="grid" x1="95.1" x2="864" y1="102" y2="102" />
+<text class="tick" x="87.1" y="107" text-anchor="end">2500 USD</text>
+<text class="tick" x="103.1" y="383" text-anchor="middle">2014-10-04</text>
+<text class="tick" x="210.7" y="383" text-anchor="middle">2014-10-05</text>
+<text class="tick" x="318.2" y="383" text-anchor="middle">2014-10-06</text>
+<text class="tick" x="425.8" y="383" text-anchor="middle">2014-10-07</text>
+<text class="tick" x="533.3" y="383" text-anchor="middle">2014-10-08</text>
+<text class="tick" x="640.9" y="383" text-anchor="middle">2014-10-09</text>
+<text class="tick" x="748.4" y="383" text-anchor="middle">2014-10-10</text>
+<polyline class="line s3" points="103.1,362 103.1,362 103.1,358 318.2,358 318.2,355.6 856,355.6 856,353.4" />
+<g>
+<title>2014-10-04 · Expenses:Food:Restaurant · 0</title>
+<circle class="hit" cx="103.1" cy="362" r="6" />
+</g>
+<g>
+<title>2014-10-04 · Expenses:Food:Restaurant · 38.17 USD</title>
+<circle class="hit" cx="103.1" cy="358" r="6" />
+</g>
+<g>
+<title>2014-10-06 · Expenses:Food:Restaurant · 61.17 USD</title>
+<circle class="hit" cx="318.2" cy="355.6" r="6" />
+</g>
+<g>
+<title>2014-10-11 · Expenses:Food:Restaurant · 83.00 USD</title>
+<circle class="hit" cx="856" cy="353.4" r="6" />
+</g>
+<polyline class="line s2" points="103.1,362 640.9,362 640.9,343.8 856,343.8" />
+<g>
+<title>2014-10-04 · Expenses:Taxes:Y2014:US:CityNYC · 0</title>
+<circle class="hit" cx="103.1" cy="362" r="6" />
+</g>
+<g>
+<title>2014-10-09 · Expenses:Taxes:Y2014:US:CityNYC · 174.92 USD</title>
+<circle class="hit" cx="640.9" cy="343.8" r="6" />
+</g>
+<polyline class="line s7" points="103.1,362 640.9,362 640.9,251.5 856,251.5" />
+<g>
+<title>2014-10-04 · Expenses:Taxes:Y2014:US:Federal · 0</title>
+<circle class="hit" cx="103.1" cy="362" r="6" />
+</g>
+<g>
+<title>2014-10-09 · Expenses:Taxes:Y2014:US:Federal · 1062.92 USD</title>
+<circle class="hit" cx="640.9" cy="251.5" r="6" />
+</g>
+<polyline class="line s5" points="103.1,362 640.9,362 640.9,350.9 856,350.9" />
+<g>
+<title>2014-10-04 · Expenses:Taxes:Y2014:US:Medicare · 0</title>
+<circle class="hit" cx="103.1" cy="362" r="6" />
+</g>
+<g>
+<title>2014-10-09 · Expenses:Taxes:Y2014:US:Medicare · 106.62 USD</title>
+<circle class="hit" cx="640.9" cy="350.9" r="6" />
+</g>
+<polyline class="line s1" points="103.1,362 640.9,362 640.9,332.7 856,332.7" />
+<g>
+<title>2014-10-04 · Expenses:Taxes:Y2014:US:SocSec · 0</title>
+<circle class="hit" cx="103.1" cy="362" r="6" />
+</g>
+<g>
+<title>2014-10-09 · Expenses:Taxes:Y2014:US:SocSec · 281.54 USD</title>
+<circle class="hit" cx="640.9" cy="332.7" r="6" />
+</g>
+<polyline class="line s6" points="103.1,362 640.9,362 640.9,324 856,324" />
+<g>
+<title>2014-10-04 · Expenses:Taxes:Y2014:US:State · 0</title>
+<circle class="hit" cx="103.1" cy="362" r="6" />
+</g>
+<g>
+<title>2014-10-09 · Expenses:Taxes:Y2014:US:State · 365.08 USD</title>
+<circle class="hit" cx="640.9" cy="324" r="6" />
+</g>
+<polyline class="line s4" points="103.1,362 533.3,362 533.3,349.5 856,349.5" />
+<g>
+<title>2014-10-04 · Expenses:Transport:Tram · 0</title>
+<circle class="hit" cx="103.1" cy="362" r="6" />
+</g>
+<g>
+<title>2014-10-08 · Expenses:Transport:Tram · 120.00 USD</title>
+<circle class="hit" cx="533.3" cy="349.5" r="6" />
+</g>
+<polyline class="line other" points="103.1,361.6 640.9,361.6 640.9,351.4 856,351.4" />
+<g>
+<title>2014-10-04 · other (6 accounts) · 4.00 USD</title>
+<circle class="hit" cx="103.1" cy="361.6" r="6" />
+</g>
+<g>
+<title>2014-10-09 · other (6 accounts) · 28.32 USD</title>
+<circle class="hit" cx="640.9" cy="359.1" r="6" />
+</g>
+<g>
+<title>2014-10-09 · other (6 accounts) · 31.22 USD</title>
+<circle class="hit" cx="640.9" cy="358.8" r="6" />
+</g>
+<g>
+<title>2014-10-09 · other (6 accounts) · 58.60 USD</title>
+<circle class="hit" cx="640.9" cy="355.9" r="6" />
+</g>
+<g>
+<title>2014-10-09 · other (6 accounts) · 100.90 USD</title>
+<circle class="hit" cx="640.9" cy="351.5" r="6" />
+</g>
+<g>
+<title>2014-10-09 · other (6 accounts) · 102.02 USD</title>
+<circle class="hit" cx="640.9" cy="351.4" r="6" />
+</g>
+<polyline class="line total" points="103.1,361.6 103.1,361.6 103.1,357.6 318.2,357.6 318.2,355.2 533.3,355.2 533.3,342.7 640.9,342.7 640.9,125.5 856,125.5 856,123.2" />
+<g>
+<title>2014-10-04 · Total · 4.00 USD</title>
+<circle class="hit" cx="103.1" cy="361.6" r="6" />
+</g>
+<g>
+<title>2014-10-04 · Total · 42.17 USD</title>
+<circle class="hit" cx="103.1" cy="357.6" r="6" />
+</g>
+<g>
+<title>2014-10-06 · Total · 65.17 USD</title>
+<circle class="hit" cx="318.2" cy="355.2" r="6" />
+</g>
+<g>
+<title>2014-10-08 · Total · 185.17 USD</title>
+<circle class="hit" cx="533.3" cy="342.7" r="6" />
+</g>
+<g>
+<title>2014-10-09 · Total · 209.49 USD</title>
+<circle class="hit" cx="640.9" cy="340.2" r="6" />
+</g>
+<g>
+<title>2014-10-09 · Total · 212.39 USD</title>
+<circle class="hit" cx="640.9" cy="339.9" r="6" />
+</g>
+<g>
+<title>2014-10-09 · Total · 239.77 USD</title>
+<circle class="hit" cx="640.9" cy="337.1" r="6" />
+</g>
+<g>
+<title>2014-10-09 · Total · 282.07 USD</title>
+<circle class="hit" cx="640.9" cy="332.7" r="6" />
+</g>
+<g>
+<title>2014-10-09 · Total · 388.69 USD</title>
+<circle class="hit" cx="640.9" cy="321.6" r="6" />
+</g>
+<g>
+<title>2014-10-09 · Total · 1451.61 USD</title>
+<circle class="hit" cx="640.9" cy="211" r="6" />
+</g>
+<g>
+<title>2014-10-09 · Total · 1816.69 USD</title>
+<circle class="hit" cx="640.9" cy="173.1" r="6" />
+</g>
+<g>
+<title>2014-10-09 · Total · 1991.61 USD</title>
+<circle class="hit" cx="640.9" cy="154.9" r="6" />
+</g>
+<g>
+<title>2014-10-09 · Total · 1992.73 USD</title>
+<circle class="hit" cx="640.9" cy="154.8" r="6" />
+</g>
+<g>
+<title>2014-10-09 · Total · 2274.27 USD</title>
+<circle class="hit" cx="640.9" cy="125.5" r="6" />
+</g>
+<g>
+<title>2014-10-11 · Total · 2296.10 USD</title>
+<circle class="hit" cx="856" cy="123.2" r="6" />
+</g>
+</svg>

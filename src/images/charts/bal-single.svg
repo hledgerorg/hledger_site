@@ -1,0 +1,311 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="hledger-chart" width="880" height="800.4" viewBox="0 0 880 800.4" role="img">
+<style>.hledger-chart{max-width:100%;height:auto;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:14px}
+.hledger-chart .title{font-size:17px;font-weight:600}
+.hledger-chart .heading{font-size:15px;font-weight:600}
+.hledger-chart .value,.hledger-chart .tick{font-variant-numeric:tabular-nums}
+.hledger-chart .grid,.hledger-chart .axis{stroke-width:1}
+.hledger-chart .line{fill:none;stroke-width:3;stroke-linejoin:round;stroke-linecap:round}
+.hledger-chart .mark{stroke-width:2.5}
+.hledger-chart .average{stroke-width:2;stroke-dasharray:5 4}
+.hledger-chart .hit,.hledger-chart .plot{fill:transparent}
+.hledger-chart .hatch{stroke-width:2.5}
+.hledger-chart .bg{fill:#fcfcfb}
+.hledger-chart .title{fill:#0b0b0b}
+.hledger-chart .heading{fill:#0b0b0b}
+.hledger-chart .label{fill:#52514e}
+.hledger-chart .value{fill:#52514e}
+.hledger-chart .tick{fill:#898781}
+.hledger-chart .grid{stroke:#e1e0d9}
+.hledger-chart .axis{stroke:#c3c2b7}
+.hledger-chart .line.total{stroke:#0b0b0b}
+.hledger-chart .mark.total{stroke:#0b0b0b}
+.hledger-chart .average{stroke:#0b0b0b}
+.hledger-chart .clip{fill:#0b0b0b}
+.hledger-chart .hatch{stroke:#fcfcfb}
+.hledger-chart .fill.ta0{fill:#2a78d6}
+.hledger-chart .line.ta0{stroke:#2a78d6}
+.hledger-chart .fill.ta1{fill:#1d5496}
+.hledger-chart .line.ta1{stroke:#1d5496}
+.hledger-chart .fill.ta2{fill:#7faee6}
+.hledger-chart .line.ta2{stroke:#7faee6}
+.hledger-chart .fill.ta3{fill:#b4d0f1}
+.hledger-chart .line.ta3{stroke:#b4d0f1}
+.hledger-chart .fill.tl0{fill:#eda100}
+.hledger-chart .line.tl0{stroke:#eda100}
+.hledger-chart .fill.tl1{fill:#a67100}
+.hledger-chart .line.tl1{stroke:#a67100}
+.hledger-chart .fill.tl2{fill:#f4c766}
+.hledger-chart .line.tl2{stroke:#f4c766}
+.hledger-chart .fill.tl3{fill:#f9dea6}
+.hledger-chart .line.tl3{stroke:#f9dea6}
+.hledger-chart .fill.te0{fill:#4a3aa7}
+.hledger-chart .line.te0{stroke:#4a3aa7}
+.hledger-chart .fill.te1{fill:#342975}
+.hledger-chart .line.te1{stroke:#342975}
+.hledger-chart .fill.te2{fill:#9289ca}
+.hledger-chart .line.te2{stroke:#9289ca}
+.hledger-chart .fill.te3{fill:#c0bae0}
+.hledger-chart .line.te3{stroke:#c0bae0}
+.hledger-chart .fill.tr0{fill:#008300}
+.hledger-chart .line.tr0{stroke:#008300}
+.hledger-chart .fill.tr1{fill:#005c00}
+.hledger-chart .line.tr1{stroke:#005c00}
+.hledger-chart .fill.tr2{fill:#66b566}
+.hledger-chart .line.tr2{stroke:#66b566}
+.hledger-chart .fill.tr3{fill:#a6d4a6}
+.hledger-chart .line.tr3{stroke:#a6d4a6}
+.hledger-chart .fill.tx0{fill:#e34948}
+.hledger-chart .line.tx0{stroke:#e34948}
+.hledger-chart .fill.tx1{fill:#9f3332}
+.hledger-chart .line.tx1{stroke:#9f3332}
+.hledger-chart .fill.tx2{fill:#ee9291}
+.hledger-chart .line.tx2{stroke:#ee9291}
+.hledger-chart .fill.tx3{fill:#f5bfbf}
+.hledger-chart .line.tx3{stroke:#f5bfbf}
+.hledger-chart .fill.s0{fill:#2a78d6}
+.hledger-chart .line.s0{stroke:#2a78d6}
+.hledger-chart .fill.s1{fill:#eb6834}
+.hledger-chart .line.s1{stroke:#eb6834}
+.hledger-chart .fill.s2{fill:#1baf7a}
+.hledger-chart .line.s2{stroke:#1baf7a}
+.hledger-chart .fill.s3{fill:#eda100}
+.hledger-chart .line.s3{stroke:#eda100}
+.hledger-chart .fill.s4{fill:#e87ba4}
+.hledger-chart .line.s4{stroke:#e87ba4}
+.hledger-chart .fill.s5{fill:#008300}
+.hledger-chart .line.s5{stroke:#008300}
+.hledger-chart .fill.s6{fill:#4a3aa7}
+.hledger-chart .line.s6{stroke:#4a3aa7}
+.hledger-chart .fill.s7{fill:#e34948}
+.hledger-chart .line.s7{stroke:#e34948}
+.hledger-chart .fill.other{fill:#898781}
+.hledger-chart .line.other{stroke:#898781}
+.hledger-chart .fill.oa{fill:#6381a3}
+.hledger-chart .line.oa{stroke:#6381a3}
+.hledger-chart .fill.ol{fill:#b1914d}
+.hledger-chart .line.ol{stroke:#b1914d}
+.hledger-chart .fill.oe{fill:#706890}
+.hledger-chart .line.oe{stroke:#706890}
+.hledger-chart .fill.or{fill:#52854d}
+.hledger-chart .line.or{stroke:#52854d}
+.hledger-chart .fill.ox{fill:#ad6e6a}
+.hledger-chart .line.ox{stroke:#ad6e6a}
+.hledger-chart .fill.lone{fill:#1597b0}
+.hledger-chart .line.lone{stroke:#1597b0}
+.hledger-chart .fill.neutral{fill:#52514e}
+.hledger-chart .line.neutral{stroke:#52514e}
+@media (prefers-color-scheme:dark){
+.hledger-chart .bg{fill:#1a1a19}
+.hledger-chart .title{fill:#ffffff}
+.hledger-chart .heading{fill:#ffffff}
+.hledger-chart .label{fill:#c3c2b7}
+.hledger-chart .value{fill:#c3c2b7}
+.hledger-chart .tick{fill:#898781}
+.hledger-chart .grid{stroke:#2c2c2a}
+.hledger-chart .axis{stroke:#383835}
+.hledger-chart .line.total{stroke:#ffffff}
+.hledger-chart .mark.total{stroke:#ffffff}
+.hledger-chart .average{stroke:#ffffff}
+.hledger-chart .clip{fill:#ffffff}
+.hledger-chart .hatch{stroke:#1a1a19}
+.hledger-chart .fill.ta0{fill:#3987e5}
+.hledger-chart .line.ta0{stroke:#3987e5}
+.hledger-chart .fill.ta1{fill:#88b7ef}
+.hledger-chart .line.ta1{stroke:#88b7ef}
+.hledger-chart .fill.ta2{fill:#285ea0}
+.hledger-chart .line.ta2{stroke:#285ea0}
+.hledger-chart .fill.ta3{fill:#bad5f6}
+.hledger-chart .line.ta3{stroke:#bad5f6}
+.hledger-chart .fill.tl0{fill:#c98500}
+.hledger-chart .line.tl0{stroke:#c98500}
+.hledger-chart .fill.tl1{fill:#dfb666}
+.hledger-chart .line.tl1{stroke:#dfb666}
+.hledger-chart .fill.tl2{fill:#8d5d00}
+.hledger-chart .line.tl2{stroke:#8d5d00}
+.hledger-chart .fill.tl3{fill:#ecd4a6}
+.hledger-chart .line.tl3{stroke:#ecd4a6}
+.hledger-chart .fill.te0{fill:#9085e9}
+.hledger-chart .line.te0{stroke:#9085e9}
+.hledger-chart .fill.te1{fill:#bcb6f2}
+.hledger-chart .line.te1{stroke:#bcb6f2}
+.hledger-chart .fill.te2{fill:#655da3}
+.hledger-chart .line.te2{stroke:#655da3}
+.hledger-chart .fill.te3{fill:#d8d4f7}
+.hledger-chart .line.te3{stroke:#d8d4f7}
+.hledger-chart .fill.tr0{fill:#008300}
+.hledger-chart .line.tr0{stroke:#008300}
+.hledger-chart .fill.tr1{fill:#66b566}
+.hledger-chart .line.tr1{stroke:#66b566}
+.hledger-chart .fill.tr2{fill:#005c00}
+.hledger-chart .line.tr2{stroke:#005c00}
+.hledger-chart .fill.tr3{fill:#a6d4a6}
+.hledger-chart .line.tr3{stroke:#a6d4a6}
+.hledger-chart .fill.tx0{fill:#e66767}
+.hledger-chart .line.tx0{stroke:#e66767}
+.hledger-chart .fill.tx1{fill:#f0a4a4}
+.hledger-chart .line.tx1{stroke:#f0a4a4}
+.hledger-chart .fill.tx2{fill:#a14848}
+.hledger-chart .line.tx2{stroke:#a14848}
+.hledger-chart .fill.tx3{fill:#f6caca}
+.hledger-chart .line.tx3{stroke:#f6caca}
+.hledger-chart .fill.s0{fill:#3987e5}
+.hledger-chart .line.s0{stroke:#3987e5}
+.hledger-chart .fill.s1{fill:#d95926}
+.hledger-chart .line.s1{stroke:#d95926}
+.hledger-chart .fill.s2{fill:#199e70}
+.hledger-chart .line.s2{stroke:#199e70}
+.hledger-chart .fill.s3{fill:#c98500}
+.hledger-chart .line.s3{stroke:#c98500}
+.hledger-chart .fill.s4{fill:#d55181}
+.hledger-chart .line.s4{stroke:#d55181}
+.hledger-chart .fill.s5{fill:#008300}
+.hledger-chart .line.s5{stroke:#008300}
+.hledger-chart .fill.s6{fill:#9085e9}
+.hledger-chart .line.s6{stroke:#9085e9}
+.hledger-chart .fill.s7{fill:#e66767}
+.hledger-chart .line.s7{stroke:#e66767}
+.hledger-chart .fill.other{fill:#898781}
+.hledger-chart .line.other{stroke:#898781}
+.hledger-chart .fill.oa{fill:#6987a9}
+.hledger-chart .line.oa{stroke:#6987a9}
+.hledger-chart .fill.ol{fill:#a3864d}
+.hledger-chart .line.ol{stroke:#a3864d}
+.hledger-chart .fill.oe{fill:#8c86ab}
+.hledger-chart .line.oe{stroke:#8c86ab}
+.hledger-chart .fill.or{fill:#52854d}
+.hledger-chart .line.or{stroke:#52854d}
+.hledger-chart .fill.ox{fill:#ae7a77}
+.hledger-chart .line.ox{stroke:#ae7a77}
+.hledger-chart .fill.lone{fill:#22a6be}
+.hledger-chart .line.lone{stroke:#22a6be}
+.hledger-chart .fill.neutral{fill:#c3c2b7}
+.hledger-chart .line.neutral{stroke:#c3c2b7}
+}
+</style>
+<rect class="bg" width="100%" height="100%" />
+<text class="heading" x="16" y="32">USD</text>
+<line class="axis" x1="112.5" x2="864" y1="324" y2="324" />
+<text class="tick" x="104.5" y="329" text-anchor="end">0</text>
+<line class="grid" x1="112.5" x2="864" y1="291.5" y2="291.5" />
+<text class="tick" x="104.5" y="296.5" text-anchor="end">20000</text>
+<line class="grid" x1="112.5" x2="864" y1="259" y2="259" />
+<text class="tick" x="104.5" y="264" text-anchor="end">40000</text>
+<line class="grid" x1="112.5" x2="864" y1="226.5" y2="226.5" />
+<text class="tick" x="104.5" y="231.5" text-anchor="end">60000</text>
+<line class="grid" x1="112.5" x2="864" y1="194" y2="194" />
+<text class="tick" x="104.5" y="199" text-anchor="end">80000</text>
+<line class="grid" x1="112.5" x2="864" y1="161.5" y2="161.5" />
+<text class="tick" x="104.5" y="166.5" text-anchor="end">100000</text>
+<line class="grid" x1="112.5" x2="864" y1="129" y2="129" />
+<text class="tick" x="104.5" y="134" text-anchor="end">120000</text>
+<line class="grid" x1="112.5" x2="864" y1="96.5" y2="96.5" />
+<text class="tick" x="104.5" y="101.5" text-anchor="end">140000</text>
+<line class="grid" x1="112.5" x2="864" y1="64" y2="64" />
+<text class="tick" x="104.5" y="69" text-anchor="end">160000 USD</text>
+<text class="label" x="179.1" y="340" text-anchor="end" transform="rotate(-45 179.1 340)">Expenses:Financial</text>
+<defs>
+<clipPath id="hledger-chart-clip-barv_143.1_324_-0.8">
+<path d="M 143.1 324 V 324 Q 143.1 323.2 143.9 323.2 H 206.4 Q 207.1 323.2 207.1 324 V 324 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_143.1_324_-0.8)">
+<g>
+<title>Expenses:Financial · Balance · 476.10 USD</title>
+<path class="fill tx0" d="M 143.1 324 V 323.2 Q 143.1 323.2 143.1 323.2 H 207.1 Q 207.1 323.2 207.1 323.2 V 324 Z" />
+</g>
+</g>
+<text class="value" x="175.1" y="317.2" text-anchor="middle">476.10 USD</text>
+<text class="label" x="304.4" y="340" text-anchor="end" transform="rotate(-45 304.4 340)">Expenses:Food</text>
+<defs>
+<clipPath id="hledger-chart-clip-barv_268.4_324_-31">
+<path d="M 268.4 324 V 296 Q 268.4 293 271.4 293 H 329.4 Q 332.4 293 332.4 296 V 324 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_268.4_324_-31)">
+<g>
+<title>Expenses:Food · Balance · 19088.98 USD</title>
+<path class="fill tx0" d="M 268.4 324 V 293 Q 268.4 293 268.4 293 H 332.4 Q 332.4 293 332.4 293 V 324 Z" />
+</g>
+</g>
+<text class="value" x="300.4" y="287" text-anchor="middle">19088.98 USD</text>
+<text class="label" x="429.6" y="340" text-anchor="end" transform="rotate(-45 429.6 340)">Expenses:Health</text>
+<defs>
+<clipPath id="hledger-chart-clip-barv_393.6_324_-11.5">
+<path d="M 393.6 324 V 315.5 Q 393.6 312.5 396.6 312.5 H 454.6 Q 457.6 312.5 457.6 315.5 V 324 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_393.6_324_-11.5)">
+<g>
+<title>Expenses:Health · Balance · 7073.70 USD</title>
+<path class="fill tx0" d="M 393.6 324 V 312.5 Q 393.6 312.5 393.6 312.5 H 457.6 Q 457.6 312.5 457.6 312.5 V 324 Z" />
+</g>
+</g>
+<text class="value" x="425.6" y="306.5" text-anchor="middle">7073.70 USD</text>
+<text class="label" x="554.9" y="340" text-anchor="end" transform="rotate(-45 554.9 340)">Expenses:Home</text>
+<defs>
+<clipPath id="hledger-chart-clip-barv_518.9_324_-136.5">
+<path d="M 518.9 324 V 190.5 Q 518.9 187.5 521.9 187.5 H 579.9 Q 582.9 187.5 582.9 190.5 V 324 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_518.9_324_-136.5)">
+<g>
+<title>Expenses:Home · Balance · 83985.80 USD</title>
+<path class="fill tx0" d="M 518.9 324 V 187.5 Q 518.9 187.5 518.9 187.5 H 582.9 Q 582.9 187.5 582.9 187.5 V 324 Z" />
+</g>
+</g>
+<text class="value" x="550.9" y="181.5" text-anchor="middle">83985.80 USD</text>
+<text class="label" x="680.1" y="340" text-anchor="end" transform="rotate(-45 680.1 340)">Expenses:Taxes</text>
+<defs>
+<clipPath id="hledger-chart-clip-barv_644.1_324_-238.2">
+<path d="M 644.1 324 V 88.8 Q 644.1 85.8 647.1 85.8 H 705.1 Q 708.1 85.8 708.1 88.8 V 324 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_644.1_324_-238.2)">
+<g>
+<title>Expenses:Taxes · Balance · 146567.12 USD</title>
+<path class="fill tx0" d="M 644.1 324 V 85.8 Q 644.1 85.8 644.1 85.8 H 708.1 Q 708.1 85.8 708.1 85.8 V 324 Z" />
+</g>
+</g>
+<text class="value" x="676.1" y="79.8" text-anchor="middle">146567.12 USD</text>
+<text class="label" x="805.4" y="340" text-anchor="end" transform="rotate(-45 805.4 340)">Expenses:Transport</text>
+<defs>
+<clipPath id="hledger-chart-clip-barv_769.4_324_-6">
+<path d="M 769.4 324 V 321 Q 769.4 318 772.4 318 H 830.4 Q 833.4 318 833.4 321 V 324 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_769.4_324_-6)">
+<g>
+<title>Expenses:Transport · Balance · 3720.00 USD</title>
+<path class="fill tx0" d="M 769.4 324 V 318 Q 769.4 318 769.4 318 H 833.4 Q 833.4 318 833.4 318 V 324 Z" />
+</g>
+</g>
+<text class="value" x="801.4" y="312" text-anchor="middle">3720.00 USD</text>
+<text class="heading" x="16" y="466.4">IRAUSD</text>
+<line class="axis" x1="132.3" x2="864" y1="758.4" y2="758.4" />
+<text class="tick" x="124.3" y="763.4" text-anchor="end">0</text>
+<line class="grid" x1="132.3" x2="864" y1="715.1" y2="715.1" />
+<text class="tick" x="124.3" y="720.1" text-anchor="end">10000</text>
+<line class="grid" x1="132.3" x2="864" y1="671.8" y2="671.8" />
+<text class="tick" x="124.3" y="676.8" text-anchor="end">20000</text>
+<line class="grid" x1="132.3" x2="864" y1="628.4" y2="628.4" />
+<text class="tick" x="124.3" y="633.4" text-anchor="end">30000</text>
+<line class="grid" x1="132.3" x2="864" y1="585.1" y2="585.1" />
+<text class="tick" x="124.3" y="590.1" text-anchor="end">40000</text>
+<line class="grid" x1="132.3" x2="864" y1="541.8" y2="541.8" />
+<text class="tick" x="124.3" y="546.8" text-anchor="end">50000</text>
+<line class="grid" x1="132.3" x2="864" y1="498.4" y2="498.4" />
+<text class="tick" x="124.3" y="503.4" text-anchor="end">60000 IRAUSD</text>
+<text class="label" x="498.2" y="774.4" text-anchor="middle">Expenses:Taxes</text>
+<defs>
+<clipPath id="hledger-chart-clip-barv_466.2_758.4_-225.3">
+<path d="M 466.2 758.4 V 536.1 Q 466.2 533.1 469.2 533.1 H 527.2 Q 530.2 533.1 530.2 536.1 V 758.4 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_466.2_758.4_-225.3)">
+<g>
+<title>Expenses:Taxes · Balance · 52000.00 IRAUSD</title>
+<path class="fill tx0" d="M 466.2 758.4 V 533.1 Q 466.2 533.1 466.2 533.1 H 530.2 Q 530.2 533.1 530.2 533.1 V 758.4 Z" />
+</g>
+</g>
+<text class="value" x="498.2" y="527.1" text-anchor="middle">52000.00 IRAUSD</text>
+</svg>

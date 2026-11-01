@@ -1,0 +1,346 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="hledger-chart" width="880" height="362" viewBox="0 0 880 362" role="img" aria-label="Transaction counts in 2012-01-01..2014-12-31:">
+<title>Transaction counts in 2012-01-01..2014-12-31:</title>
+<style>.hledger-chart{max-width:100%;height:auto;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:14px}
+.hledger-chart .title{font-size:17px;font-weight:600}
+.hledger-chart .heading{font-size:15px;font-weight:600}
+.hledger-chart .value,.hledger-chart .tick{font-variant-numeric:tabular-nums}
+.hledger-chart .grid,.hledger-chart .axis{stroke-width:1}
+.hledger-chart .line{fill:none;stroke-width:3;stroke-linejoin:round;stroke-linecap:round}
+.hledger-chart .mark{stroke-width:2.5}
+.hledger-chart .average{stroke-width:2;stroke-dasharray:5 4}
+.hledger-chart .hit,.hledger-chart .plot{fill:transparent}
+.hledger-chart .hatch{stroke-width:2.5}
+.hledger-chart .bg{fill:#fcfcfb}
+.hledger-chart .title{fill:#0b0b0b}
+.hledger-chart .heading{fill:#0b0b0b}
+.hledger-chart .label{fill:#52514e}
+.hledger-chart .value{fill:#52514e}
+.hledger-chart .tick{fill:#898781}
+.hledger-chart .grid{stroke:#e1e0d9}
+.hledger-chart .axis{stroke:#c3c2b7}
+.hledger-chart .line.total{stroke:#0b0b0b}
+.hledger-chart .mark.total{stroke:#0b0b0b}
+.hledger-chart .average{stroke:#0b0b0b}
+.hledger-chart .clip{fill:#0b0b0b}
+.hledger-chart .hatch{stroke:#fcfcfb}
+.hledger-chart .fill.ta0{fill:#2a78d6}
+.hledger-chart .line.ta0{stroke:#2a78d6}
+.hledger-chart .fill.ta1{fill:#1d5496}
+.hledger-chart .line.ta1{stroke:#1d5496}
+.hledger-chart .fill.ta2{fill:#7faee6}
+.hledger-chart .line.ta2{stroke:#7faee6}
+.hledger-chart .fill.ta3{fill:#b4d0f1}
+.hledger-chart .line.ta3{stroke:#b4d0f1}
+.hledger-chart .fill.tl0{fill:#eda100}
+.hledger-chart .line.tl0{stroke:#eda100}
+.hledger-chart .fill.tl1{fill:#a67100}
+.hledger-chart .line.tl1{stroke:#a67100}
+.hledger-chart .fill.tl2{fill:#f4c766}
+.hledger-chart .line.tl2{stroke:#f4c766}
+.hledger-chart .fill.tl3{fill:#f9dea6}
+.hledger-chart .line.tl3{stroke:#f9dea6}
+.hledger-chart .fill.te0{fill:#4a3aa7}
+.hledger-chart .line.te0{stroke:#4a3aa7}
+.hledger-chart .fill.te1{fill:#342975}
+.hledger-chart .line.te1{stroke:#342975}
+.hledger-chart .fill.te2{fill:#9289ca}
+.hledger-chart .line.te2{stroke:#9289ca}
+.hledger-chart .fill.te3{fill:#c0bae0}
+.hledger-chart .line.te3{stroke:#c0bae0}
+.hledger-chart .fill.tr0{fill:#008300}
+.hledger-chart .line.tr0{stroke:#008300}
+.hledger-chart .fill.tr1{fill:#005c00}
+.hledger-chart .line.tr1{stroke:#005c00}
+.hledger-chart .fill.tr2{fill:#66b566}
+.hledger-chart .line.tr2{stroke:#66b566}
+.hledger-chart .fill.tr3{fill:#a6d4a6}
+.hledger-chart .line.tr3{stroke:#a6d4a6}
+.hledger-chart .fill.tx0{fill:#e34948}
+.hledger-chart .line.tx0{stroke:#e34948}
+.hledger-chart .fill.tx1{fill:#9f3332}
+.hledger-chart .line.tx1{stroke:#9f3332}
+.hledger-chart .fill.tx2{fill:#ee9291}
+.hledger-chart .line.tx2{stroke:#ee9291}
+.hledger-chart .fill.tx3{fill:#f5bfbf}
+.hledger-chart .line.tx3{stroke:#f5bfbf}
+.hledger-chart .fill.s0{fill:#2a78d6}
+.hledger-chart .line.s0{stroke:#2a78d6}
+.hledger-chart .fill.s1{fill:#eb6834}
+.hledger-chart .line.s1{stroke:#eb6834}
+.hledger-chart .fill.s2{fill:#1baf7a}
+.hledger-chart .line.s2{stroke:#1baf7a}
+.hledger-chart .fill.s3{fill:#eda100}
+.hledger-chart .line.s3{stroke:#eda100}
+.hledger-chart .fill.s4{fill:#e87ba4}
+.hledger-chart .line.s4{stroke:#e87ba4}
+.hledger-chart .fill.s5{fill:#008300}
+.hledger-chart .line.s5{stroke:#008300}
+.hledger-chart .fill.s6{fill:#4a3aa7}
+.hledger-chart .line.s6{stroke:#4a3aa7}
+.hledger-chart .fill.s7{fill:#e34948}
+.hledger-chart .line.s7{stroke:#e34948}
+.hledger-chart .fill.other{fill:#898781}
+.hledger-chart .line.other{stroke:#898781}
+.hledger-chart .fill.oa{fill:#6381a3}
+.hledger-chart .line.oa{stroke:#6381a3}
+.hledger-chart .fill.ol{fill:#b1914d}
+.hledger-chart .line.ol{stroke:#b1914d}
+.hledger-chart .fill.oe{fill:#706890}
+.hledger-chart .line.oe{stroke:#706890}
+.hledger-chart .fill.or{fill:#52854d}
+.hledger-chart .line.or{stroke:#52854d}
+.hledger-chart .fill.ox{fill:#ad6e6a}
+.hledger-chart .line.ox{stroke:#ad6e6a}
+.hledger-chart .fill.lone{fill:#1597b0}
+.hledger-chart .line.lone{stroke:#1597b0}
+.hledger-chart .fill.neutral{fill:#52514e}
+.hledger-chart .line.neutral{stroke:#52514e}
+@media (prefers-color-scheme:dark){
+.hledger-chart .bg{fill:#1a1a19}
+.hledger-chart .title{fill:#ffffff}
+.hledger-chart .heading{fill:#ffffff}
+.hledger-chart .label{fill:#c3c2b7}
+.hledger-chart .value{fill:#c3c2b7}
+.hledger-chart .tick{fill:#898781}
+.hledger-chart .grid{stroke:#2c2c2a}
+.hledger-chart .axis{stroke:#383835}
+.hledger-chart .line.total{stroke:#ffffff}
+.hledger-chart .mark.total{stroke:#ffffff}
+.hledger-chart .average{stroke:#ffffff}
+.hledger-chart .clip{fill:#ffffff}
+.hledger-chart .hatch{stroke:#1a1a19}
+.hledger-chart .fill.ta0{fill:#3987e5}
+.hledger-chart .line.ta0{stroke:#3987e5}
+.hledger-chart .fill.ta1{fill:#88b7ef}
+.hledger-chart .line.ta1{stroke:#88b7ef}
+.hledger-chart .fill.ta2{fill:#285ea0}
+.hledger-chart .line.ta2{stroke:#285ea0}
+.hledger-chart .fill.ta3{fill:#bad5f6}
+.hledger-chart .line.ta3{stroke:#bad5f6}
+.hledger-chart .fill.tl0{fill:#c98500}
+.hledger-chart .line.tl0{stroke:#c98500}
+.hledger-chart .fill.tl1{fill:#dfb666}
+.hledger-chart .line.tl1{stroke:#dfb666}
+.hledger-chart .fill.tl2{fill:#8d5d00}
+.hledger-chart .line.tl2{stroke:#8d5d00}
+.hledger-chart .fill.tl3{fill:#ecd4a6}
+.hledger-chart .line.tl3{stroke:#ecd4a6}
+.hledger-chart .fill.te0{fill:#9085e9}
+.hledger-chart .line.te0{stroke:#9085e9}
+.hledger-chart .fill.te1{fill:#bcb6f2}
+.hledger-chart .line.te1{stroke:#bcb6f2}
+.hledger-chart .fill.te2{fill:#655da3}
+.hledger-chart .line.te2{stroke:#655da3}
+.hledger-chart .fill.te3{fill:#d8d4f7}
+.hledger-chart .line.te3{stroke:#d8d4f7}
+.hledger-chart .fill.tr0{fill:#008300}
+.hledger-chart .line.tr0{stroke:#008300}
+.hledger-chart .fill.tr1{fill:#66b566}
+.hledger-chart .line.tr1{stroke:#66b566}
+.hledger-chart .fill.tr2{fill:#005c00}
+.hledger-chart .line.tr2{stroke:#005c00}
+.hledger-chart .fill.tr3{fill:#a6d4a6}
+.hledger-chart .line.tr3{stroke:#a6d4a6}
+.hledger-chart .fill.tx0{fill:#e66767}
+.hledger-chart .line.tx0{stroke:#e66767}
+.hledger-chart .fill.tx1{fill:#f0a4a4}
+.hledger-chart .line.tx1{stroke:#f0a4a4}
+.hledger-chart .fill.tx2{fill:#a14848}
+.hledger-chart .line.tx2{stroke:#a14848}
+.hledger-chart .fill.tx3{fill:#f6caca}
+.hledger-chart .line.tx3{stroke:#f6caca}
+.hledger-chart .fill.s0{fill:#3987e5}
+.hledger-chart .line.s0{stroke:#3987e5}
+.hledger-chart .fill.s1{fill:#d95926}
+.hledger-chart .line.s1{stroke:#d95926}
+.hledger-chart .fill.s2{fill:#199e70}
+.hledger-chart .line.s2{stroke:#199e70}
+.hledger-chart .fill.s3{fill:#c98500}
+.hledger-chart .line.s3{stroke:#c98500}
+.hledger-chart .fill.s4{fill:#d55181}
+.hledger-chart .line.s4{stroke:#d55181}
+.hledger-chart .fill.s5{fill:#008300}
+.hledger-chart .line.s5{stroke:#008300}
+.hledger-chart .fill.s6{fill:#9085e9}
+.hledger-chart .line.s6{stroke:#9085e9}
+.hledger-chart .fill.s7{fill:#e66767}
+.hledger-chart .line.s7{stroke:#e66767}
+.hledger-chart .fill.other{fill:#898781}
+.hledger-chart .line.other{stroke:#898781}
+.hledger-chart .fill.oa{fill:#6987a9}
+.hledger-chart .line.oa{stroke:#6987a9}
+.hledger-chart .fill.ol{fill:#a3864d}
+.hledger-chart .line.ol{stroke:#a3864d}
+.hledger-chart .fill.oe{fill:#8c86ab}
+.hledger-chart .line.oe{stroke:#8c86ab}
+.hledger-chart .fill.or{fill:#52854d}
+.hledger-chart .line.or{stroke:#52854d}
+.hledger-chart .fill.ox{fill:#ae7a77}
+.hledger-chart .line.ox{stroke:#ae7a77}
+.hledger-chart .fill.lone{fill:#22a6be}
+.hledger-chart .line.lone{stroke:#22a6be}
+.hledger-chart .fill.neutral{fill:#c3c2b7}
+.hledger-chart .line.neutral{stroke:#c3c2b7}
+}
+</style>
+<rect class="bg" width="100%" height="100%" />
+<text class="title" x="16" y="33">Transaction counts in 2012-01-01..2014-12-31:</text>
+<line class="axis" x1="54.1" x2="864" y1="320" y2="320" />
+<text class="tick" x="46.1" y="325" text-anchor="end">0</text>
+<line class="grid" x1="54.1" x2="864" y1="276.7" y2="276.7" />
+<text class="tick" x="46.1" y="281.7" text-anchor="end">20</text>
+<line class="grid" x1="54.1" x2="864" y1="233.3" y2="233.3" />
+<text class="tick" x="46.1" y="238.3" text-anchor="end">40</text>
+<line class="grid" x1="54.1" x2="864" y1="190" y2="190" />
+<text class="tick" x="46.1" y="195" text-anchor="end">60</text>
+<line class="grid" x1="54.1" x2="864" y1="146.7" y2="146.7" />
+<text class="tick" x="46.1" y="151.7" text-anchor="end">80</text>
+<line class="grid" x1="54.1" x2="864" y1="103.3" y2="103.3" />
+<text class="tick" x="46.1" y="108.3" text-anchor="end">100</text>
+<line class="grid" x1="54.1" x2="864" y1="60" y2="60" />
+<text class="tick" x="46.1" y="65" text-anchor="end">120</text>
+<text class="tick" x="87.8" y="341" text-anchor="middle">2012Q1</text>
+<text class="tick" x="155.3" y="341" text-anchor="middle">2012Q2</text>
+<text class="tick" x="222.8" y="341" text-anchor="middle">2012Q3</text>
+<text class="tick" x="290.3" y="341" text-anchor="middle">2012Q4</text>
+<text class="tick" x="357.8" y="341" text-anchor="middle">2013Q1</text>
+<text class="tick" x="425.3" y="341" text-anchor="middle">2013Q2</text>
+<text class="tick" x="492.8" y="341" text-anchor="middle">2013Q3</text>
+<text class="tick" x="560.3" y="341" text-anchor="middle">2013Q4</text>
+<text class="tick" x="627.8" y="341" text-anchor="middle">2014Q1</text>
+<text class="tick" x="695.3" y="341" text-anchor="middle">2014Q2</text>
+<text class="tick" x="762.8" y="341" text-anchor="middle">2014Q3</text>
+<text class="tick" x="830.3" y="341" text-anchor="middle">2014Q4</text>
+<defs>
+<clipPath id="hledger-chart-clip-barv_62.5_320_-212.3">
+<path d="M 62.5 320 V 110.7 Q 62.5 107.7 65.5 107.7 H 110.2 Q 113.2 107.7 113.2 110.7 V 320 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_62.5_320_-212.3)">
+<g>
+<title>2012Q1 · ... · 98</title>
+<path class="fill lone" d="M 62.5 320 V 107.7 Q 62.5 107.7 62.5 107.7 H 113.2 Q 113.2 107.7 113.2 107.7 V 320 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_130_320_-199.3">
+<path d="M 130 320 V 123.7 Q 130 120.7 133 120.7 H 177.6 Q 180.6 120.7 180.6 123.7 V 320 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_130_320_-199.3)">
+<g>
+<title>2012Q2 · ... · 92</title>
+<path class="fill lone" d="M 130 320 V 120.7 Q 130 120.7 130 120.7 H 180.6 Q 180.6 120.7 180.6 120.7 V 320 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_197.5_320_-158.2">
+<path d="M 197.5 320 V 164.8 Q 197.5 161.8 200.5 161.8 H 245.1 Q 248.1 161.8 248.1 164.8 V 320 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_197.5_320_-158.2)">
+<g>
+<title>2012Q3 · ... · 73</title>
+<path class="fill lone" d="M 197.5 320 V 161.8 Q 197.5 161.8 197.5 161.8 H 248.1 Q 248.1 161.8 248.1 161.8 V 320 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_265_320_-184.2">
+<path d="M 265 320 V 138.8 Q 265 135.8 268 135.8 H 312.6 Q 315.6 135.8 315.6 138.8 V 320 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_265_320_-184.2)">
+<g>
+<title>2012Q4 · ... · 85</title>
+<path class="fill lone" d="M 265 320 V 135.8 Q 265 135.8 265 135.8 H 315.6 Q 315.6 135.8 315.6 135.8 V 320 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_332.5_320_-216.7">
+<path d="M 332.5 320 V 106.3 Q 332.5 103.3 335.5 103.3 H 380.1 Q 383.1 103.3 383.1 106.3 V 320 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_332.5_320_-216.7)">
+<g>
+<title>2013Q1 · ... · 100</title>
+<path class="fill lone" d="M 332.5 320 V 103.3 Q 332.5 103.3 332.5 103.3 H 383.1 Q 383.1 103.3 383.1 103.3 V 320 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_400_320_-221">
+<path d="M 400 320 V 102 Q 400 99 403 99 H 447.6 Q 450.6 99 450.6 102 V 320 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_400_320_-221)">
+<g>
+<title>2013Q2 · ... · 102</title>
+<path class="fill lone" d="M 400 320 V 99 Q 400 99 400 99 H 450.6 Q 450.6 99 450.6 99 V 320 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_467.5_320_-218.8">
+<path d="M 467.5 320 V 104.2 Q 467.5 101.2 470.5 101.2 H 515.1 Q 518.1 101.2 518.1 104.2 V 320 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_467.5_320_-218.8)">
+<g>
+<title>2013Q3 · ... · 101</title>
+<path class="fill lone" d="M 467.5 320 V 101.2 Q 467.5 101.2 467.5 101.2 H 518.1 Q 518.1 101.2 518.1 101.2 V 320 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_535_320_-143">
+<path d="M 535 320 V 180 Q 535 177 538 177 H 582.6 Q 585.6 177 585.6 180 V 320 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_535_320_-143)">
+<g>
+<title>2013Q4 · ... · 66</title>
+<path class="fill lone" d="M 535 320 V 177 Q 535 177 535 177 H 585.6 Q 585.6 177 585.6 177 V 320 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_602.5_320_-236.2">
+<path d="M 602.5 320 V 86.8 Q 602.5 83.8 605.5 83.8 H 650.1 Q 653.1 83.8 653.1 86.8 V 320 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_602.5_320_-236.2)">
+<g>
+<title>2014Q1 · ... · 109</title>
+<path class="fill lone" d="M 602.5 320 V 83.8 Q 602.5 83.8 602.5 83.8 H 653.1 Q 653.1 83.8 653.1 83.8 V 320 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_670_320_-216.7">
+<path d="M 670 320 V 106.3 Q 670 103.3 673 103.3 H 717.6 Q 720.6 103.3 720.6 106.3 V 320 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_670_320_-216.7)">
+<g>
+<title>2014Q2 · ... · 100</title>
+<path class="fill lone" d="M 670 320 V 103.3 Q 670 103.3 670 103.3 H 720.6 Q 720.6 103.3 720.6 103.3 V 320 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_737.5_320_-221">
+<path d="M 737.5 320 V 102 Q 737.5 99 740.5 99 H 785.1 Q 788.1 99 788.1 102 V 320 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_737.5_320_-221)">
+<g>
+<title>2014Q3 · ... · 102</title>
+<path class="fill lone" d="M 737.5 320 V 99 Q 737.5 99 737.5 99 H 788.1 Q 788.1 99 788.1 99 V 320 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_804.9_320_-15.2">
+<path d="M 804.9 320 V 307.8 Q 804.9 304.8 807.9 304.8 H 852.6 Q 855.6 304.8 855.6 307.8 V 320 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_804.9_320_-15.2)">
+<g>
+<title>2014Q4 · ... · 7</title>
+<path class="fill lone" d="M 804.9 320 V 304.8 Q 804.9 304.8 804.9 304.8 H 855.6 Q 855.6 304.8 855.6 304.8 V 320 Z" />
+</g>
+</g>
+</svg>

@@ -38,6 +38,8 @@ $ hledger -f examples/bcexample.journal is -M -p 2013 cur:USD --chart --view
 
 And to collect several reports and charts into one page, use the `run` command with `--view`, eg
 `hledger run --view -- bs -M --chart -- is -M --chart`.
+Here is [a page of example charts](charts-demo.html) made that way, from `examples/bcexample.journal`,
+each with its command and (under Report details) its report.
 
 hledger-web shows the same charts, above the report on its All accounts, Balance sheet, Income statement,
 Cashflow statement and Holdings pages, and a balance over time chart on its register page.

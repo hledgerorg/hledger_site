@@ -1,0 +1,542 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="hledger-chart" width="880" height="404" viewBox="0 0 880 404" role="img">
+<style>.hledger-chart{max-width:100%;height:auto;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:14px}
+.hledger-chart .title{font-size:17px;font-weight:600}
+.hledger-chart .heading{font-size:15px;font-weight:600}
+.hledger-chart .value,.hledger-chart .tick{font-variant-numeric:tabular-nums}
+.hledger-chart .grid,.hledger-chart .axis{stroke-width:1}
+.hledger-chart .line{fill:none;stroke-width:3;stroke-linejoin:round;stroke-linecap:round}
+.hledger-chart .mark{stroke-width:2.5}
+.hledger-chart .average{stroke-width:2;stroke-dasharray:5 4}
+.hledger-chart .hit,.hledger-chart .plot{fill:transparent}
+.hledger-chart .hatch{stroke-width:2.5}
+.hledger-chart .bg{fill:#fcfcfb}
+.hledger-chart .title{fill:#0b0b0b}
+.hledger-chart .heading{fill:#0b0b0b}
+.hledger-chart .label{fill:#52514e}
+.hledger-chart .value{fill:#52514e}
+.hledger-chart .tick{fill:#898781}
+.hledger-chart .grid{stroke:#e1e0d9}
+.hledger-chart .axis{stroke:#c3c2b7}
+.hledger-chart .line.total{stroke:#0b0b0b}
+.hledger-chart .mark.total{stroke:#0b0b0b}
+.hledger-chart .average{stroke:#0b0b0b}
+.hledger-chart .clip{fill:#0b0b0b}
+.hledger-chart .hatch{stroke:#fcfcfb}
+.hledger-chart .fill.ta0{fill:#2a78d6}
+.hledger-chart .line.ta0{stroke:#2a78d6}
+.hledger-chart .fill.ta1{fill:#1d5496}
+.hledger-chart .line.ta1{stroke:#1d5496}
+.hledger-chart .fill.ta2{fill:#7faee6}
+.hledger-chart .line.ta2{stroke:#7faee6}
+.hledger-chart .fill.ta3{fill:#b4d0f1}
+.hledger-chart .line.ta3{stroke:#b4d0f1}
+.hledger-chart .fill.tl0{fill:#eda100}
+.hledger-chart .line.tl0{stroke:#eda100}
+.hledger-chart .fill.tl1{fill:#a67100}
+.hledger-chart .line.tl1{stroke:#a67100}
+.hledger-chart .fill.tl2{fill:#f4c766}
+.hledger-chart .line.tl2{stroke:#f4c766}
+.hledger-chart .fill.tl3{fill:#f9dea6}
+.hledger-chart .line.tl3{stroke:#f9dea6}
+.hledger-chart .fill.te0{fill:#4a3aa7}
+.hledger-chart .line.te0{stroke:#4a3aa7}
+.hledger-chart .fill.te1{fill:#342975}
+.hledger-chart .line.te1{stroke:#342975}
+.hledger-chart .fill.te2{fill:#9289ca}
+.hledger-chart .line.te2{stroke:#9289ca}
+.hledger-chart .fill.te3{fill:#c0bae0}
+.hledger-chart .line.te3{stroke:#c0bae0}
+.hledger-chart .fill.tr0{fill:#008300}
+.hledger-chart .line.tr0{stroke:#008300}
+.hledger-chart .fill.tr1{fill:#005c00}
+.hledger-chart .line.tr1{stroke:#005c00}
+.hledger-chart .fill.tr2{fill:#66b566}
+.hledger-chart .line.tr2{stroke:#66b566}
+.hledger-chart .fill.tr3{fill:#a6d4a6}
+.hledger-chart .line.tr3{stroke:#a6d4a6}
+.hledger-chart .fill.tx0{fill:#e34948}
+.hledger-chart .line.tx0{stroke:#e34948}
+.hledger-chart .fill.tx1{fill:#9f3332}
+.hledger-chart .line.tx1{stroke:#9f3332}
+.hledger-chart .fill.tx2{fill:#ee9291}
+.hledger-chart .line.tx2{stroke:#ee9291}
+.hledger-chart .fill.tx3{fill:#f5bfbf}
+.hledger-chart .line.tx3{stroke:#f5bfbf}
+.hledger-chart .fill.s0{fill:#2a78d6}
+.hledger-chart .line.s0{stroke:#2a78d6}
+.hledger-chart .fill.s1{fill:#eb6834}
+.hledger-chart .line.s1{stroke:#eb6834}
+.hledger-chart .fill.s2{fill:#1baf7a}
+.hledger-chart .line.s2{stroke:#1baf7a}
+.hledger-chart .fill.s3{fill:#eda100}
+.hledger-chart .line.s3{stroke:#eda100}
+.hledger-chart .fill.s4{fill:#e87ba4}
+.hledger-chart .line.s4{stroke:#e87ba4}
+.hledger-chart .fill.s5{fill:#008300}
+.hledger-chart .line.s5{stroke:#008300}
+.hledger-chart .fill.s6{fill:#4a3aa7}
+.hledger-chart .line.s6{stroke:#4a3aa7}
+.hledger-chart .fill.s7{fill:#e34948}
+.hledger-chart .line.s7{stroke:#e34948}
+.hledger-chart .fill.other{fill:#898781}
+.hledger-chart .line.other{stroke:#898781}
+.hledger-chart .fill.oa{fill:#6381a3}
+.hledger-chart .line.oa{stroke:#6381a3}
+.hledger-chart .fill.ol{fill:#b1914d}
+.hledger-chart .line.ol{stroke:#b1914d}
+.hledger-chart .fill.oe{fill:#706890}
+.hledger-chart .line.oe{stroke:#706890}
+.hledger-chart .fill.or{fill:#52854d}
+.hledger-chart .line.or{stroke:#52854d}
+.hledger-chart .fill.ox{fill:#ad6e6a}
+.hledger-chart .line.ox{stroke:#ad6e6a}
+.hledger-chart .fill.lone{fill:#1597b0}
+.hledger-chart .line.lone{stroke:#1597b0}
+.hledger-chart .fill.neutral{fill:#52514e}
+.hledger-chart .line.neutral{stroke:#52514e}
+@media (prefers-color-scheme:dark){
+.hledger-chart .bg{fill:#1a1a19}
+.hledger-chart .title{fill:#ffffff}
+.hledger-chart .heading{fill:#ffffff}
+.hledger-chart .label{fill:#c3c2b7}
+.hledger-chart .value{fill:#c3c2b7}
+.hledger-chart .tick{fill:#898781}
+.hledger-chart .grid{stroke:#2c2c2a}
+.hledger-chart .axis{stroke:#383835}
+.hledger-chart .line.total{stroke:#ffffff}
+.hledger-chart .mark.total{stroke:#ffffff}
+.hledger-chart .average{stroke:#ffffff}
+.hledger-chart .clip{fill:#ffffff}
+.hledger-chart .hatch{stroke:#1a1a19}
+.hledger-chart .fill.ta0{fill:#3987e5}
+.hledger-chart .line.ta0{stroke:#3987e5}
+.hledger-chart .fill.ta1{fill:#88b7ef}
+.hledger-chart .line.ta1{stroke:#88b7ef}
+.hledger-chart .fill.ta2{fill:#285ea0}
+.hledger-chart .line.ta2{stroke:#285ea0}
+.hledger-chart .fill.ta3{fill:#bad5f6}
+.hledger-chart .line.ta3{stroke:#bad5f6}
+.hledger-chart .fill.tl0{fill:#c98500}
+.hledger-chart .line.tl0{stroke:#c98500}
+.hledger-chart .fill.tl1{fill:#dfb666}
+.hledger-chart .line.tl1{stroke:#dfb666}
+.hledger-chart .fill.tl2{fill:#8d5d00}
+.hledger-chart .line.tl2{stroke:#8d5d00}
+.hledger-chart .fill.tl3{fill:#ecd4a6}
+.hledger-chart .line.tl3{stroke:#ecd4a6}
+.hledger-chart .fill.te0{fill:#9085e9}
+.hledger-chart .line.te0{stroke:#9085e9}
+.hledger-chart .fill.te1{fill:#bcb6f2}
+.hledger-chart .line.te1{stroke:#bcb6f2}
+.hledger-chart .fill.te2{fill:#655da3}
+.hledger-chart .line.te2{stroke:#655da3}
+.hledger-chart .fill.te3{fill:#d8d4f7}
+.hledger-chart .line.te3{stroke:#d8d4f7}
+.hledger-chart .fill.tr0{fill:#008300}
+.hledger-chart .line.tr0{stroke:#008300}
+.hledger-chart .fill.tr1{fill:#66b566}
+.hledger-chart .line.tr1{stroke:#66b566}
+.hledger-chart .fill.tr2{fill:#005c00}
+.hledger-chart .line.tr2{stroke:#005c00}
+.hledger-chart .fill.tr3{fill:#a6d4a6}
+.hledger-chart .line.tr3{stroke:#a6d4a6}
+.hledger-chart .fill.tx0{fill:#e66767}
+.hledger-chart .line.tx0{stroke:#e66767}
+.hledger-chart .fill.tx1{fill:#f0a4a4}
+.hledger-chart .line.tx1{stroke:#f0a4a4}
+.hledger-chart .fill.tx2{fill:#a14848}
+.hledger-chart .line.tx2{stroke:#a14848}
+.hledger-chart .fill.tx3{fill:#f6caca}
+.hledger-chart .line.tx3{stroke:#f6caca}
+.hledger-chart .fill.s0{fill:#3987e5}
+.hledger-chart .line.s0{stroke:#3987e5}
+.hledger-chart .fill.s1{fill:#d95926}
+.hledger-chart .line.s1{stroke:#d95926}
+.hledger-chart .fill.s2{fill:#199e70}
+.hledger-chart .line.s2{stroke:#199e70}
+.hledger-chart .fill.s3{fill:#c98500}
+.hledger-chart .line.s3{stroke:#c98500}
+.hledger-chart .fill.s4{fill:#d55181}
+.hledger-chart .line.s4{stroke:#d55181}
+.hledger-chart .fill.s5{fill:#008300}
+.hledger-chart .line.s5{stroke:#008300}
+.hledger-chart .fill.s6{fill:#9085e9}
+.hledger-chart .line.s6{stroke:#9085e9}
+.hledger-chart .fill.s7{fill:#e66767}
+.hledger-chart .line.s7{stroke:#e66767}
+.hledger-chart .fill.other{fill:#898781}
+.hledger-chart .line.other{stroke:#898781}
+.hledger-chart .fill.oa{fill:#6987a9}
+.hledger-chart .line.oa{stroke:#6987a9}
+.hledger-chart .fill.ol{fill:#a3864d}
+.hledger-chart .line.ol{stroke:#a3864d}
+.hledger-chart .fill.oe{fill:#8c86ab}
+.hledger-chart .line.oe{stroke:#8c86ab}
+.hledger-chart .fill.or{fill:#52854d}
+.hledger-chart .line.or{stroke:#52854d}
+.hledger-chart .fill.ox{fill:#ae7a77}
+.hledger-chart .line.ox{stroke:#ae7a77}
+.hledger-chart .fill.lone{fill:#22a6be}
+.hledger-chart .line.lone{stroke:#22a6be}
+.hledger-chart .fill.neutral{fill:#c3c2b7}
+.hledger-chart .line.neutral{stroke:#c3c2b7}
+}
+</style>
+<rect class="bg" width="100%" height="100%" />
+<rect x="16" y="20" width="12" height="12" rx="3" class="fill s3" />
+<text class="label" x="36" y="31">Expenses:Food:Restaurant</text>
+<rect x="229.1" y="20" width="12" height="12" rx="3" class="fill s5" />
+<text class="label" x="249.1" y="31">Expenses:Home:Rent</text>
+<rect x="406.3" y="20" width="12" height="12" rx="3" class="fill s4" />
+<text class="label" x="426.3" y="31">Expenses:Taxes:Y2012:US:Federal</text>
+<rect x="16" y="44" width="12" height="12" rx="3" class="fill s0" />
+<text class="label" x="36" y="55">Expenses:Taxes:Y2012:US:State</text>
+<rect x="272.1" y="44" width="12" height="12" rx="3" class="fill s7" />
+<text class="label" x="292.1" y="55">Expenses:Taxes:Y2013:US:Federal</text>
+<rect x="544" y="44" width="12" height="12" rx="3" class="fill s6" />
+<text class="label" x="564" y="55">Expenses:Taxes:Y2013:US:State</text>
+<rect x="16" y="68" width="12" height="12" rx="3" class="fill s1" />
+<text class="label" x="36" y="79">Expenses:Taxes:Y2014:US:Federal</text>
+<rect x="287.9" y="68" width="12" height="12" rx="3" class="fill other" />
+<text class="label" x="307.9" y="79">other (25 accounts)</text>
+<line class="axis" x1="103.8" x2="864" y1="362" y2="362" />
+<text class="tick" x="95.8" y="367" text-anchor="end">0</text>
+<line class="grid" x1="103.8" x2="864" y1="318.7" y2="318.7" />
+<text class="tick" x="95.8" y="323.7" text-anchor="end">5000</text>
+<line class="grid" x1="103.8" x2="864" y1="275.3" y2="275.3" />
+<text class="tick" x="95.8" y="280.3" text-anchor="end">10000</text>
+<line class="grid" x1="103.8" x2="864" y1="232" y2="232" />
+<text class="tick" x="95.8" y="237" text-anchor="end">15000</text>
+<line class="grid" x1="103.8" x2="864" y1="188.7" y2="188.7" />
+<text class="tick" x="95.8" y="193.7" text-anchor="end">20000</text>
+<line class="grid" x1="103.8" x2="864" y1="145.3" y2="145.3" />
+<text class="tick" x="95.8" y="150.3" text-anchor="end">25000</text>
+<line class="grid" x1="103.8" x2="864" y1="102" y2="102" />
+<text class="tick" x="95.8" y="107" text-anchor="end">30000 USD</text>
+<text class="tick" x="135.5" y="383" text-anchor="middle">2012Q1</text>
+<text class="tick" x="262.2" y="383" text-anchor="middle">2012Q3</text>
+<text class="tick" x="388.9" y="383" text-anchor="middle">2013Q1</text>
+<text class="tick" x="515.6" y="383" text-anchor="middle">2013Q3</text>
+<text class="tick" x="642.3" y="383" text-anchor="middle">2014Q1</text>
+<text class="tick" x="769" y="383" text-anchor="middle">2014Q3</text>
+<defs>
+<clipPath id="hledger-chart-clip-barv_111.7_362_-209.6">
+<path d="M 111.7 362 V 155.4 Q 111.7 152.4 114.7 152.4 H 156.2 Q 159.2 152.4 159.2 155.4 V 362 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_111.7_362_-209.6)">
+<g>
+<title>2012Q1 · Expenses:Food:Restaurant · 950.10 USD</title>
+<path class="fill s3" d="M 111.7 362 V 353.8 Q 111.7 353.8 111.7 353.8 H 159.2 Q 159.2 353.8 159.2 353.8 V 362 Z" />
+</g>
+<g>
+<title>2012Q1 · Expenses:Home:Rent · 7200.00 USD</title>
+<path class="fill s5" d="M 111.7 351.8 V 291.4 Q 111.7 291.4 111.7 291.4 H 159.2 Q 159.2 291.4 159.2 291.4 V 351.8 Z" />
+</g>
+<g>
+<title>2012Q1 · Expenses:Taxes:Y2012:US:Federal · 7440.44 USD</title>
+<path class="fill s4" d="M 111.7 289.4 V 226.9 Q 111.7 226.9 111.7 226.9 H 159.2 Q 159.2 226.9 159.2 226.9 V 289.4 Z" />
+</g>
+<g>
+<title>2012Q1 · Expenses:Taxes:Y2012:US:State · 2555.56 USD</title>
+<path class="fill s0" d="M 111.7 224.9 V 204.7 Q 111.7 204.7 111.7 204.7 H 159.2 Q 159.2 204.7 159.2 204.7 V 224.9 Z" />
+</g>
+<g>
+<title>2012Q1 · other (25 accounts) · 6038.31 USD</title>
+<path class="fill other" d="M 111.7 202.7 V 152.4 Q 111.7 152.4 111.7 152.4 H 159.2 Q 159.2 152.4 159.2 152.4 V 202.7 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_175.1_362_-189.2">
+<path d="M 175.1 362 V 175.8 Q 175.1 172.8 178.1 172.8 H 219.6 Q 222.6 172.8 222.6 175.8 V 362 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_175.1_362_-189.2)">
+<g>
+<title>2012Q2 · Expenses:Food:Restaurant · 855.11 USD</title>
+<path class="fill s3" d="M 175.1 362 V 354.6 Q 175.1 354.6 175.1 354.6 H 222.6 Q 222.6 354.6 222.6 354.6 V 362 Z" />
+</g>
+<g>
+<title>2012Q2 · Expenses:Home:Rent · 7200.00 USD</title>
+<path class="fill s5" d="M 175.1 352.6 V 292.2 Q 175.1 292.2 175.1 292.2 H 222.6 Q 222.6 292.2 222.6 292.2 V 352.6 Z" />
+</g>
+<g>
+<title>2012Q2 · Expenses:Taxes:Y2012:US:Federal · 6377.52 USD</title>
+<path class="fill s4" d="M 175.1 290.2 V 236.9 Q 175.1 236.9 175.1 236.9 H 222.6 Q 222.6 236.9 222.6 236.9 V 290.2 Z" />
+</g>
+<g>
+<title>2012Q2 · Expenses:Taxes:Y2012:US:State · 2190.48 USD</title>
+<path class="fill s0" d="M 175.1 234.9 V 217.9 Q 175.1 217.9 175.1 217.9 H 222.6 Q 222.6 217.9 222.6 217.9 V 234.9 Z" />
+</g>
+<g>
+<title>2012Q2 · other (25 accounts) · 5205.55 USD</title>
+<path class="fill other" d="M 175.1 215.9 V 172.8 Q 175.1 172.8 175.1 172.8 H 222.6 Q 222.6 172.8 222.6 172.8 V 215.9 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_238.4_362_-210.1">
+<path d="M 238.4 362 V 154.9 Q 238.4 151.9 241.4 151.9 H 282.9 Q 285.9 151.9 285.9 154.9 V 362 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_238.4_362_-210.1)">
+<g>
+<title>2012Q3 · Expenses:Food:Restaurant · 976.09 USD</title>
+<path class="fill s3" d="M 238.4 362 V 353.5 Q 238.4 353.5 238.4 353.5 H 285.9 Q 285.9 353.5 285.9 353.5 V 362 Z" />
+</g>
+<g>
+<title>2012Q3 · Expenses:Home:Rent · 7200.00 USD</title>
+<path class="fill s5" d="M 238.4 351.5 V 291.1 Q 238.4 291.1 238.4 291.1 H 285.9 Q 285.9 291.1 285.9 291.1 V 351.5 Z" />
+</g>
+<g>
+<title>2012Q3 · Expenses:Taxes:Y2012:US:Federal · 7440.44 USD</title>
+<path class="fill s4" d="M 238.4 289.1 V 226.7 Q 238.4 226.7 238.4 226.7 H 285.9 Q 285.9 226.7 285.9 226.7 V 289.1 Z" />
+</g>
+<g>
+<title>2012Q3 · Expenses:Taxes:Y2012:US:State · 2555.56 USD</title>
+<path class="fill s0" d="M 238.4 224.7 V 204.5 Q 238.4 204.5 238.4 204.5 H 285.9 Q 285.9 204.5 285.9 204.5 V 224.7 Z" />
+</g>
+<g>
+<title>2012Q3 · other (25 accounts) · 6068.72 USD</title>
+<path class="fill other" d="M 238.4 202.5 V 151.9 Q 238.4 151.9 238.4 151.9 H 285.9 Q 285.9 151.9 285.9 151.9 V 202.5 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_301.8_362_-194.2">
+<path d="M 301.8 362 V 170.8 Q 301.8 167.8 304.8 167.8 H 346.3 Q 349.3 167.8 349.3 170.8 V 362 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_301.8_362_-194.2)">
+<g>
+<title>2012Q4 · Expenses:Food:Restaurant · 1736.24 USD</title>
+<path class="fill s3" d="M 301.8 362 V 347 Q 301.8 347 301.8 347 H 349.3 Q 349.3 347 349.3 347 V 362 Z" />
+</g>
+<g>
+<title>2012Q4 · Expenses:Home:Rent · 7200.00 USD</title>
+<path class="fill s5" d="M 301.8 345 V 284.6 Q 301.8 284.6 301.8 284.6 H 349.3 Q 349.3 284.6 349.3 284.6 V 345 Z" />
+</g>
+<g>
+<title>2012Q4 · Expenses:Taxes:Y2012:US:Federal · 6377.52 USD</title>
+<path class="fill s4" d="M 301.8 282.6 V 229.3 Q 301.8 229.3 301.8 229.3 H 349.3 Q 349.3 229.3 349.3 229.3 V 282.6 Z" />
+</g>
+<g>
+<title>2012Q4 · Expenses:Taxes:Y2012:US:State · 2190.48 USD</title>
+<path class="fill s0" d="M 301.8 227.3 V 210.3 Q 301.8 210.3 301.8 210.3 H 349.3 Q 349.3 210.3 349.3 210.3 V 227.3 Z" />
+</g>
+<g>
+<title>2012Q4 · other (25 accounts) · 4905.48 USD</title>
+<path class="fill other" d="M 301.8 208.3 V 167.8 Q 301.8 167.8 301.8 167.8 H 349.3 Q 349.3 167.8 349.3 167.8 V 208.3 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_365.1_362_-217.3">
+<path d="M 365.1 362 V 147.7 Q 365.1 144.7 368.1 144.7 H 409.6 Q 412.6 144.7 412.6 147.7 V 362 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_365.1_362_-217.3)">
+<g>
+<title>2013Q1 · Expenses:Food:Restaurant · 955.02 USD</title>
+<path class="fill s3" d="M 365.1 362 V 353.7 Q 365.1 353.7 365.1 353.7 H 412.6 Q 412.6 353.7 412.6 353.7 V 362 Z" />
+</g>
+<g>
+<title>2013Q1 · Expenses:Home:Rent · 7200.00 USD</title>
+<path class="fill s5" d="M 365.1 351.7 V 291.3 Q 365.1 291.3 365.1 291.3 H 412.6 Q 412.6 291.3 412.6 291.3 V 351.7 Z" />
+</g>
+<g>
+<title>2013Q1 · Expenses:Taxes:Y2012:US:Federal · 580.95 USD</title>
+<path class="fill s4" d="M 365.1 289.3 V 286.3 Q 365.1 286.3 365.1 286.3 H 412.6 Q 412.6 286.3 412.6 286.3 V 289.3 Z" />
+</g>
+<g>
+<title>2013Q1 · Expenses:Taxes:Y2012:US:State · 336.48 USD</title>
+<path class="fill s0" d="M 365.1 286.3 V 283.4 Q 365.1 283.4 365.1 283.4 H 412.6 Q 412.6 283.4 412.6 283.4 V 286.3 Z" />
+</g>
+<g>
+<title>2013Q1 · Expenses:Taxes:Y2013:US:Federal · 7440.44 USD</title>
+<path class="fill s7" d="M 365.1 281.4 V 218.9 Q 365.1 218.9 365.1 218.9 H 412.6 Q 412.6 218.9 412.6 218.9 V 281.4 Z" />
+</g>
+<g>
+<title>2013Q1 · Expenses:Taxes:Y2013:US:State · 2555.56 USD</title>
+<path class="fill s6" d="M 365.1 216.9 V 196.7 Q 365.1 196.7 365.1 196.7 H 412.6 Q 412.6 196.7 412.6 196.7 V 216.9 Z" />
+</g>
+<g>
+<title>2013Q1 · other (25 accounts) · 6005.66 USD</title>
+<path class="fill other" d="M 365.1 194.7 V 144.7 Q 365.1 144.7 365.1 144.7 H 412.6 Q 412.6 144.7 412.6 144.7 V 194.7 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_428.5_362_-191.2">
+<path d="M 428.5 362 V 173.8 Q 428.5 170.8 431.5 170.8 H 473 Q 476 170.8 476 173.8 V 362 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_428.5_362_-191.2)">
+<g>
+<title>2013Q2 · Expenses:Food:Restaurant · 920.86 USD</title>
+<path class="fill s3" d="M 428.5 362 V 354 Q 428.5 354 428.5 354 H 476 Q 476 354 476 354 V 362 Z" />
+</g>
+<g>
+<title>2013Q2 · Expenses:Home:Rent · 7200.00 USD</title>
+<path class="fill s5" d="M 428.5 352 V 291.6 Q 428.5 291.6 428.5 291.6 H 476 Q 476 291.6 476 291.6 V 352 Z" />
+</g>
+<g>
+<title>2013Q2 · Expenses:Taxes:Y2013:US:Federal · 6377.52 USD</title>
+<path class="fill s7" d="M 428.5 289.6 V 236.3 Q 428.5 236.3 428.5 236.3 H 476 Q 476 236.3 476 236.3 V 289.6 Z" />
+</g>
+<g>
+<title>2013Q2 · Expenses:Taxes:Y2013:US:State · 2190.48 USD</title>
+<path class="fill s6" d="M 428.5 234.3 V 217.4 Q 428.5 217.4 428.5 217.4 H 476 Q 476 217.4 476 217.4 V 234.3 Z" />
+</g>
+<g>
+<title>2013Q2 · other (25 accounts) · 5372.16 USD</title>
+<path class="fill other" d="M 428.5 215.4 V 170.8 Q 428.5 170.8 428.5 170.8 H 476 Q 476 170.8 476 170.8 V 215.4 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_491.8_362_-213.4">
+<path d="M 491.8 362 V 151.6 Q 491.8 148.6 494.8 148.6 H 536.3 Q 539.3 148.6 539.3 151.6 V 362 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_491.8_362_-213.4)">
+<g>
+<title>2013Q3 · Expenses:Food:Restaurant · 1502.65 USD</title>
+<path class="fill s3" d="M 491.8 362 V 349 Q 491.8 349 491.8 349 H 539.3 Q 539.3 349 539.3 349 V 362 Z" />
+</g>
+<g>
+<title>2013Q3 · Expenses:Home:Rent · 7200.00 USD</title>
+<path class="fill s5" d="M 491.8 347 V 286.6 Q 491.8 286.6 491.8 286.6 H 539.3 Q 539.3 286.6 539.3 286.6 V 347 Z" />
+</g>
+<g>
+<title>2013Q3 · Expenses:Taxes:Y2013:US:Federal · 7440.44 USD</title>
+<path class="fill s7" d="M 491.8 284.6 V 222.1 Q 491.8 222.1 491.8 222.1 H 539.3 Q 539.3 222.1 539.3 222.1 V 284.6 Z" />
+</g>
+<g>
+<title>2013Q3 · Expenses:Taxes:Y2013:US:State · 2555.56 USD</title>
+<path class="fill s6" d="M 491.8 220.1 V 199.9 Q 491.8 199.9 491.8 199.9 H 539.3 Q 539.3 199.9 539.3 199.9 V 220.1 Z" />
+</g>
+<g>
+<title>2013Q3 · other (25 accounts) · 5927.59 USD</title>
+<path class="fill other" d="M 491.8 197.9 V 148.6 Q 491.8 148.6 491.8 148.6 H 539.3 Q 539.3 148.6 539.3 148.6 V 197.9 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_555.2_362_-189.2">
+<path d="M 555.2 362 V 175.8 Q 555.2 172.8 558.2 172.8 H 599.7 Q 602.7 172.8 602.7 175.8 V 362 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_555.2_362_-189.2)">
+<g>
+<title>2013Q4 · Expenses:Food:Restaurant · 907.70 USD</title>
+<path class="fill s3" d="M 555.2 362 V 354.1 Q 555.2 354.1 555.2 354.1 H 602.7 Q 602.7 354.1 602.7 354.1 V 362 Z" />
+</g>
+<g>
+<title>2013Q4 · Expenses:Home:Rent · 7200.00 USD</title>
+<path class="fill s5" d="M 555.2 352.1 V 291.7 Q 555.2 291.7 555.2 291.7 H 602.7 Q 602.7 291.7 602.7 291.7 V 352.1 Z" />
+</g>
+<g>
+<title>2013Q4 · Expenses:Taxes:Y2013:US:Federal · 6377.52 USD</title>
+<path class="fill s7" d="M 555.2 289.7 V 236.5 Q 555.2 236.5 555.2 236.5 H 602.7 Q 602.7 236.5 602.7 236.5 V 289.7 Z" />
+</g>
+<g>
+<title>2013Q4 · Expenses:Taxes:Y2013:US:State · 2190.48 USD</title>
+<path class="fill s6" d="M 555.2 234.5 V 217.5 Q 555.2 217.5 555.2 217.5 H 602.7 Q 602.7 217.5 602.7 217.5 V 234.5 Z" />
+</g>
+<g>
+<title>2013Q4 · other (25 accounts) · 5150.92 USD</title>
+<path class="fill other" d="M 555.2 215.5 V 172.8 Q 555.2 172.8 555.2 172.8 H 602.7 Q 602.7 172.8 602.7 172.8 V 215.5 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_618.5_362_-219">
+<path d="M 618.5 362 V 146 Q 618.5 143 621.5 143 H 663 Q 666 143 666 146 V 362 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_618.5_362_-219)">
+<g>
+<title>2014Q1 · Expenses:Food:Restaurant · 1207.58 USD</title>
+<path class="fill s3" d="M 618.5 362 V 351.5 Q 618.5 351.5 618.5 351.5 H 666 Q 666 351.5 666 351.5 V 362 Z" />
+</g>
+<g>
+<title>2014Q1 · Expenses:Home:Rent · 7200.00 USD</title>
+<path class="fill s5" d="M 618.5 349.5 V 289.1 Q 618.5 289.1 618.5 289.1 H 666 Q 666 289.1 666 289.1 V 349.5 Z" />
+</g>
+<g>
+<title>2014Q1 · Expenses:Taxes:Y2013:US:Federal · 541.89 USD</title>
+<path class="fill s7" d="M 618.5 287.1 V 284.4 Q 618.5 284.4 618.5 284.4 H 666 Q 666 284.4 666 284.4 V 287.1 Z" />
+</g>
+<g>
+<title>2014Q1 · Expenses:Taxes:Y2013:US:State · 317.20 USD</title>
+<path class="fill s6" d="M 618.5 284.4 V 281.7 Q 618.5 281.7 618.5 281.7 H 666 Q 666 281.7 666 281.7 V 284.4 Z" />
+</g>
+<g>
+<title>2014Q1 · Expenses:Taxes:Y2014:US:Federal · 7440.44 USD</title>
+<path class="fill s1" d="M 618.5 279.7 V 217.2 Q 618.5 217.2 618.5 217.2 H 666 Q 666 217.2 666 217.2 V 279.7 Z" />
+</g>
+<g>
+<title>2014Q1 · other (25 accounts) · 8565.84 USD</title>
+<path class="fill other" d="M 618.5 215.2 V 143 Q 618.5 143 618.5 143 H 666 Q 666 143 666 143 V 215.2 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_681.9_362_-194.3">
+<path d="M 681.9 362 V 170.7 Q 681.9 167.7 684.9 167.7 H 726.4 Q 729.4 167.7 729.4 170.7 V 362 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_681.9_362_-194.3)">
+<g>
+<title>2014Q2 · Expenses:Food:Restaurant · 1304.64 USD</title>
+<path class="fill s3" d="M 681.9 362 V 350.7 Q 681.9 350.7 681.9 350.7 H 729.4 Q 729.4 350.7 729.4 350.7 V 362 Z" />
+</g>
+<g>
+<title>2014Q2 · Expenses:Home:Rent · 7200.00 USD</title>
+<path class="fill s5" d="M 681.9 348.7 V 288.3 Q 681.9 288.3 681.9 288.3 H 729.4 Q 729.4 288.3 729.4 288.3 V 348.7 Z" />
+</g>
+<g>
+<title>2014Q2 · Expenses:Taxes:Y2014:US:Federal · 6377.52 USD</title>
+<path class="fill s1" d="M 681.9 286.3 V 233 Q 681.9 233 681.9 233 H 729.4 Q 729.4 233 729.4 233 V 286.3 Z" />
+</g>
+<g>
+<title>2014Q2 · other (25 accounts) · 7538.12 USD</title>
+<path class="fill other" d="M 681.9 231 V 167.7 Q 681.9 167.7 681.9 167.7 H 729.4 Q 729.4 167.7 729.4 167.7 V 231 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_745.2_362_-213.8">
+<path d="M 745.2 362 V 151.2 Q 745.2 148.2 748.2 148.2 H 789.7 Q 792.7 148.2 792.7 151.2 V 362 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_745.2_362_-213.8)">
+<g>
+<title>2014Q3 · Expenses:Food:Restaurant · 1569.54 USD</title>
+<path class="fill s3" d="M 745.2 362 V 348.4 Q 745.2 348.4 745.2 348.4 H 792.7 Q 792.7 348.4 792.7 348.4 V 362 Z" />
+</g>
+<g>
+<title>2014Q3 · Expenses:Home:Rent · 7200.00 USD</title>
+<path class="fill s5" d="M 745.2 346.4 V 286 Q 745.2 286 745.2 286 H 792.7 Q 792.7 286 792.7 286 V 346.4 Z" />
+</g>
+<g>
+<title>2014Q3 · Expenses:Taxes:Y2014:US:Federal · 7440.44 USD</title>
+<path class="fill s1" d="M 745.2 284 V 221.5 Q 745.2 221.5 745.2 221.5 H 792.7 Q 792.7 221.5 792.7 221.5 V 284 Z" />
+</g>
+<g>
+<title>2014Q3 · other (25 accounts) · 8460.80 USD</title>
+<path class="fill other" d="M 745.2 219.5 V 148.2 Q 745.2 148.2 745.2 148.2 H 792.7 Q 792.7 148.2 792.7 148.2 V 219.5 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_808.6_362_-19.9">
+<path d="M 808.6 362 V 345.1 Q 808.6 342.1 811.6 342.1 H 853.1 Q 856.1 342.1 856.1 345.1 V 362 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_808.6_362_-19.9)">
+<g>
+<title>2014Q4 · Expenses:Food:Restaurant · 83.00 USD</title>
+<path class="fill s3" d="M 808.6 362 V 361.3 Q 808.6 361.3 808.6 361.3 H 856.1 Q 856.1 361.3 856.1 361.3 V 362 Z" />
+</g>
+<g>
+<title>2014Q4 · Expenses:Taxes:Y2014:US:Federal · 1062.92 USD</title>
+<path class="fill s1" d="M 808.6 359.3 V 352.1 Q 808.6 352.1 808.6 352.1 H 856.1 Q 856.1 352.1 856.1 352.1 V 359.3 Z" />
+</g>
+<g>
+<title>2014Q4 · other (25 accounts) · 1150.18 USD</title>
+<path class="fill other" d="M 808.6 350.1 V 342.1 Q 808.6 342.1 808.6 342.1 H 856.1 Q 856.1 342.1 856.1 342.1 V 350.1 Z" />
+</g>
+</g>
+</svg>

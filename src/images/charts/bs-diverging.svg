@@ -1,0 +1,721 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="hledger-chart" width="880" height="418" viewBox="0 0 880 418" role="img" aria-label="Quarterly Balance Sheet 2012-03-31..2014-12-31, valued at period ends">
+<title>Quarterly Balance Sheet 2012-03-31..2014-12-31, valued at period ends</title>
+<style>.hledger-chart{max-width:100%;height:auto;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:14px}
+.hledger-chart .title{font-size:17px;font-weight:600}
+.hledger-chart .heading{font-size:15px;font-weight:600}
+.hledger-chart .value,.hledger-chart .tick{font-variant-numeric:tabular-nums}
+.hledger-chart .grid,.hledger-chart .axis{stroke-width:1}
+.hledger-chart .line{fill:none;stroke-width:3;stroke-linejoin:round;stroke-linecap:round}
+.hledger-chart .mark{stroke-width:2.5}
+.hledger-chart .average{stroke-width:2;stroke-dasharray:5 4}
+.hledger-chart .hit,.hledger-chart .plot{fill:transparent}
+.hledger-chart .hatch{stroke-width:2.5}
+.hledger-chart .bg{fill:#fcfcfb}
+.hledger-chart .title{fill:#0b0b0b}
+.hledger-chart .heading{fill:#0b0b0b}
+.hledger-chart .label{fill:#52514e}
+.hledger-chart .value{fill:#52514e}
+.hledger-chart .tick{fill:#898781}
+.hledger-chart .grid{stroke:#e1e0d9}
+.hledger-chart .axis{stroke:#c3c2b7}
+.hledger-chart .line.total{stroke:#0b0b0b}
+.hledger-chart .mark.total{stroke:#0b0b0b}
+.hledger-chart .average{stroke:#0b0b0b}
+.hledger-chart .clip{fill:#0b0b0b}
+.hledger-chart .hatch{stroke:#fcfcfb}
+.hledger-chart .fill.ta0{fill:#2a78d6}
+.hledger-chart .line.ta0{stroke:#2a78d6}
+.hledger-chart .fill.ta1{fill:#1d5496}
+.hledger-chart .line.ta1{stroke:#1d5496}
+.hledger-chart .fill.ta2{fill:#7faee6}
+.hledger-chart .line.ta2{stroke:#7faee6}
+.hledger-chart .fill.ta3{fill:#b4d0f1}
+.hledger-chart .line.ta3{stroke:#b4d0f1}
+.hledger-chart .fill.tl0{fill:#eda100}
+.hledger-chart .line.tl0{stroke:#eda100}
+.hledger-chart .fill.tl1{fill:#a67100}
+.hledger-chart .line.tl1{stroke:#a67100}
+.hledger-chart .fill.tl2{fill:#f4c766}
+.hledger-chart .line.tl2{stroke:#f4c766}
+.hledger-chart .fill.tl3{fill:#f9dea6}
+.hledger-chart .line.tl3{stroke:#f9dea6}
+.hledger-chart .fill.te0{fill:#4a3aa7}
+.hledger-chart .line.te0{stroke:#4a3aa7}
+.hledger-chart .fill.te1{fill:#342975}
+.hledger-chart .line.te1{stroke:#342975}
+.hledger-chart .fill.te2{fill:#9289ca}
+.hledger-chart .line.te2{stroke:#9289ca}
+.hledger-chart .fill.te3{fill:#c0bae0}
+.hledger-chart .line.te3{stroke:#c0bae0}
+.hledger-chart .fill.tr0{fill:#008300}
+.hledger-chart .line.tr0{stroke:#008300}
+.hledger-chart .fill.tr1{fill:#005c00}
+.hledger-chart .line.tr1{stroke:#005c00}
+.hledger-chart .fill.tr2{fill:#66b566}
+.hledger-chart .line.tr2{stroke:#66b566}
+.hledger-chart .fill.tr3{fill:#a6d4a6}
+.hledger-chart .line.tr3{stroke:#a6d4a6}
+.hledger-chart .fill.tx0{fill:#e34948}
+.hledger-chart .line.tx0{stroke:#e34948}
+.hledger-chart .fill.tx1{fill:#9f3332}
+.hledger-chart .line.tx1{stroke:#9f3332}
+.hledger-chart .fill.tx2{fill:#ee9291}
+.hledger-chart .line.tx2{stroke:#ee9291}
+.hledger-chart .fill.tx3{fill:#f5bfbf}
+.hledger-chart .line.tx3{stroke:#f5bfbf}
+.hledger-chart .fill.s0{fill:#2a78d6}
+.hledger-chart .line.s0{stroke:#2a78d6}
+.hledger-chart .fill.s1{fill:#eb6834}
+.hledger-chart .line.s1{stroke:#eb6834}
+.hledger-chart .fill.s2{fill:#1baf7a}
+.hledger-chart .line.s2{stroke:#1baf7a}
+.hledger-chart .fill.s3{fill:#eda100}
+.hledger-chart .line.s3{stroke:#eda100}
+.hledger-chart .fill.s4{fill:#e87ba4}
+.hledger-chart .line.s4{stroke:#e87ba4}
+.hledger-chart .fill.s5{fill:#008300}
+.hledger-chart .line.s5{stroke:#008300}
+.hledger-chart .fill.s6{fill:#4a3aa7}
+.hledger-chart .line.s6{stroke:#4a3aa7}
+.hledger-chart .fill.s7{fill:#e34948}
+.hledger-chart .line.s7{stroke:#e34948}
+.hledger-chart .fill.other{fill:#898781}
+.hledger-chart .line.other{stroke:#898781}
+.hledger-chart .fill.oa{fill:#6381a3}
+.hledger-chart .line.oa{stroke:#6381a3}
+.hledger-chart .fill.ol{fill:#b1914d}
+.hledger-chart .line.ol{stroke:#b1914d}
+.hledger-chart .fill.oe{fill:#706890}
+.hledger-chart .line.oe{stroke:#706890}
+.hledger-chart .fill.or{fill:#52854d}
+.hledger-chart .line.or{stroke:#52854d}
+.hledger-chart .fill.ox{fill:#ad6e6a}
+.hledger-chart .line.ox{stroke:#ad6e6a}
+.hledger-chart .fill.lone{fill:#1597b0}
+.hledger-chart .line.lone{stroke:#1597b0}
+.hledger-chart .fill.neutral{fill:#52514e}
+.hledger-chart .line.neutral{stroke:#52514e}
+@media (prefers-color-scheme:dark){
+.hledger-chart .bg{fill:#1a1a19}
+.hledger-chart .title{fill:#ffffff}
+.hledger-chart .heading{fill:#ffffff}
+.hledger-chart .label{fill:#c3c2b7}
+.hledger-chart .value{fill:#c3c2b7}
+.hledger-chart .tick{fill:#898781}
+.hledger-chart .grid{stroke:#2c2c2a}
+.hledger-chart .axis{stroke:#383835}
+.hledger-chart .line.total{stroke:#ffffff}
+.hledger-chart .mark.total{stroke:#ffffff}
+.hledger-chart .average{stroke:#ffffff}
+.hledger-chart .clip{fill:#ffffff}
+.hledger-chart .hatch{stroke:#1a1a19}
+.hledger-chart .fill.ta0{fill:#3987e5}
+.hledger-chart .line.ta0{stroke:#3987e5}
+.hledger-chart .fill.ta1{fill:#88b7ef}
+.hledger-chart .line.ta1{stroke:#88b7ef}
+.hledger-chart .fill.ta2{fill:#285ea0}
+.hledger-chart .line.ta2{stroke:#285ea0}
+.hledger-chart .fill.ta3{fill:#bad5f6}
+.hledger-chart .line.ta3{stroke:#bad5f6}
+.hledger-chart .fill.tl0{fill:#c98500}
+.hledger-chart .line.tl0{stroke:#c98500}
+.hledger-chart .fill.tl1{fill:#dfb666}
+.hledger-chart .line.tl1{stroke:#dfb666}
+.hledger-chart .fill.tl2{fill:#8d5d00}
+.hledger-chart .line.tl2{stroke:#8d5d00}
+.hledger-chart .fill.tl3{fill:#ecd4a6}
+.hledger-chart .line.tl3{stroke:#ecd4a6}
+.hledger-chart .fill.te0{fill:#9085e9}
+.hledger-chart .line.te0{stroke:#9085e9}
+.hledger-chart .fill.te1{fill:#bcb6f2}
+.hledger-chart .line.te1{stroke:#bcb6f2}
+.hledger-chart .fill.te2{fill:#655da3}
+.hledger-chart .line.te2{stroke:#655da3}
+.hledger-chart .fill.te3{fill:#d8d4f7}
+.hledger-chart .line.te3{stroke:#d8d4f7}
+.hledger-chart .fill.tr0{fill:#008300}
+.hledger-chart .line.tr0{stroke:#008300}
+.hledger-chart .fill.tr1{fill:#66b566}
+.hledger-chart .line.tr1{stroke:#66b566}
+.hledger-chart .fill.tr2{fill:#005c00}
+.hledger-chart .line.tr2{stroke:#005c00}
+.hledger-chart .fill.tr3{fill:#a6d4a6}
+.hledger-chart .line.tr3{stroke:#a6d4a6}
+.hledger-chart .fill.tx0{fill:#e66767}
+.hledger-chart .line.tx0{stroke:#e66767}
+.hledger-chart .fill.tx1{fill:#f0a4a4}
+.hledger-chart .line.tx1{stroke:#f0a4a4}
+.hledger-chart .fill.tx2{fill:#a14848}
+.hledger-chart .line.tx2{stroke:#a14848}
+.hledger-chart .fill.tx3{fill:#f6caca}
+.hledger-chart .line.tx3{stroke:#f6caca}
+.hledger-chart .fill.s0{fill:#3987e5}
+.hledger-chart .line.s0{stroke:#3987e5}
+.hledger-chart .fill.s1{fill:#d95926}
+.hledger-chart .line.s1{stroke:#d95926}
+.hledger-chart .fill.s2{fill:#199e70}
+.hledger-chart .line.s2{stroke:#199e70}
+.hledger-chart .fill.s3{fill:#c98500}
+.hledger-chart .line.s3{stroke:#c98500}
+.hledger-chart .fill.s4{fill:#d55181}
+.hledger-chart .line.s4{stroke:#d55181}
+.hledger-chart .fill.s5{fill:#008300}
+.hledger-chart .line.s5{stroke:#008300}
+.hledger-chart .fill.s6{fill:#9085e9}
+.hledger-chart .line.s6{stroke:#9085e9}
+.hledger-chart .fill.s7{fill:#e66767}
+.hledger-chart .line.s7{stroke:#e66767}
+.hledger-chart .fill.other{fill:#898781}
+.hledger-chart .line.other{stroke:#898781}
+.hledger-chart .fill.oa{fill:#6987a9}
+.hledger-chart .line.oa{stroke:#6987a9}
+.hledger-chart .fill.ol{fill:#a3864d}
+.hledger-chart .line.ol{stroke:#a3864d}
+.hledger-chart .fill.oe{fill:#8c86ab}
+.hledger-chart .line.oe{stroke:#8c86ab}
+.hledger-chart .fill.or{fill:#52854d}
+.hledger-chart .line.or{stroke:#52854d}
+.hledger-chart .fill.ox{fill:#ae7a77}
+.hledger-chart .line.ox{stroke:#ae7a77}
+.hledger-chart .fill.lone{fill:#22a6be}
+.hledger-chart .line.lone{stroke:#22a6be}
+.hledger-chart .fill.neutral{fill:#c3c2b7}
+.hledger-chart .line.neutral{stroke:#c3c2b7}
+}
+</style>
+<rect class="bg" width="100%" height="100%" />
+<text class="title" x="16" y="33">Quarterly Balance Sheet 2012-03-31..2014-12-31, valued at period ends</text>
+<defs>
+<pattern id="hledger-chart-hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+<line class="hatch" x1="0" y1="0" x2="0" y2="5" />
+</pattern>
+</defs>
+<rect x="16" y="58" width="12" height="12" rx="3" class="fill ta3" />
+<text class="label" x="36" y="69">Assets:US:BofA:Checking</text>
+<rect x="221.9" y="58" width="12" height="12" rx="3" class="fill ta1" />
+<text class="label" x="241.9" y="69">Assets:US:ETrade:VHT</text>
+<rect x="411" y="58" width="12" height="12" rx="3" class="fill ta0" />
+<text class="label" x="431" y="69">Assets:US:Vanguard:RGAGX</text>
+<rect x="633.3" y="58" width="12" height="12" rx="3" class="fill ta2" />
+<text class="label" x="653.3" y="69">Assets:US:Vanguard:VBMPX</text>
+<rect x="16" y="82" width="12" height="12" rx="3" class="fill oa" />
+<text class="label" x="36" y="93">other (5 accounts)</text>
+<rect x="169.5" y="82" width="12" height="12" rx="3" class="fill tl0" />
+<text class="label" x="189.5" y="93">Liabilities:US:Chase:Slate</text>
+<line class="line total" x1="379" x2="391" y1="88" y2="88" />
+<text class="label" x="399" y="93">Net</text>
+<rect x="438.6" y="82" width="12" height="12" rx="3" class="fill neutral" />
+<rect x="438.6" y="82" width="12" height="12" rx="3" fill="url(#hledger-chart-hatch)" />
+<text class="label" x="458.6" y="93">contra</text>
+<line class="grid" x1="112.5" x2="864" y1="376" y2="376" />
+<text class="tick" x="104.5" y="381" text-anchor="end">-20000</text>
+<line class="axis" x1="112.5" x2="864" y1="338.9" y2="338.9" />
+<text class="tick" x="104.5" y="343.9" text-anchor="end">0</text>
+<line class="grid" x1="112.5" x2="864" y1="301.7" y2="301.7" />
+<text class="tick" x="104.5" y="306.7" text-anchor="end">20000</text>
+<line class="grid" x1="112.5" x2="864" y1="264.6" y2="264.6" />
+<text class="tick" x="104.5" y="269.6" text-anchor="end">40000</text>
+<line class="grid" x1="112.5" x2="864" y1="227.4" y2="227.4" />
+<text class="tick" x="104.5" y="232.4" text-anchor="end">60000</text>
+<line class="grid" x1="112.5" x2="864" y1="190.3" y2="190.3" />
+<text class="tick" x="104.5" y="195.3" text-anchor="end">80000</text>
+<line class="grid" x1="112.5" x2="864" y1="153.1" y2="153.1" />
+<text class="tick" x="104.5" y="158.1" text-anchor="end">100000</text>
+<line class="grid" x1="112.5" x2="864" y1="116" y2="116" />
+<text class="tick" x="104.5" y="121" text-anchor="end">120000 USD</text>
+<text class="tick" x="143.8" y="397" text-anchor="middle">2012-03-31</text>
+<text class="tick" x="269.1" y="397" text-anchor="middle">2012-09-30</text>
+<text class="tick" x="394.3" y="397" text-anchor="middle">2013-03-31</text>
+<text class="tick" x="519.6" y="397" text-anchor="middle">2013-09-30</text>
+<text class="tick" x="644.8" y="397" text-anchor="middle">2014-03-31</text>
+<text class="tick" x="770.1" y="397" text-anchor="middle">2014-09-30</text>
+<defs>
+<clipPath id="hledger-chart-clip-barv_120.3_338.9_-29.3">
+<path d="M 120.3 338.9 V 312.6 Q 120.3 309.6 123.3 309.6 H 139.8 Q 142.8 309.6 142.8 312.6 V 338.9 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_120.3_338.9_-29.3)">
+<g>
+<title>2012-03-31 · Assets:US:BofA:Checking · 3438.51 USD</title>
+<path class="fill ta3" d="M 120.3 338.9 V 332.5 Q 120.3 332.5 120.3 332.5 H 142.8 Q 142.8 332.5 142.8 332.5 V 338.9 Z" />
+</g>
+<g>
+<title>2012-03-31 · Assets:US:Vanguard:RGAGX · 6342.40 USD</title>
+<path class="fill ta0" d="M 120.3 330.5 V 320.7 Q 120.3 320.7 120.3 320.7 H 142.8 Q 142.8 320.7 142.8 320.7 V 330.5 Z" />
+</g>
+<g>
+<title>2012-03-31 · Assets:US:Vanguard:VBMPX · 4169.29 USD</title>
+<path class="fill ta2" d="M 120.3 318.7 V 312.9 Q 120.3 312.9 120.3 312.9 H 142.8 Q 142.8 312.9 142.8 312.9 V 318.7 Z" />
+</g>
+<g>
+<title>2012-03-31 · other (5 accounts) · 1800.05 USD</title>
+<path class="fill oa" d="M 120.3 312.9 V 309.6 Q 120.3 309.6 120.3 309.6 H 142.8 Q 142.8 309.6 142.8 309.6 V 312.9 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_144.8_338.9_-0.9">
+<path d="M 144.8 338.9 V 338.9 Q 144.8 338 145.7 338 H 166.4 Q 167.3 338 167.3 338.9 V 338.9 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_144.8_338.9_-0.9)">
+<g>
+<title>2012-03-31 · Liabilities:US:Chase:Slate · 467.32 USD</title>
+<path class="fill tl0" d="M 144.8 338.9 V 338 Q 144.8 338 144.8 338 H 167.3 Q 167.3 338 167.3 338 V 338.9 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_183_338.9_-46.3">
+<path d="M 183 338.9 V 295.6 Q 183 292.6 186 292.6 H 202.4 Q 205.4 292.6 205.4 295.6 V 338.9 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_183_338.9_-46.3)">
+<g>
+<title>2012-06-30 · Assets:US:BofA:Checking · 2131.44 USD</title>
+<path class="fill ta3" d="M 183 338.9 V 334.9 Q 183 334.9 183 334.9 H 205.4 Q 205.4 334.9 205.4 334.9 V 338.9 Z" />
+</g>
+<g>
+<title>2012-06-30 · Assets:US:Vanguard:RGAGX · 13839.51 USD</title>
+<path class="fill ta0" d="M 183 332.9 V 309.2 Q 183 309.2 183 309.2 H 205.4 Q 205.4 309.2 205.4 309.2 V 332.9 Z" />
+</g>
+<g>
+<title>2012-06-30 · Assets:US:Vanguard:VBMPX · 8956.13 USD</title>
+<path class="fill ta2" d="M 183 307.2 V 292.6 Q 183 292.6 183 292.6 H 205.4 Q 205.4 292.6 205.4 292.6 V 307.2 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_207.4_338.9_-0.7">
+<path d="M 207.4 338.9 V 338.9 Q 207.4 338.2 208.1 338.2 H 229.3 Q 229.9 338.2 229.9 338.9 V 338.9 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_207.4_338.9_-0.7)">
+<g>
+<title>2012-06-30 · Liabilities:US:Chase:Slate · 350.71 USD</title>
+<path class="fill tl0" d="M 207.4 338.9 V 338.2 Q 207.4 338.2 207.4 338.2 H 229.9 Q 229.9 338.2 229.9 338.2 V 338.9 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_245.6_338.9_-62.2">
+<path d="M 245.6 338.9 V 279.6 Q 245.6 276.6 248.6 276.6 H 265.1 Q 268.1 276.6 268.1 279.6 V 338.9 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_245.6_338.9_-62.2)">
+<g>
+<title>2012-09-30 · Assets:US:BofA:Checking · 5670.25 USD</title>
+<path class="fill ta3" d="M 245.6 338.9 V 328.3 Q 245.6 328.3 245.6 328.3 H 268.1 Q 268.1 328.3 268.1 328.3 V 338.9 Z" />
+</g>
+<g>
+<title>2012-09-30 · Assets:US:ETrade:VHT · 3293.76 USD</title>
+<path class="fill ta1" d="M 245.6 326.3 V 322.2 Q 245.6 322.2 245.6 322.2 H 268.1 Q 268.1 322.2 268.1 322.2 V 326.3 Z" />
+</g>
+<g>
+<title>2012-09-30 · Assets:US:Vanguard:RGAGX · 14163.87 USD</title>
+<path class="fill ta0" d="M 245.6 320.2 V 295.9 Q 245.6 295.9 245.6 295.9 H 268.1 Q 268.1 295.9 268.1 295.9 V 320.2 Z" />
+</g>
+<g>
+<title>2012-09-30 · Assets:US:Vanguard:VBMPX · 10279.93 USD</title>
+<path class="fill ta2" d="M 245.6 293.9 V 276.8 Q 245.6 276.8 245.6 276.8 H 268.1 Q 268.1 276.8 268.1 276.8 V 293.9 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_270.1_338.9_-1">
+<path d="M 270.1 338.9 V 338.9 Q 270.1 337.8 271.1 337.8 H 291.5 Q 292.5 337.8 292.5 338.9 V 338.9 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_270.1_338.9_-1)">
+<g>
+<title>2012-09-30 · Liabilities:US:Chase:Slate · 543.48 USD</title>
+<path class="fill tl0" d="M 270.1 338.9 V 337.8 Q 270.1 337.8 270.1 337.8 H 292.5 Q 292.5 337.8 292.5 337.8 V 338.9 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_308.2_338.9_-71.8">
+<path d="M 308.2 338.9 V 270.1 Q 308.2 267.1 311.2 267.1 H 327.7 Q 330.7 267.1 330.7 270.1 V 338.9 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_308.2_338.9_-71.8)">
+<g>
+<title>2012-12-31 · Assets:US:BofA:Checking · 7448.62 USD</title>
+<path class="fill ta3" d="M 308.2 338.9 V 325 Q 308.2 325 308.2 325 H 330.7 Q 330.7 325 330.7 325 V 338.9 Z" />
+</g>
+<g>
+<title>2012-12-31 · Assets:US:ETrade:VHT · 4742.44 USD</title>
+<path class="fill ta1" d="M 308.2 323 V 316.2 Q 308.2 316.2 308.2 316.2 H 330.7 Q 330.7 316.2 330.7 316.2 V 323 Z" />
+</g>
+<g>
+<title>2012-12-31 · Assets:US:Vanguard:RGAGX · 12584.97 USD</title>
+<path class="fill ta0" d="M 308.2 314.2 V 292.8 Q 308.2 292.8 308.2 292.8 H 330.7 Q 330.7 292.8 330.7 292.8 V 314.2 Z" />
+</g>
+<g>
+<title>2012-12-31 · Assets:US:Vanguard:VBMPX · 10765.72 USD</title>
+<path class="fill ta2" d="M 308.2 290.8 V 272.9 Q 308.2 272.9 308.2 272.9 H 330.7 Q 330.7 272.9 330.7 272.9 V 290.8 Z" />
+</g>
+<g>
+<title>2012-12-31 · other (5 accounts) · 3120.86 USD</title>
+<path class="fill oa" d="M 308.2 270.9 V 267.1 Q 308.2 267.1 308.2 267.1 H 330.7 Q 330.7 267.1 330.7 267.1 V 270.9 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_332.7_338.9_-2.5">
+<path d="M 332.7 338.9 V 338.9 Q 332.7 336.3 335.2 336.3 H 352.6 Q 355.2 336.3 355.2 338.9 V 338.9 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_332.7_338.9_-2.5)">
+<g>
+<title>2012-12-31 · Liabilities:US:Chase:Slate · 1366.52 USD</title>
+<path class="fill tl0" d="M 332.7 338.9 V 336.3 Q 332.7 336.3 332.7 336.3 H 355.2 Q 355.2 336.3 355.2 336.3 V 338.9 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_370.8_338.9_-96.1">
+<path d="M 370.8 338.9 V 245.8 Q 370.8 242.8 373.8 242.8 H 390.3 Q 393.3 242.8 393.3 245.8 V 338.9 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_370.8_338.9_-96.1)">
+<g>
+<title>2013-03-31 · Assets:US:BofA:Checking · 6417.59 USD</title>
+<path class="fill ta3" d="M 370.8 338.9 V 326.9 Q 370.8 326.9 370.8 326.9 H 393.3 Q 393.3 326.9 393.3 326.9 V 338.9 Z" />
+</g>
+<g>
+<title>2013-03-31 · Assets:US:ETrade:VHT · 2332.23 USD</title>
+<path class="fill ta1" d="M 370.8 324.9 V 322.6 Q 370.8 322.6 370.8 322.6 H 393.3 Q 393.3 322.6 393.3 322.6 V 324.9 Z" />
+</g>
+<g>
+<title>2013-03-31 · Assets:US:Vanguard:RGAGX · 19441.30 USD</title>
+<path class="fill ta0" d="M 370.8 320.6 V 286.5 Q 370.8 286.5 370.8 286.5 H 393.3 Q 393.3 286.5 393.3 286.5 V 320.6 Z" />
+</g>
+<g>
+<title>2013-03-31 · Assets:US:Vanguard:VBMPX · 16237.56 USD</title>
+<path class="fill ta2" d="M 370.8 284.5 V 256.3 Q 370.8 256.3 370.8 256.3 H 393.3 Q 393.3 256.3 393.3 256.3 V 284.5 Z" />
+</g>
+<g>
+<title>2013-03-31 · other (5 accounts) · 7293.20 USD</title>
+<path class="fill oa" d="M 370.8 254.3 V 242.8 Q 370.8 242.8 370.8 242.8 H 393.3 Q 393.3 242.8 393.3 242.8 V 254.3 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_395.3_338.9_-2.4">
+<path d="M 395.3 338.9 V 338.9 Q 395.3 336.5 397.7 336.5 H 415.4 Q 417.8 336.5 417.8 338.9 V 338.9 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_395.3_338.9_-2.4)">
+<g>
+<title>2013-03-31 · Liabilities:US:Chase:Slate · 1286.95 USD</title>
+<path class="fill tl0" d="M 395.3 338.9 V 336.5 Q 395.3 336.5 395.3 336.5 H 417.8 Q 417.8 336.5 417.8 336.5 V 338.9 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_433.5_338.9_-113.7">
+<path d="M 433.5 338.9 V 228.2 Q 433.5 225.2 436.5 225.2 H 452.9 Q 455.9 225.2 455.9 228.2 V 338.9 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_433.5_338.9_-113.7)">
+<g>
+<title>2013-06-30 · Assets:US:BofA:Checking · 1932.17 USD</title>
+<path class="fill ta3" d="M 433.5 338.9 V 335.3 Q 433.5 335.3 433.5 335.3 H 455.9 Q 455.9 335.3 455.9 335.3 V 338.9 Z" />
+</g>
+<g>
+<title>2013-06-30 · Assets:US:ETrade:VHT · 1895.04 USD</title>
+<path class="fill ta1" d="M 433.5 335.3 V 331.7 Q 433.5 331.7 433.5 331.7 H 455.9 Q 455.9 331.7 455.9 331.7 V 335.3 Z" />
+</g>
+<g>
+<title>2013-06-30 · Assets:US:Vanguard:RGAGX · 27222.24 USD</title>
+<path class="fill ta0" d="M 433.5 329.7 V 281.2 Q 433.5 281.2 433.5 281.2 H 455.9 Q 455.9 281.2 455.9 281.2 V 329.7 Z" />
+</g>
+<g>
+<title>2013-06-30 · Assets:US:Vanguard:VBMPX · 21289.59 USD</title>
+<path class="fill ta2" d="M 433.5 279.2 V 241.7 Q 433.5 241.7 433.5 241.7 H 455.9 Q 455.9 241.7 455.9 241.7 V 279.2 Z" />
+</g>
+<g>
+<title>2013-06-30 · other (5 accounts) · 8879.90 USD</title>
+<path class="fill oa" d="M 433.5 239.7 V 225.2 Q 433.5 225.2 433.5 225.2 H 455.9 Q 455.9 225.2 455.9 225.2 V 239.7 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_457.9_338.9_-2.1">
+<path d="M 457.9 338.9 V 338.9 Q 457.9 336.7 460.1 336.7 H 478.3 Q 480.4 336.7 480.4 338.9 V 338.9 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_457.9_338.9_-2.1)">
+<g>
+<title>2013-06-30 · Liabilities:US:Chase:Slate · 1152.75 USD</title>
+<path class="fill tl0" d="M 457.9 338.9 V 336.7 Q 457.9 336.7 457.9 336.7 H 480.4 Q 480.4 336.7 480.4 336.7 V 338.9 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_496.1_338.9_-132">
+<path d="M 496.1 338.9 V 209.9 Q 496.1 206.9 499.1 206.9 H 515.6 Q 518.6 206.9 518.6 209.9 V 338.9 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_496.1_338.9_-132)">
+<g>
+<title>2013-09-30 · Assets:US:BofA:Checking · 5574.01 USD</title>
+<path class="fill ta3" d="M 496.1 338.9 V 328.5 Q 496.1 328.5 496.1 328.5 H 518.6 Q 518.6 328.5 518.6 328.5 V 338.9 Z" />
+</g>
+<g>
+<title>2013-09-30 · Assets:US:ETrade:VHT · 3840.76 USD</title>
+<path class="fill ta1" d="M 496.1 326.5 V 321.4 Q 496.1 321.4 496.1 321.4 H 518.6 Q 518.6 321.4 518.6 321.4 V 326.5 Z" />
+</g>
+<g>
+<title>2013-09-30 · Assets:US:Vanguard:RGAGX · 29632.82 USD</title>
+<path class="fill ta0" d="M 496.1 319.4 V 266.3 Q 496.1 266.3 496.1 266.3 H 518.6 Q 518.6 266.3 518.6 266.3 V 319.4 Z" />
+</g>
+<g>
+<title>2013-09-30 · Assets:US:Vanguard:VBMPX · 21883.12 USD</title>
+<path class="fill ta2" d="M 496.1 264.3 V 225.7 Q 496.1 225.7 496.1 225.7 H 518.6 Q 518.6 225.7 518.6 225.7 V 264.3 Z" />
+</g>
+<g>
+<title>2013-09-30 · other (5 accounts) · 10127.37 USD</title>
+<path class="fill oa" d="M 496.1 223.7 V 206.9 Q 496.1 206.9 496.1 206.9 H 518.6 Q 518.6 206.9 518.6 206.9 V 223.7 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_520.6_338.9_-3.3">
+<path d="M 520.6 338.9 V 338.6 Q 520.6 335.6 523.6 335.6 H 540 Q 543 335.6 543 338.6 V 338.9 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_520.6_338.9_-3.3)">
+<g>
+<title>2013-09-30 · Liabilities:US:Chase:Slate · 1780.28 USD</title>
+<path class="fill tl0" d="M 520.6 338.9 V 335.6 Q 520.6 335.6 520.6 335.6 H 543 Q 543 335.6 543 335.6 V 338.9 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_558.7_338.9_-143.7">
+<path d="M 558.7 338.9 V 198.1 Q 558.7 195.1 561.7 195.1 H 578.2 Q 581.2 195.1 581.2 198.1 V 338.9 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_558.7_338.9_-143.7)">
+<g>
+<title>2013-12-31 · Assets:US:BofA:Checking · 7247.12 USD</title>
+<path class="fill ta3" d="M 558.7 338.9 V 325.4 Q 558.7 325.4 558.7 325.4 H 581.2 Q 581.2 325.4 581.2 325.4 V 338.9 Z" />
+</g>
+<g>
+<title>2013-12-31 · Assets:US:ETrade:VHT · 5906.12 USD</title>
+<path class="fill ta1" d="M 558.7 323.4 V 314.4 Q 558.7 314.4 558.7 314.4 H 581.2 Q 581.2 314.4 581.2 314.4 V 323.4 Z" />
+</g>
+<g>
+<title>2013-12-31 · Assets:US:Vanguard:RGAGX · 28859.90 USD</title>
+<path class="fill ta0" d="M 558.7 312.4 V 260.8 Q 558.7 260.8 558.7 260.8 H 581.2 Q 581.2 260.8 581.2 260.8 V 312.4 Z" />
+</g>
+<g>
+<title>2013-12-31 · Assets:US:Vanguard:VBMPX · 22128.00 USD</title>
+<path class="fill ta2" d="M 558.7 258.8 V 219.7 Q 558.7 219.7 558.7 219.7 H 581.2 Q 581.2 219.7 581.2 219.7 V 258.8 Z" />
+</g>
+<g>
+<title>2013-12-31 · other (5 accounts) · 13246.06 USD</title>
+<path class="fill oa" d="M 558.7 217.7 V 195.1 Q 558.7 195.1 558.7 195.1 H 581.2 Q 581.2 195.1 581.2 195.1 V 217.7 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_583.2_338.9_-3.5">
+<path d="M 583.2 338.9 V 338.3 Q 583.2 335.3 586.2 335.3 H 602.7 Q 605.7 335.3 605.7 338.3 V 338.9 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_583.2_338.9_-3.5)">
+<g>
+<title>2013-12-31 · Liabilities:US:Chase:Slate · 1906.01 USD</title>
+<path class="fill tl0" d="M 583.2 338.9 V 335.3 Q 583.2 335.3 583.2 335.3 H 605.7 Q 605.7 335.3 605.7 335.3 V 338.9 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_621.3_338.9_-160.9">
+<path d="M 621.3 338.9 V 180.9 Q 621.3 177.9 624.3 177.9 H 640.8 Q 643.8 177.9 643.8 180.9 V 338.9 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_621.3_338.9_-160.9)">
+<g>
+<title>2014-03-31 · Assets:US:BofA:Checking · 6109.31 USD</title>
+<path class="fill ta3" d="M 621.3 338.9 V 327.5 Q 621.3 327.5 621.3 327.5 H 643.8 Q 643.8 327.5 643.8 327.5 V 338.9 Z" />
+</g>
+<g>
+<title>2014-03-31 · Assets:US:ETrade:VHT · 8226.40 USD</title>
+<path class="fill ta1" d="M 621.3 325.5 V 312.2 Q 621.3 312.2 621.3 312.2 H 643.8 Q 643.8 312.2 643.8 312.2 V 325.5 Z" />
+</g>
+<g>
+<title>2014-03-31 · Assets:US:Vanguard:RGAGX · 33182.37 USD</title>
+<path class="fill ta0" d="M 621.3 310.2 V 250.6 Q 621.3 250.6 621.3 250.6 H 643.8 Q 643.8 250.6 643.8 250.6 V 310.2 Z" />
+</g>
+<g>
+<title>2014-03-31 · Assets:US:Vanguard:VBMPX · 28066.01 USD</title>
+<path class="fill ta2" d="M 621.3 248.6 V 198.5 Q 621.3 198.5 621.3 198.5 H 643.8 Q 643.8 198.5 643.8 198.5 V 248.6 Z" />
+</g>
+<g>
+<title>2014-03-31 · other (5 accounts) · 11058.55 USD</title>
+<path class="fill oa" d="M 621.3 196.5 V 177.9 Q 621.3 177.9 621.3 177.9 H 643.8 Q 643.8 177.9 643.8 177.9 V 196.5 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_645.8_338.9_-3.6">
+<path d="M 645.8 338.9 V 338.3 Q 645.8 335.3 648.8 335.3 H 665.3 Q 668.3 335.3 668.3 338.3 V 338.9 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_645.8_338.9_-3.6)">
+<g>
+<title>2014-03-31 · Liabilities:US:Chase:Slate · 1927.45 USD</title>
+<path class="fill tl0" d="M 645.8 338.9 V 335.3 Q 645.8 335.3 645.8 335.3 H 668.3 Q 668.3 335.3 668.3 335.3 V 338.9 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_684_338.9_-177.8">
+<path d="M 684 338.9 V 164.1 Q 684 161.1 687 161.1 H 703.4 Q 706.4 161.1 706.4 164.1 V 338.9 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_684_338.9_-177.8)">
+<g>
+<title>2014-06-30 · Assets:US:BofA:Checking · 4576.97 USD</title>
+<path class="fill ta3" d="M 684 338.9 V 330.4 Q 684 330.4 684 330.4 H 706.4 Q 706.4 330.4 706.4 330.4 V 338.9 Z" />
+</g>
+<g>
+<title>2014-06-30 · Assets:US:ETrade:VHT · 8530.34 USD</title>
+<path class="fill ta1" d="M 684 328.4 V 314.5 Q 684 314.5 684 314.5 H 706.4 Q 706.4 314.5 706.4 314.5 V 328.4 Z" />
+</g>
+<g>
+<title>2014-06-30 · Assets:US:Vanguard:RGAGX · 39587.58 USD</title>
+<path class="fill ta0" d="M 684 312.5 V 241 Q 684 241 684 241 H 706.4 Q 706.4 241 706.4 241 V 312.5 Z" />
+</g>
+<g>
+<title>2014-06-30 · Assets:US:Vanguard:VBMPX · 31823.61 USD</title>
+<path class="fill ta2" d="M 684 239 V 181.9 Q 684 181.9 684 181.9 H 706.4 Q 706.4 181.9 706.4 181.9 V 239 Z" />
+</g>
+<g>
+<title>2014-06-30 · other (5 accounts) · 11196.12 USD</title>
+<path class="fill oa" d="M 684 179.9 V 161.1 Q 684 161.1 684 161.1 H 706.4 Q 706.4 161.1 706.4 161.1 V 179.9 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_708.4_338.9_-4">
+<path d="M 708.4 338.9 V 337.8 Q 708.4 334.8 711.4 334.8 H 727.9 Q 730.9 334.8 730.9 337.8 V 338.9 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_708.4_338.9_-4)">
+<g>
+<title>2014-06-30 · Liabilities:US:Chase:Slate · 2177.19 USD</title>
+<path class="fill tl0" d="M 708.4 338.9 V 334.8 Q 708.4 334.8 708.4 334.8 H 730.9 Q 730.9 334.8 730.9 334.8 V 338.9 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_746.6_338.9_-200.2">
+<path d="M 746.6 338.9 V 141.7 Q 746.6 138.7 749.6 138.7 H 766.1 Q 769.1 138.7 769.1 141.7 V 338.9 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_746.6_338.9_-200.2)">
+<g>
+<title>2014-09-30 · Assets:US:BofA:Checking · 3049.45 USD</title>
+<path class="fill ta3" d="M 746.6 338.9 V 333.2 Q 746.6 333.2 746.6 333.2 H 769.1 Q 769.1 333.2 769.1 333.2 V 338.9 Z" />
+</g>
+<g>
+<title>2014-09-30 · Assets:US:ETrade:VHT · 14735.28 USD</title>
+<path class="fill ta1" d="M 746.6 331.2 V 305.8 Q 746.6 305.8 746.6 305.8 H 769.1 Q 769.1 305.8 769.1 305.8 V 331.2 Z" />
+</g>
+<g>
+<title>2014-09-30 · Assets:US:Vanguard:RGAGX · 41220.08 USD</title>
+<path class="fill ta0" d="M 746.6 303.8 V 229.3 Q 746.6 229.3 746.6 229.3 H 769.1 Q 769.1 229.3 769.1 229.3 V 303.8 Z" />
+</g>
+<g>
+<title>2014-09-30 · Assets:US:Vanguard:VBMPX · 34953.06 USD</title>
+<path class="fill ta2" d="M 746.6 227.3 V 164.4 Q 746.6 164.4 746.6 164.4 H 769.1 Q 769.1 164.4 769.1 164.4 V 227.3 Z" />
+</g>
+<g>
+<title>2014-09-30 · other (5 accounts) · 13826.87 USD</title>
+<path class="fill oa" d="M 746.6 162.4 V 138.7 Q 746.6 138.7 746.6 138.7 H 769.1 Q 769.1 138.7 769.1 138.7 V 162.4 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_771.1_338.9_-5">
+<path d="M 771.1 338.9 V 336.9 Q 771.1 333.9 774.1 333.9 H 790.5 Q 793.5 333.9 793.5 336.9 V 338.9 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_771.1_338.9_-5)">
+<g>
+<title>2014-09-30 · Liabilities:US:Chase:Slate · 2688.85 USD</title>
+<path class="fill tl0" d="M 771.1 338.9 V 333.9 Q 771.1 333.9 771.1 333.9 H 793.5 Q 793.5 333.9 793.5 333.9 V 338.9 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_809.2_338.9_-204.9">
+<path d="M 809.2 338.9 V 137 Q 809.2 134 812.2 134 H 828.7 Q 831.7 134 831.7 137 V 338.9 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_809.2_338.9_-204.9)">
+<g>
+<title>2014-12-31 · Assets:US:BofA:Checking · 596.05 USD</title>
+<path class="fill ta3" d="M 809.2 338.9 V 337.8 Q 809.2 337.8 809.2 337.8 H 831.7 Q 831.7 337.8 831.7 337.8 V 338.9 Z" />
+</g>
+<g>
+<title>2014-12-31 · Assets:US:ETrade:VHT · 14729.40 USD</title>
+<path class="fill ta1" d="M 809.2 335.8 V 310.4 Q 809.2 310.4 809.2 310.4 H 831.7 Q 831.7 310.4 831.7 310.4 V 335.8 Z" />
+</g>
+<g>
+<title>2014-12-31 · Assets:US:Vanguard:RGAGX · 40220.57 USD</title>
+<path class="fill ta0" d="M 809.2 308.4 V 235.7 Q 809.2 235.7 809.2 235.7 H 831.7 Q 831.7 235.7 831.7 235.7 V 308.4 Z" />
+</g>
+<g>
+<title>2014-12-31 · Assets:US:Vanguard:VBMPX · 35802.32 USD</title>
+<path class="fill ta2" d="M 809.2 233.7 V 169.2 Q 809.2 169.2 809.2 169.2 H 831.7 Q 831.7 169.2 831.7 169.2 V 233.7 Z" />
+</g>
+<g>
+<title>2014-12-31 · other (5 accounts) · 18956.50 USD</title>
+<path class="fill oa" d="M 809.2 167.2 V 134 Q 809.2 134 809.2 134 H 831.7 Q 831.7 134 831.7 134 V 167.2 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_833.7_338.9_-5.4">
+<path d="M 833.7 338.9 V 336.5 Q 833.7 333.5 836.7 333.5 H 853.2 Q 856.2 333.5 856.2 336.5 V 338.9 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_833.7_338.9_-5.4)">
+<g>
+<title>2014-12-31 · Liabilities:US:Chase:Slate · 2891.85 USD</title>
+<path class="fill tl0" d="M 833.7 338.9 V 333.5 Q 833.7 333.5 833.7 333.5 H 856.2 Q 856.2 333.5 856.2 333.5 V 338.9 Z" />
+</g>
+</g>
+<polyline class="line total" points="143.8,310.5 206.4,293.2 269.1,277.6 331.7,269.6 394.3,245.2 456.9,227.3 519.6,210.2 582.2,198.7 644.8,181.5 707.4,165.1 770.1,143.7 832.7,139.4" />
+<g>
+<title>2012-03-31 · Net · 15282.93 USD</title>
+<circle class="hit" cx="143.8" cy="310.5" r="6" />
+</g>
+<g>
+<title>2012-06-30 · Net · 24576.35 USD</title>
+<circle class="hit" cx="206.4" cy="293.2" r="6" />
+</g>
+<g>
+<title>2012-09-30 · Net · 32966.67 USD</title>
+<circle class="hit" cx="269.1" cy="277.6" r="6" />
+</g>
+<g>
+<title>2012-12-31 · Net · 37296.09 USD</title>
+<circle class="hit" cx="331.7" cy="269.6" r="6" />
+</g>
+<g>
+<title>2013-03-31 · Net · 50434.92 USD</title>
+<circle class="hit" cx="394.3" cy="245.2" r="6" />
+</g>
+<g>
+<title>2013-06-30 · Net · 60066.19 USD</title>
+<circle class="hit" cx="456.9" cy="227.3" r="6" />
+</g>
+<g>
+<title>2013-09-30 · Net · 69277.81 USD</title>
+<circle class="hit" cx="519.6" cy="210.2" r="6" />
+</g>
+<g>
+<title>2013-12-31 · Net · 75481.19 USD</title>
+<circle class="hit" cx="582.2" cy="198.7" r="6" />
+</g>
+<g>
+<title>2014-03-31 · Net · 84715.18 USD</title>
+<circle class="hit" cx="644.8" cy="181.5" r="6" />
+</g>
+<g>
+<title>2014-06-30 · Net · 93537.43 USD</title>
+<circle class="hit" cx="707.4" cy="165.1" r="6" />
+</g>
+<g>
+<title>2014-09-30 · Net · 105095.89 USD</title>
+<circle class="hit" cx="770.1" cy="143.7" r="6" />
+</g>
+<g>
+<title>2014-12-31 · Net · 107412.99 USD</title>
+<circle class="hit" cx="832.7" cy="139.4" r="6" />
+</g>
+</svg>

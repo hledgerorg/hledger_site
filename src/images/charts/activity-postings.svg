@@ -1,0 +1,654 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="hledger-chart" width="880" height="442" viewBox="0 0 880 442" role="img" aria-label="Posting counts in 2012-01-01..2014-12-31:">
+<title>Posting counts in 2012-01-01..2014-12-31:</title>
+<style>.hledger-chart{max-width:100%;height:auto;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:14px}
+.hledger-chart .title{font-size:17px;font-weight:600}
+.hledger-chart .heading{font-size:15px;font-weight:600}
+.hledger-chart .value,.hledger-chart .tick{font-variant-numeric:tabular-nums}
+.hledger-chart .grid,.hledger-chart .axis{stroke-width:1}
+.hledger-chart .line{fill:none;stroke-width:3;stroke-linejoin:round;stroke-linecap:round}
+.hledger-chart .mark{stroke-width:2.5}
+.hledger-chart .average{stroke-width:2;stroke-dasharray:5 4}
+.hledger-chart .hit,.hledger-chart .plot{fill:transparent}
+.hledger-chart .hatch{stroke-width:2.5}
+.hledger-chart .bg{fill:#fcfcfb}
+.hledger-chart .title{fill:#0b0b0b}
+.hledger-chart .heading{fill:#0b0b0b}
+.hledger-chart .label{fill:#52514e}
+.hledger-chart .value{fill:#52514e}
+.hledger-chart .tick{fill:#898781}
+.hledger-chart .grid{stroke:#e1e0d9}
+.hledger-chart .axis{stroke:#c3c2b7}
+.hledger-chart .line.total{stroke:#0b0b0b}
+.hledger-chart .mark.total{stroke:#0b0b0b}
+.hledger-chart .average{stroke:#0b0b0b}
+.hledger-chart .clip{fill:#0b0b0b}
+.hledger-chart .hatch{stroke:#fcfcfb}
+.hledger-chart .fill.ta0{fill:#2a78d6}
+.hledger-chart .line.ta0{stroke:#2a78d6}
+.hledger-chart .fill.ta1{fill:#1d5496}
+.hledger-chart .line.ta1{stroke:#1d5496}
+.hledger-chart .fill.ta2{fill:#7faee6}
+.hledger-chart .line.ta2{stroke:#7faee6}
+.hledger-chart .fill.ta3{fill:#b4d0f1}
+.hledger-chart .line.ta3{stroke:#b4d0f1}
+.hledger-chart .fill.tl0{fill:#eda100}
+.hledger-chart .line.tl0{stroke:#eda100}
+.hledger-chart .fill.tl1{fill:#a67100}
+.hledger-chart .line.tl1{stroke:#a67100}
+.hledger-chart .fill.tl2{fill:#f4c766}
+.hledger-chart .line.tl2{stroke:#f4c766}
+.hledger-chart .fill.tl3{fill:#f9dea6}
+.hledger-chart .line.tl3{stroke:#f9dea6}
+.hledger-chart .fill.te0{fill:#4a3aa7}
+.hledger-chart .line.te0{stroke:#4a3aa7}
+.hledger-chart .fill.te1{fill:#342975}
+.hledger-chart .line.te1{stroke:#342975}
+.hledger-chart .fill.te2{fill:#9289ca}
+.hledger-chart .line.te2{stroke:#9289ca}
+.hledger-chart .fill.te3{fill:#c0bae0}
+.hledger-chart .line.te3{stroke:#c0bae0}
+.hledger-chart .fill.tr0{fill:#008300}
+.hledger-chart .line.tr0{stroke:#008300}
+.hledger-chart .fill.tr1{fill:#005c00}
+.hledger-chart .line.tr1{stroke:#005c00}
+.hledger-chart .fill.tr2{fill:#66b566}
+.hledger-chart .line.tr2{stroke:#66b566}
+.hledger-chart .fill.tr3{fill:#a6d4a6}
+.hledger-chart .line.tr3{stroke:#a6d4a6}
+.hledger-chart .fill.tx0{fill:#e34948}
+.hledger-chart .line.tx0{stroke:#e34948}
+.hledger-chart .fill.tx1{fill:#9f3332}
+.hledger-chart .line.tx1{stroke:#9f3332}
+.hledger-chart .fill.tx2{fill:#ee9291}
+.hledger-chart .line.tx2{stroke:#ee9291}
+.hledger-chart .fill.tx3{fill:#f5bfbf}
+.hledger-chart .line.tx3{stroke:#f5bfbf}
+.hledger-chart .fill.s0{fill:#2a78d6}
+.hledger-chart .line.s0{stroke:#2a78d6}
+.hledger-chart .fill.s1{fill:#eb6834}
+.hledger-chart .line.s1{stroke:#eb6834}
+.hledger-chart .fill.s2{fill:#1baf7a}
+.hledger-chart .line.s2{stroke:#1baf7a}
+.hledger-chart .fill.s3{fill:#eda100}
+.hledger-chart .line.s3{stroke:#eda100}
+.hledger-chart .fill.s4{fill:#e87ba4}
+.hledger-chart .line.s4{stroke:#e87ba4}
+.hledger-chart .fill.s5{fill:#008300}
+.hledger-chart .line.s5{stroke:#008300}
+.hledger-chart .fill.s6{fill:#4a3aa7}
+.hledger-chart .line.s6{stroke:#4a3aa7}
+.hledger-chart .fill.s7{fill:#e34948}
+.hledger-chart .line.s7{stroke:#e34948}
+.hledger-chart .fill.other{fill:#898781}
+.hledger-chart .line.other{stroke:#898781}
+.hledger-chart .fill.oa{fill:#6381a3}
+.hledger-chart .line.oa{stroke:#6381a3}
+.hledger-chart .fill.ol{fill:#b1914d}
+.hledger-chart .line.ol{stroke:#b1914d}
+.hledger-chart .fill.oe{fill:#706890}
+.hledger-chart .line.oe{stroke:#706890}
+.hledger-chart .fill.or{fill:#52854d}
+.hledger-chart .line.or{stroke:#52854d}
+.hledger-chart .fill.ox{fill:#ad6e6a}
+.hledger-chart .line.ox{stroke:#ad6e6a}
+.hledger-chart .fill.lone{fill:#1597b0}
+.hledger-chart .line.lone{stroke:#1597b0}
+.hledger-chart .fill.neutral{fill:#52514e}
+.hledger-chart .line.neutral{stroke:#52514e}
+@media (prefers-color-scheme:dark){
+.hledger-chart .bg{fill:#1a1a19}
+.hledger-chart .title{fill:#ffffff}
+.hledger-chart .heading{fill:#ffffff}
+.hledger-chart .label{fill:#c3c2b7}
+.hledger-chart .value{fill:#c3c2b7}
+.hledger-chart .tick{fill:#898781}
+.hledger-chart .grid{stroke:#2c2c2a}
+.hledger-chart .axis{stroke:#383835}
+.hledger-chart .line.total{stroke:#ffffff}
+.hledger-chart .mark.total{stroke:#ffffff}
+.hledger-chart .average{stroke:#ffffff}
+.hledger-chart .clip{fill:#ffffff}
+.hledger-chart .hatch{stroke:#1a1a19}
+.hledger-chart .fill.ta0{fill:#3987e5}
+.hledger-chart .line.ta0{stroke:#3987e5}
+.hledger-chart .fill.ta1{fill:#88b7ef}
+.hledger-chart .line.ta1{stroke:#88b7ef}
+.hledger-chart .fill.ta2{fill:#285ea0}
+.hledger-chart .line.ta2{stroke:#285ea0}
+.hledger-chart .fill.ta3{fill:#bad5f6}
+.hledger-chart .line.ta3{stroke:#bad5f6}
+.hledger-chart .fill.tl0{fill:#c98500}
+.hledger-chart .line.tl0{stroke:#c98500}
+.hledger-chart .fill.tl1{fill:#dfb666}
+.hledger-chart .line.tl1{stroke:#dfb666}
+.hledger-chart .fill.tl2{fill:#8d5d00}
+.hledger-chart .line.tl2{stroke:#8d5d00}
+.hledger-chart .fill.tl3{fill:#ecd4a6}
+.hledger-chart .line.tl3{stroke:#ecd4a6}
+.hledger-chart .fill.te0{fill:#9085e9}
+.hledger-chart .line.te0{stroke:#9085e9}
+.hledger-chart .fill.te1{fill:#bcb6f2}
+.hledger-chart .line.te1{stroke:#bcb6f2}
+.hledger-chart .fill.te2{fill:#655da3}
+.hledger-chart .line.te2{stroke:#655da3}
+.hledger-chart .fill.te3{fill:#d8d4f7}
+.hledger-chart .line.te3{stroke:#d8d4f7}
+.hledger-chart .fill.tr0{fill:#008300}
+.hledger-chart .line.tr0{stroke:#008300}
+.hledger-chart .fill.tr1{fill:#66b566}
+.hledger-chart .line.tr1{stroke:#66b566}
+.hledger-chart .fill.tr2{fill:#005c00}
+.hledger-chart .line.tr2{stroke:#005c00}
+.hledger-chart .fill.tr3{fill:#a6d4a6}
+.hledger-chart .line.tr3{stroke:#a6d4a6}
+.hledger-chart .fill.tx0{fill:#e66767}
+.hledger-chart .line.tx0{stroke:#e66767}
+.hledger-chart .fill.tx1{fill:#f0a4a4}
+.hledger-chart .line.tx1{stroke:#f0a4a4}
+.hledger-chart .fill.tx2{fill:#a14848}
+.hledger-chart .line.tx2{stroke:#a14848}
+.hledger-chart .fill.tx3{fill:#f6caca}
+.hledger-chart .line.tx3{stroke:#f6caca}
+.hledger-chart .fill.s0{fill:#3987e5}
+.hledger-chart .line.s0{stroke:#3987e5}
+.hledger-chart .fill.s1{fill:#d95926}
+.hledger-chart .line.s1{stroke:#d95926}
+.hledger-chart .fill.s2{fill:#199e70}
+.hledger-chart .line.s2{stroke:#199e70}
+.hledger-chart .fill.s3{fill:#c98500}
+.hledger-chart .line.s3{stroke:#c98500}
+.hledger-chart .fill.s4{fill:#d55181}
+.hledger-chart .line.s4{stroke:#d55181}
+.hledger-chart .fill.s5{fill:#008300}
+.hledger-chart .line.s5{stroke:#008300}
+.hledger-chart .fill.s6{fill:#9085e9}
+.hledger-chart .line.s6{stroke:#9085e9}
+.hledger-chart .fill.s7{fill:#e66767}
+.hledger-chart .line.s7{stroke:#e66767}
+.hledger-chart .fill.other{fill:#898781}
+.hledger-chart .line.other{stroke:#898781}
+.hledger-chart .fill.oa{fill:#6987a9}
+.hledger-chart .line.oa{stroke:#6987a9}
+.hledger-chart .fill.ol{fill:#a3864d}
+.hledger-chart .line.ol{stroke:#a3864d}
+.hledger-chart .fill.oe{fill:#8c86ab}
+.hledger-chart .line.oe{stroke:#8c86ab}
+.hledger-chart .fill.or{fill:#52854d}
+.hledger-chart .line.or{stroke:#52854d}
+.hledger-chart .fill.ox{fill:#ae7a77}
+.hledger-chart .line.ox{stroke:#ae7a77}
+.hledger-chart .fill.lone{fill:#22a6be}
+.hledger-chart .line.lone{stroke:#22a6be}
+.hledger-chart .fill.neutral{fill:#c3c2b7}
+.hledger-chart .line.neutral{stroke:#c3c2b7}
+}
+</style>
+<rect class="bg" width="100%" height="100%" />
+<text class="title" x="16" y="33">Posting counts in 2012-01-01..2014-12-31:</text>
+<rect x="16" y="58" width="12" height="12" rx="3" class="fill tl0" />
+<text class="label" x="36" y="69">Liabilities:US:Chase:Slate</text>
+<rect x="225.5" y="58" width="12" height="12" rx="3" class="fill tx0" />
+<text class="label" x="245.5" y="69">Expenses:Food:Restaurant</text>
+<rect x="438.6" y="58" width="12" height="12" rx="3" class="fill ta0" />
+<text class="label" x="458.6" y="69">Assets:US:Vanguard:Cash</text>
+<rect x="16" y="82" width="12" height="12" rx="3" class="fill tr0" />
+<text class="label" x="36" y="93">Income:US:Hoogle:GroupTermLife</text>
+<rect x="279.6" y="82" width="12" height="12" rx="3" class="fill tl1" />
+<text class="label" x="299.6" y="93">Liabilities:AccountsPayable</text>
+<rect x="502" y="82" width="12" height="12" rx="3" class="fill te0" />
+<text class="label" x="522" y="93">Equity:Opening-Balances</text>
+<rect x="16" y="106" width="12" height="12" rx="3" class="fill ox" />
+<text class="label" x="36" y="117">other Expenses (34 accounts)</text>
+<rect x="246.8" y="106" width="12" height="12" rx="3" class="fill oa" />
+<text class="label" x="266.8" y="117">other Assets:US (10 accounts)</text>
+<rect x="480.9" y="106" width="12" height="12" rx="3" class="fill or" />
+<text class="label" x="500.9" y="117">other Income:US (5 accounts)</text>
+<line class="axis" x1="54.1" x2="864" y1="400" y2="400" />
+<text class="tick" x="46.1" y="405" text-anchor="end">0</text>
+<line class="grid" x1="54.1" x2="864" y1="362.9" y2="362.9" />
+<text class="tick" x="46.1" y="367.9" text-anchor="end">50</text>
+<line class="grid" x1="54.1" x2="864" y1="325.7" y2="325.7" />
+<text class="tick" x="46.1" y="330.7" text-anchor="end">100</text>
+<line class="grid" x1="54.1" x2="864" y1="288.6" y2="288.6" />
+<text class="tick" x="46.1" y="293.6" text-anchor="end">150</text>
+<line class="grid" x1="54.1" x2="864" y1="251.4" y2="251.4" />
+<text class="tick" x="46.1" y="256.4" text-anchor="end">200</text>
+<line class="grid" x1="54.1" x2="864" y1="214.3" y2="214.3" />
+<text class="tick" x="46.1" y="219.3" text-anchor="end">250</text>
+<line class="grid" x1="54.1" x2="864" y1="177.1" y2="177.1" />
+<text class="tick" x="46.1" y="182.1" text-anchor="end">300</text>
+<line class="grid" x1="54.1" x2="864" y1="140" y2="140" />
+<text class="tick" x="46.1" y="145" text-anchor="end">350</text>
+<text class="tick" x="87.8" y="421" text-anchor="middle">2012Q1</text>
+<text class="tick" x="155.3" y="421" text-anchor="middle">2012Q2</text>
+<text class="tick" x="222.8" y="421" text-anchor="middle">2012Q3</text>
+<text class="tick" x="290.3" y="421" text-anchor="middle">2012Q4</text>
+<text class="tick" x="357.8" y="421" text-anchor="middle">2013Q1</text>
+<text class="tick" x="425.3" y="421" text-anchor="middle">2013Q2</text>
+<text class="tick" x="492.8" y="421" text-anchor="middle">2013Q3</text>
+<text class="tick" x="560.3" y="421" text-anchor="middle">2013Q4</text>
+<text class="tick" x="627.8" y="421" text-anchor="middle">2014Q1</text>
+<text class="tick" x="695.3" y="421" text-anchor="middle">2014Q2</text>
+<text class="tick" x="762.8" y="421" text-anchor="middle">2014Q3</text>
+<text class="tick" x="830.3" y="421" text-anchor="middle">2014Q4</text>
+<defs>
+<clipPath id="hledger-chart-clip-barv_62.5_400_-228.8">
+<path d="M 62.5 400 V 174.2 Q 62.5 171.2 65.5 171.2 H 110.2 Q 113.2 171.2 113.2 174.2 V 400 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_62.5_400_-228.8)">
+<g>
+<title>2012Q1 · Liabilities:US:Chase:Slate · 46</title>
+<path class="fill tl0" d="M 62.5 400 V 365.8 Q 62.5 365.8 62.5 365.8 H 113.2 Q 113.2 365.8 113.2 365.8 V 400 Z" />
+</g>
+<g>
+<title>2012Q1 · Expenses:Food:Restaurant · 31</title>
+<path class="fill tx0" d="M 62.5 363.8 V 342.8 Q 62.5 342.8 62.5 342.8 H 113.2 Q 113.2 342.8 113.2 342.8 V 363.8 Z" />
+</g>
+<g>
+<title>2012Q1 · Assets:US:Vanguard:Cash · 38</title>
+<path class="fill ta0" d="M 62.5 340.8 V 314.6 Q 62.5 314.6 62.5 314.6 H 113.2 Q 113.2 314.6 113.2 314.6 V 340.8 Z" />
+</g>
+<g>
+<title>2012Q1 · Income:US:Hoogle:GroupTermLife · 7</title>
+<path class="fill tr0" d="M 62.5 312.6 V 309.4 Q 62.5 309.4 62.5 309.4 H 113.2 Q 113.2 309.4 113.2 309.4 V 312.6 Z" />
+</g>
+<g>
+<title>2012Q1 · Equity:Opening-Balances · 1</title>
+<path class="fill te0" d="M 62.5 309.4 V 308.6 Q 62.5 308.6 62.5 308.6 H 113.2 Q 113.2 308.6 113.2 308.6 V 309.4 Z" />
+</g>
+<g>
+<title>2012Q1 · other Expenses (34 accounts) · 101</title>
+<path class="fill ox" d="M 62.5 306.6 V 233.6 Q 62.5 233.6 62.5 233.6 H 113.2 Q 113.2 233.6 113.2 233.6 V 306.6 Z" />
+</g>
+<g>
+<title>2012Q1 · other Assets:US (10 accounts) · 62</title>
+<path class="fill oa" d="M 62.5 231.6 V 187.5 Q 62.5 187.5 62.5 187.5 H 113.2 Q 113.2 187.5 113.2 187.5 V 231.6 Z" />
+</g>
+<g>
+<title>2012Q1 · other Income:US (5 accounts) · 22</title>
+<path class="fill or" d="M 62.5 185.5 V 171.2 Q 62.5 171.2 62.5 171.2 H 113.2 Q 113.2 171.2 113.2 171.2 V 185.5 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_130_400_-208">
+<path d="M 130 400 V 195 Q 130 192 133 192 H 177.6 Q 180.6 192 180.6 195 V 400 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_130_400_-208)">
+<g>
+<title>2012Q2 · Liabilities:US:Chase:Slate · 40</title>
+<path class="fill tl0" d="M 130 400 V 370.3 Q 130 370.3 130 370.3 H 180.6 Q 180.6 370.3 180.6 370.3 V 400 Z" />
+</g>
+<g>
+<title>2012Q2 · Expenses:Food:Restaurant · 29</title>
+<path class="fill tx0" d="M 130 368.3 V 348.7 Q 130 348.7 130 348.7 H 180.6 Q 180.6 348.7 180.6 348.7 V 368.3 Z" />
+</g>
+<g>
+<title>2012Q2 · Assets:US:Vanguard:Cash · 40</title>
+<path class="fill ta0" d="M 130 346.7 V 319 Q 130 319 130 319 H 180.6 Q 180.6 319 180.6 319 V 346.7 Z" />
+</g>
+<g>
+<title>2012Q2 · Income:US:Hoogle:GroupTermLife · 6</title>
+<path class="fill tr0" d="M 130 317 V 314.6 Q 130 314.6 130 314.6 H 180.6 Q 180.6 314.6 180.6 314.6 V 317 Z" />
+</g>
+<g>
+<title>2012Q2 · other Expenses (34 accounts) · 86</title>
+<path class="fill ox" d="M 130 312.6 V 250.7 Q 130 250.7 130 250.7 H 180.6 Q 180.6 250.7 180.6 250.7 V 312.6 Z" />
+</g>
+<g>
+<title>2012Q2 · other Assets:US (10 accounts) · 61</title>
+<path class="fill oa" d="M 130 248.7 V 205.4 Q 130 205.4 130 205.4 H 180.6 Q 180.6 205.4 180.6 205.4 V 248.7 Z" />
+</g>
+<g>
+<title>2012Q2 · other Income:US (5 accounts) · 18</title>
+<path class="fill or" d="M 130 203.4 V 192 Q 130 192 130 192 H 180.6 Q 180.6 192 180.6 192 V 203.4 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_197.5_400_-181.3">
+<path d="M 197.5 400 V 221.7 Q 197.5 218.7 200.5 218.7 H 245.1 Q 248.1 218.7 248.1 221.7 V 400 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_197.5_400_-181.3)">
+<g>
+<title>2012Q3 · Liabilities:US:Chase:Slate · 42</title>
+<path class="fill tl0" d="M 197.5 400 V 368.8 Q 197.5 368.8 197.5 368.8 H 248.1 Q 248.1 368.8 248.1 368.8 V 400 Z" />
+</g>
+<g>
+<title>2012Q3 · Expenses:Food:Restaurant · 29</title>
+<path class="fill tx0" d="M 197.5 366.8 V 347.3 Q 197.5 347.3 197.5 347.3 H 248.1 Q 248.1 347.3 248.1 347.3 V 366.8 Z" />
+</g>
+<g>
+<title>2012Q3 · Assets:US:Vanguard:Cash · 12</title>
+<path class="fill ta0" d="M 197.5 345.3 V 338.3 Q 197.5 338.3 197.5 338.3 H 248.1 Q 248.1 338.3 248.1 338.3 V 345.3 Z" />
+</g>
+<g>
+<title>2012Q3 · Income:US:Hoogle:GroupTermLife · 7</title>
+<path class="fill tr0" d="M 197.5 336.3 V 333.1 Q 197.5 333.1 197.5 333.1 H 248.1 Q 248.1 333.1 248.1 333.1 V 336.3 Z" />
+</g>
+<g>
+<title>2012Q3 · other Expenses (34 accounts) · 95</title>
+<path class="fill ox" d="M 197.5 331.1 V 262.6 Q 197.5 262.6 197.5 262.6 H 248.1 Q 248.1 262.6 248.1 262.6 V 331.1 Z" />
+</g>
+<g>
+<title>2012Q3 · other Assets:US (10 accounts) · 43</title>
+<path class="fill oa" d="M 197.5 260.6 V 230.6 Q 197.5 230.6 197.5 230.6 H 248.1 Q 248.1 230.6 248.1 230.6 V 260.6 Z" />
+</g>
+<g>
+<title>2012Q3 · other Income:US (5 accounts) · 16</title>
+<path class="fill or" d="M 197.5 228.6 V 218.7 Q 197.5 218.7 197.5 218.7 H 248.1 Q 248.1 218.7 248.1 218.7 V 228.6 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_265_400_-186.5">
+<path d="M 265 400 V 216.5 Q 265 213.5 268 213.5 H 312.6 Q 315.6 213.5 315.6 216.5 V 400 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_265_400_-186.5)">
+<g>
+<title>2012Q4 · Liabilities:US:Chase:Slate · 63</title>
+<path class="fill tl0" d="M 265 400 V 353.2 Q 265 353.2 265 353.2 H 315.6 Q 315.6 353.2 315.6 353.2 V 400 Z" />
+</g>
+<g>
+<title>2012Q4 · Expenses:Food:Restaurant · 48</title>
+<path class="fill tx0" d="M 265 351.2 V 317.5 Q 265 317.5 265 317.5 H 315.6 Q 315.6 317.5 315.6 317.5 V 351.2 Z" />
+</g>
+<g>
+<title>2012Q4 · Income:US:Hoogle:GroupTermLife · 6</title>
+<path class="fill tr0" d="M 265 315.5 V 313.1 Q 265 313.1 265 313.1 H 315.6 Q 315.6 313.1 315.6 313.1 V 315.5 Z" />
+</g>
+<g>
+<title>2012Q4 · other Expenses (34 accounts) · 87</title>
+<path class="fill ox" d="M 265 311.1 V 248.5 Q 265 248.5 265 248.5 H 315.6 Q 315.6 248.5 315.6 248.5 V 311.1 Z" />
+</g>
+<g>
+<title>2012Q4 · other Assets:US (10 accounts) · 35</title>
+<path class="fill oa" d="M 265 246.5 V 222.5 Q 265 222.5 265 222.5 H 315.6 Q 315.6 222.5 315.6 222.5 V 246.5 Z" />
+</g>
+<g>
+<title>2012Q4 · other Income:US (5 accounts) · 12</title>
+<path class="fill or" d="M 265 220.5 V 213.5 Q 265 213.5 265 213.5 H 315.6 Q 315.6 213.5 315.6 213.5 V 220.5 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_332.5_400_-237">
+<path d="M 332.5 400 V 166 Q 332.5 163 335.5 163 H 380.1 Q 383.1 163 383.1 166 V 400 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_332.5_400_-237)">
+<g>
+<title>2013Q1 · Liabilities:US:Chase:Slate · 41</title>
+<path class="fill tl0" d="M 332.5 400 V 369.5 Q 332.5 369.5 332.5 369.5 H 383.1 Q 383.1 369.5 383.1 369.5 V 400 Z" />
+</g>
+<g>
+<title>2013Q1 · Expenses:Food:Restaurant · 29</title>
+<path class="fill tx0" d="M 332.5 367.5 V 348 Q 332.5 348 332.5 348 H 383.1 Q 383.1 348 383.1 348 V 367.5 Z" />
+</g>
+<g>
+<title>2013Q1 · Assets:US:Vanguard:Cash · 38</title>
+<path class="fill ta0" d="M 332.5 346 V 319.8 Q 332.5 319.8 332.5 319.8 H 383.1 Q 383.1 319.8 383.1 319.8 V 346 Z" />
+</g>
+<g>
+<title>2013Q1 · Income:US:Hoogle:GroupTermLife · 7</title>
+<path class="fill tr0" d="M 332.5 317.8 V 314.6 Q 332.5 314.6 332.5 314.6 H 383.1 Q 383.1 314.6 383.1 314.6 V 317.8 Z" />
+</g>
+<g>
+<title>2013Q1 · Liabilities:AccountsPayable · 3</title>
+<path class="fill tl1" d="M 332.5 314.6 V 312.3 Q 332.5 312.3 332.5 312.3 H 383.1 Q 383.1 312.3 383.1 312.3 V 314.6 Z" />
+</g>
+<g>
+<title>2013Q1 · other Expenses (34 accounts) · 105</title>
+<path class="fill ox" d="M 332.5 310.3 V 234.3 Q 332.5 234.3 332.5 234.3 H 383.1 Q 383.1 234.3 383.1 234.3 V 310.3 Z" />
+</g>
+<g>
+<title>2013Q1 · other Assets:US (10 accounts) · 73</title>
+<path class="fill oa" d="M 332.5 232.3 V 180.1 Q 332.5 180.1 332.5 180.1 H 383.1 Q 383.1 180.1 383.1 180.1 V 232.3 Z" />
+</g>
+<g>
+<title>2013Q1 · other Income:US (5 accounts) · 23</title>
+<path class="fill or" d="M 332.5 178.1 V 163 Q 332.5 163 332.5 163 H 383.1 Q 383.1 163 383.1 163 V 178.1 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_400_400_-230.3">
+<path d="M 400 400 V 172.7 Q 400 169.7 403 169.7 H 447.6 Q 450.6 169.7 450.6 172.7 V 400 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_400_400_-230.3)">
+<g>
+<title>2013Q2 · Liabilities:US:Chase:Slate · 41</title>
+<path class="fill tl0" d="M 400 400 V 369.5 Q 400 369.5 400 369.5 H 450.6 Q 450.6 369.5 450.6 369.5 V 400 Z" />
+</g>
+<g>
+<title>2013Q2 · Expenses:Food:Restaurant · 28</title>
+<path class="fill tx0" d="M 400 367.5 V 348.7 Q 400 348.7 400 348.7 H 450.6 Q 450.6 348.7 450.6 348.7 V 367.5 Z" />
+</g>
+<g>
+<title>2013Q2 · Assets:US:Vanguard:Cash · 40</title>
+<path class="fill ta0" d="M 400 346.7 V 319 Q 400 319 400 319 H 450.6 Q 450.6 319 450.6 319 V 346.7 Z" />
+</g>
+<g>
+<title>2013Q2 · Income:US:Hoogle:GroupTermLife · 6</title>
+<path class="fill tr0" d="M 400 317 V 314.6 Q 400 314.6 400 314.6 H 450.6 Q 450.6 314.6 450.6 314.6 V 317 Z" />
+</g>
+<g>
+<title>2013Q2 · other Expenses (34 accounts) · 96</title>
+<path class="fill ox" d="M 400 312.6 V 243.3 Q 400 243.3 400 243.3 H 450.6 Q 450.6 243.3 450.6 243.3 V 312.6 Z" />
+</g>
+<g>
+<title>2013Q2 · other Assets:US (10 accounts) · 79</title>
+<path class="fill oa" d="M 400 241.3 V 184.6 Q 400 184.6 400 184.6 H 450.6 Q 450.6 184.6 450.6 184.6 V 241.3 Z" />
+</g>
+<g>
+<title>2013Q2 · other Income:US (5 accounts) · 20</title>
+<path class="fill or" d="M 400 182.6 V 169.7 Q 400 169.7 400 169.7 H 450.6 Q 450.6 169.7 450.6 169.7 V 182.6 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_467.5_400_-228.1">
+<path d="M 467.5 400 V 174.9 Q 467.5 171.9 470.5 171.9 H 515.1 Q 518.1 171.9 518.1 174.9 V 400 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_467.5_400_-228.1)">
+<g>
+<title>2013Q3 · Liabilities:US:Chase:Slate · 64</title>
+<path class="fill tl0" d="M 467.5 400 V 352.5 Q 467.5 352.5 467.5 352.5 H 518.1 Q 518.1 352.5 518.1 352.5 V 400 Z" />
+</g>
+<g>
+<title>2013Q3 · Expenses:Food:Restaurant · 47</title>
+<path class="fill tx0" d="M 467.5 350.5 V 317.5 Q 467.5 317.5 467.5 317.5 H 518.1 Q 518.1 317.5 518.1 317.5 V 350.5 Z" />
+</g>
+<g>
+<title>2013Q3 · Assets:US:Vanguard:Cash · 12</title>
+<path class="fill ta0" d="M 467.5 315.5 V 308.6 Q 467.5 308.6 467.5 308.6 H 518.1 Q 518.1 308.6 518.1 308.6 V 315.5 Z" />
+</g>
+<g>
+<title>2013Q3 · Income:US:Hoogle:GroupTermLife · 7</title>
+<path class="fill tr0" d="M 467.5 306.6 V 303.4 Q 467.5 303.4 467.5 303.4 H 518.1 Q 518.1 303.4 518.1 303.4 V 306.6 Z" />
+</g>
+<g>
+<title>2013Q3 · other Expenses (34 accounts) · 105</title>
+<path class="fill ox" d="M 467.5 301.4 V 225.4 Q 467.5 225.4 467.5 225.4 H 518.1 Q 518.1 225.4 518.1 225.4 V 301.4 Z" />
+</g>
+<g>
+<title>2013Q3 · other Assets:US (10 accounts) · 55</title>
+<path class="fill oa" d="M 467.5 223.4 V 184.6 Q 467.5 184.6 467.5 184.6 H 518.1 Q 518.1 184.6 518.1 184.6 V 223.4 Z" />
+</g>
+<g>
+<title>2013Q3 · other Income:US (5 accounts) · 17</title>
+<path class="fill or" d="M 467.5 182.6 V 171.9 Q 467.5 171.9 467.5 171.9 H 518.1 Q 518.1 171.9 518.1 171.9 V 182.6 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_535_400_-159.7">
+<path d="M 535 400 V 243.3 Q 535 240.3 538 240.3 H 582.6 Q 585.6 240.3 585.6 243.3 V 400 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_535_400_-159.7)">
+<g>
+<title>2013Q4 · Liabilities:US:Chase:Slate · 43</title>
+<path class="fill tl0" d="M 535 400 V 368.1 Q 535 368.1 535 368.1 H 585.6 Q 585.6 368.1 585.6 368.1 V 400 Z" />
+</g>
+<g>
+<title>2013Q4 · Expenses:Food:Restaurant · 29</title>
+<path class="fill tx0" d="M 535 366.1 V 346.5 Q 535 346.5 535 346.5 H 585.6 Q 585.6 346.5 585.6 346.5 V 366.1 Z" />
+</g>
+<g>
+<title>2013Q4 · Income:US:Hoogle:GroupTermLife · 6</title>
+<path class="fill tr0" d="M 535 344.5 V 342.1 Q 535 342.1 535 342.1 H 585.6 Q 585.6 342.1 585.6 342.1 V 344.5 Z" />
+</g>
+<g>
+<title>2013Q4 · other Expenses (34 accounts) · 87</title>
+<path class="fill ox" d="M 535 340.1 V 277.4 Q 535 277.4 535 277.4 H 585.6 Q 585.6 277.4 585.6 277.4 V 340.1 Z" />
+</g>
+<g>
+<title>2013Q4 · other Assets:US (10 accounts) · 37</title>
+<path class="fill oa" d="M 535 275.4 V 249.9 Q 535 249.9 535 249.9 H 585.6 Q 585.6 249.9 585.6 249.9 V 275.4 Z" />
+</g>
+<g>
+<title>2013Q4 · other Income:US (5 accounts) · 13</title>
+<path class="fill or" d="M 535 247.9 V 240.3 Q 535 240.3 535 240.3 H 585.6 Q 585.6 240.3 585.6 240.3 V 247.9 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_602.5_400_-251.1">
+<path d="M 602.5 400 V 151.9 Q 602.5 148.9 605.5 148.9 H 650.1 Q 653.1 148.9 653.1 151.9 V 400 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_602.5_400_-251.1)">
+<g>
+<title>2014Q1 · Liabilities:US:Chase:Slate · 47</title>
+<path class="fill tl0" d="M 602.5 400 V 365.1 Q 602.5 365.1 602.5 365.1 H 653.1 Q 653.1 365.1 653.1 365.1 V 400 Z" />
+</g>
+<g>
+<title>2014Q1 · Expenses:Food:Restaurant · 34</title>
+<path class="fill tx0" d="M 602.5 363.1 V 339.8 Q 602.5 339.8 602.5 339.8 H 653.1 Q 653.1 339.8 653.1 339.8 V 363.1 Z" />
+</g>
+<g>
+<title>2014Q1 · Assets:US:Vanguard:Cash · 42</title>
+<path class="fill ta0" d="M 602.5 337.8 V 308.6 Q 602.5 308.6 602.5 308.6 H 653.1 Q 653.1 308.6 653.1 308.6 V 337.8 Z" />
+</g>
+<g>
+<title>2014Q1 · Income:US:Hoogle:GroupTermLife · 7</title>
+<path class="fill tr0" d="M 602.5 306.6 V 303.4 Q 602.5 303.4 602.5 303.4 H 653.1 Q 653.1 303.4 653.1 303.4 V 306.6 Z" />
+</g>
+<g>
+<title>2014Q1 · Liabilities:AccountsPayable · 3</title>
+<path class="fill tl1" d="M 602.5 303.4 V 301.2 Q 602.5 301.2 602.5 301.2 H 653.1 Q 653.1 301.2 653.1 301.2 V 303.4 Z" />
+</g>
+<g>
+<title>2014Q1 · other Expenses (34 accounts) · 105</title>
+<path class="fill ox" d="M 602.5 299.2 V 223.2 Q 602.5 223.2 602.5 223.2 H 653.1 Q 653.1 223.2 653.1 223.2 V 299.2 Z" />
+</g>
+<g>
+<title>2014Q1 · other Assets:US (10 accounts) · 75</title>
+<path class="fill oa" d="M 602.5 221.2 V 167.5 Q 602.5 167.5 602.5 167.5 H 653.1 Q 653.1 167.5 653.1 167.5 V 221.2 Z" />
+</g>
+<g>
+<title>2014Q1 · other Income:US (5 accounts) · 25</title>
+<path class="fill or" d="M 602.5 165.5 V 148.9 Q 602.5 148.9 602.5 148.9 H 653.1 Q 653.1 148.9 653.1 148.9 V 165.5 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_670_400_-219.9">
+<path d="M 670 400 V 183.1 Q 670 180.1 673 180.1 H 717.6 Q 720.6 180.1 720.6 183.1 V 400 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_670_400_-219.9)">
+<g>
+<title>2014Q2 · Liabilities:US:Chase:Slate · 52</title>
+<path class="fill tl0" d="M 670 400 V 361.4 Q 670 361.4 670 361.4 H 720.6 Q 720.6 361.4 720.6 361.4 V 400 Z" />
+</g>
+<g>
+<title>2014Q2 · Expenses:Food:Restaurant · 37</title>
+<path class="fill tx0" d="M 670 359.4 V 333.9 Q 670 333.9 670 333.9 H 720.6 Q 720.6 333.9 720.6 333.9 V 359.4 Z" />
+</g>
+<g>
+<title>2014Q2 · Assets:US:Vanguard:Cash · 36</title>
+<path class="fill ta0" d="M 670 331.9 V 307.1 Q 670 307.1 670 307.1 H 720.6 Q 720.6 307.1 720.6 307.1 V 331.9 Z" />
+</g>
+<g>
+<title>2014Q2 · Income:US:Hoogle:GroupTermLife · 6</title>
+<path class="fill tr0" d="M 670 305.1 V 302.7 Q 670 302.7 670 302.7 H 720.6 Q 720.6 302.7 720.6 302.7 V 305.1 Z" />
+</g>
+<g>
+<title>2014Q2 · other Expenses (34 accounts) · 90</title>
+<path class="fill ox" d="M 670 300.7 V 235.8 Q 670 235.8 670 235.8 H 720.6 Q 720.6 235.8 720.6 235.8 V 300.7 Z" />
+</g>
+<g>
+<title>2014Q2 · other Assets:US (10 accounts) · 57</title>
+<path class="fill oa" d="M 670 233.8 V 193.5 Q 670 193.5 670 193.5 H 720.6 Q 720.6 193.5 720.6 193.5 V 233.8 Z" />
+</g>
+<g>
+<title>2014Q2 · other Income:US (5 accounts) · 18</title>
+<path class="fill or" d="M 670 191.5 V 180.1 Q 670 180.1 670 180.1 H 720.6 Q 720.6 180.1 720.6 180.1 V 191.5 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_737.5_400_-228.8">
+<path d="M 737.5 400 V 174.2 Q 737.5 171.2 740.5 171.2 H 785.1 Q 788.1 171.2 788.1 174.2 V 400 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_737.5_400_-228.8)">
+<g>
+<title>2014Q3 · Liabilities:US:Chase:Slate · 65</title>
+<path class="fill tl0" d="M 737.5 400 V 351.7 Q 737.5 351.7 737.5 351.7 H 788.1 Q 788.1 351.7 788.1 351.7 V 400 Z" />
+</g>
+<g>
+<title>2014Q3 · Expenses:Food:Restaurant · 49</title>
+<path class="fill tx0" d="M 737.5 349.7 V 315.3 Q 737.5 315.3 737.5 315.3 H 788.1 Q 788.1 315.3 788.1 315.3 V 349.7 Z" />
+</g>
+<g>
+<title>2014Q3 · Assets:US:Vanguard:Cash · 12</title>
+<path class="fill ta0" d="M 737.5 313.3 V 306.4 Q 737.5 306.4 737.5 306.4 H 788.1 Q 788.1 306.4 788.1 306.4 V 313.3 Z" />
+</g>
+<g>
+<title>2014Q3 · Income:US:Hoogle:GroupTermLife · 7</title>
+<path class="fill tr0" d="M 737.5 304.4 V 301.2 Q 737.5 301.2 737.5 301.2 H 788.1 Q 788.1 301.2 788.1 301.2 V 304.4 Z" />
+</g>
+<g>
+<title>2014Q3 · other Expenses (34 accounts) · 103</title>
+<path class="fill ox" d="M 737.5 299.2 V 224.7 Q 737.5 224.7 737.5 224.7 H 788.1 Q 788.1 224.7 788.1 224.7 V 299.2 Z" />
+</g>
+<g>
+<title>2014Q3 · other Assets:US (10 accounts) · 55</title>
+<path class="fill oa" d="M 737.5 222.7 V 183.8 Q 737.5 183.8 737.5 183.8 H 788.1 Q 788.1 183.8 788.1 183.8 V 222.7 Z" />
+</g>
+<g>
+<title>2014Q3 · other Income:US (5 accounts) · 17</title>
+<path class="fill or" d="M 737.5 181.8 V 171.2 Q 737.5 171.2 737.5 171.2 H 788.1 Q 788.1 171.2 788.1 171.2 V 181.8 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_804.9_400_-20.1">
+<path d="M 804.9 400 V 382.9 Q 804.9 379.9 807.9 379.9 H 852.6 Q 855.6 379.9 855.6 382.9 V 400 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_804.9_400_-20.1)">
+<g>
+<title>2014Q4 · Liabilities:US:Chase:Slate · 4</title>
+<path class="fill tl0" d="M 804.9 400 V 397 Q 804.9 397 804.9 397 H 855.6 Q 855.6 397 855.6 397 V 400 Z" />
+</g>
+<g>
+<title>2014Q4 · Expenses:Food:Restaurant · 3</title>
+<path class="fill tx0" d="M 804.9 397 V 394.8 Q 804.9 394.8 804.9 394.8 H 855.6 Q 855.6 394.8 855.6 394.8 V 397 Z" />
+</g>
+<g>
+<title>2014Q4 · Income:US:Hoogle:GroupTermLife · 1</title>
+<path class="fill tr0" d="M 804.9 394.8 V 394.1 Q 804.9 394.1 804.9 394.1 H 855.6 Q 855.6 394.1 855.6 394.1 V 394.8 Z" />
+</g>
+<g>
+<title>2014Q4 · other Expenses (34 accounts) · 12</title>
+<path class="fill ox" d="M 804.9 392.1 V 385.1 Q 804.9 385.1 804.9 385.1 H 855.6 Q 855.6 385.1 855.6 385.1 V 392.1 Z" />
+</g>
+<g>
+<title>2014Q4 · other Assets:US (10 accounts) · 5</title>
+<path class="fill oa" d="M 804.9 385.1 V 381.4 Q 804.9 381.4 804.9 381.4 H 855.6 Q 855.6 381.4 855.6 381.4 V 385.1 Z" />
+</g>
+<g>
+<title>2014Q4 · other Income:US (5 accounts) · 2</title>
+<path class="fill or" d="M 804.9 381.4 V 379.9 Q 804.9 379.9 804.9 379.9 H 855.6 Q 855.6 379.9 855.6 379.9 V 381.4 Z" />
+</g>
+</g>
+</svg>

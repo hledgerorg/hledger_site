@@ -1,0 +1,474 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="hledger-chart" width="880" height="394" viewBox="0 0 880 394" role="img" aria-label="Quarterly Cashflow Statement 2012-01-01..2014-12-31, valued at period ends">
+<title>Quarterly Cashflow Statement 2012-01-01..2014-12-31, valued at period ends</title>
+<style>.hledger-chart{max-width:100%;height:auto;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:14px}
+.hledger-chart .title{font-size:17px;font-weight:600}
+.hledger-chart .heading{font-size:15px;font-weight:600}
+.hledger-chart .value,.hledger-chart .tick{font-variant-numeric:tabular-nums}
+.hledger-chart .grid,.hledger-chart .axis{stroke-width:1}
+.hledger-chart .line{fill:none;stroke-width:3;stroke-linejoin:round;stroke-linecap:round}
+.hledger-chart .mark{stroke-width:2.5}
+.hledger-chart .average{stroke-width:2;stroke-dasharray:5 4}
+.hledger-chart .hit,.hledger-chart .plot{fill:transparent}
+.hledger-chart .hatch{stroke-width:2.5}
+.hledger-chart .bg{fill:#fcfcfb}
+.hledger-chart .title{fill:#0b0b0b}
+.hledger-chart .heading{fill:#0b0b0b}
+.hledger-chart .label{fill:#52514e}
+.hledger-chart .value{fill:#52514e}
+.hledger-chart .tick{fill:#898781}
+.hledger-chart .grid{stroke:#e1e0d9}
+.hledger-chart .axis{stroke:#c3c2b7}
+.hledger-chart .line.total{stroke:#0b0b0b}
+.hledger-chart .mark.total{stroke:#0b0b0b}
+.hledger-chart .average{stroke:#0b0b0b}
+.hledger-chart .clip{fill:#0b0b0b}
+.hledger-chart .hatch{stroke:#fcfcfb}
+.hledger-chart .fill.ta0{fill:#2a78d6}
+.hledger-chart .line.ta0{stroke:#2a78d6}
+.hledger-chart .fill.ta1{fill:#1d5496}
+.hledger-chart .line.ta1{stroke:#1d5496}
+.hledger-chart .fill.ta2{fill:#7faee6}
+.hledger-chart .line.ta2{stroke:#7faee6}
+.hledger-chart .fill.ta3{fill:#b4d0f1}
+.hledger-chart .line.ta3{stroke:#b4d0f1}
+.hledger-chart .fill.tl0{fill:#eda100}
+.hledger-chart .line.tl0{stroke:#eda100}
+.hledger-chart .fill.tl1{fill:#a67100}
+.hledger-chart .line.tl1{stroke:#a67100}
+.hledger-chart .fill.tl2{fill:#f4c766}
+.hledger-chart .line.tl2{stroke:#f4c766}
+.hledger-chart .fill.tl3{fill:#f9dea6}
+.hledger-chart .line.tl3{stroke:#f9dea6}
+.hledger-chart .fill.te0{fill:#4a3aa7}
+.hledger-chart .line.te0{stroke:#4a3aa7}
+.hledger-chart .fill.te1{fill:#342975}
+.hledger-chart .line.te1{stroke:#342975}
+.hledger-chart .fill.te2{fill:#9289ca}
+.hledger-chart .line.te2{stroke:#9289ca}
+.hledger-chart .fill.te3{fill:#c0bae0}
+.hledger-chart .line.te3{stroke:#c0bae0}
+.hledger-chart .fill.tr0{fill:#008300}
+.hledger-chart .line.tr0{stroke:#008300}
+.hledger-chart .fill.tr1{fill:#005c00}
+.hledger-chart .line.tr1{stroke:#005c00}
+.hledger-chart .fill.tr2{fill:#66b566}
+.hledger-chart .line.tr2{stroke:#66b566}
+.hledger-chart .fill.tr3{fill:#a6d4a6}
+.hledger-chart .line.tr3{stroke:#a6d4a6}
+.hledger-chart .fill.tx0{fill:#e34948}
+.hledger-chart .line.tx0{stroke:#e34948}
+.hledger-chart .fill.tx1{fill:#9f3332}
+.hledger-chart .line.tx1{stroke:#9f3332}
+.hledger-chart .fill.tx2{fill:#ee9291}
+.hledger-chart .line.tx2{stroke:#ee9291}
+.hledger-chart .fill.tx3{fill:#f5bfbf}
+.hledger-chart .line.tx3{stroke:#f5bfbf}
+.hledger-chart .fill.s0{fill:#2a78d6}
+.hledger-chart .line.s0{stroke:#2a78d6}
+.hledger-chart .fill.s1{fill:#eb6834}
+.hledger-chart .line.s1{stroke:#eb6834}
+.hledger-chart .fill.s2{fill:#1baf7a}
+.hledger-chart .line.s2{stroke:#1baf7a}
+.hledger-chart .fill.s3{fill:#eda100}
+.hledger-chart .line.s3{stroke:#eda100}
+.hledger-chart .fill.s4{fill:#e87ba4}
+.hledger-chart .line.s4{stroke:#e87ba4}
+.hledger-chart .fill.s5{fill:#008300}
+.hledger-chart .line.s5{stroke:#008300}
+.hledger-chart .fill.s6{fill:#4a3aa7}
+.hledger-chart .line.s6{stroke:#4a3aa7}
+.hledger-chart .fill.s7{fill:#e34948}
+.hledger-chart .line.s7{stroke:#e34948}
+.hledger-chart .fill.other{fill:#898781}
+.hledger-chart .line.other{stroke:#898781}
+.hledger-chart .fill.oa{fill:#6381a3}
+.hledger-chart .line.oa{stroke:#6381a3}
+.hledger-chart .fill.ol{fill:#b1914d}
+.hledger-chart .line.ol{stroke:#b1914d}
+.hledger-chart .fill.oe{fill:#706890}
+.hledger-chart .line.oe{stroke:#706890}
+.hledger-chart .fill.or{fill:#52854d}
+.hledger-chart .line.or{stroke:#52854d}
+.hledger-chart .fill.ox{fill:#ad6e6a}
+.hledger-chart .line.ox{stroke:#ad6e6a}
+.hledger-chart .fill.lone{fill:#1597b0}
+.hledger-chart .line.lone{stroke:#1597b0}
+.hledger-chart .fill.neutral{fill:#52514e}
+.hledger-chart .line.neutral{stroke:#52514e}
+@media (prefers-color-scheme:dark){
+.hledger-chart .bg{fill:#1a1a19}
+.hledger-chart .title{fill:#ffffff}
+.hledger-chart .heading{fill:#ffffff}
+.hledger-chart .label{fill:#c3c2b7}
+.hledger-chart .value{fill:#c3c2b7}
+.hledger-chart .tick{fill:#898781}
+.hledger-chart .grid{stroke:#2c2c2a}
+.hledger-chart .axis{stroke:#383835}
+.hledger-chart .line.total{stroke:#ffffff}
+.hledger-chart .mark.total{stroke:#ffffff}
+.hledger-chart .average{stroke:#ffffff}
+.hledger-chart .clip{fill:#ffffff}
+.hledger-chart .hatch{stroke:#1a1a19}
+.hledger-chart .fill.ta0{fill:#3987e5}
+.hledger-chart .line.ta0{stroke:#3987e5}
+.hledger-chart .fill.ta1{fill:#88b7ef}
+.hledger-chart .line.ta1{stroke:#88b7ef}
+.hledger-chart .fill.ta2{fill:#285ea0}
+.hledger-chart .line.ta2{stroke:#285ea0}
+.hledger-chart .fill.ta3{fill:#bad5f6}
+.hledger-chart .line.ta3{stroke:#bad5f6}
+.hledger-chart .fill.tl0{fill:#c98500}
+.hledger-chart .line.tl0{stroke:#c98500}
+.hledger-chart .fill.tl1{fill:#dfb666}
+.hledger-chart .line.tl1{stroke:#dfb666}
+.hledger-chart .fill.tl2{fill:#8d5d00}
+.hledger-chart .line.tl2{stroke:#8d5d00}
+.hledger-chart .fill.tl3{fill:#ecd4a6}
+.hledger-chart .line.tl3{stroke:#ecd4a6}
+.hledger-chart .fill.te0{fill:#9085e9}
+.hledger-chart .line.te0{stroke:#9085e9}
+.hledger-chart .fill.te1{fill:#bcb6f2}
+.hledger-chart .line.te1{stroke:#bcb6f2}
+.hledger-chart .fill.te2{fill:#655da3}
+.hledger-chart .line.te2{stroke:#655da3}
+.hledger-chart .fill.te3{fill:#d8d4f7}
+.hledger-chart .line.te3{stroke:#d8d4f7}
+.hledger-chart .fill.tr0{fill:#008300}
+.hledger-chart .line.tr0{stroke:#008300}
+.hledger-chart .fill.tr1{fill:#66b566}
+.hledger-chart .line.tr1{stroke:#66b566}
+.hledger-chart .fill.tr2{fill:#005c00}
+.hledger-chart .line.tr2{stroke:#005c00}
+.hledger-chart .fill.tr3{fill:#a6d4a6}
+.hledger-chart .line.tr3{stroke:#a6d4a6}
+.hledger-chart .fill.tx0{fill:#e66767}
+.hledger-chart .line.tx0{stroke:#e66767}
+.hledger-chart .fill.tx1{fill:#f0a4a4}
+.hledger-chart .line.tx1{stroke:#f0a4a4}
+.hledger-chart .fill.tx2{fill:#a14848}
+.hledger-chart .line.tx2{stroke:#a14848}
+.hledger-chart .fill.tx3{fill:#f6caca}
+.hledger-chart .line.tx3{stroke:#f6caca}
+.hledger-chart .fill.s0{fill:#3987e5}
+.hledger-chart .line.s0{stroke:#3987e5}
+.hledger-chart .fill.s1{fill:#d95926}
+.hledger-chart .line.s1{stroke:#d95926}
+.hledger-chart .fill.s2{fill:#199e70}
+.hledger-chart .line.s2{stroke:#199e70}
+.hledger-chart .fill.s3{fill:#c98500}
+.hledger-chart .line.s3{stroke:#c98500}
+.hledger-chart .fill.s4{fill:#d55181}
+.hledger-chart .line.s4{stroke:#d55181}
+.hledger-chart .fill.s5{fill:#008300}
+.hledger-chart .line.s5{stroke:#008300}
+.hledger-chart .fill.s6{fill:#9085e9}
+.hledger-chart .line.s6{stroke:#9085e9}
+.hledger-chart .fill.s7{fill:#e66767}
+.hledger-chart .line.s7{stroke:#e66767}
+.hledger-chart .fill.other{fill:#898781}
+.hledger-chart .line.other{stroke:#898781}
+.hledger-chart .fill.oa{fill:#6987a9}
+.hledger-chart .line.oa{stroke:#6987a9}
+.hledger-chart .fill.ol{fill:#a3864d}
+.hledger-chart .line.ol{stroke:#a3864d}
+.hledger-chart .fill.oe{fill:#8c86ab}
+.hledger-chart .line.oe{stroke:#8c86ab}
+.hledger-chart .fill.or{fill:#52854d}
+.hledger-chart .line.or{stroke:#52854d}
+.hledger-chart .fill.ox{fill:#ae7a77}
+.hledger-chart .line.ox{stroke:#ae7a77}
+.hledger-chart .fill.lone{fill:#22a6be}
+.hledger-chart .line.lone{stroke:#22a6be}
+.hledger-chart .fill.neutral{fill:#c3c2b7}
+.hledger-chart .line.neutral{stroke:#c3c2b7}
+}
+</style>
+<rect class="bg" width="100%" height="100%" />
+<text class="title" x="16" y="33">Quarterly Cashflow Statement 2012-01-01..2014-12-31, valued at period ends</text>
+<rect x="16" y="58" width="12" height="12" rx="3" class="fill s1" />
+<text class="label" x="36" y="69">Assets:US:BofA:Checking</text>
+<rect x="221.9" y="58" width="12" height="12" rx="3" class="fill s6" />
+<text class="label" x="241.9" y="69">Assets:US:ETrade:Cash</text>
+<rect x="415.7" y="58" width="12" height="12" rx="3" class="fill s4" />
+<text class="label" x="435.7" y="69">Assets:US:Vanguard:Cash</text>
+<line class="mark total" x1="623.7" x2="635.7" y1="64" y2="64" />
+<text class="label" x="643.7" y="69">Net</text>
+<line class="grid" x1="95.1" x2="864" y1="352" y2="352" />
+<text class="tick" x="87.1" y="357" text-anchor="end">-8000</text>
+<line class="grid" x1="95.1" x2="864" y1="314.9" y2="314.9" />
+<text class="tick" x="87.1" y="319.9" text-anchor="end">-6000</text>
+<line class="grid" x1="95.1" x2="864" y1="277.7" y2="277.7" />
+<text class="tick" x="87.1" y="282.7" text-anchor="end">-4000</text>
+<line class="grid" x1="95.1" x2="864" y1="240.6" y2="240.6" />
+<text class="tick" x="87.1" y="245.6" text-anchor="end">-2000</text>
+<line class="axis" x1="95.1" x2="864" y1="203.4" y2="203.4" />
+<text class="tick" x="87.1" y="208.4" text-anchor="end">0</text>
+<line class="grid" x1="95.1" x2="864" y1="166.3" y2="166.3" />
+<text class="tick" x="87.1" y="171.3" text-anchor="end">2000</text>
+<line class="grid" x1="95.1" x2="864" y1="129.1" y2="129.1" />
+<text class="tick" x="87.1" y="134.1" text-anchor="end">4000</text>
+<line class="grid" x1="95.1" x2="864" y1="92" y2="92" />
+<text class="tick" x="87.1" y="97" text-anchor="end">6000 USD</text>
+<text class="tick" x="127.1" y="373" text-anchor="middle">2012Q1</text>
+<text class="tick" x="255.3" y="373" text-anchor="middle">2012Q3</text>
+<text class="tick" x="383.4" y="373" text-anchor="middle">2013Q1</text>
+<text class="tick" x="511.6" y="373" text-anchor="middle">2013Q3</text>
+<text class="tick" x="639.7" y="373" text-anchor="middle">2014Q1</text>
+<text class="tick" x="767.9" y="373" text-anchor="middle">2014Q3</text>
+<defs>
+<clipPath id="hledger-chart-clip-barv_103.1_203.4_-97.3">
+<path d="M 103.1 203.4 V 109.1 Q 103.1 106.1 106.1 106.1 H 148.2 Q 151.2 106.1 151.2 109.1 V 203.4 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_103.1_203.4_-97.3)">
+<g>
+<title>2012Q1 · Assets:US:BofA:Checking · 3438.51 USD</title>
+<path class="fill s1" d="M 103.1 203.4 V 139.6 Q 103.1 139.6 103.1 139.6 H 151.2 Q 151.2 139.6 151.2 139.6 V 203.4 Z" />
+</g>
+<g>
+<title>2012Q1 · Assets:US:Vanguard:Cash · 1800.05 USD</title>
+<path class="fill s4" d="M 103.1 137.6 V 106.1 Q 103.1 106.1 103.1 106.1 H 151.2 Q 151.2 106.1 151.2 106.1 V 137.6 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_167.2_203.4_57.7">
+<path d="M 167.2 203.4 V 258.1 Q 167.2 261.1 170.2 261.1 H 212.2 Q 215.2 261.1 215.2 258.1 V 203.4 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_167.2_203.4_57.7)">
+<g>
+<title>2012Q2 · Assets:US:BofA:Checking · -1307.07 USD</title>
+<path class="fill s1" d="M 167.2 203.4 V 227.7 Q 167.2 227.7 167.2 227.7 H 215.2 Q 215.2 227.7 215.2 227.7 V 203.4 Z" />
+</g>
+<g>
+<title>2012Q2 · Assets:US:Vanguard:Cash · -1800.07 USD</title>
+<path class="fill s4" d="M 167.2 229.7 V 261.1 Q 167.2 261.1 167.2 261.1 H 215.2 Q 215.2 261.1 215.2 261.1 V 229.7 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_231.3_203.4_-67.6">
+<path d="M 231.3 203.4 V 138.8 Q 231.3 135.8 234.3 135.8 H 276.3 Q 279.3 135.8 279.3 138.8 V 203.4 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_231.3_203.4_-67.6)">
+<g>
+<title>2012Q3 · Assets:US:BofA:Checking · 3538.81 USD</title>
+<path class="fill s1" d="M 231.3 203.4 V 137.7 Q 231.3 137.7 231.3 137.7 H 279.3 Q 279.3 137.7 279.3 137.7 V 203.4 Z" />
+</g>
+<g>
+<title>2012Q3 · Assets:US:ETrade:Cash · 102.39 USD</title>
+<path class="fill s6" d="M 231.3 137.7 V 135.8 Q 231.3 135.8 231.3 135.8 H 279.3 Q 279.3 135.8 279.3 135.8 V 137.7 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_295.3_203.4_-37.4">
+<path d="M 295.3 203.4 V 169 Q 295.3 166 298.3 166 H 340.4 Q 343.4 166 343.4 169 V 203.4 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_295.3_203.4_-37.4)">
+<g>
+<title>2012Q4 · Assets:US:BofA:Checking · 1778.37 USD</title>
+<path class="fill s1" d="M 295.3 203.4 V 170.4 Q 295.3 170.4 295.3 170.4 H 343.4 Q 343.4 170.4 343.4 170.4 V 203.4 Z" />
+</g>
+<g>
+<title>2012Q4 · Assets:US:ETrade:Cash · 234.79 USD</title>
+<path class="fill s6" d="M 295.3 168.4 V 166 Q 295.3 166 295.3 166 H 343.4 Q 343.4 166 343.4 166 V 168.4 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_359.4_203.4_-36.3">
+<path d="M 359.4 203.4 V 170.1 Q 359.4 167.1 362.4 167.1 H 404.5 Q 407.5 167.1 407.5 170.1 V 203.4 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_359.4_203.4_-36.3)">
+<g>
+<title>2013Q1 · Assets:US:ETrade:Cash · 155.16 USD</title>
+<path class="fill s6" d="M 359.4 203.4 V 200.5 Q 359.4 200.5 359.4 200.5 H 407.5 Q 407.5 200.5 407.5 200.5 V 203.4 Z" />
+</g>
+<g>
+<title>2013Q1 · Assets:US:Vanguard:Cash · 1800.07 USD</title>
+<path class="fill s4" d="M 359.4 198.5 V 167.1 Q 359.4 167.1 359.4 167.1 H 407.5 Q 407.5 167.1 407.5 167.1 V 198.5 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_359.4_203.4_19.1">
+<path d="M 359.4 203.4 V 219.6 Q 359.4 222.6 362.4 222.6 H 404.5 Q 407.5 222.6 407.5 219.6 V 203.4 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_359.4_203.4_19.1)">
+<g>
+<title>2013Q1 · Assets:US:BofA:Checking · -1031.03 USD</title>
+<path class="fill s1" d="M 359.4 203.4 V 222.6 Q 359.4 222.6 359.4 222.6 H 407.5 Q 407.5 222.6 407.5 222.6 V 203.4 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_423.5_203.4_119.7">
+<path d="M 423.5 203.4 V 320.1 Q 423.5 323.1 426.5 323.1 H 468.5 Q 471.5 323.1 471.5 320.1 V 203.4 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_423.5_203.4_119.7)">
+<g>
+<title>2013Q2 · Assets:US:BofA:Checking · -4485.42 USD</title>
+<path class="fill s1" d="M 423.5 203.4 V 286.7 Q 423.5 286.7 423.5 286.7 H 471.5 Q 471.5 286.7 471.5 286.7 V 203.4 Z" />
+</g>
+<g>
+<title>2013Q2 · Assets:US:ETrade:Cash · -159.37 USD</title>
+<path class="fill s6" d="M 423.5 286.7 V 289.7 Q 423.5 289.7 423.5 289.7 H 471.5 Q 471.5 289.7 471.5 289.7 V 286.7 Z" />
+</g>
+<g>
+<title>2013Q2 · Assets:US:Vanguard:Cash · -1800.03 USD</title>
+<path class="fill s4" d="M 423.5 291.7 V 323.1 Q 423.5 323.1 423.5 323.1 H 471.5 Q 471.5 323.1 471.5 323.1 V 291.7 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_487.6_203.4_-67.6">
+<path d="M 487.6 203.4 V 138.8 Q 487.6 135.8 490.6 135.8 H 532.6 Q 535.6 135.8 535.6 138.8 V 203.4 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_487.6_203.4_-67.6)">
+<g>
+<title>2013Q3 · Assets:US:BofA:Checking · 3641.84 USD</title>
+<path class="fill s1" d="M 487.6 203.4 V 135.8 Q 487.6 135.8 487.6 135.8 H 535.6 Q 535.6 135.8 535.6 135.8 V 203.4 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_487.6_203.4_1.4">
+<path d="M 487.6 203.4 V 203.4 Q 487.6 204.9 489 204.9 H 534.2 Q 535.6 204.9 535.6 203.4 V 203.4 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_487.6_203.4_1.4)">
+<g>
+<title>2013Q3 · Assets:US:ETrade:Cash · -77.43 USD</title>
+<path class="fill s6" d="M 487.6 203.4 V 204.9 Q 487.6 204.9 487.6 204.9 H 535.6 Q 535.6 204.9 535.6 204.9 V 203.4 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_551.6_203.4_-31.1">
+<path d="M 551.6 203.4 V 175.4 Q 551.6 172.4 554.6 172.4 H 596.7 Q 599.7 172.4 599.7 175.4 V 203.4 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_551.6_203.4_-31.1)">
+<g>
+<title>2013Q4 · Assets:US:BofA:Checking · 1673.11 USD</title>
+<path class="fill s1" d="M 551.6 203.4 V 172.4 Q 551.6 172.4 551.6 172.4 H 599.7 Q 599.7 172.4 599.7 172.4 V 203.4 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_615.7_203.4_-13.3">
+<path d="M 615.7 203.4 V 193.1 Q 615.7 190.1 618.7 190.1 H 660.8 Q 663.8 190.1 663.8 193.1 V 203.4 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_615.7_203.4_-13.3)">
+<g>
+<title>2014Q1 · Assets:US:ETrade:Cash · 718.52 USD</title>
+<path class="fill s6" d="M 615.7 203.4 V 190.1 Q 615.7 190.1 615.7 190.1 H 663.8 Q 663.8 190.1 663.8 190.1 V 203.4 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_615.7_203.4_21.1">
+<path d="M 615.7 203.4 V 221.6 Q 615.7 224.6 618.7 224.6 H 660.8 Q 663.8 224.6 663.8 221.6 V 203.4 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_615.7_203.4_21.1)">
+<g>
+<title>2014Q1 · Assets:US:BofA:Checking · -1137.81 USD</title>
+<path class="fill s1" d="M 615.7 203.4 V 224.6 Q 615.7 224.6 615.7 224.6 H 663.8 Q 663.8 224.6 663.8 224.6 V 203.4 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_679.8_203.4_28.5">
+<path d="M 679.8 203.4 V 228.9 Q 679.8 231.9 682.8 231.9 H 724.8 Q 727.8 231.9 727.8 228.9 V 203.4 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_679.8_203.4_28.5)">
+<g>
+<title>2014Q2 · Assets:US:BofA:Checking · -1532.34 USD</title>
+<path class="fill s1" d="M 679.8 203.4 V 231.9 Q 679.8 231.9 679.8 231.9 H 727.8 Q 727.8 231.9 727.8 231.9 V 203.4 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_743.9_203.4_43.9">
+<path d="M 743.9 203.4 V 244.3 Q 743.9 247.3 746.9 247.3 H 788.9 Q 791.9 247.3 791.9 244.3 V 203.4 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_743.9_203.4_43.9)">
+<g>
+<title>2014Q3 · Assets:US:BofA:Checking · -1527.52 USD</title>
+<path class="fill s1" d="M 743.9 203.4 V 231.8 Q 743.9 231.8 743.9 231.8 H 791.9 Q 791.9 231.8 791.9 231.8 V 203.4 Z" />
+</g>
+<g>
+<title>2014Q3 · Assets:US:ETrade:Cash · -837.08 USD</title>
+<path class="fill s6" d="M 743.9 233.8 V 247.3 Q 743.9 247.3 743.9 247.3 H 791.9 Q 791.9 247.3 791.9 247.3 V 233.8 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_807.9_203.4_-92.9">
+<path d="M 807.9 203.4 V 113.6 Q 807.9 110.6 810.9 110.6 H 853 Q 856 110.6 856 113.6 V 203.4 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_807.9_203.4_-92.9)">
+<g>
+<title>2014Q4 · Assets:US:ETrade:Cash · 5000.00 USD</title>
+<path class="fill s6" d="M 807.9 203.4 V 110.6 Q 807.9 110.6 807.9 110.6 H 856 Q 856 110.6 856 110.6 V 203.4 Z" />
+</g>
+</g>
+<defs>
+<clipPath id="hledger-chart-clip-barv_807.9_203.4_45.6">
+<path d="M 807.9 203.4 V 246 Q 807.9 249 810.9 249 H 853 Q 856 249 856 246 V 203.4 Z" />
+</clipPath>
+</defs>
+<g clip-path="url(#hledger-chart-clip-barv_807.9_203.4_45.6)">
+<g>
+<title>2014Q4 · Assets:US:BofA:Checking · -2453.40 USD</title>
+<path class="fill s1" d="M 807.9 203.4 V 249 Q 807.9 249 807.9 249 H 856 Q 856 249 856 249 V 203.4 Z" />
+</g>
+</g>
+<g>
+<title>2012Q1 · Net · 5238.56 USD</title>
+<line class="mark total" x1="99.1" x2="155.2" y1="106.1" y2="106.1" />
+</g>
+<g>
+<title>2012Q2 · Net · -3107.14 USD</title>
+<line class="mark total" x1="163.2" x2="219.2" y1="261.1" y2="261.1" />
+</g>
+<g>
+<title>2012Q3 · Net · 3641.18 USD</title>
+<line class="mark total" x1="227.3" x2="283.3" y1="135.8" y2="135.8" />
+</g>
+<g>
+<title>2012Q4 · Net · 2013.16 USD</title>
+<line class="mark total" x1="291.3" x2="347.4" y1="166" y2="166" />
+</g>
+<g>
+<title>2013Q1 · Net · 924.20 USD</title>
+<line class="mark total" x1="355.4" x2="411.5" y1="186.3" y2="186.3" />
+</g>
+<g>
+<title>2013Q2 · Net · -6444.82 USD</title>
+<line class="mark total" x1="419.5" x2="475.5" y1="323.1" y2="323.1" />
+</g>
+<g>
+<title>2013Q3 · Net · 3564.41 USD</title>
+<line class="mark total" x1="483.6" x2="539.6" y1="137.2" y2="137.2" />
+</g>
+<g>
+<title>2013Q4 · Net · 1656.63 USD</title>
+<line class="mark total" x1="547.6" x2="603.7" y1="172.7" y2="172.7" />
+</g>
+<g>
+<title>2014Q1 · Net · -419.34 USD</title>
+<line class="mark total" x1="611.7" x2="667.8" y1="211.2" y2="211.2" />
+</g>
+<g>
+<title>2014Q2 · Net · -1532.34 USD</title>
+<line class="mark total" x1="675.8" x2="731.8" y1="231.9" y2="231.9" />
+</g>
+<g>
+<title>2014Q3 · Net · -2364.57 USD</title>
+<line class="mark total" x1="739.9" x2="795.9" y1="247.3" y2="247.3" />
+</g>
+<g>
+<title>2014Q4 · Net · 2546.60 USD</title>
+<line class="mark total" x1="803.9" x2="860" y1="156.1" y2="156.1" />
+</g>
+</svg>

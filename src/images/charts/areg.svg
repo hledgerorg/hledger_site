@@ -1,0 +1,293 @@
+<svg xmlns="http://www.w3.org/2000/svg" class="hledger-chart" width="880" height="362" viewBox="0 0 880 362" role="img" aria-label="Transactions in Assets and subaccounts (matching query):">
+<title>Transactions in Assets and subaccounts (matching query):</title>
+<style>.hledger-chart{max-width:100%;height:auto;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;font-size:14px}
+.hledger-chart .title{font-size:17px;font-weight:600}
+.hledger-chart .heading{font-size:15px;font-weight:600}
+.hledger-chart .value,.hledger-chart .tick{font-variant-numeric:tabular-nums}
+.hledger-chart .grid,.hledger-chart .axis{stroke-width:1}
+.hledger-chart .line{fill:none;stroke-width:3;stroke-linejoin:round;stroke-linecap:round}
+.hledger-chart .mark{stroke-width:2.5}
+.hledger-chart .average{stroke-width:2;stroke-dasharray:5 4}
+.hledger-chart .hit,.hledger-chart .plot{fill:transparent}
+.hledger-chart .hatch{stroke-width:2.5}
+.hledger-chart .bg{fill:#fcfcfb}
+.hledger-chart .title{fill:#0b0b0b}
+.hledger-chart .heading{fill:#0b0b0b}
+.hledger-chart .label{fill:#52514e}
+.hledger-chart .value{fill:#52514e}
+.hledger-chart .tick{fill:#898781}
+.hledger-chart .grid{stroke:#e1e0d9}
+.hledger-chart .axis{stroke:#c3c2b7}
+.hledger-chart .line.total{stroke:#0b0b0b}
+.hledger-chart .mark.total{stroke:#0b0b0b}
+.hledger-chart .average{stroke:#0b0b0b}
+.hledger-chart .clip{fill:#0b0b0b}
+.hledger-chart .hatch{stroke:#fcfcfb}
+.hledger-chart .fill.ta0{fill:#2a78d6}
+.hledger-chart .line.ta0{stroke:#2a78d6}
+.hledger-chart .fill.ta1{fill:#1d5496}
+.hledger-chart .line.ta1{stroke:#1d5496}
+.hledger-chart .fill.ta2{fill:#7faee6}
+.hledger-chart .line.ta2{stroke:#7faee6}
+.hledger-chart .fill.ta3{fill:#b4d0f1}
+.hledger-chart .line.ta3{stroke:#b4d0f1}
+.hledger-chart .fill.tl0{fill:#eda100}
+.hledger-chart .line.tl0{stroke:#eda100}
+.hledger-chart .fill.tl1{fill:#a67100}
+.hledger-chart .line.tl1{stroke:#a67100}
+.hledger-chart .fill.tl2{fill:#f4c766}
+.hledger-chart .line.tl2{stroke:#f4c766}
+.hledger-chart .fill.tl3{fill:#f9dea6}
+.hledger-chart .line.tl3{stroke:#f9dea6}
+.hledger-chart .fill.te0{fill:#4a3aa7}
+.hledger-chart .line.te0{stroke:#4a3aa7}
+.hledger-chart .fill.te1{fill:#342975}
+.hledger-chart .line.te1{stroke:#342975}
+.hledger-chart .fill.te2{fill:#9289ca}
+.hledger-chart .line.te2{stroke:#9289ca}
+.hledger-chart .fill.te3{fill:#c0bae0}
+.hledger-chart .line.te3{stroke:#c0bae0}
+.hledger-chart .fill.tr0{fill:#008300}
+.hledger-chart .line.tr0{stroke:#008300}
+.hledger-chart .fill.tr1{fill:#005c00}
+.hledger-chart .line.tr1{stroke:#005c00}
+.hledger-chart .fill.tr2{fill:#66b566}
+.hledger-chart .line.tr2{stroke:#66b566}
+.hledger-chart .fill.tr3{fill:#a6d4a6}
+.hledger-chart .line.tr3{stroke:#a6d4a6}
+.hledger-chart .fill.tx0{fill:#e34948}
+.hledger-chart .line.tx0{stroke:#e34948}
+.hledger-chart .fill.tx1{fill:#9f3332}
+.hledger-chart .line.tx1{stroke:#9f3332}
+.hledger-chart .fill.tx2{fill:#ee9291}
+.hledger-chart .line.tx2{stroke:#ee9291}
+.hledger-chart .fill.tx3{fill:#f5bfbf}
+.hledger-chart .line.tx3{stroke:#f5bfbf}
+.hledger-chart .fill.s0{fill:#2a78d6}
+.hledger-chart .line.s0{stroke:#2a78d6}
+.hledger-chart .fill.s1{fill:#eb6834}
+.hledger-chart .line.s1{stroke:#eb6834}
+.hledger-chart .fill.s2{fill:#1baf7a}
+.hledger-chart .line.s2{stroke:#1baf7a}
+.hledger-chart .fill.s3{fill:#eda100}
+.hledger-chart .line.s3{stroke:#eda100}
+.hledger-chart .fill.s4{fill:#e87ba4}
+.hledger-chart .line.s4{stroke:#e87ba4}
+.hledger-chart .fill.s5{fill:#008300}
+.hledger-chart .line.s5{stroke:#008300}
+.hledger-chart .fill.s6{fill:#4a3aa7}
+.hledger-chart .line.s6{stroke:#4a3aa7}
+.hledger-chart .fill.s7{fill:#e34948}
+.hledger-chart .line.s7{stroke:#e34948}
+.hledger-chart .fill.other{fill:#898781}
+.hledger-chart .line.other{stroke:#898781}
+.hledger-chart .fill.oa{fill:#6381a3}
+.hledger-chart .line.oa{stroke:#6381a3}
+.hledger-chart .fill.ol{fill:#b1914d}
+.hledger-chart .line.ol{stroke:#b1914d}
+.hledger-chart .fill.oe{fill:#706890}
+.hledger-chart .line.oe{stroke:#706890}
+.hledger-chart .fill.or{fill:#52854d}
+.hledger-chart .line.or{stroke:#52854d}
+.hledger-chart .fill.ox{fill:#ad6e6a}
+.hledger-chart .line.ox{stroke:#ad6e6a}
+.hledger-chart .fill.lone{fill:#1597b0}
+.hledger-chart .line.lone{stroke:#1597b0}
+.hledger-chart .fill.neutral{fill:#52514e}
+.hledger-chart .line.neutral{stroke:#52514e}
+@media (prefers-color-scheme:dark){
+.hledger-chart .bg{fill:#1a1a19}
+.hledger-chart .title{fill:#ffffff}
+.hledger-chart .heading{fill:#ffffff}
+.hledger-chart .label{fill:#c3c2b7}
+.hledger-chart .value{fill:#c3c2b7}
+.hledger-chart .tick{fill:#898781}
+.hledger-chart .grid{stroke:#2c2c2a}
+.hledger-chart .axis{stroke:#383835}
+.hledger-chart .line.total{stroke:#ffffff}
+.hledger-chart .mark.total{stroke:#ffffff}
+.hledger-chart .average{stroke:#ffffff}
+.hledger-chart .clip{fill:#ffffff}
+.hledger-chart .hatch{stroke:#1a1a19}
+.hledger-chart .fill.ta0{fill:#3987e5}
+.hledger-chart .line.ta0{stroke:#3987e5}
+.hledger-chart .fill.ta1{fill:#88b7ef}
+.hledger-chart .line.ta1{stroke:#88b7ef}
+.hledger-chart .fill.ta2{fill:#285ea0}
+.hledger-chart .line.ta2{stroke:#285ea0}
+.hledger-chart .fill.ta3{fill:#bad5f6}
+.hledger-chart .line.ta3{stroke:#bad5f6}
+.hledger-chart .fill.tl0{fill:#c98500}
+.hledger-chart .line.tl0{stroke:#c98500}
+.hledger-chart .fill.tl1{fill:#dfb666}
+.hledger-chart .line.tl1{stroke:#dfb666}
+.hledger-chart .fill.tl2{fill:#8d5d00}
+.hledger-chart .line.tl2{stroke:#8d5d00}
+.hledger-chart .fill.tl3{fill:#ecd4a6}
+.hledger-chart .line.tl3{stroke:#ecd4a6}
+.hledger-chart .fill.te0{fill:#9085e9}
+.hledger-chart .line.te0{stroke:#9085e9}
+.hledger-chart .fill.te1{fill:#bcb6f2}
+.hledger-chart .line.te1{stroke:#bcb6f2}
+.hledger-chart .fill.te2{fill:#655da3}
+.hledger-chart .line.te2{stroke:#655da3}
+.hledger-chart .fill.te3{fill:#d8d4f7}
+.hledger-chart .line.te3{stroke:#d8d4f7}
+.hledger-chart .fill.tr0{fill:#008300}
+.hledger-chart .line.tr0{stroke:#008300}
+.hledger-chart .fill.tr1{fill:#66b566}
+.hledger-chart .line.tr1{stroke:#66b566}
+.hledger-chart .fill.tr2{fill:#005c00}
+.hledger-chart .line.tr2{stroke:#005c00}
+.hledger-chart .fill.tr3{fill:#a6d4a6}
+.hledger-chart .line.tr3{stroke:#a6d4a6}
+.hledger-chart .fill.tx0{fill:#e66767}
+.hledger-chart .line.tx0{stroke:#e66767}
+.hledger-chart .fill.tx1{fill:#f0a4a4}
+.hledger-chart .line.tx1{stroke:#f0a4a4}
+.hledger-chart .fill.tx2{fill:#a14848}
+.hledger-chart .line.tx2{stroke:#a14848}
+.hledger-chart .fill.tx3{fill:#f6caca}
+.hledger-chart .line.tx3{stroke:#f6caca}
+.hledger-chart .fill.s0{fill:#3987e5}
+.hledger-chart .line.s0{stroke:#3987e5}
+.hledger-chart .fill.s1{fill:#d95926}
+.hledger-chart .line.s1{stroke:#d95926}
+.hledger-chart .fill.s2{fill:#199e70}
+.hledger-chart .line.s2{stroke:#199e70}
+.hledger-chart .fill.s3{fill:#c98500}
+.hledger-chart .line.s3{stroke:#c98500}
+.hledger-chart .fill.s4{fill:#d55181}
+.hledger-chart .line.s4{stroke:#d55181}
+.hledger-chart .fill.s5{fill:#008300}
+.hledger-chart .line.s5{stroke:#008300}
+.hledger-chart .fill.s6{fill:#9085e9}
+.hledger-chart .line.s6{stroke:#9085e9}
+.hledger-chart .fill.s7{fill:#e66767}
+.hledger-chart .line.s7{stroke:#e66767}
+.hledger-chart .fill.other{fill:#898781}
+.hledger-chart .line.other{stroke:#898781}
+.hledger-chart .fill.oa{fill:#6987a9}
+.hledger-chart .line.oa{stroke:#6987a9}
+.hledger-chart .fill.ol{fill:#a3864d}
+.hledger-chart .line.ol{stroke:#a3864d}
+.hledger-chart .fill.oe{fill:#8c86ab}
+.hledger-chart .line.oe{stroke:#8c86ab}
+.hledger-chart .fill.or{fill:#52854d}
+.hledger-chart .line.or{stroke:#52854d}
+.hledger-chart .fill.ox{fill:#ae7a77}
+.hledger-chart .line.ox{stroke:#ae7a77}
+.hledger-chart .fill.lone{fill:#22a6be}
+.hledger-chart .line.lone{stroke:#22a6be}
+.hledger-chart .fill.neutral{fill:#c3c2b7}
+.hledger-chart .line.neutral{stroke:#c3c2b7}
+}
+</style>
+<rect class="bg" width="100%" height="100%" />
+<text class="title" x="16" y="33">Transactions in Assets and subaccounts (matching query):</text>
+<line class="axis" x1="105.4" x2="864" y1="320" y2="320" />
+<text class="tick" x="97.4" y="325" text-anchor="end">0</text>
+<line class="grid" x1="105.4" x2="864" y1="282.9" y2="282.9" />
+<text class="tick" x="97.4" y="287.9" text-anchor="end">50</text>
+<line class="grid" x1="105.4" x2="864" y1="245.7" y2="245.7" />
+<text class="tick" x="97.4" y="250.7" text-anchor="end">100</text>
+<line class="grid" x1="105.4" x2="864" y1="208.6" y2="208.6" />
+<text class="tick" x="97.4" y="213.6" text-anchor="end">150</text>
+<line class="grid" x1="105.4" x2="864" y1="171.4" y2="171.4" />
+<text class="tick" x="97.4" y="176.4" text-anchor="end">200</text>
+<line class="grid" x1="105.4" x2="864" y1="134.3" y2="134.3" />
+<text class="tick" x="97.4" y="139.3" text-anchor="end">250</text>
+<line class="grid" x1="105.4" x2="864" y1="97.1" y2="97.1" />
+<text class="tick" x="97.4" y="102.1" text-anchor="end">300</text>
+<line class="grid" x1="105.4" x2="864" y1="60" y2="60" />
+<text class="tick" x="97.4" y="65" text-anchor="end">350 VACHR</text>
+<text class="tick" x="267.2" y="341" text-anchor="middle">2014-03</text>
+<text class="tick" x="429" y="341" text-anchor="middle">2014-05</text>
+<text class="tick" x="590.8" y="341" text-anchor="middle">2014-07</text>
+<text class="tick" x="755.2" y="341" text-anchor="middle">2014-09</text>
+<polyline class="line ta0" points="113.4,138.1 150.5,138.1 150.5,134.7 187.7,134.7 187.7,131.2 224.8,131.2 224.8,127.8 261.9,127.8 261.9,124.4 299,124.4 299,120.9 336.2,120.9 336.2,117.5 373.3,117.5 373.3,114.1 410.4,114.1 410.4,110.6 447.6,110.6 447.6,107.2 484.7,107.2 484.7,103.8 521.8,103.8 521.8,100.4 559,100.4 559,96.9 596.1,96.9 596.1,93.5 633.2,93.5 633.2,90.1 670.4,90.1 670.4,86.6 707.5,86.6 707.5,83.2 744.6,83.2 744.6,79.8 781.7,79.8 781.7,76.3 818.9,76.3 818.9,72.9 856,72.9 856,69.5" />
+<g>
+<title>2014-01-02 · Assets · 244.86 VACHR</title>
+<circle class="hit" cx="113.4" cy="138.1" r="6" />
+</g>
+<g>
+<title>2014-01-16 · Assets · 249.48 VACHR</title>
+<circle class="hit" cx="150.5" cy="134.7" r="6" />
+</g>
+<g>
+<title>2014-01-30 · Assets · 254.10 VACHR</title>
+<circle class="hit" cx="187.7" cy="131.2" r="6" />
+</g>
+<g>
+<title>2014-02-13 · Assets · 258.72 VACHR</title>
+<circle class="hit" cx="224.8" cy="127.8" r="6" />
+</g>
+<g>
+<title>2014-02-27 · Assets · 263.34 VACHR</title>
+<circle class="hit" cx="261.9" cy="124.4" r="6" />
+</g>
+<g>
+<title>2014-03-13 · Assets · 267.96 VACHR</title>
+<circle class="hit" cx="299" cy="120.9" r="6" />
+</g>
+<g>
+<title>2014-03-27 · Assets · 272.58 VACHR</title>
+<circle class="hit" cx="336.2" cy="117.5" r="6" />
+</g>
+<g>
+<title>2014-04-10 · Assets · 277.20 VACHR</title>
+<circle class="hit" cx="373.3" cy="114.1" r="6" />
+</g>
+<g>
+<title>2014-04-24 · Assets · 281.82 VACHR</title>
+<circle class="hit" cx="410.4" cy="110.6" r="6" />
+</g>
+<g>
+<title>2014-05-08 · Assets · 286.44 VACHR</title>
+<circle class="hit" cx="447.6" cy="107.2" r="6" />
+</g>
+<g>
+<title>2014-05-22 · Assets · 291.06 VACHR</title>
+<circle class="hit" cx="484.7" cy="103.8" r="6" />
+</g>
+<g>
+<title>2014-06-05 · Assets · 295.68 VACHR</title>
+<circle class="hit" cx="521.8" cy="100.4" r="6" />
+</g>
+<g>
+<title>2014-06-19 · Assets · 300.30 VACHR</title>
+<circle class="hit" cx="559" cy="96.9" r="6" />
+</g>
+<g>
+<title>2014-07-03 · Assets · 304.92 VACHR</title>
+<circle class="hit" cx="596.1" cy="93.5" r="6" />
+</g>
+<g>
+<title>2014-07-17 · Assets · 309.54 VACHR</title>
+<circle class="hit" cx="633.2" cy="90.1" r="6" />
+</g>
+<g>
+<title>2014-07-31 · Assets · 314.16 VACHR</title>
+<circle class="hit" cx="670.4" cy="86.6" r="6" />
+</g>
+<g>
+<title>2014-08-14 · Assets · 318.78 VACHR</title>
+<circle class="hit" cx="707.5" cy="83.2" r="6" />
+</g>
+<g>
+<title>2014-08-28 · Assets · 323.40 VACHR</title>
+<circle class="hit" cx="744.6" cy="79.8" r="6" />
+</g>
+<g>
+<title>2014-09-11 · Assets · 328.02 VACHR</title>
+<circle class="hit" cx="781.7" cy="76.3" r="6" />
+</g>
+<g>
+<title>2014-09-25 · Assets · 332.64 VACHR</title>
+<circle class="hit" cx="818.9" cy="72.9" r="6" />
+</g>
+<g>
+<title>2014-10-09 · Assets · 337.26 VACHR</title>
+<circle class="hit" cx="856" cy="69.5" r="6" />
+</g>
+</svg>
