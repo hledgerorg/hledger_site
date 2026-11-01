@@ -41,9 +41,9 @@ For all changes, see the [release notes](relnotes.md).
 
 Upgrading is essentially just: install a hledger 2 binary (or build it) and keep working.
 
-But if you prefer, here's a more careful process, providing more assurance:
+But if you prefer, here's a more careful process:
 
-1. Install hledger 2 (see [Install](install.md)),
+1. [Install](install.md) hledger 2,
    keeping hledger 1 available under another name, eg by renaming its executable to `hledger1`.
 
    Both versions read the same config file. If you later use hledger 2 config file features,
