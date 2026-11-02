@@ -103,17 +103,18 @@ Short videos:
   - [hledger add](https://www.youtube.com/watch?v=oel7fBv1frI)
   - [hledger iadd](https://www.youtube.com/watch?v=ZuCT9EzryaI)
 - nontproject intros
-  - [You Need to Know Double-Entry Bookkeeping for Personal Finance, part 1](https://www.youtube.com/watch?v=L-JdL7cCiSQ) (2026, 8m, in bangla)
-  - [You Need to Learn hledger for Personal Finance: Beginners Guide, part 2](https://www.youtube.com/watch?v=NERD28IGwRE) (2026, 20m, in bangla)
-  - [Generate hledger Reports Like a Pro: Beginners Guide, part 3](https://www.youtube.com/watch?v=P3aPgROtkUc) (2026, 15m, in bangla)
-- [TORGiren DevOpses: hledger part 1](https://www.youtube.com/watch?v=sq3E-TKufh0) (2026, 10m, in polish)
+  - [You Need to Know Double-Entry Bookkeeping for Personal Finance, part 1](https://www.youtube.com/watch?v=L-JdL7cCiSQ) (2026, 8m, bangla)
+  - [You Need to Learn hledger for Personal Finance: Beginners Guide, part 2](https://www.youtube.com/watch?v=NERD28IGwRE) (2026, 20m, bangla)
+  - [Generate hledger Reports Like a Pro: Beginners Guide, part 3](https://www.youtube.com/watch?v=P3aPgROtkUc) (2026, 15m, bangla)
 
 Longer talks:
 
-- [O Clementino: Faça o Emacs olhar para o dinheiro usando o Embark](https://www.youtube.com/watch?v=4pvjwgvOtgA) (2026, 16m, in brazilian portuguese)
-- [O Clementino: Gerencie suas finanças como um hacker](https://www.youtube.com/watch?v=YG2I2Z8nfoo) (2026, 23m, in brazilian portuguese)
+- [TORGiren DevOpses: hledger part 2](https://www.youtube.com/watch?v=zD0ueaVw7pU) (2026, 40m, polish)
+- [TORGiren DevOpses: hledger part 1](https://www.youtube.com/watch?v=sq3E-TKufh0) (2026, 10m, polish)
+- [O Clementino: Faça o Emacs olhar para o dinheiro usando o Embark](https://www.youtube.com/watch?v=4pvjwgvOtgA) (2026, 16m, brazilian portuguese)
+- [O Clementino: Gerencie suas finanças como um hacker](https://www.youtube.com/watch?v=YG2I2Z8nfoo) (2026, 23m, brazilian portuguese)
 - [Youngbin Han @ FOSS for All](https://docs.google.com/presentation/d/17kkPlLOFhpwfEIhHfT0hJ1PRmZ6-Tq7JIAdTAhjp24A/preview?pru=AAABmo3qmB4*fWFiJB8Z7cZwQbc72JsTjA&slide=id.g38f1acd61f5_0_19)
-  (2025, slides, in korean and english) \
+  (2025, slides, korean and english) \
   Plain Text Accounting with hledger \
   with short videos of
   [add](https://www.youtube.com/watch?v=rh5EFnm0t_M) and
