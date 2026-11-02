@@ -81,9 +81,13 @@ Some other useful docs:
 
 ## Videos
 
-Short videos:
+Some may have alternate language soundtracks, or can be watched with auto-translated captions.
+
+English
 
 - [Coder Kaylee: Hledger in 10 Minutes: The Ultimate CLI Tool](https://www.youtube.com/watch?v=hshDr2Af2RU) (2025, 5m)
+- [Glenn Ramsey @ Kiwi Pycon XI](https://youtube.com/watch?v=lazZwTmAEHs)  (2022, 30m)\
+  Plain text accounting for fun and profit
 - [hledger fan: beginner lessons](https://youtube.com/channel/UCZLxXTjOqLzq4z5Jy0AyWSQ) (2019-2021, ~3m)
   - [The Basics: An hledger Transaction](https://www.youtube.com/watch?v=SSz09ThShrs)
   - [hledger Basics: 3 Must-Know Options for the Balance Command](https://www.youtube.com/watch?v=JZE5302SrtM)
@@ -102,25 +106,6 @@ Short videos:
   - [hledger: shortcuts part 3](https://www.youtube.com/watch?v=_3pHNICDgHc)
   - [hledger add](https://www.youtube.com/watch?v=oel7fBv1frI)
   - [hledger iadd](https://www.youtube.com/watch?v=ZuCT9EzryaI)
-- nontproject intros
-  - [You Need to Know Double-Entry Bookkeeping for Personal Finance, part 1](https://www.youtube.com/watch?v=L-JdL7cCiSQ) (2026, 8m, bangla)
-  - [You Need to Learn hledger for Personal Finance: Beginners Guide, part 2](https://www.youtube.com/watch?v=NERD28IGwRE) (2026, 20m, bangla)
-  - [Generate hledger Reports Like a Pro: Beginners Guide, part 3](https://www.youtube.com/watch?v=P3aPgROtkUc) (2026, 15m, bangla)
-
-Longer talks:
-
-- [TORGiren DevOpses: hledger part 2](https://www.youtube.com/watch?v=zD0ueaVw7pU) (2026, 40m, polish)
-- [TORGiren DevOpses: hledger part 1](https://www.youtube.com/watch?v=sq3E-TKufh0) (2026, 10m, polish)
-- [O Clementino: Faça o Emacs olhar para o dinheiro usando o Embark](https://www.youtube.com/watch?v=4pvjwgvOtgA) (2026, 16m, brazilian portuguese)
-- [O Clementino: Gerencie suas finanças como um hacker](https://www.youtube.com/watch?v=YG2I2Z8nfoo) (2026, 23m, brazilian portuguese)
-- [Youngbin Han @ FOSS for All](https://docs.google.com/presentation/d/17kkPlLOFhpwfEIhHfT0hJ1PRmZ6-Tq7JIAdTAhjp24A/preview?pru=AAABmo3qmB4*fWFiJB8Z7cZwQbc72JsTjA&slide=id.g38f1acd61f5_0_19)
-  (2025, slides, korean and english) \
-  Plain Text Accounting with hledger \
-  with short videos of
-  [add](https://www.youtube.com/watch?v=rh5EFnm0t_M) and
-  [web](https://www.youtube.com/watch?v=zOjvSYCvXNc)
-- [Glenn Ramsey @ Kiwi Pycon XI](https://youtube.com/watch?v=lazZwTmAEHs)  (2022, 30m)\
-  Plain text accounting for fun and profit
 - [Simon Michael @ HaskellerZ meetup](https://www.youtube.com/watch?v=6PKmZSHxu0c) (2021, 2h) <!-- apr 29 --> \
   Inside hledger: an architectural tour and how-to,
   [slides](https://rawcdn.githack.com/hledgerorg/hledger/4013a81af8dd2804c73ecac18fb3e7e4745a4275/doc/haskellerz/haskellerz.slidy.html)
@@ -135,14 +120,36 @@ Longer talks:
 - [FLOSS Weekly episode 375: hledger](https://twit.tv/shows/floss-weekly/episodes/375) (2016) <!-- feb 16 --> -
   [overview](https://www.youtube.com/watch?v=qS2UcDV_lbs) (3m),
   [full interview](https://www.youtube.com/watch?v=Xjl-wVJcYpE) (1h)
-<!-- gone
-- [hledger add](https://www.vincecima.com/2016/06/12/the-surprising-ease-of-plain-text-accounting.html) (2016, 30s) \
-  in The Surprising Ease of Plain Text Accounting 
--->
 
-See also:
+Bangla
 
-- [Youtube: latest "hledger" videos](https://www.youtube.com/results?search_query=hledger+-heath+-joker+-letlive) (beware, there's a ton of AI slop videos - report them if bad)
+- nontproject intros
+  - [You Need to Know Double-Entry Bookkeeping for Personal Finance, part 1](https://www.youtube.com/watch?v=L-JdL7cCiSQ) (2026, 8m, bangla)
+  - [You Need to Learn hledger for Personal Finance: Beginners Guide, part 2](https://www.youtube.com/watch?v=NERD28IGwRE) (2026, 20m, bangla)
+  - [Generate hledger Reports Like a Pro: Beginners Guide, part 3](https://www.youtube.com/watch?v=P3aPgROtkUc) (2026, 15m, bangla)
+
+Brazilian Portuguese
+
+- [O Clementino: Faça o Emacs olhar para o dinheiro usando o Embark](https://www.youtube.com/watch?v=4pvjwgvOtgA) (2026, 16m, brazilian portuguese)
+- [O Clementino: Gerencie suas finanças como um hacker](https://www.youtube.com/watch?v=YG2I2Z8nfoo) (2026, 23m, brazilian portuguese)
+
+Korean
+
+- [Youngbin Han @ FOSS for All](https://docs.google.com/presentation/d/17kkPlLOFhpwfEIhHfT0hJ1PRmZ6-Tq7JIAdTAhjp24A/preview?pru=AAABmo3qmB4*fWFiJB8Z7cZwQbc72JsTjA&slide=id.g38f1acd61f5_0_19)
+  (2025, slides, korean and english) \
+  Plain Text Accounting with hledger \
+  with short videos of
+  [add](https://www.youtube.com/watch?v=rh5EFnm0t_M) and
+  [web](https://www.youtube.com/watch?v=zOjvSYCvXNc)
+
+Polish
+
+- [TORGiren DevOpses: hledger part 2](https://www.youtube.com/watch?v=zD0ueaVw7pU) (2026, 40m, polish)
+- [TORGiren DevOpses: hledger part 1](https://www.youtube.com/watch?v=sq3E-TKufh0) (2026, 10m, polish)
+
+See also
+
+- [Youtube: latest "hledger" videos](https://www.youtube.com/results?search_query=hledger) (beware, there's a ton of slop videos - most of the good stuff is linked above)
 - [PTA: Videos](https://plaintextaccounting.org/#videos)
 
 ## Cookbook
