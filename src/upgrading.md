@@ -22,6 +22,7 @@ Some of the most useful new features in hledger 2:
   with several [cost basis methods](/1.99.6/hledger.html#cost-basis-methods) (FIFO, LIFO, HIFO, AVERAGE, ..).
   A new [holdings](/1.99.6/hledger.html#holdings) report shows your investments' performance.
 - **Charts**: reports can show [charts](charts.md), in the terminal or as SVG/HTML, with `--chart`.
+- **Simpler viewing**: `--view` opens a report in an appropriate viewer.
 - **Custom commands**: define custom [command aliases](/1.99.6/hledger.html#command-aliases) and scripts in your config file
 - **Simpler importing**: the new [get](/1.99.6/hledger.html#get) command fetches new transactions and market prices,
   and with a conventional `data/`, `rules/`, `prices/` layout, `hledger import` needs no arguments
@@ -29,11 +30,10 @@ Some of the most useful new features in hledger 2:
 - **More powerful CSV rules**: [merge](/1.99.6/hledger.html#merge) combines several CSV records into one transaction,
   [functions](/1.99.6/hledger.html#functions) transform field values,
   and CSV or rules files can be included in a journal.
-- **Simpler viewing**: `--view` opens a non-text report in the appropriate viewer.
+- **Compact transactions report**: the new [transactions](/1.99.6/hledger.html#transactions) (tx) command prints transactions as one line each.
 - **Find anywhere**: [`::TEXT`](/1.99.6/hledger.html#find-query) is an easy way to match on any field.
 - **Commodity aliases**: [commodity aliases](/1.99.6/hledger.html#commodity-aliases) help unify a commodity's symbols/units.
 - **Amount expressions**: a posting amount can be an [arithmetic expression](/1.99.6/hledger.html#amount-expressions), like `($50.20 + $16.54) * 1.05`.
-- **Compact transactions report**: the new [transactions](/1.99.6/hledger.html#transactions) (tx) command prints transactions as one line each.
 - **hledger-ui** updates automatically when your files change, by default.
 - **hledger-web** now has the main hledger reports, charts, report options, keyboard shortcuts, paging and a dark mode.
 
