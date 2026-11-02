@@ -5,8 +5,8 @@ h2 { margin-top:2em; }
 h3 { margin-top:1.5em; }
 </style>
 
-hledger has lots of docs, covering different needs.
-(If it seems like a lot, see [Tips for learning hledger](learn.md).)
+hledger has lots of documentation covering different needs.
+(If it seems overwhelming, see [Tips for learning hledger](learn.md).)
 
 **Start here:**
 
@@ -148,7 +148,7 @@ Polish
 
 See also
 
-- [Youtube: latest "hledger" videos](https://www.youtube.com/results?search_query=hledger) (beware, there's a ton of slop videos - most of the good stuff is linked above)
+- [Youtube: latest "hledger" videos](https://www.youtube.com/results?search_query=hledger) (beware, as of 2026 most results are slop - the good stuff gets linked above)
 - [PTA: Videos](https://plaintextaccounting.org/#videos)
 
 ## Cookbook
