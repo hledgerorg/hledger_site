@@ -244,4 +244,4 @@ If you are using hledger 2's lot tracking, you should also:
 
 After edits, check your files with both versions, eg `hledger check` and `hledger1 check`.
 For more about how hledger 1 reads hledger 2's lot entries,
-see [Keeping files readable by hledger 1](start-tracking-lots.md#keeping-files-readable-by-hledger-1).
+see [Keeping files readable by hledger 1](start-tracking-lots.md#keeping-lot-entries-readable-by-hledger-1).
