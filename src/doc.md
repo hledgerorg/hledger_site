@@ -135,12 +135,11 @@ Brazilian Portuguese
 
 Korean
 
-- [Youngbin Han @ FOSS for All](https://docs.google.com/presentation/d/17kkPlLOFhpwfEIhHfT0hJ1PRmZ6-Tq7JIAdTAhjp24A/preview?pru=AAABmo3qmB4*fWFiJB8Z7cZwQbc72JsTjA&slide=id.g38f1acd61f5_0_19)
-  (2025, slides, korean and english) \
-  Plain Text Accounting with hledger \
-  with short videos of
-  [add](https://www.youtube.com/watch?v=rh5EFnm0t_M) and
-  [web](https://www.youtube.com/watch?v=zOjvSYCvXNc)
+- [Youngbin Han: Plain Text Accounting with hledger @ FOSS for All](https://docs.google.com/presentation/d/17kkPlLOFhpwfEIhHfT0hJ1PRmZ6-Tq7JIAdTAhjp24A/preview?pru=AAABmo3qmB4*fWFiJB8Z7cZwQbc72JsTjA&slide=id.g38f1acd61f5_0_19)
+  slides, with short videos
+  [add](https://www.youtube.com/watch?v=rh5EFnm0t_M) (1m) &
+  [web](https://www.youtube.com/watch?v=zOjvSYCvXNc) (1m)
+  (2025, korean and english)
 
 Polish
 
