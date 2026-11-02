@@ -148,7 +148,7 @@ Polish
 
 See also
 
-- [Youtube: latest "hledger" videos](https://www.youtube.com/results?search_query=hledger) (beware, as of 2026 most results are slop - the good stuff gets linked above)
+- [Youtube: latest "hledger" videos](https://www.youtube.com/results?search_query=hledger) (beware, there's a ton of slop; the good stuff gets linked above)
 - [PTA: Videos](https://plaintextaccounting.org/#videos)
 
 ## Cookbook
