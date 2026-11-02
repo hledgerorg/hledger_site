@@ -935,6 +935,10 @@ Puts me in a position to make better financial decisions. So thanks, Simon. Hled
 Hledger used with an LLM is pure bliss
 --Luca Molteni
 
+hledger is the ffmpeg of accounting applications.
+--Grass Toucher Georg
+
+
 
 
 `; const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
