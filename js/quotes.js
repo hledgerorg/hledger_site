@@ -736,6 +736,9 @@ Thanks for showing one way of simplifying a task the software service vendors wa
 
 As someone who's worked as an accountant since 1985, I'm going to have to play with this. --dingokidneys
 
+Maybe this was fine in the 80's, but  not now. I'm an accountant, and I would never use a system like this. I've been using GNUCash for almost 15 years and its great, but any spreadsheet would be better than this.
+--javinot1
+
 I've been using hledger + Plaid + OpenClaw to manage my finances and honestly it's replaced every budgeting app I've tried. --Kenrick Beckett
 
 The other task was getting an overview over company finances. [Openclaw] set up a hledger, added some amounts, and keeps track of burn! Won’t replace an accountant, but super convenient to have everything accessible via one chat instead of across multiple apps.
@@ -938,6 +941,14 @@ Hledger used with an LLM is pure bliss
 hledger is the ffmpeg of accounting applications.
 --Grass Toucher Georg
 
+I've been using hledger for three years now for my business, but hand typed everything.  Didn't even know about hledger add until this video.  I really need to check out the CSV import.
+--MarkDyck
+
+csv import is God-sent
+--ivbaklan
+
+It took me two days to setup import rules for 8 different accounts across two banks, but now it all just works! The hardest part is the monthly download of the files now.
+--konradha
 
 
 
