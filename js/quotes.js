@@ -950,6 +950,7 @@ csv import is God-sent
 It took me two days to setup import rules for 8 different accounts across two banks, but now it all just works! The hardest part is the monthly download of the files now.
 --konradha
 
-
+Charts and the ROI and holdings improvements in one report make a plain-text ledger much easier to show to someone who doesn't live in the terminal.
+--Lucius
 
 `; const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
