@@ -20,6 +20,7 @@ beyond the [Accounting basics for PTA users](accounting-basics.md).
   [So, you want to learn Bookkeeping!](https://www.dwmbeancounter.com/BCTutorials/BCIntro/index.html).
   This has been recommended on the ledger list and [on HN](https://news.ycombinator.com/item?id=17245101).
 - [Accounting Coach](https://www.accountingcoach.com/)
+- [PractiBalance](https://practibalance.com/) - journal entry exercises: build the debits and credits for a transaction and see which line is missing, extra, on the wrong side or has the wrong amount. Free, no sign-up; also in Spanish (PGC), French (PCG) and German.
 - [Accounting Basics](http://www.accountingverse.com/accounting-basics/)
 - [Guru 99 Accounting Tutorials](http://www.guru99.com/accounting.html)
 - [principlesofaccounting.com](http://www.principlesofaccounting.com)
