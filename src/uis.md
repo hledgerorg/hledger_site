@@ -85,7 +85,7 @@ Help welcome, share updates in the chat room.
 | [ldash]             | rust     | Y       | N          | Y          | Y      | Y            | Y         | Y         | won't detect my accounts; requires assets:crypto |
 | [hledger-textual]   | python   | Y       | Y          | N          | Y      | Y            | Y         | Y         | writes directives to journal           |
 | [dravik]            | python   | N       |            |            |        |              |           |           | failed to build pydantic-core==2.33.2  |
-| [hledger-cal]       | haskell  | Y       | Y          | Y          | Y      | Y            | Y         | not yet!  |                                        |
+| [hledger-cal]       | haskell  | Y       | Y          | Y          | Y      | Y            | Y         | Y         |                                        |
 | **Graphical**       |          |         |            |            |        |              |           |           |                                        |
 | [Surebeans]         | C#       | Y       | Y          | Y          | Y      | N            | Y         | Y         | adds directives to files opened        |
 | [hledger-macos]     | swift    | Y       | N          | N          | Y      | Y            | Y         | Y         | (mac only)                             |
