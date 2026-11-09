@@ -10,6 +10,7 @@ Last updated: 2026-04
 [dravik]:             https://github.com/Yaser-Amiri/dravik
 [fruit-credits]:      https://codeberg.org/dz4k/fruit-credits
 [hledger add]:        hledger.md#add
+[hledger-cal]:        https://github.com/igbanam/hledger-cal
 [hledger-edit]:       https://pypi.org/project/hledger-utils
 [hledger-iadd]:       https://github.com/hpdeifel/hledger-iadd
 [hledger-macos]:      https://github.com/thesmokinator/hledger-macos
@@ -41,6 +42,7 @@ Last updated: 2026-04
 - [hledger-textual] TUI for hledger viewing/entry/editing (python, 2026)
 - [ldash] TUI for viewing portfolio, net worth and monthly budget (rust, 2026)
 - [puffin] TUI for hledger viewing (go, 2023..)
+- [hledger-cal] Calendar view of income and expenses for HLedger (haskell, 2026)
 
 **Graphical**
 
@@ -80,9 +82,10 @@ Help welcome, share updates in the chat room.
 | **[hledger-ui]**    | haskell  | Y       | Y          | Y          | Y      | Y            | Y         | Y         |                                        |
 | [hledger-iadd]      | haskell  | Y       | Y          | Y          | Y      | Y            | Y         | Y         |                                        |
 | [puffin]            | go       | Y       | N          | N          | Y      | Y            | Y         | Y         |                                        |
-| [ldash]             | rust     | Y       | N          | Y          | Y      | Y            | Y         | Y         | won't detect my accounts; requires assets:crypto
+| [ldash]             | rust     | Y       | N          | Y          | Y      | Y            | Y         | Y         | won't detect my accounts; requires assets:crypto |
 | [hledger-textual]   | python   | Y       | Y          | N          | Y      | Y            | Y         | Y         | writes directives to journal           |
 | [dravik]            | python   | N       |            |            |        |              |           |           | failed to build pydantic-core==2.33.2  |
+| [hledger-cal]       | haskell  | Y       | Y          | Y          | Y      | Y            | Y         | not yet!  |                                        |
 | **Graphical**       |          |         |            |            |        |              |           |           |                                        |
 | [Surebeans]         | C#       | Y       | Y          | Y          | Y      | N            | Y         | Y         | adds directives to files opened        |
 | [hledger-macos]     | swift    | Y       | N          | N          | Y      | Y            | Y         | Y         | (mac only)                             |
