@@ -16,6 +16,8 @@ Last updated: 2023
 
 - <https://github.com/zombor/hledger-envelope-budget>
 
+- <https://www.reddit.com/r/plaintextaccounting/comments/1xv2m79/how_i_have_learnt_to_use_hledger_to_budget_my_own/>
+
 - <https://github.com/Kickball/awesome-selfhosted#money-budgeting--management>, some other budgeting software for comparison
 
 - [Time planning](time-planning.md#how-to-set-up-a-time-budget) -> How to set up a time budget
