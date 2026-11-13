@@ -953,4 +953,7 @@ It took me two days to setup import rules for 8 different accounts across two ba
 Charts and the ROI and holdings improvements in one report make a plain-text ledger much easier to show to someone who doesn't live in the terminal.
 --Lucius
 
+I've spent many years trying to perfect the way I budget and manage my money. I'm probably more interested in the idea of saving money than actually doing it.
+--danbryce95
+
 `; const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
