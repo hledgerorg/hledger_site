@@ -223,11 +223,11 @@ Y (supported), Partial (partly supported), Ignored (accepted but ignored), or N 
 | `commodity` pre-declare commodities                                                                                                                   | Y       | Y       |
 | `commodity` subdirectives                                                                                                                             | Y       | Y       | `format` is supported, other subdirectives are ignored. hledger 2 declares commodity aliases with an `alias:` tag instead.
 | `define` define value expressions for future use                                                                                                      | Ignored | Ignored |
-| `end`/`end apply` shorthand for ending most recent apply block                                                                                        | N       | N       | <!-- Y? -->
+| `end`/`end apply` shorthand for ending most recent apply block                                                                                        | N       | N       | hledger requires the kind of block, eg `end apply account`; 2.x gives a clear error.
 | `end apply account`                                                                                                                                   | Y       | Y       |
 | `end apply fixed`                                                                                                                                     | Ignored | Ignored |
 | `end apply tag`                                                                                                                                       | Ignored | Ignored |
-| `end apply year`                                                                                                                                      | Ignored | Ignored | <!-- Y? -->
+| `end apply year`                                                                                                                                      | Ignored | Y       |
 | `end tag`                                                                                                                                             | Ignored | Ignored |
 | `eval`/`expr` evaluate a value expression                                                                                                             | Ignored | Ignored |
 | `include` include another file                                                                                                                        | Y       | Y       |
@@ -238,7 +238,7 @@ Y (supported), Partial (partly supported), Ignored (accepted but ignored), or N 
 | `tag` subdirectives                                                                                                                                   | Ignored | Ignored |
 | `test`, a synonym for `comment`                                                                                                                       | N       | N       |
 | `value EXPR` set a default valuation function for all commodities                                                                                     | Ignored | Ignored |
-| `Y`/`year`/`apply year` set the year for year-less dates                                                                                              | Y       | Y       | In hledger, `apply year` is not scoped: like `Y`/`year`, it lasts until the next year directive, and `end apply year` has no effect.
+| `Y`/`year`/`apply year` set the year for year-less dates                                                                                              | Y       | Y       | In hledger 1, `apply year` is not scoped: like `Y`/`year`, it lasts until the next year directive, and `end apply year` has no effect. In 2.x it is scoped as in Ledger.
 | `N COMM` ignore pricing information for a commodity                                                                                                   | Ignored | Ignored |
 | `D AMT` set a default commodity and its format                                                                                                        | Y       | Y       | A decimal mark is required (followed by 0 or more zeroes).
 | `C AMT1 = AMT2` declare a commodity equivalency                                                                                                       | Ignored | Ignored | <!-- Y? -->
