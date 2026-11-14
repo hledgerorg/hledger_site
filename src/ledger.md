@@ -238,7 +238,7 @@ Y (supported), Partial (partly supported), Ignored (accepted but ignored), or N 
 | `tag` subdirectives                                                                                                                                   | Ignored | Ignored |
 | `test`, a synonym for `comment`                                                                                                                       | N       | N       |
 | `value EXPR` set a default valuation function for all commodities                                                                                     | Ignored | Ignored |
-| `Y`/`year`/`apply year` set the year for year-less dates                                                                                              | Y       | Y       |
+| `Y`/`year`/`apply year` set the year for year-less dates                                                                                              | Y       | Y       | In hledger, `apply year` is not scoped: like `Y`/`year`, it lasts until the next year directive, and `end apply year` has no effect.
 | `N COMM` ignore pricing information for a commodity                                                                                                   | Ignored | Ignored |
 | `D AMT` set a default commodity and its format                                                                                                        | Y       | Y       | A decimal mark is required (followed by 0 or more zeroes).
 | `C AMT1 = AMT2` declare a commodity equivalency                                                                                                       | Ignored | Ignored | <!-- Y? -->
