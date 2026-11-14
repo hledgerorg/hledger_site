@@ -422,7 +422,25 @@ It can also print them in Ledger's syntax, with the `ledger` output format.
 Note one difference: when both `{}` and `@` are written on a purchase, Ledger balances with `{}` and treats `@` as an informational price,
 whereas in hledger 2 `@` is always what you paid, so it must agree with `{}` (or use `-I`/`--ignore-lots`);
 record a different market price with a `P` directive instead.
-See [Acquire](../dev/hledger.md#acquire) in the manual for more about this.
+Eg, this Ledger entry, which hledger 2 rejects:
+
+```journal
+2018-04-22 buy
+    assets:test               10.00 EUR {1.23 USD} @ 1.30 USD
+    assets:bank
+```
+
+can be written for hledger 2 like this, with the same balances and lot, and 1.30 USD as the market price:
+
+```journal
+P 2018-04-22 EUR 1.30 USD
+
+2018-04-22 buy
+    assets:test               10.00 EUR {1.23 USD}
+    assets:bank
+```
+
+See [Basis and transacted cost must agree](../dev/hledger.md#basis-and-transacted-cost-must-agree) in the manual for more about this.
 
 #### Lots from `@` costs
 
