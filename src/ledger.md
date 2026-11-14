@@ -148,7 +148,7 @@ Here are some of the roadbumps to expect (see also: [#1752](https://github.com/h
 - Some features are supported only by one or the other (Ledger's `((VALUEEXPR))`.. , hledger's `==`, `=*`, `==*`..)
 - Some are supported only partly by hledger (Ledger's `(AMOUNTEXPR)`: not by hledger 1, only simple arithmetic by hledger 2)
 - Some are accepted but ignored by hledger 1, perhaps causing transactions not to balance (`{LOTCOST}`, `{=LOTFIXEDCOST}`, `[LOTDATE]`, `(LOTNOTE)`..); hledger 2 reads and uses these
-- Some may be interpreted differently (balance assertions, balance assignments..)
+- Some may be interpreted differently (balance assertions, balance assignments, `@` costs on investment purchases..)
 - Some may have different restrictions (dates, comments..)
 
 You'll find lots of tips for how to handle these and other differences, below.
@@ -187,7 +187,7 @@ Y (supported), Partial (partly supported), Ignored (accepted but ignored), or N 
 | [5.13 Posting cost expressions](https://www.ledger-cli.org/3.0/doc/ledger3.html#Posting-cost-expressions)                                             | N       | N       |
 | [5.14 Total posting costs](https://www.ledger-cli.org/3.0/doc/ledger3.html#Total-posting-costs)                                                       | Y       | Y       | "(Explicit) total cost"
 | [5.15 Virtual posting costs](https://www.ledger-cli.org/3.0/doc/ledger3.html#Virtual-posting-costs)                                                   | Ignored | Ignored | The parentheses are ignored (it's treated like a regular cost).
-| [5.16 Commodity prices](https://www.ledger-cli.org/3.0/doc/ledger3.html#Commodity-prices)                                                             | Ignored | Y       | hledger 1 preserves lot cost basis annotations, so Ledger entries with these probably won't balance. hledger 2 uses them for lot tracking, since 1.99.1.
+| [5.16 Commodity prices](https://www.ledger-cli.org/3.0/doc/ledger3.html#Commodity-prices)                                                             | Ignored | Y       | hledger 1 preserves lot cost basis annotations, so Ledger entries with these probably won't balance. hledger 2 uses them for lot tracking, since 1.99.1. In hledger 2, plain `@` costs create lots only for commodities declared with a `lots:` tag; see [Lots from `@` costs](#lots-from--costs).
 | [5.16.1 Total commodity prices](https://www.ledger-cli.org/3.0/doc/ledger3.html#Total-commodity-prices)                                               | Ignored | Y       | Since 1.99.1.
 | [5.17 Prices versus costs](https://www.ledger-cli.org/3.0/doc/ledger3.html#Prices-versus-costs)                                                       | N       | N       | If attached to a posting amount we call it "transacted cost", if declared ambiently with a P directive we call it "price" or "market price". `{AMT}` is a cost basis annotation (ignored by hledger 1, used by hledger 2).
 | [5.18 Fixated prices and costs](https://www.ledger-cli.org/3.0/doc/ledger3.html#Fixated-prices-and-costs)                                             | Ignored | Partial | hledger 2 reads `{=AMT}` as `{AMT}`; the fixation is not enforced. For a fixed value, use a separate commodity with a single P price.
@@ -422,6 +422,40 @@ whereas in hledger 2 `@` is always what you paid, so it must agree with `{}` (or
 record a different market price with a `P` directive instead.
 See [Acquire](../dev/hledger.md#acquire) in the manual for more about this.
 
+#### Lots from `@` costs
+
+In hledger 2, `@` in `10 AAPL @ $50.00` means transacted cost / conversion rate.
+It doesn't always generate a lot, as in Ledger.
+It will do, indirectly, if the commodity is declared with a [`lots` tag](../dev/hledger.md#lotful-commodities) -
+in this case, a cost basis annotation (`{$50.00}`) is inferred from the  transacted cost (`@`).
+(`print -a` shows the inferred annotations.)
+It's the cost basis annotation that generates a lot.
+
+So adding the `lots` tag is usually the easiest way to help hledger see a Ledger journal's lot acquisitions:
+
+```journal
+commodity AAPL  ; lots:
+```
+
+Then plain `@` purchases become lot acquisitions.
+
+Without the tag, Ledger journals which buy with `@` and sell with a `{}` lot selector,
+like the examples in Ledger's manual, will give an error:
+
+```journal
+2012-04-10 buy
+    assets:brokerage          10 AAPL @ $50.00
+    assets:brokerage:cash   $-500.00
+
+2012-05-10 sell
+    assets:brokerage          -4 AAPL {$50.00} @ $60.00
+    assets:brokerage:cash    $240.00
+    income:gains
+```
+
+hledger 2 reports "no AAPL lots available for disposal", since the purchase did not create a lot.
+Declaring AAPL lotful fixes it (or use `-I`/`--ignore-lots`, if you don't need lots or gains).
+
 See [hledger manual: Cost basis](../dev/hledger.md#cost-basis),
 [hledger manual: Lots and capital gains](../dev/hledger.md#lots-and-capital-gains).
 
@@ -522,6 +556,10 @@ Some common problems:
   So transactions using those might be reported as unbalanced, or might have wrong capital gain inferred.
   hledger 2 reads them and tracks the lots.
   See [Cost basis](#cost-basis) above.
+
+- hledger 2 does not create lots from plain `@` purchases, unless the commodity is declared lotful (`commodity AAPL  ; lots:`).
+  So Ledger entries which buy with `@` and later sell with a `{COST}` selector may give a "no lots available for disposal" error.
+  See [Lots from `@` costs](#lots-from--costs) above.
 
 - If your Ledger journal has `date:` or `date2:` metadata in posting comments,
   hledger will use those as posting dates (or reject them if they aren't dates).
