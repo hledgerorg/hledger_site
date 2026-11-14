@@ -404,7 +404,9 @@ Expressions that hledger can't read must be converted to explicit amounts. Here 
   $ beancount2ledger file.beancount > file.journal
   ```
 
-### Cost basis
+<a name="cost-basis"></a>
+
+### Lots
 
 hledger 1 (1.52) preserves cost basis annotations, so that they can be exported to Ledger or Beancount for gain calculations,
 but otherwise ignores them. So Ledger entries using cost basis annotations might be reported as unbalanced, or might have wrong capital gain inferred.
@@ -427,7 +429,7 @@ See [Acquire](../dev/hledger.md#acquire) in the manual for more about this.
 In hledger 2, `@` in `10 AAPL @ $50.00` means transacted cost / conversion rate.
 It doesn't always generate a lot, as in Ledger.
 It will do, indirectly, if the commodity is declared with a [`lots` tag](../dev/hledger.md#lotful-commodities) -
-in this case, a cost basis annotation (`{$50.00}`) is inferred from the  transacted cost (`@`).
+in this case, a cost basis annotation (`{$50.00}`) is inferred from the transacted cost (`@`).
 (`print -a` shows the inferred annotations.)
 It's the cost basis annotation that generates a lot.
 
@@ -555,7 +557,7 @@ Some common problems:
 - hledger 1 preserves but otherwise ignores Ledger's cost basis annotations.
   So transactions using those might be reported as unbalanced, or might have wrong capital gain inferred.
   hledger 2 reads them and tracks the lots.
-  See [Cost basis](#cost-basis) above.
+  See [Lots](#lots) above.
 
 - hledger 2 does not create lots from plain `@` purchases, unless the commodity is declared lotful (`commodity AAPL  ; lots:`).
   So Ledger entries which buy with `@` and later sell with a `{COST}` selector may give a "no lots available for disposal" error.
