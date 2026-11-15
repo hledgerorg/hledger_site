@@ -956,4 +956,8 @@ Charts and the ROI and holdings improvements in one report make a plain-text led
 I've spent many years trying to perfect the way I budget and manage my money. I'm probably more interested in the idea of saving money than actually doing it.
 --danbryce95
 
+though I don't know Haskell, the quality of the code and project layout for hledger seemed more sensible and easy to follow, and the author seems to be able to implement changes/fixes more quickly and with less guesswork
+--gumnos
+
+
 `; const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
