@@ -145,7 +145,7 @@ perhaps keeping non-compatible features in separate files.
 A typical gnarly old Ledger file will not work with hledger as-is.
 Here are some of the roadbumps to expect (see also: [#1752](https://github.com/hledgerorg/hledger/issues/1752)):
 
-- Some features are supported only by one or the other (Ledger's `((VALUEEXPR))`.. , hledger's `==`, `=*`, `==*`..)
+- Some features are supported only by one or the other (Ledger's `((VALUEEXPR))`, `@ =FIXEDCOST`.. , hledger's `==`, `=*`, `==*`..)
 - Some are supported only partly by hledger (Ledger's `(AMOUNTEXPR)`: not by hledger 1, only simple arithmetic by hledger 2)
 - Some are accepted but ignored by hledger 1, perhaps causing transactions not to balance (`{LOTCOST}`, `{=LOTFIXEDCOST}`, `[LOTDATE]`, `(LOTNOTE)`..); hledger 2 reads and uses these
 - Some may be interpreted differently (balance assertions, balance assignments, `@` costs on investment purchases..)
