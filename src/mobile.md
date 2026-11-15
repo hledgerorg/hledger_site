@@ -8,6 +8,17 @@ Most of these are focussed on data entry, then export to a computer for reportin
 
 ## hledger-compatible apps
 
+### Ledgedroid & Receiptdroid (Android, 2026-)
+
+<https://github.com/hnvy/ledgedroid> A full-featured hledger-like app with data entry & reports.
+
+There's also an add-on app for scanning receipts: <https://github.com/hnvy/receiptdroid>
+
+<img width="23%" src="images/ledgedroid/1-journal.png" alt="Ledgedroid journal" />
+<img width="23%" src="images/ledgedroid/2-add.png" alt="Ledgedroid add form" />
+<img width="23%" src="images/ledgedroid/3-is.png" alt="Ledgedroid income statement" />
+<img width="23%" src="images/ledgedroid/4-receiptdroid.jpg" alt="Receiptdroid" />
+
 ### NanoLedger (Android, 2023-)
 
 <https://github.com/chvp/NanoLedger>\
