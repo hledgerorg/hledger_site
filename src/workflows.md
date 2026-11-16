@@ -119,24 +119,6 @@ Some downloading helpers can be found at
 <https://plaintextaccounting.org/#data-importconversion> (search for "download").
 
 
-## Version control
-
-It's optional, but keeping your journal files in a version control system
-is a very useful way to track changes, undo mistakes, and keep backups. Eg with git:
-
-```cli
-$ git init                                     # start tracking changes in this directory
-$ git add main.journal                         # start tracking this file
-$ git commit -m 'first commit' main.journal    # save a snapshot
-$ git status; git diff                         # see uncommitted changes
-$ git commit -m 'updates' main.journal         # save another snapshot
-$ git log                                      # see past commits
-```
-
-Other tools such as darcs or jj work just as well.
-Committing after each reconciliation or import is a good habit;
-and you can commit report output too, to detect changes (see [Checking for errors](checking-for-errors.md#compare-report-output)).
-
 ## Comparing CSV workflows
 
 hledger's [import] command, hledger [reading CSV files directly][convert],
@@ -162,6 +144,25 @@ are four ways to get bank data into hledger. The main difference:
 | Other topics covered      | See the [manual](dev/hledger.md)                                           | See the [manual](dev/hledger.md)                                                            | Investments, mortgages, foreign currency, tax returns, lots, prices    | Transfers, opening and closing balances                                                     |
 | Platforms                 | All                                                                        | All                                                                                         | Unix-like systems (Linux, Mac, WSL); others via Docker                 | Linux, Mac, Windows                                                                         |
 | Good for                  | Frequent, overlapping CSV downloads; manual edits to imported transactions | A smallish number of non-overlapping CSV files; evolving rules; no special import step      | Many non-overlapping CSV files; evolving rules; customising every step | Many non-overlapping CSV files; evolving rules; a ready-made tool instead of a build script |
+
+
+## Version control
+
+It's optional, but keeping your journal files in a version control system
+is a very useful way to track changes, undo mistakes, and keep backups. Eg with git:
+
+```cli
+$ git init                                     # start tracking changes in this directory
+$ git add main.journal                         # start tracking this file
+$ git commit -m 'first commit' main.journal    # save a snapshot
+$ git status; git diff                         # see uncommitted changes
+$ git commit -m 'updates' main.journal         # save another snapshot
+$ git log                                      # see past commits
+```
+
+Other tools such as darcs or jj work just as well.
+Committing after each reconciliation or import is a good habit;
+and you can commit report output too, to detect changes (see [Checking for errors](checking-for-errors.md#compare-report-output)).
 
 ## Custom workflows
 

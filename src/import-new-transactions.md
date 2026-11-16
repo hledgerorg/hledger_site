@@ -33,6 +33,9 @@ $ hledger aregister checking
 
 For more detail, see: [Tutorial: Import CSV data](import-csv.md)
 
+Importing like this, and reading CSV directly as in [Read CSV files](read-csv-files.md), are two of several CSV workflows;
+to choose one, see [Comparing CSV workflows](workflows.md#comparing-csv-workflows).
+
 <br>
 
 (Part of [hledger by example](hbe.md).)

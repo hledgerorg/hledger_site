@@ -143,6 +143,9 @@ the makefile moves downloaded csv files there and imports them. The procedure co
 There are many other CSV conversion tools (nine CSV->*ledger tools at last count), linked at
 [plaintextaccounting.org -> data import/conversion](https://plaintextaccounting.org/#data-importconversion).
 
+To choose between importing, reading CSV directly, and other hledger-based CSV workflows,
+see [Comparing CSV workflows](workflows.md#comparing-csv-workflows).
+
 
 [output formats]: hledger.html#output-format
 [csv format]: hledger.html#csv-format
