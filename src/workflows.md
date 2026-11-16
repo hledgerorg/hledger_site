@@ -124,8 +124,8 @@ Some downloading helpers can be found at
 hledger's [import] command, hledger [reading CSV files directly][convert],
 [hledger-flow](https://github.com/apauley/hledger-flow) and [Full-fledged hledger](https://github.com/adept/full-fledged-hledger)
 are four ways to get bank data into hledger. The main difference: 
-- With hledger import, your journal is the main record, and new transactions are appended to it. CSV files can overlap, and can be downloaded frequently (eg daily).
-- With the other three, your CSV files are the main record and transactions are regenerated from them, so old transactions can be reclassified. CSV files must be disjoint.
+- With hledger import, your journal is the main record, and new transactions are appended to it. CSV files can overlap, and can be downloaded often (eg daily).
+- With the other three, your CSV files are the main record and transactions are regenerated from them, so improving the rules also reclassifies old transactions. CSV files must be disjoint.
 
 |                                  | hledger import                                                                                                                                            | hledger, reading CSV directly                                                                          | hledger-flow                                                                                     | Full-fledged hledger                                                                                                                   |
 |----------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|
