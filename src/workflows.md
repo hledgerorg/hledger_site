@@ -142,13 +142,13 @@ and you can commit report output too, to detect changes (see [Checking for error
 hledger's [import] command, hledger [reading CSV files directly][convert],
 [Full-fledged hledger](https://github.com/adept/full-fledged-hledger) and [hledger-flow](https://github.com/apauley/hledger-flow)
 are four ways to get bank data into hledger.
-The main difference: with import, your journal is the main record, and new transactions are appended to it;
-with the other three, your bank CSV files are the main record, and transactions are regenerated from them.
+The main difference: with hledger import, your journal is the main record, and new transactions are appended to it;
+with the other three, your bank CSV files are the main record, and transactions are generated from them.
 
 |                                      | hledger import                                    | hledger, reading CSV directly                                 | Full-fledged hledger                                          | hledger-flow                                              |
 |--------------------------------------|---------------------------------------------------|---------------------------------------------------------------|---------------------------------------------------------------|-----------------------------------------------------------|
 | What it is                           | A built-in command                                | Built in: `-f FILE.csv`, or [include]-ing a CSV or rules file in your journal | A tutorial, template and build script that you copy and adapt               | A separate program                                        |
-| Imported transactions                | Appended to your journal; you can edit them       | Converted on every run; not edited                            | Generated; not edited                                         | Generated; not edited                                     |
+| Imported transactions                | Appended to your journal; you can edit them       | Converted on every run; not edited                            | Converted and saved; not edited                               | Converted and saved; not edited                           |
 | Manual entries                       | In the same journal                               | In the journal that includes the CSV files                    | In yearly journal files                                       | In separate `_manual_` files                              |
 | Overlapping downloads (eg "last 90 days") | Supported; only new transactions are added   | Not supported; needs non-overlapping CSV files      | Not supported; needs non-overlapping CSV files      | Not supported; needs non-overlapping CSV files  |
 | Downloaded files                     | Optionally kept ([archive] rule)                  | All kept; they are the data                                   | All kept; they are the data                                   | All kept; they are the data                               |
