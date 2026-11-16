@@ -211,8 +211,6 @@ I'd then proceed to manually check that all ending balances in hledger match wit
 After I've finished processing the note from my phone, that note will be archvied and I will start with a new note.
 --abfar
 
-In summary for me: hledger has better csv importing system and ledger has support for lots. I use both. --faustlast
-
 I started setting up hledger this year and I’m with you for a small business it is absolutely great.
 Some notes:
 - The initial setup of the books is pretty time consuming especially if you have a lot of accounts. I recommend starting your most important accounts and adding as you go along.
