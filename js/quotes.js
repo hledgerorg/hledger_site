@@ -220,9 +220,6 @@ Some notes:
 Overall more fine tuned than what I have been able to achieve with Quickbooks over 8 years.
 --abhiyerra
 
-journal's greenyellow really makes it pop and I think it will make us rich!
---sm
-
 My favorite part of the (extensive) Haskell API is Hledger.Cli.Script. It re-exports all the most commonly used functions and data types, meaning you're just one import away from everything you need to get started. --wbadart
 
 I generally despise having to do double entry bookkeeping in the first place, but when I do (in some situations you have to), I use ledger (or hledger). Way less painful than QuickBooks if you're also a programmer or adjacent. --dmoy
