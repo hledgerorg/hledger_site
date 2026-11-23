@@ -954,5 +954,9 @@ I've spent many years trying to perfect the way I budget and manage my money. I'
 though I don't know Haskell, the quality of the code and project layout for hledger seemed more sensible and easy to follow, and the author seems to be able to implement changes/fixes more quickly and with less guesswork
 --gumnos
 
+I’m glad software like hledger exists.
+It looks unassuming at first, but once you dig into it, it turns out to be incredibly powerful.
+You can use it to track things it wasn’t even originally designed for.
+--Marcus Jaschen
 
 `; const quotes = quotesmd.trim().split('\n\n').map(q => q.replace(/^\*|\*$/g, '').trim());
