@@ -83,7 +83,7 @@ Help welcome, share updates in the chat room.
 | [hledger-iadd]      | haskell  | Y       | Y          | Y          | Y      | Y            | Y         | Y         |                                        |
 | [puffin]            | go       | Y       | N          | N          | Y      | Y            | Y         | Y         |                                        |
 | [ldash]             | rust     | Y       | N          | Y          | Y      | Y            | Y         | Y         | won't detect my accounts; requires assets:crypto |
-| [hledger-textual]   | python   | Y       | Y          | N          | Y      | Y            | Y         | Y         | writes directives to journal           |
+| [hledger-textual]   | python   | Y       | Y          | Y          | Y      | Y            | Y         | Y         |                                        |
 | [dravik]            | python   | N       |            |            |        |              |           |           | failed to build pydantic-core==2.33.2  |
 | [hledger-cal]       | haskell  | Y       | Y          | Y          | Y      | Y            | Y         | Y         |                                        |
 | **Graphical**       |          |         |            |            |        |              |           |           |                                        |
